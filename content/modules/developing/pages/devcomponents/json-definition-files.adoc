@@ -1,0 +1,33 @@
+:title: JSON Definition Files
+:type: developingComponent
+:status: published
+:summary: Introduction to JSON definition files.
+:order: 32
+
+${branding} supports adding new attribute types, metacard types, validators, and more using json-formatted definition files.
+
+The following may be defined in a JSON definition file:
+
+- <<{developing-prefix}attribute_type_definition_file,Attribute Types>>
+- <<{developing-prefix}metacard_type_definition_file,Metacard Types>>
+- <<{developing-prefix}global_attribute_validators_file,Global Attribute Validators>>
+- <<{developing-prefix}default_attribute_values,Default Attribute Values>>
+- <<{developing-prefix}attribute_injection_definition,Attribute Injections>>
+
+==== Definition File Format
+
+A definition file follows the JSON format as specified in http://www.ecma-international.org/publications/standards/Ecma-404.htm[ECMA-404] {external-link}.
+All definition files must be valid JSON in order to be parsed.
+
+A single definition file may define as many of the types as needed.
+This means that types can be defined across multiple files for grouping or clarity.
+
+==== Deploying Definition Files
+
+The file must have a `.json` extension in order to be picked up by the deployer.
+Once the definition file is ready to be deployed, put the definition file `<filename>.json` into the `etc/definitions` folder.
+
+Definition files can be added, updated, and/or deleted in the `etc/definitions` folder.
+The changes are applied dynamically and no restart is required.
+
+If a definition file is removed from the `etc/definitions` folder, the changes that were applied by that file will be undone.

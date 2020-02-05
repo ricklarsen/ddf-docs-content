@@ -1,0 +1,11 @@
+:title: Standards Supported by {branding}
+:type: coreConcept
+:priority: 00
+:section: Core Concepts
+:status: published
+:order: 10
+
+= Standards Supported by {branding}
+
+{branding} incorporates support for many common xref:coreconcepts/service-standards.adoc[Service], xref:coreconcepts/data-standards.adoc[Metadata], and xref:coreconcepts/security-standards.adoc[Security] standards, as well as many common xref:coreconcepts/data-standards.adoc[Data Formats].
+

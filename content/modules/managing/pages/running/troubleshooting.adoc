@@ -1,0 +1,97 @@
+:title: Troubleshooting
+:type: troubleshooting
+:status: published
+:summary: Troubleshooting steps for common setup issues.
+:order: 00
+////
+Troubleshooting
+////
+
+If, after configuration, a ${branding} is not performing as expected, consult this table of common fixes and workarounds.
+
+.General Troubleshooting
+[cols="3a,7a" options="header"]
+|===
+
+|Issue
+|Solution
+
+|Unable to unzip distribution on Windows platform
+|The default Windows zip utility is not compatible with the ${branding} distribution zip file. Use Java or a third-party zip utility.
+
+|Unable to federate on Windows Platform
+|Windows default firewall is not compatible with ${branding}.
+
+|Ingesting more than 200,000 data files stored NFS shares may cause Java Heap Space error (Linux-only issue).
+|This is an NFS bug where it creates duplicate entries for some files when doing a file list. Depending on the OS, some Linux machines can handle the bug better and able get a list of files but get an incorrect number of files. Others would have a Java Heap Space error because there are too many file to list.
+
+As a workaround, ingest files in batches smaller than 200,000.
+
+|Ingesting serialized data file with scientific notation in WKT string causes RuntimeException.
+|WKT string with scientific notation such as POINT (-34.8932113039107 -4.77974239601E-5) won't ingest. This occurs with serialized data format only.
+
+|Exception Starting ${branding} (Windows)
+
+An exception is sometimes thrown starting ${branding} on a Windows machine (x86).
+
+If using an unsupported terminal, `java.lang.NoClassDefFoundError: Could not initialize class org.fusesource.jansi.internal.Kernel32` is thrown.
+
+|Install missing Windows libraries.
+
+Some Windows platforms are missing libraries that are required by ${branding}.  These libraries are provided by the http://www.microsoft.com/en-us/download/details.aspx?id=15336[Microsoft Visual C++ 2008 Redistributable Package x64] {external-link}.
+
+|CXF BusException
+
+The following exception is thrown:
+`org.apache.cxf.BusException: No conduit initiator`
+
+a|Restart ${branding}.
+
+. Shut down ${branding}: +
+`${branding-lowercase}${at-symbol}local>shutdown`
+. Start up ${branding}:
+`./${branding-lowercase}`
+
+|Distribution Will Not Start
+
+${branding} will not start when calling the start script defined during installation.
+|Complete the following procedure.
+
+. Verify that Java is correctly installed.
++
+`java -version`
+. This should return something similar to:
++
+`java version "1.8.0_45" Java(TM) SE Runtime Environment (build 1.8.0_45-b14) Java HotSpot(TM) Server VM (build 25.45-b02, mixed mode)`
+. If running *nix, verify that bash is installed.
++
+`echo $SHELL`
+. This should return:
++
+`/bin/bash`
+
+|Multiple `java.exe` processes running, indicating more than one ${branding} instance is running.
+
+This can be caused when another ${branding} is not properly shut down.
+
+|Perform one or all of the following recommended solutions, as necessary.
+
+* Wait for proper shutdown of ${branding} prior to starting a new instance.
+* Verify running java.exe are not ${branding} (e.g., kill/close if necessary).
+* Utilize automated start/stop scripts to run ${branding} as a service.
+
+2+^|*Troubleshooting TLS/SSL Connectivity*
+
+.6+.^|Connection error messages found in log files, for example:
+
+* `java.net.SocketException: Broken pipe`
+* `java.net.SocketException: Connection reset`
+
+|Ensure all the Certificate Authorities (CAs) and the whole trust chain (all intermediate certificates are included in the walk-up to the CA) have been added to the <<{managing-prefix}creating_a_new_keystore_truststore_with_an_existing_certificate_and_private_key,trust store>>.
+|Ensure none of the certificates or CAs have expired.
+|Ensure the alias of the private key in the <<{managing-prefix}updating_key_store_trust_store_via_the_admin_console,keystore>> matches the hostname.
+|Ensure the time on all hosts and VMs are the same (no time drifts).
+|Ensure the server's <<{managing-prefix}keystore_password,private key password>> matches the password of the keystore (if the key has a password).
+|Ensure the Subject Alternative Names (SANS) includes the fully qualified domain name (FQDN) and IP address of the system (not required but helpful).
+
+|===

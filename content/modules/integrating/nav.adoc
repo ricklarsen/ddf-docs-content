@@ -1,0 +1,23 @@
+.xref:integrating-intro.adoc[Integrating Intro]
+* xref:high-availability-integrating-warning.adoc[High Availability Warning]
+* xref:endpoints/endpoint-intro.adoc[Endpoints]
+
+** xref:endpoints/ingest-endpoints-intro.adoc[Ingest Endpoints]
+*** xref:endpoints/catalog-rest-endpoint.adoc[Catalog REST Endpoint]
+*** xref:endpoints/csw-endpoint.adoc[CSW Endpoint]
+*** xref:endpoints/ftp-endpoint.adoc[FTP Endpoint]
+
+** xref:endpoints/crud-endpoints-intro.adoc[CRUD Endpoints]
+*** xref:endpoints/catalog-rest-endpoint.adoc[Catalog REST Endpoint]
+*** xref:endpoints/csw-endpoint.adoc[CSW Endpoint]
+*** xref:endpoints/query-endpoints.adoc[Queries Endpoint]
+
+** xref:endpoints/query-endpoints-intro.adoc[Query Endpoints]
+*** xref:endpoints/csw-endpoint.adoc[CSW Endpoint]
+*** xref:endpoints/opensearch-endpoint.adoc[OpenSearch Endpoint]
+
+** xref:endpoints/content-endpoints-intro.adoc[Content Retrieval Endpoints]
+*** xref:endpoints/catalog-rest-endpoint.adoc[Catalog REST Endpoint]
+
+** xref:endpoints/pub-sub-endpoints-intro.adoc[Pub-Sub Endpoints]
+*** xref:endpoints/csw-endpoint.adoc[CSW Endpoint]

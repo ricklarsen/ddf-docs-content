@@ -1,0 +1,33 @@
+= DDF: Intelligent Integration
+
+DDF provides free and open-source data integration.
+
+image:ddf_logo.png[DDF logo]
+
+xref:features.html[Explore DDF]
+
+.What is DDF?
+****
+DDF is a free and open-source common data layer that abstracts services and business logic from the underlying data structures to enable rapid integration of new data sources.
+
+DDF is an interoperability platform that provides secure and scalable discovery and retrieval from a wide array of disparate sources. DDF is built to "unzip and run" while having the ability to scale to large enterprise systems.
+
+DDF can be used in accordance with terms of the GNU Lesser General Public License (LGPL). Copyright is managed by the Codice Foundation, a non-profit established to provide infrastructure, support, education, and export control advice to government-focused teams desiring to operate open-source projects.
+****
+
+.Latest Release
+****
+[#stable-version]
+Link to latest version
+****
+
+.Latest Builds
+****
+TBD
+****
+
+.News and Events
+****
+[#version-history]
+* *2013-01-01* Happy Birthday!
+****

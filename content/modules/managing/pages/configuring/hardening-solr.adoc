@@ -1,0 +1,18 @@
+:title: Hardening Solr
+:type: subConfiguration
+:status: published
+:parent: Configuring Solr
+:summary: Hardening Solr.
+:order: 02
+
+== {title}
+
+Follow instructions on https://lucene.apache.org/solr/guide/${solr.docs.version}/securing-solr.html[Securing Solr] {external-link}.
+
+=== Configuring Solr Encryption
+
+While it is possible to encrypt the Solr index, it decreases performance significantly.
+An encrypted Solr index also can only perform exact match queries, not relative or contextual queries.
+As this drastically reduces the usefulness of the index, this configuration is not recommended.
+The recommended approach is to encrypt the entire drive through the Operating System of the server
+on which the index is located.

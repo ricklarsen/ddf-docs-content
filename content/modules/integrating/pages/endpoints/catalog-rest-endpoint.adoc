@@ -1,0 +1,331 @@
+:title: Catalog REST Endpoint
+:type: endpoint
+:status: published
+:operations: ingest, retrieval, crud
+:link: _catalog_rest_endpoint
+:summary: Uses REST to interact with the catalog.
+
+== {title}
+
+The Catalog REST Endpoint allows clients to perform operations on the Catalog using REST, a simple architectural style that performs communication using HTTP. 
+
+Bulk operations are not supported: for all RESTful CRUD commands, only one metacard ID is supported in the URL.
+
+The Catalog REST Endpoint can be used for one or more of these operations on an instance of ${branding}:
+
+* <<{integrating-prefix}catalog_rest_create_operation_examples,Ingest metacards or resources into the ${branding} catalog.>>
+* <<{integrating-prefix}catalog_rest_read_operation_examples,Retrieve metacards or resources from the catalog.>>
+* <<{integrating-prefix}catalog_rest_update_operation_examples,Update metacards or resources in the catalog.>>
+* <<{integrating-prefix}catalog_rest_delete_operation_examples,Delete resources and metadata from the catalog.>>
+* <<{integrating-prefix}catalog_rest_sources_operation_examples,Get information about configured sources.>>
+
+This example metacard can be used to test the integration with ${branding}.
+
+.Example Metacard
+[source,xml,linenums]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<metacard xmlns="urn:catalog:metacard" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:smillang="http://www.w3.org/2001/SMIL20/Language" gml:id="3a59483ba44e403a9f0044580343007e">
+  <type>ddf.metacard</type>
+  <string name="title">
+    <value>Test REST Metacard</value>
+  </string>
+  <string name="description">
+    <value>Vestibulum quis ipsum sit amet metus imperdiet vehicula. Nulla scelerisque cursus mi.</value>
+  </string>
+</metacard>
+----
+
+=== Catalog REST Create Operation Examples
+The REST endpoint can be used to upload resources as attachments.
+
+Send a `POST` request with the input to be ingested contained in the HTTP request body to the endpoint.
+
+.Create Request URL
+[source,javascript]
+----
+https://<FQDN>:<PORT>/services/catalog/
+----
+
+.Example Create Request
+[source,http,linenums]
+----
+POST /services/catalog?transform=xml HTTP/1.1
+Host: <FQDN>:<PORT>
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Cache-Control: no-cache
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="parse.resource"; filename=""
+Content-Type:
+
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="parse.metadata"; filename=""
+Content-Type:
+
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+----
+
+The `create` and `update` methods both support the multipart mime format.
+If only a single attachment exists, it will be interpreted as a resource to be parsed, which will result in a metacard and resource being stored in the system.
+
+If multiple attachments exist, then the REST endpoint will assume that one attachment is the actual resource (attachment should be named `parse.resource`) and the other attachments are overrides of metacard attributes (attachment names should follow metacard attribute names).
+In the case of the metadata attribute, it is possible to also have the system transform that metadata and use the results of that to override the metacard that would be generated from the resource (attachment should be named `parse.metadata`).
+
+.Create Success
+If the ingest is successful, a status of `201 Created` will be returned, along with the Metacard ID in the header of the response.
+
+.Request with Non-XML Data
+[NOTE]
+====
+If a request with non-XML data is sent to the Catalog REST endpoint,
+the metacard will be created but the resource will be stored in the `metadata` field.
+This could affect discoverability.
+====
+
+If content or metadata is not ingested successfully, check for these error messages.
+
+.Create Error Responses
+[cols="2,2,3" options="header"]
+|===
+|Status Code
+|Error Message
+|Possible Causes
+
+.2+.^|`400 Bad Request`
+.2+.^|`<pre>Error while storing entry in catalog: </pre>`
+
+|_Malformed XML Response_: If the XML being ingested has formatting errors.
+|_Request with Unknown Schema_: If ingest is attempted with a schema that is unknown, unsupported, or not configured by the endpoint, ${branding} creates a generic resource metacard with the provided XML as content for the `metadata` XML field in the metacard.
+
+|===
+
+
+=== Catalog REST Read Operation Examples
+The `read` operation can be used to retrieve metadata in different formats.
+
+. Send a `GET` request to the endpoint.
+. Optionally add a `transform` query parameter to the end of the URL with the transformer to be used (such as `transform=kml`).
+By default, the response body will include the XML representation of the Metacard.
+
+.Read Request URL
+[source,javascript]
+----
+https://<FQDN>:<PORT>/services/catalog/<metacardId>
+----
+
+If successful, a status of `200 OK` will be returned, along with the content of the metacard requested.
+
+.Read Success Response Example
+[source,javascript,linenums]
+----
+<metacard xmlns="urn:catalog:metacard" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:smillang="http://www.w3.org/2001/SMIL20/Language" gml:id="<METACARD_ID>">
+    <type>${branding-lowercase}.metacard</type>
+    <source>${branding-lowercase}.distribution</source>
+    <string name="title">
+        <value>Test REST Metacard</value>
+    </string>
+    <string name="point-of-contact">
+        <value>email@example.com</value>
+    </string>
+    <dateTime name="metacard.created">
+        <value>${timestamp}</value>
+    </dateTime>
+    <dateTime name="effective">
+        <value>${timestamp}</value>
+    </dateTime>
+    <dateTime name="modified">
+        <value>${timestamp}</value>
+    </dateTime>
+    <dateTime name="created">
+        <value>${timestamp}</value>
+    </dateTime>
+    <string name="description">
+        <value>Vestibulum quis ipsum sit amet metus imperdiet vehicula. Nulla scelerisque cursus mi.</value>
+    </string>
+    <string name="metacard-tags">
+        <value>resource</value>
+        <value>VALID</value>
+    </string>
+    <dateTime name="metacard.modified">
+        <value>${timestamp}</value>
+    </dateTime>
+</metacard>
+----
+
+* To receive metadata in an alternate format, add a transformer to the request URL.
+
+.Metacard Transform Request URL
+[source,http]
+----
+https://<FQDN>:<PORT>/services/catalog/<metacardId>?transform=<TRANSFORMER_ID>
+----
+
+.Metacard Transform Response (`transform=geojson`)
+[source,json,linenums]
+----
+{
+    "geometry": null,
+    "type": "Feature",
+    "properties": {
+        "effective": "${timestamp}",
+        "point-of-contact": "email@example.com",
+        "created": "${timestamp}",
+        "metacard.modified": "${timestamp}",
+        "metacard-tags": [
+            "resource",
+            "VALID"
+        ],
+        "modified": "${timestamp}",
+        "description": "Vestibulum quis ipsum sit amet metus imperdiet vehicula. Nulla scelerisque cursus mi.",
+        "id": "3a59483ba44e403a9f0044580343007e",
+        "metacard-type": "${branding-lowercase}.metacard",
+        "title": "Test REST Metacard",
+        "source-id": "${branding-lowercase}.distribution",
+        "metacard.created": "${timestamp}"
+    }
+}
+----
+
+To retrieve a metacard from a specific federated source, add `sources/<SOURCE_ID>` to the URL.
+
+.Federated Read Request URL
+[source,http]
+----
+https://<FQDN>:<PORT>/services/catalog/sources/<sourceId>/<metacardId>?transform=<TRANSFORMER_ID>
+----
+
+To retrieve the resource associated with a metacard, use the `resource` transformer with the `GET` request.
+
+.Retrieve Resource Request URL
+[source,http]
+----
+https://<FQDN>:<PORT>/services/catalog/<metacardId>?transform=resource
+----
+
+See <<{architecture-prefix}available_metacard_transformers,Metacard Transformers>> for details on metacard transformers.
+
+.Read Error Response Examples
+If the metacard or resource is not returned successfully, check for these errors.
+
+.Read Error Responses
+[cols="2,2,3" options="header"]
+|===
+|Status Code
+|Error Message
+|Possible Causes
+
+|`404 Not Found`
+|`<pre>Unable to retrieve requested metacard.</pre>`
+|Invalid Metacard ID
+
+.3+.^|`500 Server Error`
+|`<pre>Unknown error occurred while processing request.</pre>`
+|Transformer is invalid, unsupported, or not configured.
+|`<pre>Unable to transform Metacard.  Try different transformer: </pre>`
+|Metacard does not have an associated resource (is metadata only).
+|`<pre>READ failed due to unexpected exception: </pre>`
+|Invalid source ID, or source unavailable.
+
+|===
+
+=== Catalog Rest Update Operation Examples
+To update the metadata for a metacard, send a `PUT` request with the ID of the Metacard to be updated appended to the end of the URL
+and the updated metadata is contained in the HTTP body.
+
+Optionally, specify the transformer to use when parsing an override of a metadata attribute.
+
+.Update Request URL
+[source,http]
+----
+https://<FQDN>:<PORT>/<metacardId>?transform=<input transformer>
+----
+
+.Update Error Response Examples
+[cols="2,2,3" options="header"]
+|===
+|Status Code
+|Error Message
+|Possible Causes
+
+|`400 Bad Request`
+|`<pre>Error cataloging updated metadata: </pre>`
+|Invalid metacard ID.
+
+|`500 Server Error`
+|`<pre>Error cataloging updated metadata: </pre>`
+|Invalid transformer ID.
+
+|===
+
+=== Catalog REST Delete Operation Examples
+To delete a metacard, send a `DELETE` request with the metacard ID to be deleted appended
+to the end of the URL.
+
+Delete Request URL
+[source,http]
+----
+https://<FQDN>:<PORT>/services/catalog/<metacardId>
+----
+
+.Delete Error Response Examples
+[cols="2,2,3" options="header"]
+|===
+|Status Code
+|Error Message
+|Possible Causes
+
+|`400 Bad Request`
+|`<pre>Error deleting entry from catalog: </pre>`
+|Invalid metacard ID.
+
+|===
+
+=== Catalog REST Sources Operation Examples
+To retrieve information about federated sources, including `sourceId`,
+`availability`, `contentTypes`,and `version`,
+send a `GET` request to the endpoint.
+
+.Sources Response URL
+[source,http]
+----
+https://<FQDN>:<PORT>//sources/
+----
+
+.Sources Response Example
+[source,javascript,linenums]
+----
+[
+   {
+      "id" : "${branding}-OS",
+      "available" : true,
+      "contentTypes" :
+         [
+         ],
+      "version" : "${project.version}"
+   },
+   {
+      "id" : "${branding-lowercase}.distribution",
+      "available" : true,
+      "contentTypes" :
+         [
+         ],
+      "version" : "${project.version}"
+   }
+]
+----
+
+.Sources Error Responses
+[cols="2,2m,3" options="header"]
+|===
+|Status Code
+|Error Message
+|Possible Causes
+
+|403
+a|<p>Problem accessing /ErrorServlet. Reason: <pre>Forbidden</pre></p>
+|Connection error or service unavailable.
+
+|===

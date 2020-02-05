@@ -1,0 +1,52 @@
+:title: Catalog Service Standards
+:type: subCoreConcept
+:section: Core Concepts
+:status: published
+:parent: Standards Supported by {branding}
+:order: 00
+:checkmark: image:checkmark.png[X]
+
+= Catalog Service Standards
+
+Service standards are implemented within xref:coreconcepts/endpoints-intro.adoc[Endpoints] and/or xref:coreconcepts/federation-intro.adoc[Sources].
+Standards marked *Experimental* are functional and have been tested, but are subject to change or removal during the incubation period.
+
+.Catalog Service Standards Included with {ddf-branding}
+[cols="2,1,1,1" options="header"]
+|===
+
+|Standard (public standards linked where available)
+|Endpoints
+|Sources
+|Status
+
+|http://www.opengeospatial.org/standards/cat[Open Geospatial Consortium Catalog Service for the Web (OGC CSW) 2.0.1/2.0.2] {external-link}
+|xref:integrating:endpoints/csw-endpoint.adoc[CSW Endpoint]
+|xref:managing:configuring/sources/gmd-csw-source.adoc[Geographic MetaData extensible markup language (GMD) CSW Source]
+|Supported
+
+|http://www.opengeospatial.org/standards/wfs[OGC Web Feature Service WFS 1.0/1.1/2.0] {external-link}
+|
+|xref:managing:configuring/sources/wfs-10-source.adoc[WFS 1.0 Source], xref:managing:configuring/sources/wfs-11-source.adoc[WFS 1.1 Source], xref:managing:configuring/sources/wfs-20-source.adoc[WFS 2.0 Source]
+|Supported
+
+|http://www.opengeospatial.org/standards/wps[OGC WPS 2.0] {external-link} Web Processing Service
+|xref:integrating:endpoints/configuring_wps_endpoint,WPS Endpoint>>
+|
+|Experimental
+
+|http://www.opensearch.org/Home[OpenSearch] {external-link}
+|xref:integrating:endpoints/opensearch-endpoint.adoc[OpenSearch Endpoint]
+|xref:managing:configuring/sources/opensearch-source.adoc[OpenSearch Source]
+|Supported
+
+|https://tools.ietf.org/html/rfc959[File Transfer Protocol (FTP)] {external-link}
+|xref:integrating:endpoints/ftp-endpoint.adoc[FTP Endpoint]
+|
+|Supported
+
+|Atlassian Confluence®
+|
+|xref:managing:configuring/sources/confluence-federated-source.adoc[Atlassian Confluence® Federated Source]
+|Supported
+|===

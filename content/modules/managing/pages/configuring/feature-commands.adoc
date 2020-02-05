@@ -1,0 +1,74 @@
+:title: Feature Commands
+:type: configuration
+:status: published
+:parent: Console Command Reference
+:order: 02
+:summary: Managing features from the {command-console}.
+
+== {title}
+
+Individual features can also be added via the {command-console}.
+
+. Determine which feature to install by viewing the available features on {branding}. +
+`{branding-lowercase}@local>feature:list`
+. The console outputs a list of all features available (installed and uninstalled). A snippet of the list output is shown below (the versions may differ):
+
+[subs="verbatim,attributes"]
+----
+State         Version            Name                                     Repository                           Description
+[installed  ] [{version}  ] security-handler-api                     security-services-app-{version} API for authentication handlers for web applications.
+[installed  ] [{version}  ] security-core                            security-services-app-{version} DDF Security Core
+[uninstalled] [{version}  ] security-expansion                       security-services-app-{version} DDF Security Expansion
+[installed  ] [{version}  ] security-pdp-authz                       security-services-app-{version} DDF Security PDP.
+[uninstalled] [{version}  ] security-pep-serviceauthz                security-services-app-{version} DDF Security PEP Service AuthZ
+[uninstalled] [{version}  ] security-expansion-user-attributes       security-services-app-{version} DDF Security Expansion User Attributes Expansion
+[uninstalled] [{version}  ] security-expansion-metacard-attributes   security-services-app-{version} DDF Security Expansion Metacard Attributes Expansion
+[installed  ] [{version}  ] security-sts-server                      security-services-app-{version} DDF Security STS.
+[installed  ] [{version}  ] security-sts-realm                       security-services-app-{version} DDF Security STS Realm.
+[uninstalled] [{version}  ] security-sts-ldaplogin                   security-services-app-{version} DDF Security STS JAAS LDAP Login.
+[uninstalled] [{version}  ] security-sts-ldapclaimshandler           security-services-app-{version} Retrieves claims attributes from an LDAP store.
+----
+. Check the bundle status to verify the service is started. +
+`{branding-lowercase}@local>list`
+
+The console output should show an entry similar to the following:
+[subs="verbatim,attributes"]
+----
+[ 117] [Active     ] [            ] [Started] [   75] {ddf-branding} :: Catalog :: Source :: Dummy (<version>)
+----
+
+=== Uninstalling Features from the {command-console}
+
+. Check the feature list to verify the feature is installed properly. +
+`{branding-lowercase}@local>feature:list`
+
+[subs="verbatim,attributes"]
+----
+State         Version          Name                          Repository  		   Description
+[installed  ] [{version}         ] {ddf-branding-lowercase}-core                      {ddf-branding-lowercase}-{version}
+[uninstalled] [{version}         ] {ddf-branding-lowercase}-sts                       {ddf-branding-lowercase}-{version}
+[installed  ] [{version}         ] {ddf-branding-lowercase}-security-common           {ddf-branding-lowercase}-{version}
+[installed  ] [{version}         ] {ddf-branding-lowercase}-resource-impl             {ddf-branding-lowercase}-{version}
+[installed  ] [{version}         ] {ddf-branding-lowercase}-source-dummy              {ddf-branding-lowercase}-{version}
+----
+
+. Uninstall the feature. +
+`{branding-lowercase}@local>feature:uninstall {branding-lowercase}-source-dummy`
+
+[WARNING]
+====
+Dependencies that were auto-installed by the feature are not automatically uninstalled.
+====
+
+. Verify that the feature has uninstalled properly. +
+`{branding-lowercase}@local>feature:list`
+
+[subs="verbatim,attributes"]
+----
+State         Version          Name                          Repository  Description
+[installed  ] [{version}         ] {ddf-branding-lowercase}-core                      {ddf-branding-lowercase}-{version}
+[uninstalled] [{version}         ] {ddf-branding-lowercase}-sts                       {ddf-branding-lowercase}-{version}
+[installed  ] [{version}         ] {ddf-branding-lowercase}-security-common           {ddf-branding-lowercase}-{version}
+[installed  ] [{version}         ] {ddf-branding-lowercase}-resource-impl             {ddf-branding-lowercase}-{version}
+[uninstalled] [{version}         ] {ddf-branding-lowercase}-source-dummy              {ddf-branding-lowercase}-{version}
+----
