@@ -5,11 +5,11 @@
 :order: 01
 :summary: Prevent invalid metacards from being displayed in query results, unless specifically queried.
 
-== {title}
+= Hiding Errors or Warnings from Queries
 
 Prevent invalid metacards from being displayed in query results, unless specifically queried.
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *{ddf-catalog}* application.
 . Select *Configuration*.
 . Select *Catalog Federation Strategy*.

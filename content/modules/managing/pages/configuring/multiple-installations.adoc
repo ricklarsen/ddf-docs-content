@@ -5,6 +5,6 @@
 :summary: Multiple installations
 :order: 00
 
-== {title}
+= Multiple Installations
 
-One common specialized configuration is installing multiple instances of ${branding}.
+One common specialized configuration is installing multiple instances of {branding}.

@@ -2,15 +2,15 @@
 :type: configuration
 :status: published
 :parent: Configuring UI Themes
-:summary: Configure logout pages displayed on ${branding}.
+:summary: Configure logout pages displayed on {branding}.
 :order: 01
 
-== {title}
+= Configuring Logout Page
 
-The logout pages is presented to users through the navigation of ${branding} and has a changeable timeout value.
+The logout pages is presented to users through the navigation of {branding} and has a changeable timeout value.
 
-. Navigate to the *${admin-console}*.
-. Select *${ddf-security}* Application.
+. Navigate to the *{admin-console}*.
+. Select *{ddf-security}* Application.
 . Select *Configuration* tab.
 . Select *Logout Page*.
 
@@ -20,4 +20,4 @@ time for the user to submit will be rejected.
 
 . *Default value*: 3600000 (milliseconds)
 
-See <<{reference-prefix}org.codice.ddf.security.idp.client.LogoutRequestService, Logout Configuration>> for detailed information.
+See xref:reference:tables/LogoutRequestService.adoc[Logout Configuration] for detailed information.

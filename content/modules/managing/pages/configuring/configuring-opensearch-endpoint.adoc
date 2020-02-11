@@ -5,13 +5,13 @@
 :summary: Configuring OpenSearch Endpoint
 :order: 04
 
-== {title}
+= Configuring OpenSearch Endpoint
 
 The OpenSearch endpoint enables a client to send query parameters and receive search results. This endpoint uses the input query parameters to create an OpenSearch query. The client does not need to specify all of the query parameters, only the query parameters of interest.
 
 To install the KML endpoint:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select *System*.
 . Select *Features*.
 . Install the `catalog-opensearch-endpoint` feature.

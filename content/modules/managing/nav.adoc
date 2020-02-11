@@ -28,7 +28,7 @@
 *** xref:installing/ie11-configuration.adoc[Internet Explorer 11 Enhanced Security Configuration]
 
 ** xref:installing/high-availability-initial-setup.adoc[High Availability Initial Setup]
-*** xref:installing/high-availability-initial-setup-exceptions.adoc[exceptions!]
+*** xref:installing/high-availability-initial-setup-exceptions.adoc[High Availability Setup Exceptions]
 
 *** xref:installing/configure-single-sign-on.adoc[Configuring Single Sign On]
 *** xref:installing/ddf-setup-types.adoc[Setup Types]
@@ -54,15 +54,10 @@
 *** xref:configuring/configuring-guest-access.adoc[Configuring Guest Access]
 *** xref:configuring/configuring-rest-for-users.adoc[Configuring REST Services for Users]
 **** xref:configuring/securing-idp-sp.adoc[Securing IdP SP]
-**** xref:configuring/sts-no-idp.adoc[STS no IdP]
 **** xref:configuring/configuring-oidc.adoc[Configuring OIDC]
-**** xref:configuring/configuring-sts.adoc[Configuring STS]
-**** xref:configuring/configuring-idp.adoc[Configuring Included Identity Provider]
 **** xref:configuring/connecting-to-external-idp.adoc[Connecting to an Identity Provider]
 **** xref:configuring/no-idp.adoc[Configuring Without an Identity Provider]
 **** xref:configuring/configuring-multi-factor-auth.adoc[Configuring Multi-Factor Authentication]
-*** xref:configuring/configuring-soap-for-users.adoc[Configuring SOAP Services for Users]
-**** xref:configuring/configuring-sts-for-soap.adoc[Connecting to Included STS with SOAP]
 *** xref:configuring/ldap-server.adoc[Connecting to an LDAP Server]
 *** xref:configuring/updating-system-users.adoc[Updating System Users]
 *** xref:configuring/securing-admin-console.adoc[Restricting Access to the Admin Console]
@@ -97,22 +92,25 @@
 **** xref:configuring/setting-internal-policies.adoc[Setting Internal Policies]
 **** xref:configuring/setting-xacml-policies.adoc[Setting XACML Policies]
 
-** xref:configuring/configuring-uis.adoc[Configuring User Interfaces]
-*** xref:configuring/configuring-intrigue.adoc[Configuring Intrigue]
-**** xref:configuring/default-layout-intrigue.adoc[Default Layout]
-**** xref:configuring/map-configuration-intrigue.adoc[Map Configuration]
-**** xref:configuring/map-layers-intrigue.adoc[Configuring Map Layers]
-**** xref:configuring/query-feedback.adoc[Query Feedback]
-**** xref:configuring/upload-editor-intrigue.adoc[Configuring Upload Editor]
-**** xref:configuring/uploading-and-editing.adoc[Uploading and Editing]
-**** xref:configuring/search-options.adoc[Search Options]
-
 ** xref:configuring/configuring-federation.adoc[Configuring Federation]
 *** xref:configuring/enabling-ssl.adoc[Enabling SSL for Clients]
 *** xref:configuring/http-port.adoc[Configuring HTTPS Ports]
 *** xref:configuring/http-proxy.adoc[Configuring HTTP Proxy]
 *** xref:configuring/connecting-to-sources.adoc[Connecting to Sources]
-**** _sources_
+**** xref:configuring/sources/confluence-federated-source.adoc[Federated Source for Atlassian Confluence(R)]
+**** xref:configuring/sources/csw-federated-source.adoc[CSW Specification Profile Federated Source]
+**** xref:configuring/sources/csw-federation-profile-source.adoc[CSW Federation Profile Source]
+**** xref:configuring/sources/default-storage-provider.adoc[Content File System Storage Provider]
+**** xref:configuring/sources/gmd-csw-source.adoc[GMD CSW Source]
+**** xref:configuring/sources/opensearch-source.adoc[OpenSearch Source]
+**** xref:configuring/sources/solr-catalog-provider.adoc[Solr Catalog Provider]
+**** xref:configuring/sources/wfs-10-source.adoc[WFS 1.0 Source]
+**** xref:configuring/sources/wfs-11-source.adoc[WFS 1.1 Source]
+**** xref:configuring/sources/wfs-20-source.adoc[WFS 2.0 Source]
+**** xref:configuring/sources/catalog-provider-intro.adoc[Catalog Provider Intro]
+**** xref:configuring/sources/federation-strategy.adoc[Federation Strategy]
+**** xref:configuring/sources/storage-provider-intro.adoc[Storage Provider]
+
 *** xref:configuring/configuring-endpoints.adoc[Configuring Endpoints]
 **** xref:configuring/configuring-csw-endpoint.adoc[Configuring CSW Endpoint]
 **** xref:configuring/configuring-catalog-rest-endpoint.adoc[Configuring Catalog REST Endpoint]
@@ -121,10 +119,6 @@
 **** xref:configuring/configuring-opensearch-endpoint.adoc[Configuring OpenSearch Endpoint]
 **** xref:configuring/configuring-wps-endpoint.adoc[Configuring WPS Endpoint]
 **** xref:configuring/compression-services.adoc[Configuring Compression Services]
-*** xref:configuring/connecting-to-registry.adoc[Federating Through a Registry]
-**** xref:configuring/configuring-identity-node.adoc[Configuring Identity Node]
-**** xref:configuring/publishing-to-node.adoc[Publishing to a Node]
-**** xref:configuring/subscribing-to-node.adoc[Subscribing to a Node]
 
 ** xref:configuring/environment-hardening.adoc[Environment Hardening]
 
@@ -133,7 +127,6 @@
 **** xref:configuring/reusing-configurations.adoc[Reusing Configurations]
 **** xref:configuring/isolating-solrcloud-zookeeper.adoc[Isolating SolrCloud and Zookeeper]
 *** xref:configuring/configuring-fanout-proxy.adoc[Configuring for a Fanout Proxy]
-*** xref:configuring/standalone-sts.adoc[Standalone Security Token Service Installation]
 *** xref:configuring/high-availability-config.adoc[Configuring for a Highly Available Cluster]
 
 ** xref:configuring/admin-theming-configurations.adoc[Configuring UI Themes]
@@ -149,9 +142,8 @@
 
 * xref:running/running-intro.adoc[Running]
 ** xref:running/starting-intro.adoc[Starting]
-*** xref:running/ddf-service.adoc[Run DDF as a Managed Service]
 ** xref:running/os-services.adoc[Managed Services]
-*** xref:running/solr-service.adoc[Run Solr as Managed Service]
+*** xref:running/ddf-service.adoc[Run DDF as a Managed Service]
 ** xref:running/console-commands.adoc[Console Commands]
 *** xref:running/console-commands-help.adoc[Console Commands Help]
 *** xref:running/cql-syntax.adoc[CQL Syntax]
@@ -165,7 +157,6 @@
 *** xref:running/command-scheduler.adoc[Command Scheduler]
 ** xref:running/monitoring.adoc[Monitoring]
 ** xref:running/troubleshooting.adoc[Troubleshooting]
-*** xref:running/troubleshooting-ui.adoc[Troubleshooting UI]
 
 * Data Management
 ** xref:datamanagement/ingesting.adoc[Ingesting Data]
@@ -204,8 +195,4 @@
 **** xref:datamanagement/attributes-added-by-pre-ingest-plugins.adoc[Attributes Added by Pre-Ingest Plugins]
 *** xref:datamanagement/attributes-added-on-query.adoc[Attributes Added on Query]
 **** xref:datamanagement/attributes-added-by-attribute-overrides-query.adoc[Attributes Added by Attribute Overrides (Query)]
-
-
-
-
 

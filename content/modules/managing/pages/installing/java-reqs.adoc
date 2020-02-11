@@ -4,7 +4,7 @@
 :parent: Installation Prerequisites
 :order: 01
 
-== Java Requirements
+= Java Requirements
 For a runtime system:
 
 * https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html[JRE 8 x64] {external-link} or https://openjdk.java.net/install[OpenJDK 8 JRE] {external-link} must be installed.
@@ -24,7 +24,7 @@ For a development system:
 
 [NOTE]
 ====
-Prior to installing ${branding}, ensure the system time is accurate to prevent federation issues.
+Prior to installing {branding}, ensure the system time is accurate to prevent federation issues.
 ====
 
 .*NIX Unset JAVA_HOME if Previously Set

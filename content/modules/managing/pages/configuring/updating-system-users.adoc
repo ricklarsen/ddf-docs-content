@@ -5,14 +5,14 @@
 :parent: Configuring User Access
 :order: 04
 
-== {title}
+= Updating System Users
 
-By default, all system users are located in the `${home_directory}/etc/users.properties` and `${home_directory}/etc/users.attributes` files.
+By default, all system users are located in the `{home_directory}/etc/users.properties` and `{home_directory}/etc/users.attributes` files.
 The default users included in these two files are "admin" and "localhost".
 The `users.properties` file contains username, password, and role information; while the `users.attributes` file is used to mix in additional attributes.
-The `users.properties` file must also contain the user corresponding to the fully qualified domain name (FQDN) of the system where ${branding} is running.
+The `users.properties` file must also contain the user corresponding to the fully qualified domain name (FQDN) of the system where {branding} is running.
 This FQDN user represents this host system internally when making decisions about what operations the system is capable of performing.
-For example, when performing a ${branding} Catalog Ingest, the system's attributes will be checked against any security attributes present on the metacard, prior to ingest, to determine whether or not the system should be allowed to ingest that metacard.
+For example, when performing a {branding} Catalog Ingest, the system's attributes will be checked against any security attributes present on the metacard, prior to ingest, to determine whether or not the system should be allowed to ingest that metacard.
 
 Additionally, the `users.attributes` file can contain user entries in a regex format.
 This allows an administrator to mix in attributes for external systems that match a particular regex pattern.

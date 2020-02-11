@@ -5,7 +5,7 @@
 :summary: Catalog filtering.
 :order: 01
 
-== {title}
+= Configuring Catalog Filtering Policies
 
 Filtering is the process of evaluating security markings on data resources, comparing them to the users permissions and protecting resources from inappropriate access.
 

@@ -7,5 +7,5 @@
 
 == {title}
 
-The default catalog provider for ${branding} is <<{managing-prefix}solr_catalog_provider,Solr>>.
-If using another catalog provider, see <<{managing-prefix}changing_catalog_providers,Changing Catalog Providers>>.
+The default catalog provider for {branding} is xref:managing:configuring/sources/solr-catalog-provider.adoc[Solr].
+If using another catalog provider, see xref:managing:configuring/catalog-provider.adoc[Changing Catalog Providers].

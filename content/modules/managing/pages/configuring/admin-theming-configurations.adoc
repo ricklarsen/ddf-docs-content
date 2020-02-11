@@ -5,6 +5,6 @@
 :order: 11
 :Summary: Configuring UI themes.
 
-== {title}
+= Configuring UI Themes
 
-The optional configurations in this section cover minor changes that can be made to optimize ${branding} appearance.
+The optional configurations in this section cover minor changes that can be made to optimize {branding} appearance.

@@ -5,6 +5,6 @@
 :parent: Configuring
 :order: 07
 
-== {title}
+= Configuring Security Policies
 
-User attributes and Data attributes are matched by security policies defined within ${branding}.
+User attributes and Data attributes are matched by security policies defined within {branding}.

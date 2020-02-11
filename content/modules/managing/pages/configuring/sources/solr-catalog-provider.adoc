@@ -9,9 +9,9 @@
 :storageprovider:
 :catalogstore:
 
-== {title}
+= Solr Catalog Provider
 
-The Solr Catalog Provider is included with a standard installation of ${branding}.
+The Solr Catalog Provider is included with a standard installation of {branding}.
 
 .[[_solr_cloud]]SolrCloud
 SolrCloud is a cluster of distributed Solr servers used for high availability and scalability.
@@ -57,8 +57,8 @@ Configuration shared between Solr Server instances is managed by Zookeeper.
 
 .SolrCloud Prerequisites
 
-* https://lucene.apache.org/solr/downloads.html[Solr ${solr.version}] {external-link}
-* https://zookeeper.apache.org/releases.html#download[ZooKeeper ${solr.zookeeper.version}] {external-link}
+* https://lucene.apache.org/solr/downloads.html[Solr {solr.version}] {external-link}
+* https://zookeeper.apache.org/releases.html#download[ZooKeeper {solr.zookeeper.version}] {external-link}
 * JRE 8 or greater
 
 [NOTE]
@@ -67,7 +67,7 @@ A minimum of three Zookeeper nodes required.
 Three Zookeeper nodes are needed to form a quorum.
 A three Zookeeper ensemble allows for a single server to fail and the service will still be available.
 More Zookeeper nodes can be added to achieve greater fault tolerance. The total number of nodes must always be an odd number.
-See https://lucene.apache.org/solr/guide/${solr.docs.version}/setting-up-an-external-zookeeper-ensemble.html#SettingUpanExternalZooKeeperEnsemble-SettingupaZooKeeperEnsemble[
+See https://lucene.apache.org/solr/guide/{solr.docs.version}/setting-up-an-external-zookeeper-ensemble.html#SettingUpanExternalZooKeeperEnsemble-SettingupaZooKeeperEnsemble[
 Setting Up an External Zoo Keeper Ensemble] for more information.
 ====
 
@@ -75,11 +75,11 @@ Setting Up an External Zoo Keeper Ensemble] for more information.
 
 Review and complete the following Zookeeper and Solr documentation:
 
-* https://lucene.apache.org/solr/guide/${solr.docs.version}/getting-started.html[Getting Started] {external-link}
-* https://zookeeper.apache.org/doc/r${solr.zookeeper.version}/zookeeperStarted.html[ZooKeeper Getting Started Guide] {external-link}
-* https://lucene.apache.org/solr/guide/${solr.docs.version}/setting-up-an-external-zookeeper-ensemble.html#SettingUpanExternalZooKeeperEnsemble-SettingupaZooKeeperEnsemble[Setting Up an External Zookeeper Ensemble] {external-link}
-* https://lucene.apache.org/solr/guide/${solr.docs.version}/taking-solr-to-production.html[Taking Solr to Production] {external-link}
-* https://lucene.apache.org/solr/guide/${solr.docs.version}/securing-solr.html[Securing Solr] {external-link}
+* https://lucene.apache.org/solr/guide/{solr.docs.version}/getting-started.html[Getting Started] {external-link}
+* https://zookeeper.apache.org/doc/r{solr.zookeeper.version}/zookeeperStarted.html[ZooKeeper Getting Started Guide] {external-link}
+* https://lucene.apache.org/solr/guide/{solr.docs.version}/setting-up-an-external-zookeeper-ensemble.html#SettingUpanExternalZooKeeperEnsemble-SettingupaZooKeeperEnsemble[Setting Up an External Zookeeper Ensemble] {external-link}
+* https://lucene.apache.org/solr/guide/{solr.docs.version}/taking-solr-to-production.html[Taking Solr to Production] {external-link}
+* https://lucene.apache.org/solr/guide/{solr.docs.version}/securing-solr.html[Securing Solr] {external-link}
 
 [NOTE]
 ====
@@ -95,18 +95,18 @@ The `jute.maxbuffer` property needs to be set on Zookeeper and SolrCloud nodes t
 
 The JARs can be downloaded from:
 
-.. http://artifacts.codice.org/content/groups/public/org/locationtech/jts/jts-core/${jts.spatial4j.version}/jts-core-${jts.spatial4j.version}.jar[jts-core-${jts.spatial4j.version}.jar] {external-link}
-.. http://artifacts.codice.org/service/local/repositories/releases/content/ddf/platform/solr/solr-xpath/${ddf.version}/solr-xpath-${ddf.version}.jar[solr-xpath-${ddf.version}.jar] {external-link}
+.. http://artifacts.codice.org/content/groups/public/org/locationtech/jts/jts-core/{jts.spatial4j.version}/jts-core-{jts.spatial4j.version}.jar[jts-core-{jts.spatial4j.version}.jar] {external-link}
+.. http://artifacts.codice.org/service/local/repositories/releases/content/ddf/platform/solr/solr-xpath/{ddf.version}/solr-xpath-{ddf.version}.jar[solr-xpath-{ddf.version}.jar] {external-link}
 
 Repeat the following procedure for each Zookeeper and SolrCloud node instance:
 
 . Add `jute.maxbuffer=0x30D40` to `<ZOOKEEPER_INSTALL_DIR>/conf/zoo.cfg`.
 . Add `SOLR_OPTS="$SOLR_OPTS -Djute.maxbuffer=0x30D40"` to `<SOLR_INSTALL_DIR>/bin/solr.in.cmd`.
-. Copy `jts-core-${jts.spatial4j.version}.jar` to: `<SOLR_INSTALL_DIR>/server/solr-webapp/webapp/WEB-INF/lib/`.
-. Copy `solr-xpath-${ddf.version}.jar` to: `<SOLR_INSTALL_DIR>/plugins/`.
+. Copy `jts-core-{jts.spatial4j.version}.jar` to: `<SOLR_INSTALL_DIR>/server/solr-webapp/webapp/WEB-INF/lib/`.
+. Copy `solr-xpath-{ddf.version}.jar` to: `<SOLR_INSTALL_DIR>/plugins/`.
 
-.Configuring ${branding} for SolrCloud
-. On the ${branding} server, edit `${home_directory}/etc/custom.system.properties`:
+.Configuring {branding} for SolrCloud
+. On the {branding} server, edit `{home_directory}/etc/custom.system.properties`:
 .. Comment out the Solr Client Configuration for *Http Solr Client* section.
 .. Uncomment the section for the *Cloud Solr Client*:
 .. Set `solr.cloud.zookeeper` to `<ZOOKEEPER_1_HOSTNAME>:<PORT_NUMBER>`, `<ZOOKEEPER_2_HOSTNAME>:<PORT_NUMBER>`, `<ZOOKEEPER_n_HOSTNAME>:<PORT_NUMBER>`
@@ -115,6 +115,6 @@ Repeat the following procedure for each Zookeeper and SolrCloud node instance:
 .SolrCloud System Properties
 ----
 solr.client = CloudSolrClient
-solr.data.dir = ${karaf.home}/data/solr
+solr.data.dir = {karaf.home}/data/solr
 solr.cloud.zookeeper = zk1:2181,zk2:2181,zk3:2181
 ----

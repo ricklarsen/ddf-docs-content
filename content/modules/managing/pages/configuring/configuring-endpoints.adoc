@@ -5,6 +5,6 @@
 :order: 049
 :summary: Configuring endpoints.
 
-== {title}
+= Configuring Endpoints
 
-Configure endpoints to enable external systems to send and receive content and metadata from ${branding}.
+Configure endpoints to enable external systems to send and receive content and metadata from {branding}.

@@ -5,18 +5,18 @@
 :summary: Configuring without SAML.
 :order: 20
 
-== {title}
+= Configuring Without SAML
 
-To configure ${branding} to not use a SAML Identity Provider (IdP),
+To configure {branding} to not use a SAML Identity Provider (IdP),
 
 . Disable the 'security-handler-saml' feature.
-.. Navigate to the *${admin-console}*.
+.. Navigate to the *{admin-console}*.
 .. Select the *System* tab.
 .. Select the *Features* tab.
 .. Uninstall the `security-handler-saml` feature.
 . Change the Authentication Type if it is SAML.
-.. Navigate to the *${admin-console}*.
-.. Select the *${ddf-security}* application.
+.. Navigate to the *{admin-console}*.
+.. Select the *{ddf-security}* application.
 .. Select the *Configuration* tab.
 .. Select *Web Context Policy Manager*
 .. Under *Authentication Types*, remove the SAML authentication type from all context paths.

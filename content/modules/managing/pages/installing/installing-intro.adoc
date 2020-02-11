@@ -4,14 +4,14 @@
 :summary: Introduction to installation instructions.
 :order: 01
 
-== {title}
+= Installing
 
-Set up a complete, secure instance of ${branding}.
-For simplified steps used for a testing, development, or demonstration installation, see the <<{quickstart-prefix}quick_start_tutorial,${branding} Quick Start>>.
+Set up a complete, secure instance of {branding}.
+For simplified steps used for a testing, development, or demonstration installation, see the <<{quickstart-prefix}quick_start_tutorial,{branding} Quick Start>>.
 
 [IMPORTANT]
 ====
-Although ${branding} can be installed by any user, it is recommended for security reasons to have a non-`root` user execute the ${branding} installation.
+Although {branding} can be installed by any user, it is recommended for security reasons to have a non-`root` user execute the {branding} installation.
 ====
 
 [NOTE]

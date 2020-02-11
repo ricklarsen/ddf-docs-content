@@ -5,34 +5,34 @@
 :summary: Configure authentication via SAML 2.0 Web SSO.
 :order: 00
 
-== {title}
+= Included SAML Service Provider
 
-The ${ddf-security} SAML handler provides service provider handling that satisfies the http://docs.oasis-open.org/security/saml/v2.0/saml-profiles-2.0-os.pdf[SAML 2.0 Web SSO profile] in order to support external SAML IdPs (Identity Providers).
+The {ddf-security} SAML handler provides service provider handling that satisfies the http://docs.oasis-open.org/security/saml/v2.0/saml-profiles-2.0-os.pdf[SAML 2.0 Web SSO profile] in order to support external SAML IdPs (Identity Providers).
 
 The SAML handler is used for SSO authentication purposes.
 
-=== Installing the SAML Web SSO handler
+== Installing the SAML Web SSO handler
 
-The Web SSO bundles are installed by default with the ${ddf-security} application.
+The Web SSO bundles are installed by default with the {ddf-security} application.
 
-. Install the `security-handler-saml` feature either by command line: `features:install security-handler-saml`, or by the ${admin-console}: *System* tab -> *Features* tab -> `security-handler-saml`
+. Install the `security-handler-saml` feature either by command line: `features:install security-handler-saml`, or by the {admin-console}: *System* tab -> *Features* tab -> `security-handler-saml`
 
-=== Configuring SAML Web SSO
+== Configuring SAML Web SSO
 
-. Navigate to *${admin-console}*.
-. Select the *${ddf-security}* application.
+. Navigate to *{admin-console}*.
+. Select the *{ddf-security}* application.
 . Select the *Configuration* tab.
 . Select *SAML Handler*.
 . Populate IdP Metadata field through one of the following:
 .. An HTTPS URL (https://)
 .. A file URL (file:)
 .. An XML block to refer to desired metadata
-... (e.g., \${secure_url}/services/idp/login/metadata)
+... (e.g., \{secure_url}/services/idp/login/metadata)
 
 .SAML 2.0 Web SSO Client (SP) example.xml
 [source,xml,linenums]
 ----
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="${secure_url}/services/idp/login">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="{secure_url}/services/idp/login">
   <md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
     <md:KeyDescriptor use="signing">
       <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
@@ -52,8 +52,8 @@ The Web SSO bundles are installed by default with the ${ddf-security} applicatio
         </ds:X509Data>
       </ds:KeyInfo>
     </md:KeyDescriptor>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="${secure_url}/logout"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="${secure_url}/logout"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="{secure_url}/logout"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="{secure_url}/logout"/>
     <md:NameIDFormat>
       urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
     </md:NameIDFormat>
@@ -63,18 +63,18 @@ The Web SSO bundles are installed by default with the ${ddf-security} applicatio
     <md:NameIDFormat>
       urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName
     </md:NameIDFormat>
-    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="${secure_url}/services/idp/login"/>
-    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="${secure_url}/services/idp/login"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="{secure_url}/services/idp/login"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="{secure_url}/services/idp/login"/>
   </md:IDPSSODescriptor>
 </md:EntityDescriptor>
 ----
 
-=== Configuring Authentication Types for SAML IdP
+== Configuring Authentication Types for SAML IdP
 
 Set the authentication types in the `WebContextPolicyManager` to SAML.
 
-. Navigate to the *${admin-console}*.
-. Select the *${ddf-security}* application.
+. Navigate to the *{admin-console}*.
+. Select the *{ddf-security}* application.
 . Select the *Configuration* tab.
 . Select *Web Context Policy Manager*
 . Under *Authentication Types*, set the SAML authentication type_ as necessary.

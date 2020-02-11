@@ -4,7 +4,9 @@
 :summary: Monitoring an installed instance.
 :order: 00
 
-The ${branding} contains many tools to monitor system functionality, usage, and overall system health.
+= Monitoring
+
+The {branding} contains many tools to monitor system functionality, usage, and overall system health.
 
 == Metrics Reporting
 
@@ -12,7 +14,7 @@ Metrics are available in several formats and levels of detail.
 
 Complete the following procedure now that several queries have been executed.
 
-. Select *${ddf-platform}*
+. Select *{ddf-platform}*
 . Select *Metrics* tab
 . For individual metrics, choose the format desired from the desired timeframe column:
 .. PNG
@@ -23,25 +25,25 @@ A report is generated in _xls_ format.
 
 === Managing Logging
 
-The ${branding} supports a dynamic and customizable logging system including log level, log format, log output destinations, roll over, etc.
+The {branding} supports a dynamic and customizable logging system including log level, log format, log output destinations, roll over, etc.
 
 ==== Configuring Logging
 
-Edit the configuration file `${home_directory}/etc/org.ops4j.pax.logging.cfg]`
+Edit the configuration file `{home_directory}/etc/org.ops4j.pax.logging.cfg]`
 
-==== ${branding} log file
+==== {branding} log file
 
 The name and location of the log file can be changed with the following setting:
 
-`log4j.appender.out.file=${home_directory}/data/log/${branding-lowercase}.log`
+`log4j.appender.out.file={home_directory}/data/log/{branding-lowercase}.log`
 
-===== Controlling log level
+===== Controlling Log Level
 
 A useful way to debug and detect issues is to change the log level:
 
 `log4j.rootLogger=DEBUG, out, osgi:VmLogAppender`
 
-===== Controlling the size of the log file
+===== Controlling the Size of the Log File
 
 Set the maximum size of the log file before it is rolled over by editing the value of this setting:
 
@@ -53,15 +55,15 @@ Adjust the number of backup files to keep by editing the value of this setting:
 
 `log4j.appender.out.maxBackupIndex=10`
 
-===== Enabling logging of inbound and outbound SOAP messages for the ${branding} SOAP endpoints
+===== Enabling logging of inbound and outbound SOAP messages for the {branding} SOAP endpoints
 
-By default, the ${branding} start scripts include a system property enabling logging of inbound and outbound SOAP messages.
+By default, the {branding} start scripts include a system property enabling logging of inbound and outbound SOAP messages.
 
 `-Dcom.sun.xml.ws.transport.http.HttpAdapter.dump=true`
 
 In order to see the messages in the log, one must set the logging level for `org.apache.cxf.services` to `INFO`. By default, the logging level for `org.apache.cxf` is set to `WARN`.
 
-`${branding-lowercase}${at-symbol}local>log:set INFO org.apache.cxf.services`
+`{branding-lowercase}{at-symbol}local>log:set INFO org.apache.cxf.services`
 
 ===== Logging External Resources
 
@@ -71,7 +73,7 @@ For more detail on configuring the log file and what is logged to the console se
 
 ===== Enabling HTTP Access Logging
 
-To enable access logs for the current ${branding}, do the following:
+To enable access logs for the current {branding}, do the following:
 
 * Update the `jetty.xml` file located in `etc/` adding the following xml:
 
@@ -111,7 +113,7 @@ This is the most popular format for access logs and can be parsed by many web se
 
 === Using the LogViewer
 
-* Navigate to the ${admin-console}
+* Navigate to the {admin-console}
 * Navigate to the *System* tab
 * Select *Logs*
 
@@ -122,7 +124,7 @@ Log events can be filtered by:
 
 * Log level (`ERROR`, `WARNING`, etc).
 ** The LogViewer will display at the currently configured log level for the Karaf logs.
-*** See <<{managing-prefix}controlling_log_level, Controlling Log Level>> to change log level.
+*** See xref:managing:running/monitoring.adoc#controlling_log_level[Controlling Log Level] to change log level.
 * Log message text.
 * Bundle generating the message.
 
@@ -131,7 +133,7 @@ Log events can be filtered by:
 It is not recommended to use the LogViewer if the system logger is set to a low reporting level such as `TRACE`.
 The volume of messages logged will exceed the polling rate, and incoming logs may be missed.
 
-The actual logs being polled by the LogViewer can still be accessed at `${home_directory}/data/log`
+The actual logs being polled by the LogViewer can still be accessed at `{home_directory}/data/log`
 ====
 
 [NOTE]

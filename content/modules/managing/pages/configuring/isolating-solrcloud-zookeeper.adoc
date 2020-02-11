@@ -5,7 +5,7 @@
 :summary: Isolating SolrCloud and Zookeeper.
 :order: 01
 
-== {title}
+= Isolating SolrCloud and Zookeeper
 
 * *{hardening-step}* (if using SolrCloud/Zookeeper)
 
@@ -13,9 +13,9 @@ Zookeeper clients cannot use secure (SSL/TLS) connections.
 The configuration information that Zookeeper sends and receives is vulnerable to network sniffing.
 Any unencrypted network traffic is vulnerable to sniffing attacks.
 To use SolrCloud with Zookeeper securely, these processes must be isolated on the network, or their communications must be encrypted by other means.
-The ${branding} process must be visible on the network to allow authorized parties to interact with it.
+The {branding} process must be visible on the network to allow authorized parties to interact with it.
 
 .Examples of Isolation:
-* Create a private network for SolrCloud and Zookeeper. Only ${branding} is allowed to contact devices inside the private network.
-* Use IPsec to encrypt the connections between ${branding}, SolrCloud nodes, and Zookeeper nodes.
-* Put ${branding}, SolrCloud and Zookeeper behind a firewall that only allows access to ${branding}.
+* Create a private network for SolrCloud and Zookeeper. Only {branding} is allowed to contact devices inside the private network.
+* Use IPsec to encrypt the connections between {branding}, SolrCloud nodes, and Zookeeper nodes.
+* Put {branding}, SolrCloud and Zookeeper behind a firewall that only allows access to {branding}.

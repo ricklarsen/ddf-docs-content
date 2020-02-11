@@ -5,18 +5,18 @@
 :summary: Configuring HTTP Proxy.
 :order: 02
 
-== {title}
+= Configuring HTTP Proxy
 
 The `platform-http-proxy` feature proxies https to http for clients that cannot use HTTPS and should not have HTTP enabled for the entire container via the `etc/org.ops4j.pax.web.cfg` file.
 
-.Enabling the HTTP Proxy from the ${admin-console}
-. Navigate to the *${admin-console}*.
+.Enabling the HTTP Proxy from the {admin-console}
+. Navigate to the *{admin-console}*.
 . Select the *System* tab.
 . Select the *Features* tab.
 . Select `platform-http-proxy`.
 . Select the *Play* button to the right of the word “Uninstalled”
 
-.Enabling the HTTP Proxy from the ${command-console}
+.Enabling the HTTP Proxy from the {command-console}
 * Type the command `feature:install platform-http-proxy`
 
 .Configuring HTTP Proxy Hostname

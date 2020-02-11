@@ -4,7 +4,9 @@
 :summary: Starting and stopping an instance.
 :order: 01
 
-Follow the below steps to start and stop ${branding}.
+= Starting Intro
+
+Follow the below steps to start and stop {branding}.
 
 == Starting from Startup Scripts
 
@@ -12,46 +14,46 @@ Run one of the start scripts from a command shell to start the distribution and 
 
 .Start Script: *NIX
 ----
-${home_directory}/bin/${branding-lowercase}
+{home_directory}/bin/{branding-lowercase}
 ----
 
 .Start Script: Windows
 ----
-${home_directory}/bin/${branding-lowercase}.bat
+{home_directory}/bin/{branding-lowercase}.bat
 ----
 
 == Starting as a Background Process
 
-Alternatively, to run ${branding} as a background process, run the `start` script:
+Alternatively, to run {branding} as a background process, run the `start` script:
 
 .*NIX
 ----
-${home_directory}/bin/start
+{home_directory}/bin/start
 ----
 
 .Windows
 ----
-${home_directory}/bin/start.bat
+{home_directory}/bin/start.bat
 ----
 
 [NOTE]
 ====
-If console access is needed while running as a service, run the `client` script on the host where the ${branding} is running:
+If console access is needed while running as a service, run the `client` script on the host where the {branding} is running:
 
 .*NIX
 ----
-${home_directory}/bin/client
+{home_directory}/bin/client
 ----
 
 .Windows
 ----
-${home_directory}/bin/client.bat -h <FQDN>
+{home_directory}/bin/client.bat -h <FQDN>
 ----
 
-Use the `-h` option followed by the name (`<FQDN>`) or IP of the host where ${branding} is running.
+Use the `-h` option followed by the name (`<FQDN>`) or IP of the host where {branding} is running.
 ====
 
-== Stopping ${branding}
+== Stopping {branding}
 
 There are two options to stop a running instance:
 
@@ -59,12 +61,12 @@ There are two options to stop a running instance:
 
 .Shut down with a prompt
 ----
-${branding-lowercase}${at-symbol}local>shutdown
+{branding-lowercase}{at-symbol}local>shutdown
 ----
 
 .Force Shutdown without prompt
 ----
-${branding-lowercase}${at-symbol}local>shutdown -f
+{branding-lowercase}{at-symbol}local>shutdown -f
 ----
 
 * Keyboard shortcut for shutdown
@@ -74,18 +76,18 @@ ${branding-lowercase}${at-symbol}local>shutdown -f
 
 .*NIX
 ----
-${home_directory}/bin/stop
+{home_directory}/bin/stop
 ----
 
 .Windows
 ----
-${home_directory}/bin/stop.bat
+{home_directory}/bin/stop.bat
 ----
 
 .Shut Down
 [IMPORTANT]
 ====
 Do not shut down by closing the window (Windows, Unix) or using the `kill -9 <pid>` command (Unix).
-This prevents a clean shutdown and can cause significant problems when ${branding} is restarted.
+This prevents a clean shutdown and can cause significant problems when {branding} is restarted.
 Always use the shutdown command or the shortcut from the command line console.
 ====

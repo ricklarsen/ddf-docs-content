@@ -5,7 +5,7 @@
 :summary: Data migration commands available.
 :order: 05
 
-== {title}
+= Migrate Commands
 
 .[[_migrate_command_descriptions]]Migrate Command Descriptions
 

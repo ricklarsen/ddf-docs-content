@@ -5,13 +5,13 @@
 :summary: Configuring WPS Endpoint
 :order: 05
 
-== {title}
+= Configuring WPS Endpoint
 
 The WPS endpoint enables a client to execute and monitor long running processes.
 
 To install the WPS endpoint:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select *System*.
 . Select *Features*.
 . Install the `spatial-wps` feature.

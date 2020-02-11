@@ -9,19 +9,19 @@
 :storageprovider: x
 :catalogstore:
 
-== {title}
+= Content File System Storage Provider
 
-The Content File System Storage Provider is the default Storage Provider included with ${branding}
+The Content File System Storage Provider is the default Storage Provider included with {branding}
 
 .Installing the Content File System Storage Provider
-The Content File System Storage Provider is installed by default with the ${ddf-catalog} application.
+The Content File System Storage Provider is installed by default with the {ddf-catalog} application.
 
 .Configuring Content File System Storage Provider
 To configure the Content File System Storage Provider:
 
-. Navigate to the *${admin-console}*.
-. Select *${ddf-catalog}*.
+. Navigate to the *{admin-console}*.
+. Select *{ddf-catalog}*.
 . Select *Configuration*.
 . Select *Content File System Storage Provider*.
 
-See <<{reference-prefix}org.codice.ddf.catalog.content.impl.FileSystemStorageProvider,Content File System Storage Provider configurations>> for all possible configurations.
+See xref:reference:tables/ContentFileSystemStorageProvider.adoc[Content File System Storage Provider configurations] for all possible configurations.

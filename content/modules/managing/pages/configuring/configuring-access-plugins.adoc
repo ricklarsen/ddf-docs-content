@@ -5,23 +5,23 @@
 :parent: Configuring Data Management
 :order: 06
 
-== {title}
+= Configuring Data Access Plugins
 
 Configure access plugins to act upon the rules and attributes configured by the policy plugins and user attributes.
 
 
-=== Configuring the Security Audit Plugin
+== Configuring the Security Audit Plugin
 
-The <<{architecture-prefix}security_audit_plugin,Security Audit Plugin>> audits specific metacard attributes.
+The xref:architectures:security-audit-plugin.adoc[Security Audit Plugin] audits specific metacard attributes.
 
 To configure the Security Audit Plugin:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select *{ddf-catalog}* application.
 . Select *Configuration* tab.
 . Select *Security Audit Plugin*.
 
 Add the desired metacard attributes that will be audited when modified.
 
-See <<{reference-prefix}org.codice.ddf.catalog.plugin.security.audit.SecurityAuditPlugin,Security Audit Plugin configurations>> for all possible configurations.
+See xref:reference:tables/SecurityAuditPlugin.adoc[Security Audit Plugin configurations] for all possible configurations.
 

@@ -7,9 +7,9 @@ nav:
 - modules/introduction/nav.adoc
 - modules/quickstart/nav.adoc
 - modules/managing/nav.adoc
-- modules/using/nav.adoc
-- modules/integrating/nav.adoc
-- modules/architectures/nav.adoc
-- modules/developing/nav.adoc
-- modules/reference/nav.adoc
-- modules/metadataReference/nav.adoc
+#- modules/using/nav.adoc
+#- modules/integrating/nav.adoc
+#- modules/architectures/nav.adoc
+#- modules/developing/nav.adoc
+#- modules/reference/nav.adoc
+#- modules/metadataReference/nav.adoc

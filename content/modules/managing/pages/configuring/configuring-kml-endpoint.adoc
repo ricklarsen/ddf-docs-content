@@ -5,7 +5,7 @@
 :summary: Configuring KML Endpoint
 :order: 03
 
-== {title}
+= Configuring KML Endpoint
 
 Keyhole Markup Language (_KML_) is an XML notation for describing geographic annotation and visualization for 2- and 3- dimensional maps.
 
@@ -25,16 +25,16 @@ This may contain the general purpose of the network and URLs to external resourc
 
 To install the KML endpoint:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select *System*.
 . Select *Features*.
 . Install the `spatial-kml` feature.
 
 To configure the KML endpoint:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select *System*.
 . Select *Features*.
 . Select *KML Endpoint*.
 
-See <<{reference-prefix}org.codice.ddf.spatial.kml.endpoint.KmlEndpoint,KML Endpoint configurations>> for all possible configurations.
+See xref:reference:tables/KmlEndpoint.adoc[KML Endpoint configurations] for all possible configurations.

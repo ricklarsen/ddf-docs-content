@@ -5,11 +5,11 @@
 :summary: Hardening Solr.
 :order: 02
 
-== {title}
+= Hardening Solr
 
-Follow instructions on https://lucene.apache.org/solr/guide/${solr.docs.version}/securing-solr.html[Securing Solr] {external-link}.
+Follow instructions on https://lucene.apache.org/solr/guide/{solr.docs.version}/securing-solr.html[Securing Solr] {external-link}.
 
-=== Configuring Solr Encryption
+== Configuring Solr Encryption
 
 While it is possible to encrypt the Solr index, it decreases performance significantly.
 An encrypted Solr index also can only perform exact match queries, not relative or contextual queries.

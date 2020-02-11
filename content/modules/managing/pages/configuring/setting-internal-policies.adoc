@@ -5,10 +5,10 @@
 :summary: Setting Internal Policies.
 :order: 00
 
-== {title}
+= Setting Internal Policies
 
-. Navigate to the *${admin-console}*.
-. Select the *${ddf-security}* application.
+. Navigate to the *{admin-console}*.
+. Select the *{ddf-security}* application.
 . Click the *Configuration* tab.
 . Click on the *Security AuthZ Realm* configuration.
 . Add any attribute mappings necessary to map between subject attributes and the attributes to be asserted.

@@ -34,7 +34,7 @@ forms: "forms.json"
 results: "results.json"
 ```
 
-Example search forms and result form data can be found in `${home_directory}/etc/forms/readme.md`.
+Example search forms and result form data can be found in `{home_directory}/etc/forms/readme.md`.
 
 Managing Forms
 

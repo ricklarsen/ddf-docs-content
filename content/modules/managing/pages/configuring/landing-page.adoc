@@ -5,30 +5,30 @@
 :summary: Configure landing page.
 :order: 00
 
-== {title}
+= Landing Page
 
-The Landing Page is the first page presented to users of ${branding}.
+The Landing Page is the first page presented to users of {branding}.
 It is customizable to allow adding organizationally-relevant content.
 
-=== Installing the Landing Page
+== Installing the Landing Page
 
 The Landing Page is installed by default with a standard installation.
 
-=== Configuring the Landing Page
+== Configuring the Landing Page
 
-The ${branding} landing page offers a starting point and general information for a ${branding} node.
+The {branding} landing page offers a starting point and general information for a {branding} node.
 It is accessible at `/(index|home|landing(.htm|html))`.
 
-=== Customizing the Landing Page
+== Customizing the Landing Page
 
-Configure the Landing Page from the ${admin-console}:
+Configure the Landing Page from the {admin-console}:
 
-. Navigate to the *${admin-console}*.
-. Select *${ddf-platform}* Application.
+. Navigate to the *{admin-console}*.
+. Select *{ddf-platform}* Application.
 . Select *Configuration* tab.
 . Select *Landing Page*.
 
 Configure important landing page items such as branding logo, contact information, description,
 and additional links.
 
-See <<{reference-prefix}org.codice.ddf.distribution.landingpage.properties,Landing Page configurations>> for all possible configurations.
+See xref:reference:tables/landingpage.properties.adoc[Landing Page configurations] for all possible configurations.

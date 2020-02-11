@@ -2,14 +2,14 @@
 :type: subInstalling
 :status: published
 :summary: Keystore and certificate instructions.
-:parent: Installing With the ${branding} Distribution Zip
+:parent: Installing With the {branding} Distribution Zip
 :order: 01
 
-== {title}
+= Managing Keystores and Certificates
 
 * *{hardening-step}*
 
-${branding} uses certificates in two ways:
+{branding} uses certificates in two ways:
 
 . Ensuring the privacy and integrity of messages sent or received over a network.
 . Authenticating an incoming user request.

@@ -5,27 +5,27 @@
 :summary: Configuring the Web Context Policy Manager.
 :order: 00
 
-== {title}
+= Configuring the Web Context Policy Manager
 
-The Web Context Policy Manager defines all security policies for REST endpoints within ${branding}.
+The Web Context Policy Manager defines all security policies for REST endpoints within {branding}.
 It defines:
 
 * the realms a context should authenticate against.
 * the type of authentication that a context requires.
 * any user attributes required for authorization.
 
-See <<{reference-prefix}org.codice.ddf.security.policy.context.impl.PolicyManager, Web Context Policy Manager Configurations>> for detailed descriptions of all fields.
+See xref:reference:tables/PolicyManager.adoc[Web Context Policy Manager Configurations] for detailed descriptions of all fields.
 
-=== Guest Access
+== Guest Access
 Guest access is a toggleable configuration.
 Enabling guest access will cause all users to be assigned a guest principal for use throughout the entire system.
 The guest principal will be used either by itself or along with any other principals acquired from configured authentication types.
 
-=== Session Storage
+== Session Storage
 Enabling session storage allows the system to persist the user login through the use of cookies.
 Note that the `SAML` and `OIDC` authentication types require session storage to be enabled.
 
-=== Authentication Types
+== Authentication Types
 
 As you add REST endpoints, you may need to add different types of authentication through the Web Context Policy Manager.
 
@@ -56,7 +56,7 @@ Any web context that allows or requires specific authentication types should be 
 
 |===
 
-==== Terminating and Non-Terminating Authentication Types
+=== Terminating and Non-Terminating Authentication Types
 Terminating authentication types are authentication types where, once hit, must either allow or forbid access to the system.
 No other authentication types will be checked once a terminating authentication type is hit.
 
@@ -80,12 +80,12 @@ If the system cannot acquire SAML credentials from the client, the system will c
 Contrarily, assume a context is protected by the terminating `BASIC` authentication type.
 Once this authentication type is hit, the system either allows or forbids access to the system, without checking if the client supports the acquisition of BASIC credentials.
 
-=== Required Attributes
+== Required Attributes
 
 The fields for required attributes allows configuring certain contexts to only be accessible to users with pre-defined attributes.
-For example, the default required attribute for the `/admin` context is `role=system-admin`, limiting access to the ${admin-console} to system administrators
+For example, the default required attribute for the `/admin` context is `role=system-admin`, limiting access to the {admin-console} to system administrators
 
-=== White Listed Contexts
+== White Listed Contexts
 
 White listed contexts are trusted contexts which will bypass security.
 Any sub-contexts of a white listed context will be white listed as well, unless they are specifically assigned a policy.

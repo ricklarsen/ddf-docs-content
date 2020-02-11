@@ -2,12 +2,12 @@
 :type: installing
 :status: published
 :summary: Finish page.
-:project: ${branding}
+:project: {branding}
 :order: 07
 
 .Finished Page
 ****
-Upon successful startup, the *Finish* page will redirect to the ${admin-console} to begin further configuration, ingest, or federation.
+Upon successful startup, the *Finish* page will redirect to the {admin-console} to begin further configuration, ingest, or federation.
 
 [NOTE]
 ====

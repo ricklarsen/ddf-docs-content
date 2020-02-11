@@ -5,7 +5,7 @@
 :summary: Solr commands available.
 :order: 02
 
-== {title}
+= Solr Commands
 
 .[[_solr_command_descriptions]]Solr Command Descriptions
 [cols="1m,9a" options="header"]

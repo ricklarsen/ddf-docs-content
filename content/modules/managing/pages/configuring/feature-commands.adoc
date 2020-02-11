@@ -5,7 +5,7 @@
 :order: 02
 :summary: Managing features from the {command-console}.
 
-== {title}
+= Feature Commands
 
 Individual features can also be added via the {command-console}.
 

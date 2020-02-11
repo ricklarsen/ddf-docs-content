@@ -5,11 +5,11 @@
 :summary: Configuring thread pools.
 :order: 00
 
-== {title}
+= Configuring Thread Pools
 
 The `org.codice.ddf.system.threadPoolSize` property can be used to specify the size of thread pools used by:
 
-* Federating requests between ${branding} systems
+* Federating requests between {branding} systems
 * Downloading resources
 * Handling asynchronous queries, such as queries from the UI
 

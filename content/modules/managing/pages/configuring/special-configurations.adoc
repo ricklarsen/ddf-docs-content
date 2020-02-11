@@ -5,7 +5,7 @@
 :order: 10
 :summary: Configuring for Special Deployments
 
-== {title}
+= Configuring for Special Deployments
 
-In addition to standard configurations, several specialized configurations are possible for specific uses of ${branding}.
+In addition to standard configurations, several specialized configurations are possible for specific uses of {branding}.
 

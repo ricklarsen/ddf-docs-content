@@ -5,21 +5,21 @@
 :summary: Configure product cache.
 :order: 01
 
-== {title }
+= Configuring Product Cache
 
-All caching properties are part of the <<{reference-prefix}ddf.catalog.resource.download.ReliableResourceDownloadManager,Resource Download Settings>>.
+All caching properties are part of the xref:reference:tables/ReliableResourceDownload.adoc[Resource Download Settings].
 
-=== Invalidating the Product Cache
+== Invalidating the Product Cache
 
 . The product cache directory can be administratively invalidated by turning off the product caching using the Enable Product Caching configuration.
 . Alternatively, an administrator may manually invalidate products by removing them from the file system. Products are cached at the directory specified in the Product Cache Directory configuration.
 
 Format:
 
-`${home_directory}/data/product-cache/<source-id>-<metacard-id>`
+`{home_directory}/data/product-cache/<source-id>-<metacard-id>`
 
 Example:
 
-`${home_directory}/data/product-cache/abc123`
+`{home_directory}/data/product-cache/abc123`
 
-See <<{managing-prefix}metacard_ingest_network_plugin, Metacard Ingest Network Plugin>>.
+See xref:architectures:metacard_ingest_network_plugin[Metacard Ingest Network Plugin].

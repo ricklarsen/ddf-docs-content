@@ -7,7 +7,7 @@
 
 == {title}
 
-To manually remove expired records from the Catalog, execute in the ${command-console}:
+To manually remove expired records from the Catalog, execute in the {command-console}:
 
 ----
 catalog:removeall --expired

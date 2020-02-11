@@ -5,10 +5,10 @@
 :summary: Configure Global Settings with the custom.system.properties file.
 :order: 00
 
-== {title}
+= Configuring Global Settings with `custom.system.properties`
 
 Global configuration settings are configured via the properties file `custom.system.properties`.
-These properties can be manually set by editing this file or set via the initial configuration from the ${admin-console}.
+These properties can be manually set by editing this file or set via the initial configuration from the {admin-console}.
 
 [NOTE]
 ====
@@ -50,7 +50,7 @@ Changing these values without also changing the passwords of the JKS causes unde
 |Truststore
 |javax.net.ssl.trustStore
 |String
-|The trust store used for SSL/TLS connections. Path is relative to `${home_directory}`.
+|The trust store used for SSL/TLS connections. Path is relative to `{home_directory}`.
 |etc/keystores/serverTruststore.jks
 |Yes
 
@@ -98,7 +98,7 @@ Changing these values without also changing the passwords of the JKS causes unde
 |String
 a|The hostname or IP address this system runs on.
 
-If the hostname is changed during the install to something other than `localhost` a new keystore and truststore must be provided. See <<{managing-prefix}managing_keystores_and_certificates,Managing Keystores and Certificates>> for details.
+If the hostname is changed during the install to something other than `localhost` a new keystore and truststore must be provided. See xref:managing:installing/managing-certificates.adoc[Managing Keystores and Certificates] for details.
 |localhost
 |Yes
 
@@ -148,7 +148,7 @@ NOTE: This *DOES* change the port the system runs on.
 |String
 a|The hostname or IP address used to advertise the system. Do not enter `localhost`. Possibilities include the address of a single node or that of a load balancer in a multi-node deployment.
 
-If the hostname is changed during the install to something other than `localhost` a new keystore and truststore must be provided. See <<{managing-prefix}managing_keystores_and_certificates,Managing Keystores and Certificates>> for details.
+If the hostname is changed during the install to something other than `localhost` a new keystore and truststore must be provided. See xref:managing:installing/managing-certificates.adoc[Managing Keystores and Certificates] for details.
 
 NOTE:
 Does not change the address the system runs on.
@@ -195,7 +195,7 @@ NOTE: Does not change the port the system runs on.
 |Site Name
 |org.codice.ddf.system.siteName
 |String
-|The site name for ${branding}.
+|The site name for {branding}.
 |ddf.distribution
 |Yes
 
@@ -209,23 +209,23 @@ NOTE: Does not change the port the system runs on.
 |Version
 |org.codice.ddf.system.version
 |String
-|The version of ${branding} that is running.
+|The version of {branding} that is running.
 
 This value should not be changed from the factory default.
-|${project.version}
+|{project.version}
 |Yes
 
 |Organization
 |org.codice.ddf.system.organization
 |String
-|The organization responsible for this installation of ${branding}.
+|The organization responsible for this installation of {branding}.
 |Codice Foundation
 |Yes
 
 |Registry ID
 |org.codice.ddf.system.registry-id
 |String
-|The registry id for this installation of ${branding}.
+|The registry id for this installation of {branding}.
 |
 |No
 
@@ -234,7 +234,7 @@ This value should not be changed from the factory default.
 |Thread Pool Size
 |org.codice.ddf.system.threadPoolSize
 |Integer
-|Size of thread pool used for handling UI queries, federating requests, and downloading resources. See <<{managing-prefix}configuring_thread_pools,Configuring Thread Pools>>
+|Size of thread pool used for handling UI queries, federating requests, and downloading resources. See xref:managing:configuring/thread-pools.adoc[Configuring Thread Pools]
 |128
 |Yes
 
@@ -457,7 +457,7 @@ Thumbs.db
 |solr.data.dir
 |String
 |Directory for Solr core files
-|`${home_directory}`/solr/server/solr
+|`{home_directory}`/solr/server/solr
 |Yes
 
 |Solr server HTTP port
@@ -507,12 +507,12 @@ This property is only used if the `solr.client` property is `HttpSolrClient`.
 
 |===
 
-These properties are available to be used as variable parameters in input url fields within the ${admin-console}.
-For example, the url for the local csw service (\${secure_url}/services/csw) could be defined as:
+These properties are available to be used as variable parameters in input url fields within the {admin-console}.
+For example, the url for the local csw service (\{secure_url}/services/csw) could be defined as:
 
 [source]
 ----
-${variable-prefix}org.codice.ddf.system.protocol}${variable-prefix}org.codice.ddf.system.hostname}:${variable-prefix}org.codice.ddf.system.port}${variable-prefix}org.codice.ddf.system.rootContext}/csw
+{variable-prefix}org.codice.ddf.system.protocol}{variable-prefix}org.codice.ddf.system.hostname}:{variable-prefix}org.codice.ddf.system.port}{variable-prefix}org.codice.ddf.system.rootContext}/csw
 ----
 
 This variable version is more verbose, but will not need to be changed if the system `host`, `port` or `root` context changes.

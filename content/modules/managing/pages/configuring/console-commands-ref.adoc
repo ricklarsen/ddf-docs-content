@@ -5,6 +5,6 @@
 :order: 01
 :summary: Console command reference
 
-== {title}
+= Console Command Reference
 
-${branding} provides access to a powerful ${command-console} to use to manage and configure the system.
+{branding} provides access to a powerful {command-console} to use to manage and configure the system.

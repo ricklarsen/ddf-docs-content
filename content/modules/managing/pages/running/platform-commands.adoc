@@ -5,7 +5,7 @@
 :summary: Platform commands available.
 :order: 04
 
-== {title}
+= Platform Commands
 
 .[[_platform_command_descriptions]]Platform Command Descriptions
 [cols="1m,9" options="header"]

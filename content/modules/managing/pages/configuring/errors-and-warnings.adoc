@@ -5,7 +5,7 @@
 :order: 025
 :summary: Enabling viewing of errors and warnings in data attributes.
 
-== {title}
+= Configuring Errors and Warnings
 
-${branding} performs several types of validation on metadata ingested into the catalog.
-Depending on need, configure ${branding} to act on the warnings or errors discovered.
+{branding} performs several types of validation on metadata ingested into the catalog.
+Depending on need, configure {branding} to act on the warnings or errors discovered.

@@ -5,11 +5,11 @@
 :order: 00
 :summary: Prevent data with errors or warnings from being ingested at all.
 
-== {title}
+= Enforcing Errors or Warnings
 
 Prevent data with errors or warnings from being ingested at all.
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *{ddf-catalog}* application.
 . Select *Configuration*.
 . Select *Metacard Validation Marker Plugin*.

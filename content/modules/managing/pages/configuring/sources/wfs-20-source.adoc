@@ -9,32 +9,32 @@
 :storageprovider:
 :catalogstore:
 
-== {title}
+= WFS 2.0 Source
 The WFS 2.0 Source allows for requests for geographical features across the web using platform-independent calls.
 
-Use the WFS Source if querying a WFS version 2.0.0 compliant service. Also see <<{developing-prefix}wfs_services,Working with WFS Sources>>.
+Use the WFS Source if querying a WFS version 2.0.0 compliant service. Also see xref:developing:devcomponents/wfs-sources-services.adoc[Working with WFS Sources].
 
 .Installing the WFS v2.0.0 Source
-The WFS v2.0.0 Source is installed by default with a standard installation in the ${ddf-spatial} application.
+The WFS v2.0.0 Source is installed by default with a standard installation in the {ddf-spatial} application.
 
-Configure a new WFS v2.0.0 Source through the ${admin-console}:
+Configure a new WFS v2.0.0 Source through the {admin-console}:
 
-* Navigate to the *${admin-console}*.
-* Select the *${ddf-catalog}* application.
+* Navigate to the *{admin-console}*.
+* Select the *{ddf-catalog}* application.
 * Select the *Sources* tab.
 * Add a new source.
 * Name the new source.
 * Select *WFS v2.0.0 Source* from *Binding Configurations*.
 
 .Configuring the WFS v2.0.0 Source
-Configure an existing WFS v2.0.0 Source through the ${admin-console}:
+Configure an existing WFS v2.0.0 Source through the {admin-console}:
 
-* Navigate to the *${admin-console}*.
-* Select the *${ddf-catalog}* application.
+* Navigate to the *{admin-console}*.
+* Select the *{ddf-catalog}* application.
 * Select the *Sources* tab.
 * Select the name of the source to edit.
 
-See <<{reference-prefix}Wfs_v2_0_0_Federated_Source,WFS v.2.0 Federated source configurations>> or <<{reference-prefix}Wfs_v2_0_0_Connected_Source,WFS v2.0 Connected source configurations>> for all possible configurations.
+See xref:reference:tables/Wfs_v2_0_0_Federated_Source.adoc[WFS v.2.0 Federated source configurations] or xref:reference:tables/Wfs_v2_0_0_Connected_Source.adoc[WFS v2.0 Connected source configurations] for all possible configurations.
 
 .WFS URL
 The WFS URL must match the endpoint for the service being used.
@@ -61,18 +61,18 @@ A feature is roughly equivalent to a metacard. The `MetacardMapper` was added to
 
 .Using the WFS `MetacardMapper`
 Use the WFS `MetacardMapper` to configure which feature properties map to which metacard attributes when querying a WFS version 2.0.0 compliant service.
-When feature collection responses are returned from WFS sources, a default mapping occurs which places the feature properties into metacard attributes, which are then presented to the user via ${branding}.
+When feature collection responses are returned from WFS sources, a default mapping occurs which places the feature properties into metacard attributes, which are then presented to the user via {branding}.
 There can be situations where this automatic mapping is not optimal for your solution.
 Custom mappings of feature property responses to metacard attributes can be achieved through the `MetacardMapper`.
 The `MetacardMapper` is set by creating a feature file configuration which specifies the appropriate mapping. The mappings are specific to a given feature type.
 
 .Installing the WFS `MetacardMapper`
-The WFS `MetacardMapper` is installed by default with a standard installation in the ${ddf-spatial} application.
+The WFS `MetacardMapper` is installed by default with a standard installation in the {ddf-spatial} application.
 
 .Configuring the WFS `MetacardMapper`
 There are two ways to configure the `MetacardMapper`:
 
-. The Configuration Admin available in the ${admin-console}.
+. The Configuration Admin available in the {admin-console}.
 . Placing a `feature.xml` file in the `deploy` directory.
 
 .Example WFS MetacardMapper Configuration
@@ -84,9 +84,9 @@ In this particular case, since we mapped the state name to title in the metacard
 .Example `MetacardMapper` Configuration Within a `feature.xml` file:
 [source,xml,linenums]
 ----
-<feature name="geoserver-states" version="${project.version}"
+<feature name="geoserver-states" version="{project.version}"
     description="WFS Feature to Metacard mappings for GeoServer Example {http://www.openplans.org/topp}states">
-    <config name="org.codice.${ddf-branding-lowercase}.spatial.ogc.wfs.catalog.mapper.MetacardMapper-geoserver.http://www.openplans.org/topp.states">
+    <config name="org.codice.{ddf-branding-lowercase}.spatial.ogc.wfs.catalog.mapper.MetacardMapper-geoserver.http://www.openplans.org/topp.states">
         featureType = {http://www.openplans.org/topp}states
         titleMapping = STATE_NAME
     </config>

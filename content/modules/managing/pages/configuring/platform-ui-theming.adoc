@@ -2,25 +2,25 @@
 :type: configuration
 :status: published
 :parent: Configuring UI Themes
-:summary: Configure theme of all pages displayed on ${branding}.
+:summary: Configure theme of all pages displayed on {branding}.
 :order: 02
 
-== {title}
+= Platform UI Themes
 
-The Platform UI Configuration allows for the customization of attributes of all pages within ${branding}.
+The Platform UI Configuration allows for the customization of attributes of all pages within {branding}.
 It contains settings to display messages to users at login or in banners in the headers and footers of all pages,
 along with changing the colors of text and backgrounds.
 
-=== Navigating to UI Theme Configuration
+== Navigating to UI Theme Configuration
 
-. Navigate to the *${admin-console}*.
-. Select the *${ddf-platform}* application.
+. Navigate to the *{admin-console}*.
+. Select the *{ddf-platform}* application.
 . Select *Configuration*.
 . Select *Platform UI Configuration*.
 
-=== Customizing the UI Theme
+== Customizing the UI Theme
 
-The customization of the UI theme across ${branding} is available through the capabilities of Platform UI Configuration.
+The customization of the UI theme across {branding} is available through the capabilities of Platform UI Configuration.
 The banner has four items to configure:
 
 . *Header* (text)
@@ -28,4 +28,4 @@ The banner has four items to configure:
 . *Text Color*
 . *Background Color*
 
-See the <<{reference-prefix}ddf.platform.ui.config,Platform UI>> for all possible configurations of the Platform UI Configuration.
+See the xref:reference:tables/platform.ui.config.adoc[Platform UI] for all possible configurations of the Platform UI Configuration.

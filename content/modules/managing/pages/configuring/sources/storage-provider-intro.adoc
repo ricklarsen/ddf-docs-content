@@ -5,7 +5,7 @@
 :summary:
 
 .Storage Providers
-[ditaa, catalog_architecture_storage_providers, png, ${image-width}]
+[ditaa, catalog_architecture_storage_providers, png]
 ....
 +------------------------------------------------------------+
 |                /-------------------\                       |

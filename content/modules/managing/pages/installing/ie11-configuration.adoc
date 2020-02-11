@@ -1,13 +1,13 @@
 :title: Additional Internet Explorer 11 Security Configuration
 :type: installing
 :status: published
-:summary: Configuring Internet Explorer Enhanced Security used in ${branding}.
-:project: ${branding}
+:summary: Configuring Internet Explorer Enhanced Security used in {branding}.
+:project: {branding}
 :order: 09
 
-=== Internet Explorer 11 Enhanced Security Configuration
+= Internet Explorer 11 Enhanced Security Configuration
 
-Below are steps listing all of the changes that ${branding} requires to run on Internet Explorer 11 and several additional considerations to keep in mind.
+Below are steps listing all of the changes that {branding} requires to run on Internet Explorer 11 and several additional considerations to keep in mind.
 
 . In the IE11 `Settings` > `Compatibility View Settings` dialog, un-check `Display intranet sites in Compatibility View`.
 . In the `Settings` > `Internet Options` > `Security` tab, `Local intranet` zone:
@@ -18,5 +18,5 @@ Below are steps listing all of the changes that ${branding} requires to run on I
 
 [NOTE]
 ====
-During installation, make sure to use the host name and not localhost when setting up the ${branding}'s hostname, port, etc.
+During installation, make sure to use the host name and not localhost when setting up the {branding}'s hostname, port, etc.
 ====

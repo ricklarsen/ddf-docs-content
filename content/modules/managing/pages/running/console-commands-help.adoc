@@ -2,17 +2,17 @@
 :type: maintaining
 :status: published
 :parent: Console Commands
-:summary: ${command-console} help command.
+:summary: {command-console} help command.
 :order: 00
 
-== {title}
+= Console Command Help
 
 For details on any command, type `help` then the command.
 For example, `help search` (see results of this command in the example below).
 
 .Example Help
 ----
-${branding-lowercase}${at-symbol}local>help search
+{branding-lowercase}{at-symbol}local>help search
 DESCRIPTION
         catalog:search
         Searches records in the catalog provider.

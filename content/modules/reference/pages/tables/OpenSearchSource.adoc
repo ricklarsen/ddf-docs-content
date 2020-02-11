@@ -94,7 +94,7 @@
 |true
 
 |Convert to BBox
-a|[[_shouldConvertToBBox]]shouldConvertToBBox
+a|[[shouldConvertToBBox]]shouldConvertToBBox
 |Boolean
 |Converts Polygon and Point-Radius searches to a Bounding Box for compatibility with older interfaces. Generated bounding box is a very rough representation of the input geometry.
 |true

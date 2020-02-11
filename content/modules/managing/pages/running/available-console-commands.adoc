@@ -5,11 +5,11 @@
 :summary: Types of console commands available.
 :order: 02
 
-== {title}
+= Available Console Commands
 
-Many console commands are available, including DDF commands and the core Karaf console commands. For more information about these core Karaf commands and using the console, see the Commands documentation for Karaf ${karaf.version} at https://karaf.apache.org/documentation.html[Karaf documentation] {external-link}.
+Many console commands are available, including DDF commands and the core Karaf console commands. For more information about these core Karaf commands and using the console, see the Commands documentation for Karaf {karaf.version} at https://karaf.apache.org/documentation.html[Karaf documentation] {external-link}.
 
-For a complete list of all available commands, from the ${command-console}, press *TAB* and confirm when prompted.
+For a complete list of all available commands, from the {command-console}, press *TAB* and confirm when prompted.
 
 Console commands follow a format of `namespace:command`.
 
@@ -17,28 +17,28 @@ To get a list of commands, type in the namespace of the desired extension then p
 
 For example, type `catalog`, then press *TAB*.
 
-.[[available_console_commands]]${branding} Console Command Namespaces
+.[[available_console_commands]]{branding} Console Command Namespaces
 [cols="1,5" options="header"]
 |===
 |Namespace
 |Description
 
-|<<{managing-prefix}catalog_command_descriptions, catalog>>
+|xref:managing:running/catalog-commands.adoc/#catalog_command_descriptions, catalog>>
 |The Catalog Shell Commands are meant to be used with any `CatalogProvider` implementations. They provide general useful queries and functions against the Catalog API that can be used for debugging, printing, or scripting.
 
-|<<{managing-prefix}migrate_command_descriptions, migrate>>
+|xref:managing:running/migrate-commands.adoc/#migrate_command_descriptions, migrate>>
 |The Migrate Shell Commands provide functions to perform data migrations.
 
-|<<{managing-prefix}platform_command_descriptions, platform>>
-|The ${branding} Platform Shell Commands provide generic platform management functions
+|xref:managing:running/platform-commands.adoc/#platform_command_descriptions, platform>>
+|The {branding} Platform Shell Commands provide generic platform management functions
 
-|<<{managing-prefix}store_command_descriptions, store>>
+|xref:managing:running/store-commands.adoc/#store_command_descriptions, store>>
 |The Persistence Shell Commands are meant to be used with any `PersistentStore` implementations. They provide the ability to query and delete entries from the persistence store.
 
-|<<{managing-prefix}subscription_command_descriptions, subscription>>
-|The ${branding} PubSub shell commands provide functions to list the registered subscriptions in ${branding} and to delete subscriptions.
+|xref:managing:running/subscription-commands.adoc/#subscription_command_descriptions, subscription>>
+|The {branding} PubSub shell commands provide functions to list the registered subscriptions in {branding} and to delete subscriptions.
 
-|<<{managing-prefix}solr_command_descriptions, solr>>
+|xref:managing:running/solr-commands.adoc/#solr_command_descriptions, solr>>
 |The Solr commands are used for the Solr `CatalogProvider` implementation. They provide commands specific to that provider.
 
 

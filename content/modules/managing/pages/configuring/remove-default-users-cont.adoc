@@ -7,14 +7,14 @@
 
 [WARNING]
 ====
-Once the default users are removed, the `<${branding}_HOME>/bin/client` and `<${branding}_HOME>/bin/client.bat` scripts will not work.
+Once the default users are removed, the `<{branding}_HOME>/bin/client` and `<{branding}_HOME>/bin/client.bat` scripts will not work.
 If SSH access to the Karaf shell is to be supported, edit the file `org.apache.karaf.shell.cfg` in the `<INSTALL_HOME>/etc` directory, changing the value of the `sshRealm` property from `karaf` to `ldap`.
 ====
 
 .Emergency Use of `users.properties` file
 [NOTE]
 ====
-Typically, the ${branding} does not manage passwords.
+Typically, the {branding} does not manage passwords.
 Authenticators are stored in an external identity management solution. However, administrators may temporarily use a `users.properties` file for emergencies.
 
 If a system recovery account is configured in `users.properties`, ensure:

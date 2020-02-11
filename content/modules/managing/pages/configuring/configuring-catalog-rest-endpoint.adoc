@@ -5,13 +5,13 @@
 :summary: Configuring Catalog REST Endpoint
 :order: 00
 
-== {title}
+= Configuring Catalog REST Endpoint
 
 The Catalog REST endpoint allows clients to perform operations on the Catalog using REST.
 
 To install the Catalog REST endpoint:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select *System*.
 . Select *Features*.
 . Install the `catalog-rest-endpoint` feature.

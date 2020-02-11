@@ -7,13 +7,13 @@
 
 == {title}
 
-When Enforce Errors is enabled within the ${admin-console}, validator plugins ensure the data being
+When Enforce Errors is enabled within the {admin-console}, validator plugins ensure the data being
 ingested is valid. Below is a list of the validators run against the data ingested.
 
 .*Enforcing errors*:
 [NOTE]
 ====
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *System* tab.
 . Select the *Configuration* tab.
 . Select *Metacard Validation Marker Plugin*.

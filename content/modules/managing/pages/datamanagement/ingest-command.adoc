@@ -1,13 +1,13 @@
 :title: Ingest Command
 :type: dataManagement
 :status: published
-:summary: Ingesting data from the ${command-console}.
+:summary: Ingesting data from the {command-console}.
 :parent: Ingesting Data
 :order: 00
 
 == {title}
 
-The ${command-console} has a command-line option for ingesting data.
+The {command-console} has a command-line option for ingesting data.
 
 [NOTE]
 ====
@@ -26,7 +26,7 @@ To see a list of all transformers currently installed, and the file types suppor
 
 For more information on the schemas and file types(mime-types) supported by each transformer see the <<{integrating-prefix}available_input_transformers, Input Transformers>>.
 
-The `<file path>` is relative to the ${home_directory} directory.
+The `<file path>` is relative to the {home_directory} directory.
 This can be the path to a file or a directory containing the desired files.
 
 .Windows Users
@@ -37,5 +37,5 @@ On Windows, put the file path in quotes: `"path/to/file"`.
 
 Successful command line ingest operations are accompanied with messaging indicating how many files were ingested and how long the operations took.
 The ingest command also prints which files could not be ingested with additional details recorded in the ingest log.
-The default location of the log is `${home_directory}/data/log/ingest_error.log`.
+The default location of the log is `{home_directory}/data/log/ingest_error.log`.
 

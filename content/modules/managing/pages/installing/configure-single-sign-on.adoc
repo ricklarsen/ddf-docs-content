@@ -2,7 +2,7 @@
 :type: installing
 :status: published
 :summary: Configure Single Sign On (SSO) page of installer.
-:project: ${branding}
+:project: {branding}
 :order: 07
 
 .[[_configuring_sso]]Configure Single Sign On (SSO)
@@ -13,7 +13,7 @@ Configure Single Sign On method: SAML or OIDC.
 Enter the URLs for the IdP metatdata and set other options.
 
 IdP Server::
-Configure ${BRANDING}'s internal Identity Provider Server.
+Configure {branding}'s internal Identity Provider Server.
 
 . *_SP Metadata_*: The metatada of the desired Service Provider to connect to the internal IdP. Can be configured as an HTTPS URL (`https://`), file URL (`file:`), or an XML block (`&lt;md:EntityDescriptor&gt;...&lt;/md:EntityDescriptor&gt;`).
 

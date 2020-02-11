@@ -4,15 +4,15 @@
 :parent: Installation Prerequisites
 :order: 00
 
-== Hardware Requirements
+= Hardware Requirements
 
 ======
 
-.Using the Standard installation of the ${branding} application:
+.Using the Standard installation of the {branding} application:
 [cols="2,3,3" options="header"]
 |===
 
-3+^|Minimum and Recommended Requirements for ${branding} Systems
+3+^|Minimum and Recommended Requirements for {branding} Systems
 
 
 |*Criteria*
@@ -41,12 +41,12 @@
 
 |===
 
-^*^The amount of RAM can be increased to support memory-intensive applications. See <<{managing-prefix}jvm_memory_configuration, Memory Considerations>>
+^*^The amount of RAM can be increased to support memory-intensive applications. See xref:managing:installing/file-system-access.adoc#jvm_memory_configuration[Memory Considerations].
 
 ======
 
 .Operating Systems
-${branding} has been tested on the following operating systems and with the following browsers.
+{branding} has been tested on the following operating systems and with the following browsers.
 Other operating systems or browsers may be used but have not been officially tested.
 
 =====

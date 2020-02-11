@@ -26,7 +26,7 @@
 * xref:devcomponents/custom-xacml-policies.adoc[Developing XACML Policies]
 * xref:devcomponents/assuring-bundles-and-apps.adoc[Assuring Authenticity of Bundles and Applications]
 * xref:devcomponents/json-definition-files.adoc[JSON Definition Files]
-
+* xref:configuring/sources/wfs-sources-services.adoc[WFS Services]
 
 * xref:devguidelines/contributing-intro.adoc[Contributing]
 ** xref:devguidelines/high-availability-guidance.adoc[High Availability Guidance]

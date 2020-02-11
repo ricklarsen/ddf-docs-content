@@ -6,22 +6,22 @@
 :summary: Encrypts plain text.
 :order: 03
 
-== {title}
-${branding} includes an encryption service to encrypt plain text such as passwords.
+= Encrypting Passwords
+{branding} includes an encryption service to encrypt plain text such as passwords.
 
-=== Encryption Command
+== Encryption Command
 
-An encrypt security command is provided with ${branding} to encrypt text.
+An encrypt security command is provided with {branding} to encrypt text.
 This is useful when displaying password fields to users.
 
 Below is an example of the `security:encrypt` command used to encrypt the plain text `myPasswordToEncrypt`.
 
-. Navigate to the ${command-console}.
+. Navigate to the {command-console}.
 +
 .security:encrypt Command Example
 [source%nowrap.java]
 ----
-${branding-lowercase}${at-symbol}local>security:encrypt myPasswordToEncrypt
+{branding-lowercase}{at-symbol}local>security:encrypt myPasswordToEncrypt
 ----
 +
 . The output is the encrypted value.
@@ -29,5 +29,5 @@ ${branding-lowercase}${at-symbol}local>security:encrypt myPasswordToEncrypt
 .security:encrypt Command Output
 [source%nowrap.java]
 ----
-${branding-lowercase}${at-symbol}local>bR9mJpDVo8bTRwqGwIFxHJ5yFJzatKwjXjIo/8USWm8=
+{branding-lowercase}{at-symbol}local>bR9mJpDVo8bTRwqGwIFxHJ5yFJzatKwjXjIo/8USWm8=
 ----

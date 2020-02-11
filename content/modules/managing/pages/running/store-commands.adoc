@@ -5,7 +5,7 @@
 :summary: Persistence Store commands available.
 :order: 06
 
-== {title}
+= Persistence Store Commands
 
 .[[_store_command_descriptions]]Persistence Store Command Descriptions
 [cols="2m,6"]

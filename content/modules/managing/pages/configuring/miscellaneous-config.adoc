@@ -5,6 +5,6 @@
 :order: 12
 :Summary: Miscellaneous configurations and optimizations
 
-== {title}
+= Miscellaneous Configurations
 
-The optional configurations in this section cover minor changes that can be made to optimize ${branding}.
+The optional configurations in this section cover minor changes that can be made to optimize {branding}.

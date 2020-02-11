@@ -5,16 +5,16 @@
 :order: 03
 :summary: Content Directory Monitor.
 
-== {title}
+= Content Directory Monitor
 
 The Content Directory Monitor (CDM) provides the capability to easily add content and metacards into the {ddf-catalog} by placing a file in a directory.
 
-=== Installing the Content Directory Monitor
+== Installing the Content Directory Monitor
 
 The Content Directory Monitor is installed by default with a standard installation of the {ddf-catalog} application.
 
-=== Configuring Permissions for the Content Directory Monitor
-// This section of the docs is duplicated in ${home_directory}/security/configurations.policy. Updates
+== Configuring Permissions for the Content Directory Monitor
+// This section of the docs is duplicated in {home_directory}/security/configurations.policy. Updates
 // should be applied to both locations.
 
 [TIP]
@@ -24,7 +24,7 @@ If monitoring a WebDav server, then adding these permissions is not required and
 
 Configuring a Content Directory Monitor requires adding permissions to the Security Manager before CDM configuration.
 
-Configuring a CDM requires adding read and write permissions to the directory being monitored. The following permissions, replacing <DIRECTORY_PATH> with the path of the directory being monitored, are required for each configured CDM and should be placed in the CDM section inside ${home_directory}/security/configurations.policy.
+Configuring a CDM requires adding read and write permissions to the directory being monitored. The following permissions, replacing <DIRECTORY_PATH> with the path of the directory being monitored, are required for each configured CDM and should be placed in the CDM section inside {home_directory}/security/configurations.policy.
 
 .Adding New Permissions
 [WARNING]
@@ -33,47 +33,47 @@ After adding permissions, a system restart is required for them to take effect.
 ====
 
 . permission java.io.FilePermission "<DIRECTORY_PATH>", "read";
-. permission java.io.FilePermission "<DIRECTORY_PATH>${/}-", "read, write";
+. permission java.io.FilePermission "<DIRECTORY_PATH>{/}-", "read, write";
 
-Trailing slashes after <DIRECTORY_PATH> have no effect on the permissions granted. For example, adding a permission for "${/}test${/}path" and "${/}test${/}path${/}" are equivalent. The recursive forms "${/}test${/}path${/}-", and "${/}test${/}path${/}${/}-" are also equivalent.
+Trailing slashes after <DIRECTORY_PATH> have no effect on the permissions granted. For example, adding a permission for "{/}test{/}path" and "{/}test{/}path{/}" are equivalent. The recursive forms "{/}test{/}path{/}-", and "{/}test{/}path{/}{/}-" are also equivalent.
 
-Line 1 gives the CDM the permissions to read from the monitored directory path. Line 2 gives the CDM the permissions to recursively read and write from the monitored directory path, specified by the directory path's suffix "${/}-".
+Line 1 gives the CDM the permissions to read from the monitored directory path. Line 2 gives the CDM the permissions to recursively read and write from the monitored directory path, specified by the directory path's suffix "{/}-".
 
 If a CDM configuration is deleted, then the corresponding permissions that were added should be deleted to avoid granting unnecessary permissions to parts of the system.
 
-=== Configuring the Content Directory Monitor
+== Configuring the Content Directory Monitor
 
 .Content Directory Monitor Permissions
 [IMPORTANT]
 ====
-When configuring a Content Directory Monitor, make sure to set permissions on the new directory to allow ${branding} to access it.
+When configuring a Content Directory Monitor, make sure to set permissions on the new directory to allow {branding} to access it.
 Setting permissions should be done *before* configuring a CDM.
 Also, don't forget to add permissions for resources outside of the monitored directory.
-See <<{managing-prefix}configuring_permissions_for_the_content_directory_monitor,Configuring Permissions for the Content Directory Monitor>> for in-depth instructions on configuring permissions.
+See xref:managing:configuring/content-directory-monitor.adoc#configuring_permissions_for_the_content_directory_monitor[Configuring Permissions for the Content Directory Monitor] for in-depth instructions on configuring permissions.
 ====
 
 [NOTE]
 ====
-If there's a metacard that points to a resource outside of the CDM, then you must configure the <<{developing-prefix}url_resource_reader, URL Resource Reader>> to be able to download it.
+If there's a metacard that points to a resource outside of the CDM, then you must configure the xref:developing:devcomponents/url-resource-reader[URL Resource Reader] to be able to download it.
 ====
 
 .Monitoring Directories In Place
 [WARNING]
 ====
-If monitoring a directory in place, then the <<{developing-prefix}url_resource_reader, URL Resource Reader>> must be configured prior to configuring the CDM to allow reading from the configured directory.
+If monitoring a directory in place, then the xref:architectures:url-resource-reader.adoc[URL Resource Reader] must be configured prior to configuring the CDM to allow reading from the configured directory.
 This allows the {ddf-catalog} to download the resources.
 ====
 
-Configure the CDM from the ${admin-console}:
+Configure the CDM from the {admin-console}:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *{ddf-catalog}* application.
 . Select the *Configuration* tab.
 . Select *Catalog Content Directory Monitor*.
 
-See <<{reference-prefix}org.codice.ddf.catalog.content.monitor.ContentDirectoryMonitor,Content Directory Monitor configurations>> for all possible configurations.
+See xref:reference:tables/ContentDirectoryMonitor.adoc[Content Directory Monitor configurations] for all possible configurations.
 
-=== Using the Content Directory Monitor
+== Using the Content Directory Monitor
 
 The CDM processes files in a directory, and all of its sub-directories. The CDM offers three options:
 
@@ -81,7 +81,7 @@ The CDM processes files in a directory, and all of its sub-directories. The CDM 
 * Move
 * Monitor in place
 
-Regardless of the option, the ${branding} takes each file in a monitored directory structure and creates a metacard for it. The metacard is linked to the file. The behavior of each option is given below.
+Regardless of the option, the {branding} takes each file in a monitored directory structure and creates a metacard for it. The metacard is linked to the file. The behavior of each option is given below.
 
 .Delete
 * Copies the file into the Content Repository.
@@ -112,7 +112,7 @@ It is also recommended that the *ReadLock Time Interval* be set to a lower amoun
 locked in a timely manner and processed as soon as possible.  When a higher *ReadLock Time Interval* is set, the time it takes for files to be processed is increased.
 
 .Attribute Overrides
-The CDM supports setting metacard attributes directly when ${branding} ingests a file. Custom overrides are entered in the form:
+The CDM supports setting metacard attributes directly when {branding} ingests a file. Custom overrides are entered in the form:
 
 `*attribute-name=attribute-value*`
 
@@ -128,13 +128,13 @@ To set multi-valued attributes, use a separate override for each value. For exam
 `*topic.keyword=PPI*` +
 `*topic.keyword=radiology*`
 
-Attributes will only be overridden if they are part of the <<{integrating-prefix}metacard_type, metacard type>> or are <<{developing-prefix}attribute_injection_definition,injected>>.
+Attributes will only be overridden if they are part of the xref:developing:devcomponents/metacard-type.adoc[metacard type] or are xref:developing:devcomponents/attribute-injection.adoc[injected].
 
-All attributes in the <<{metadata-prefix}catalog_taxonomy_definitions, catalog taxonomy tables>> are injected into all metacards by default and can be overridden.
+All attributes in the xref:metadatareference:catalog-taxonomy-intro.adoc[catalog taxonomy tables] are injected into all metacards by default and can be overridden.
 
 [IMPORTANT]
 ====
-If an overridden attribute is not part of the <<{integrating-prefix}metacard_type, metacard type>> or <<{developing-prefix}attribute_injection_definition,injected>> the attribute will not be added to the metacard.
+If an overridden attribute is not part of the xref:developing:devcomponents/metacard-type.adoc[metacard type] or xref:developing:devcomponents/attribute-injection.adoc[injected] the attribute will not be added to the metacard.
 ====
 
 For example, if the metacard type contains contact email,
@@ -142,7 +142,7 @@ For example, if the metacard type contains contact email,
 `*contact.point-of-contact-email*`
 
 but the value is not currently set, adding an attribute override will set the attribute value.
-To override attributes that are not part of the metacard type, <<{developing-prefix}attribute_injection_definition,attribute injection>> can be used.
+To override attributes that are not part of the metacard type, xref:developing:devcomponents/attribute-injection-definition/adoc[attribute injection] can be used.
 
 .Blacklist
 The CDM blacklist uses the "bad.files" and "bad.file.extensions" properties from the custom.system.properties file in "etc/" in order to prevent
@@ -156,6 +156,6 @@ configured to *Delete* or *Move*, the original file is also moved to the `\.erro
 
 .Other
 * Multiple directories can be monitored. Each directory has an independent configuration.
-* To support the monitoring in place behavior, ${branding} indexes the files to track their names and modification timestamps. This enables the Content Directory Monitor to take appropriate action when files are changed or deleted.
+* To support the monitoring in place behavior, {branding} indexes the files to track their names and modification timestamps. This enables the Content Directory Monitor to take appropriate action when files are changed or deleted.
 * The Content Directory Monitor recursively processes all subdirectories.
 
