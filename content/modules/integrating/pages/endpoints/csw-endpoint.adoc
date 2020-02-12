@@ -5,7 +5,7 @@
 :link: _csw_endpoint
 :summary: Searches collections of descriptive information (metadata) about geospatial data and services.
 
-== {title}
+= CSW Endpoint
 
 The CSW endpoint enables a client to search collections of descriptive information (metadata) about geospatial data and services.
 
@@ -13,14 +13,14 @@ The CSW endpoint supports metadata operations only.
 
 For more information about the http://www.opengeospatial.org/standards/cat2eoext4ebrim[Catalogue Services for Web (CSW) standard] {external-link}.
 
-The CSW Endpoint can be used for one or more of these operations on an instance of ${branding}:
+The CSW Endpoint can be used for one or more of these operations on an instance of {branding}:
 
-* <<{integrating-prefix}csw_endpoint_create_examples,Ingest metadata into the ${branding} catalog.>>
-* <<{integrating-prefix}csw_endpoint_query_examples,Read metacards from the catalog.>>
-* <<{integrating-prefix}csw_endpoint_update_examples,Update metadata in the catalog.>>
-* <<{integrating-prefix}csw_endpoint_publication_subscription_examples,Publish and/or subscribe to catalog events.>>
-* <<{integrating-prefix}csw_endpoint_delete_examples,Delete metadata from the catalog.>>
-* <<{integrating-prefix}csw_endpoint_get_capabilities_examples,Get capabilities of the catalog and the URLs used to access.>>
+* xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_create_examples,Ingest metadata into the {branding} catalog.>>
+* xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_query_examples,Read metacards from the catalog.>>
+* xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_update_examples,Update metadata in the catalog.>>
+* xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_publication_subscription_examples,Publish and/or subscribe to catalog events.>>
+* xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_delete_examples,Delete metadata from the catalog.>>
+* xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_get_capabilities_examples,Get capabilities of the catalog and the URLs used to access.>>
 
 .Sample Responses May Not Match Actual Responses
 [NOTE]
@@ -29,7 +29,7 @@ Actual responses may vary from these samples, depending on your configuration.
 Send a GET or POST request to obtain an accurate response.
 ====
 
-=== CSW Endpoint Create Examples
+== CSW Endpoint Create Examples
 
 Metacards are ingested into the catalog via the `Insert` sub-operation.
 
@@ -66,7 +66,7 @@ Include the metadata to ingest within a `csw:Insert` block in the body of the re
             <dc:type>http://purl.org/dc/dcmitype/Text</dc:type>
             <dc:subject>Hydrography--Dictionaries</dc:subject>
             <dc:format>application/pdf</dc:format>
-            <dc:date>${timestamp}</dc:date>
+            <dc:date>{timestamp}</dc:date>
             <dct:abstract>Vestibulum quis ipsum sit amet metus imperdiet vehicula. Nulla scelerisque cursus mi.</dct:abstract>
             <ows:BoundingBox crs="urn:x-ogc:def:crs:EPSG:6.11:4326">
                 <ows:LowerCorner>44.792 -6.171</ows:LowerCorner>
@@ -161,7 +161,7 @@ A successful ingest will return a status of `200 OK` and `csw:TransactionRespons
 
 |===
 
-=== CSW Endpoint Query Examples
+== CSW Endpoint Query Examples
 
 To query through the CSW Enpoint, send a `POST` request to the CSW endpoint.
 
@@ -175,7 +175,7 @@ Within the body of the request, include a `GetRecords` operation to define the q
 Define the service and version to use (CSW, 2.0.2).
 The output format must be `application/xml`.
 Specify the output schema.
-(To get a list of supported schemas, send a <<{integrating-prefix}csw_endpoint_get_capabilities_examples,Get Capabilities>> request to the CSW endpoint.)
+(To get a list of supported schemas, send a xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_get_capabilities_examples,Get Capabilities>> request to the CSW endpoint.)
 
 .GetRecords Syntax
 [source,xml,linenums]
@@ -270,7 +270,7 @@ Within the `Constraint` element, define the query as an OSG or CQL filter.
                         xmlns:xs="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0.2">
-  <csw:SearchStatus timestamp="${timestamp}"/>
+  <csw:SearchStatus timestamp="{timestamp}"/>
   <csw:SearchResults numberOfRecordsMatched="1" numberOfRecordsReturned="1" nextRecord="0" recordSchema="http://www.opengis.net/cat/csw/2.0.2" elementSet="summary">
     <csw:Record xmlns:ows="http://www.opengis.net/ows"
                 xmlns:csw="http://www.opengis.net/cat/csw/2.0.2"
@@ -282,7 +282,7 @@ Within the `Constraint` element, define the query as an OSG or CQL filter.
         <dc:type>http://purl.org/dc/dcmitype/Text</dc:type>
         <dc:subject>Hydrography--Dictionaries</dc:subject>
         <dc:format>application/pdf</dc:format>
-        <dc:date>${timestamp}</dc:date>
+        <dc:date>{timestamp}</dc:date>
         <dct:abstract>Vestibulum quis ipsum sit amet metus imperdiet vehicula. Nulla scelerisque cursus mi.</dct:abstract>
         <ows:BoundingBox crs="urn:x-ogc:def:crs:EPSG:6.11:4326">
             <ows:LowerCorner>44.792 -6.171</ows:LowerCorner>
@@ -295,7 +295,7 @@ Within the `Constraint` element, define the query as an OSG or CQL filter.
 
 .Querying a Specific Source with the CSW Endpoint
 To query a `Specific Source`, specify a query for a `source-id`.
-To find a valid `source-id` , send a <<{integrating-prefix}csw_endpoint_get_capabilities_examples,Get Capabilities>> request.
+To find a valid `source-id` , send a xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_get_capabilities_examples,Get Capabilities>> request.
 Configured sources will be listed in the `FederatedCatalogs` section of the response.
 
 [NOTE]
@@ -778,7 +778,7 @@ To locate a record by Metacard ID, send a `POST` request with a `GetRecordById` 
 |No results found for query. Verify input.
 |===
 
-=== CSW Endpoint Update Examples
+== CSW Endpoint Update Examples
 
 The CSW Endpoint can edit the metadata attributes of a metacard.
 
@@ -812,7 +812,7 @@ Replace the `<METACARD-ID>` value with the metacard id being updated, and edit a
             <dc:type>http://purl.org/dc/dcmitype/Text</dc:type>
             <dc:subject>Hydrography--Dictionaries</dc:subject>
             <dc:format>application/pdf</dc:format>
-            <dc:date>${timestamp}</dc:date>
+            <dc:date>{timestamp}</dc:date>
             <dct:abstract>Vestibulum quis ipsum sit amet metus imperdiet vehicula. Nulla scelerisque cursus mi.</dct:abstract>
             <ows:BoundingBox crs="urn:x-ogc:def:crs:EPSG:6.11:4326">
                 <ows:LowerCorner>44.792 -6.171</ows:LowerCorner>
@@ -1033,7 +1033,7 @@ These filters can search on any arbitrary query criteria, but take care to only 
 |No records were updated. Verify metacard id or search parameters.
 |===
 
-=== CSW Endpoint Publication/Subscription Examples
+== CSW Endpoint Publication/Subscription Examples
 
 The subscription `GetRecords` operation is very similar to the `GetRecords` operation used to search the catalog
 but it subscribes to a search and sends events to a `ResponseHandler` endpoint as metacards are ingested matching
@@ -1092,14 +1092,14 @@ To update an existing subscription, send a `PUT` request with the `requestid` UR
 CSW Endpoint Subscription Update URL
 [source,https]
 ----
-${secure_url}/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea-6115021dd62f
+{secure_url}/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea-6115021dd62f
 ----
 
 .Subscription `GetRecords` XML Response
 [source,xml]
 ----
 <?xml version="1.0" ?>
-<Acknowledgement timeStamp="${timestamp}T18:49:45" xmlns="http://www.opengis.net/cat/csw/2.0.2"
+<Acknowledgement timeStamp="{timestamp}T18:49:45" xmlns="http://www.opengis.net/cat/csw/2.0.2"
 xmlns:ogc="http://www.opengis.net/ogc"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 ../../../csw/2.0.2/CSW-discovery.xsd">
@@ -1164,7 +1164,7 @@ https://<FQDN>:<PORT>/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea
 [source,xml]
 ----
 <?xml version="1.0" ?>
-<Acknowledgement timeStamp="${timestamp}T18:49:45" xmlns="http://www.opengis.net/cat/csw/2.0.2"
+<Acknowledgement timeStamp="{timestamp}T18:49:45" xmlns="http://www.opengis.net/cat/csw/2.0.2"
                                                  xmlns:ogc="http://www.opengis.net/ogc"
                                                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                                                  xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 ../../../csw/2.0.2/CSW-discovery.xsd">
@@ -1204,7 +1204,7 @@ To delete a subscription, send a `DELETE` request with the `requestid` URN appen
 https://<FQDN>:<PORT>/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea-6115021dd62f
 ----
 
-=== CSW Endpoint Delete Examples
+== CSW Endpoint Delete Examples
 
 To delete metacards via the CSW Endpoint, send a `POST` request with a `csw:Delete` to the CSW Endpoint URL.
 
@@ -1295,7 +1295,7 @@ The constraint can be either an OGC or CQL filter.
 
 |===
 
-=== CSW Endpoint Get Capabilities Examples
+== CSW Endpoint Get Capabilities Examples
 
 The `GetCapabilities` operation describes the operations the catalog supports and the URLs used to access those operations.
 The CSW endpoint supports both `HTTP GET` and `HTTP POST` requests for the `GetCapabilities` operation.
@@ -1336,12 +1336,12 @@ Include an XML message body with a `GetCapabilities` element.
 <csw:Capabilities xmlns:ows="http://www.opengis.net/ows" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:ns6="http://www.w3.org/2001/SMIL20/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ns9="http://www.w3.org/2001/SMIL20/Language" xmlns:ns10="http://www.w3.org/2001/XMLSchema-instance" version="2.0.2" ns10:schemaLocation="http://www.opengis.net/csw /ogc/csw/2.0.2/CSW-publication.xsd">
     <ows:ServiceIdentification>
         <ows:Title>Catalog Service for the Web</ows:Title>
-        <ows:Abstract>${branding} CSW Endpoint</ows:Abstract>
+        <ows:Abstract>{branding} CSW Endpoint</ows:Abstract>
         <ows:ServiceType>CSW</ows:ServiceType>
         <ows:ServiceTypeVersion>2.0.2</ows:ServiceTypeVersion>
     </ows:ServiceIdentification>
     <ows:ServiceProvider>
-        <ows:ProviderName>${branding}</ows:ProviderName>
+        <ows:ProviderName>{branding}</ows:ProviderName>
         <ows:ProviderSite/>
         <ows:ServiceContact/>
     </ows:ServiceProvider>

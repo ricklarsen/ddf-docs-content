@@ -5,15 +5,15 @@
 :summary: How attribute overrides add attributes to metacards during query.
 :order: 08
 
-=== {title}
+= Attributes Added by Attribute Overrides (Query)
 
-<<{managing-prefix}overriding_attributes,Attribute Overriding>> is the act of replacing existing attribute values with a new value.
+xref:managing:datamanagement/overriding-attributes.adoc[Attribute Overriding] is the act of replacing existing attribute values with a new value.
 
-Attribute overrides can be configured for query results from the following <<{managing-prefix}connecting_to_sources,Sources>>:
+Attribute overrides can be configured for query results from the following xref:managing:configuring/connecting-to-sources.adoc[Sources]:
 
-* <<{managing-prefix}federated_source_for_atlassian_confluence_r,Federated Source For Atlassian Confluence>>.
-* <<{managing-prefix}csw_specification_profile_federated_source,CSW Specification Profile Federated Source>>.
-* <<{managing-prefix}gmd_csw_source,GMD CSW Federated Source>>.
+* xref:managing:configuring/sources/confluence-federated-source.adoc[Federated Source For Atlassian Confluence (R)].
+* xref:managing:configuring/sources/csw-federated-source.adoc[CSW Specification Profile Federated Source].
+* xref:managing:configuring/sources/gmd-csw-source.adoc[GMD CSW Federated Source].
 
-Note that the attribute must be part of the metacard's <<{integrating-prefix}metacard_type,Metacard Type>> before it can be overridden. +
-See <<{managing-prefix}attributes_added_by_attribute_injection,Attributes Added By Attribute Injection>> for more information about injecting attributes into the metacard type.
+Note that the attribute must be part of the metacard's xref:developing:devcomponents/metacard-type.adoc[Metacard Type] before it can be overridden. +
+See xref:managing:datamanagement/attributes-added-by-attribute-injection.adoc[Attributes Added By Attribute Injection] for more information about injecting attributes into the metacard type.

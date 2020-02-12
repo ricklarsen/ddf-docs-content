@@ -5,21 +5,21 @@
 :link: _catalog_rest_endpoint
 :summary: Uses REST to interact with the catalog.
 
-== {title}
+= Catalog REST Endpoint
 
 The Catalog REST Endpoint allows clients to perform operations on the Catalog using REST, a simple architectural style that performs communication using HTTP. 
 
 Bulk operations are not supported: for all RESTful CRUD commands, only one metacard ID is supported in the URL.
 
-The Catalog REST Endpoint can be used for one or more of these operations on an instance of ${branding}:
+The Catalog REST Endpoint can be used for one or more of these operations on an instance of {branding}:
 
-* <<{integrating-prefix}catalog_rest_create_operation_examples,Ingest metacards or resources into the ${branding} catalog.>>
-* <<{integrating-prefix}catalog_rest_read_operation_examples,Retrieve metacards or resources from the catalog.>>
-* <<{integrating-prefix}catalog_rest_update_operation_examples,Update metacards or resources in the catalog.>>
-* <<{integrating-prefix}catalog_rest_delete_operation_examples,Delete resources and metadata from the catalog.>>
-* <<{integrating-prefix}catalog_rest_sources_operation_examples,Get information about configured sources.>>
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_create_operation_examples,Ingest metacards or resources into the {branding} catalog.>>
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_read_operation_examples,Retrieve metacards or resources from the catalog.>>
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_update_operation_examples,Update metacards or resources in the catalog.>>
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_delete_operation_examples,Delete resources and metadata from the catalog.>>
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_sources_operation_examples,Get information about configured sources.>>
 
-This example metacard can be used to test the integration with ${branding}.
+This example metacard can be used to test the integration with {branding}.
 
 .Example Metacard
 [source,xml,linenums]
@@ -36,7 +36,7 @@ This example metacard can be used to test the integration with ${branding}.
 </metacard>
 ----
 
-=== Catalog REST Create Operation Examples
+== Catalog REST Create Operation Examples
 The REST endpoint can be used to upload resources as attachments.
 
 Send a `POST` request with the input to be ingested contained in the HTTP request body to the endpoint.
@@ -98,12 +98,12 @@ If content or metadata is not ingested successfully, check for these error messa
 .2+.^|`<pre>Error while storing entry in catalog: </pre>`
 
 |_Malformed XML Response_: If the XML being ingested has formatting errors.
-|_Request with Unknown Schema_: If ingest is attempted with a schema that is unknown, unsupported, or not configured by the endpoint, ${branding} creates a generic resource metacard with the provided XML as content for the `metadata` XML field in the metacard.
+|_Request with Unknown Schema_: If ingest is attempted with a schema that is unknown, unsupported, or not configured by the endpoint, {branding} creates a generic resource metacard with the provided XML as content for the `metadata` XML field in the metacard.
 
 |===
 
 
-=== Catalog REST Read Operation Examples
+== Catalog REST Read Operation Examples
 The `read` operation can be used to retrieve metadata in different formats.
 
 . Send a `GET` request to the endpoint.
@@ -122,8 +122,8 @@ If successful, a status of `200 OK` will be returned, along with the content of 
 [source,javascript,linenums]
 ----
 <metacard xmlns="urn:catalog:metacard" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:smillang="http://www.w3.org/2001/SMIL20/Language" gml:id="<METACARD_ID>">
-    <type>${branding-lowercase}.metacard</type>
-    <source>${branding-lowercase}.distribution</source>
+    <type>{branding-lowercase}.metacard</type>
+    <source>{branding-lowercase}.distribution</source>
     <string name="title">
         <value>Test REST Metacard</value>
     </string>
@@ -131,16 +131,16 @@ If successful, a status of `200 OK` will be returned, along with the content of 
         <value>email@example.com</value>
     </string>
     <dateTime name="metacard.created">
-        <value>${timestamp}</value>
+        <value>{timestamp}</value>
     </dateTime>
     <dateTime name="effective">
-        <value>${timestamp}</value>
+        <value>{timestamp}</value>
     </dateTime>
     <dateTime name="modified">
-        <value>${timestamp}</value>
+        <value>{timestamp}</value>
     </dateTime>
     <dateTime name="created">
-        <value>${timestamp}</value>
+        <value>{timestamp}</value>
     </dateTime>
     <string name="description">
         <value>Vestibulum quis ipsum sit amet metus imperdiet vehicula. Nulla scelerisque cursus mi.</value>
@@ -150,7 +150,7 @@ If successful, a status of `200 OK` will be returned, along with the content of 
         <value>VALID</value>
     </string>
     <dateTime name="metacard.modified">
-        <value>${timestamp}</value>
+        <value>{timestamp}</value>
     </dateTime>
 </metacard>
 ----
@@ -170,21 +170,21 @@ https://<FQDN>:<PORT>/services/catalog/<metacardId>?transform=<TRANSFORMER_ID>
     "geometry": null,
     "type": "Feature",
     "properties": {
-        "effective": "${timestamp}",
+        "effective": "{timestamp}",
         "point-of-contact": "email@example.com",
-        "created": "${timestamp}",
-        "metacard.modified": "${timestamp}",
+        "created": "{timestamp}",
+        "metacard.modified": "{timestamp}",
         "metacard-tags": [
             "resource",
             "VALID"
         ],
-        "modified": "${timestamp}",
+        "modified": "{timestamp}",
         "description": "Vestibulum quis ipsum sit amet metus imperdiet vehicula. Nulla scelerisque cursus mi.",
         "id": "3a59483ba44e403a9f0044580343007e",
-        "metacard-type": "${branding-lowercase}.metacard",
+        "metacard-type": "{branding-lowercase}.metacard",
         "title": "Test REST Metacard",
-        "source-id": "${branding-lowercase}.distribution",
-        "metacard.created": "${timestamp}"
+        "source-id": "{branding-lowercase}.distribution",
+        "metacard.created": "{timestamp}"
     }
 }
 ----
@@ -205,7 +205,7 @@ To retrieve the resource associated with a metacard, use the `resource` transfor
 https://<FQDN>:<PORT>/services/catalog/<metacardId>?transform=resource
 ----
 
-See <<{architecture-prefix}available_metacard_transformers,Metacard Transformers>> for details on metacard transformers.
+See xref:architectures:transformers-intro.adoc[Metacard Transformers] for details on metacard transformers.
 
 .Read Error Response Examples
 If the metacard or resource is not returned successfully, check for these errors.
@@ -231,7 +231,7 @@ If the metacard or resource is not returned successfully, check for these errors
 
 |===
 
-=== Catalog Rest Update Operation Examples
+== Catalog Rest Update Operation Examples
 To update the metadata for a metacard, send a `PUT` request with the ID of the Metacard to be updated appended to the end of the URL
 and the updated metadata is contained in the HTTP body.
 
@@ -260,7 +260,7 @@ https://<FQDN>:<PORT>/<metacardId>?transform=<input transformer>
 
 |===
 
-=== Catalog REST Delete Operation Examples
+== Catalog REST Delete Operation Examples
 To delete a metacard, send a `DELETE` request with the metacard ID to be deleted appended
 to the end of the URL.
 
@@ -283,7 +283,7 @@ https://<FQDN>:<PORT>/services/catalog/<metacardId>
 
 |===
 
-=== Catalog REST Sources Operation Examples
+== Catalog REST Sources Operation Examples
 To retrieve information about federated sources, including `sourceId`,
 `availability`, `contentTypes`,and `version`,
 send a `GET` request to the endpoint.
@@ -299,20 +299,20 @@ https://<FQDN>:<PORT>//sources/
 ----
 [
    {
-      "id" : "${branding}-OS",
+      "id" : "{branding}-OS",
       "available" : true,
       "contentTypes" :
          [
          ],
-      "version" : "${project.version}"
+      "version" : "{project.version}"
    },
    {
-      "id" : "${branding-lowercase}.distribution",
+      "id" : "{branding-lowercase}.distribution",
       "available" : true,
       "contentTypes" :
          [
          ],
-      "version" : "${project.version}"
+      "version" : "{project.version}"
    }
 ]
 ----

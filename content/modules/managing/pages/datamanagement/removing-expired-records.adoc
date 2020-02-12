@@ -4,7 +4,7 @@
 :summary: Methods of removing Expired Records from the Catalog.
 :order: 02
 
-== {title}
+= Removing Expired Records from the Catalog
 
 {branding} has many ways to remove expired records from the underlying Catalog data store.
 Nevertheless, the benefits of data standardization is that an attempt can be made to remove records without the need to know any vendor-specific information.

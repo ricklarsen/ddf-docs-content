@@ -5,19 +5,19 @@
 :link: _queries_endpoint
 :summary: To perform CRUD (Create, Read, Update, Delete) operations on query metacards in the catalog, work with one of these endpoints.
 
-== {title}
+= Queries Endpoint
 
 The queries endpoint enables an application to create, retrieve, update, and delete query metacards.
 
 Query metacards represent queries within the UI. A query metacard is what is persisted in the data store.
 
-The queries endpoint can be used for one or more of these operations on an instance of ${branding}:
+The queries endpoint can be used for one or more of these operations on an instance of {branding}:
 
-* Create query metacards and store them in the ${branding} catalog.
-* Retrieve all query metacards stored in the ${branding} catalog and sort them based on attribute and sort order.
-* Retrieve a specific query metacard stored in the ${branding} catalog.
-* Update query metacards that are stored in the ${branding} catalog.
-* Delete query metacards that are stored in the ${branding} catalog.
+* Create query metacards and store them in the {branding} catalog.
+* Retrieve all query metacards stored in the {branding} catalog and sort them based on attribute and sort order.
+* Retrieve a specific query metacard stored in the {branding} catalog.
+* Update query metacards that are stored in the {branding} catalog.
+* Delete query metacards that are stored in the {branding} catalog.
 
 .Queries Endpoint URL
 [source,https]
@@ -25,7 +25,7 @@ The queries endpoint can be used for one or more of these operations on an insta
 https://<HOSTNAME>:<PORT>/search/catalog/internal/queries
 ----
 
-=== Queries Endpoint Create Examples
+== Queries Endpoint Create Examples
 
 To create a query metacard through the queries endpoint, send a `POST` request to the queries endpoint.
 
@@ -87,7 +87,7 @@ An unsuccessful create request will return a status of `500 SERVER ERROR`.
 }
 ----
 
-=== Queries Endpoint Retrieve All Examples
+== Queries Endpoint Retrieve All Examples
 
 To retrieve a query metacard through the queries endpoint, send a `GET` request to the queries endpoint.
 
@@ -135,7 +135,7 @@ To retrieve a query metacard through the queries endpoint, send a `GET` request 
 
 A successful retrieval request will return a status of `200 OK`.
 
-=== Queries Endpoint Retrieve All Fuzzy Examples
+== Queries Endpoint Retrieve All Fuzzy Examples
 
 To retrieve all query metacards based on some text based value through the queries endpoint, send a `GET` request to the queries endpoint specifying a value for `text` as a query parameters.
 
@@ -147,7 +147,7 @@ https://<HOSTNAME>:<PORT>/search/catalog/internal/queries?text=<VALUE>
 
 A fuzzy search will only be performed against the `title`, `modified`, `owner`, and `description` attributes.
 
-=== Queries Endpoint Retrieve Examples
+== Queries Endpoint Retrieve Examples
 
 .Retrieve Specific Query Endpoint URL
 [source,https]
@@ -169,7 +169,7 @@ A successful retrieval request will return a status of `200 OK`.
 
 An unsuccessful retrieval request will return a status of `404 NOT FOUND`.
 
-=== Queries Endpoint Update Examples
+== Queries Endpoint Update Examples
 
 .Update Query Endpoint URL
 [source,https]
@@ -238,7 +238,7 @@ An unsuccessful update request will return a status of `404 NOT FOUND`.
 ----
 
 
-=== Queries Endpoint Delete Examples
+== Queries Endpoint Delete Examples
 
 .Delete Query Endpoint URL
 [source,https]

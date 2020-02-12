@@ -5,10 +5,9 @@
 :order: 03
 :summary: Manually editing attributes.
 
-== {title}
+= Manually Editing Attributes
 
 For small numbers of metacards, or for metacards ingested without overrides, attributes can be edited directly.
-
 
 [WARNING]
 ====

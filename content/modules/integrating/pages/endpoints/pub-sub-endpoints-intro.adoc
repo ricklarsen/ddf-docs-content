@@ -4,7 +4,7 @@
 :operations: pub-sub
 :order: 05
 
-== {title}
+= Publication-Subscription Endpoints
 
-These endpoints provide publication and subscription services to allow notifications when certain events happen within ${branding}.
+These endpoints provide publication and subscription services to allow notifications when certain events happen within {branding}.
 

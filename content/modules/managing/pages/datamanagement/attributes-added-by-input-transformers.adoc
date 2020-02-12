@@ -5,15 +5,14 @@
 :summary: How input tranformers add attributes to metacards.
 :order: 01
 
-=== {title}
+= Attributes Added by Input Transformers
 
-<<{architecture-prefix}available_input_transformers,Input Transformers>> create and populate metacards by parsing a resource.
-See <<{metadata-prefix}file_format_specific_attributes,File Format Specific Attributes>> to see the attributes used for specific file formats.
+Input Transformers create and populate metacards by parsing available metadata on a resource.
 
 {branding} chooses which input transformer to use by:
 
 . Resolving the mimetype for the resource.
-. Gathering all of the input transformers associated with the resolved mimetype. See <<{metadata-prefix}all_file_formats_supported,Supported File Formats>> for a list of supported mimetypes.
+. Gathering all of the input transformers associated with the resolved mimetype. See xref:metadatareference:complete-list-file-types.adoc[Supported File Formats] for a list of supported mimetypes.
 . Iterating through the transformers until a successful transformation is performed.
 
 The first transformer that can successfully create a metacard from the ingested resource is chosen.

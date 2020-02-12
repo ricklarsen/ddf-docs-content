@@ -4,6 +4,6 @@
 :operations: retrieval
 :order: 04
 
-== {title}
+= Content Retrieval Endpoints
 
-To retrieve content from an instance of ${branding}, use one of these endpoints.
+To retrieve content from an instance of {branding}, use one of these endpoints.

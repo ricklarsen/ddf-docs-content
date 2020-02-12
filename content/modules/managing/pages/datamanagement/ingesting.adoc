@@ -13,6 +13,6 @@ There are multiple methods available for ingesting files into the {branding}.
 .Guest Claims Attributes and Ingest
 [NOTE]
 ====
-Ensure that appropriate <<{developing-prefix}configuring_guest_interceptor,Guest Claims>> are configured to allow guest users to ingest data and query the catalog.
+Ensure that appropriate xref:managing:configuring/configuring-guest-access.adoc#configuring_guest_interceptor_if_allowing_guest_users[Guest Claims] are configured to allow guest users to ingest data and query the catalog.
 ====
 

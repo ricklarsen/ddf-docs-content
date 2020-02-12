@@ -5,7 +5,7 @@
 :link: _opensearch_endpoint
 :summary: Sends query parameters and receives search results.
 
-== {title}
+= OpenSearch Endpoint
 
 The OpenSearch Endpoint enables a client to send query parameters and receive search results.
 This endpoint uses the input query parameters to create an OpenSearch query.
@@ -15,7 +15,7 @@ The OpenSearch specification defines a file format to describe an OpenSearch end
 This file is XML-based and is used to programatically retrieve a site's endpoint, as well as the different parameter options a site holds.
 The parameters are defined via the http://www.opensearch.org/Specifications/OpenSearch/1.1[OpenSearch] {external-link} and https://www.dni.gov/index.php/about/organization/chief-information-officer/cdr-search[CDR IPT] {external-link} Specifications.
 
-=== OpenSearch Contextual Queries
+== OpenSearch Contextual Queries
 
 To use the OpenSearch endpoint for a query, send a `GET` request with the query options as parameters
 
@@ -58,7 +58,6 @@ default: `1`
 |`format`
 |Requires a transformer shortname as a string, possible values include, when available, `atom`, `html`, and `kml`.
 
-See <<{architecture-prefix}available_query_response_transformers,Query Response transformers>> for more possible values.
 |Defines the format that the return type should be in.
 
 default: `atom`
@@ -70,7 +69,7 @@ default: `atom`
 https://<FQDN>:<PORT>/services/catalog/query?q="Aliquam"&count=20
 ----
 
-==== Complex OpenSearch Contextual Query Format
+=== Complex OpenSearch Contextual Query Format
 
 The OpenSearch Endpoint supports the following operators: `AND`, `OR`, and `NOT`.
 These operators are case sensitive.
@@ -87,7 +86,7 @@ See the http://www.opensearch.org/Specifications/OpenSearch/1.1[OpenSearch] spec
 https://<FQDN>:<PORT>/services/catalog/query?q='cat OR dog'
 ----
 
-=== OpenSearch Temporal Queries
+zOpenSearch Temporal Queries
 Queries can also specify a start and end time to narrow results.
 
 .OpenSearch Temporal Parameters
@@ -116,19 +115,19 @@ Current GMT date/time is used when `dtstart` is specified but `dtend` is not spe
 .OpenSearch Temporal Query Example
 [source,https]
 ----
-https://<FQDN>:<PORT>/services/catalog/query?q='*'&dtstart=${timestamp}T00:00:00Z&dtend=${timestamp}T18:00:00Z
+https://<FQDN>:<PORT>/services/catalog/query?q='*'&dtstart={timestamp}T00:00:00Z&dtend={timestamp}T18:00:00Z
 ----
 
 [NOTE]
 ====
 The start and end temporal criteria must be of the format specified above. Other formats are currently not supported. Example:
 
-`${timestamp}T12:00:00.111-04:00`.
+`{timestamp}T12:00:00.111-04:00`.
 
-*The start and end temporal elements are based on <<{metadata-prefix}modified,modified>> timestamps for a metacard.*
+*The start and end temporal elements are based on xref:metadatareference:core-attributes-table.adoc#modified[modified] timestamps for a metacard.*
 ====
 
-=== OpenSearch Geospatial Queries
+== OpenSearch Geospatial Queries
 Query by location.
 
 Use geospatial query parameters to create a geospatial `INTERSECTS` query, where `INTERSECTS` means geometries that are not `DISJOINT` to the given geospatial parameters. 
@@ -194,7 +193,7 @@ Examples:
 https://localhost:8993/services/catalog/query?q='*'&lon=44.792&lat=-6.171
 ----
 
-=== Additional OpenSearch Query Parameters
+== Additional OpenSearch Query Parameters
 The OpenSearch Endpoint can also use these additional parameters to refine queries
 
 .OpenSearch Query Extensions
@@ -215,7 +214,7 @@ The OpenSearch Endpoint can also use these additional parameters to refine queri
 |`<sborder>` is optional but has a value of `asc` or `desc` (default is `desc`).
 However, when `<sbfield>` is `relevance`, `<sborder>` must be `desc`.
 
-Sorting by `date` will sort the results by the <<{metadata-prefix}effective,`effective`>> date.
+Sorting by `date` will sort the results by the xref:metadatareference:core-attributes-table.adoc#effective[`effective`] date.
 
 default: `relevance:desc`
 
@@ -238,7 +237,7 @@ default: `300000` (5 minutes)
 |`dateOffset`
 |`dtoffset`
 |Integer > 0
-|Specifies an offset (milliseconds), backwards from the current time, to search on the <<{metadata-prefix}modified, modified>> time field for entries.
+|Specifies an offset (milliseconds), backwards from the current time, to search on the xref:metadatareference:core-attributes-table.adoc#modified[modified] time field for entries.
 
 |`type`
 |`type`

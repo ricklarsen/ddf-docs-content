@@ -5,7 +5,7 @@
 :order: 00
 :summary: Validator plugins run on Ingest
 
-== {title}
+= Validator Plugins on Ingest
 
 When Enforce Errors is enabled within the {admin-console}, validator plugins ensure the data being
 ingested is valid. Below is a list of the validators run against the data ingested.
@@ -21,7 +21,7 @@ ingested is valid. Below is a list of the validators run against the data ingest
 .. If *Enforce errors* is not checked, these validators below will *not* be run on ingest.
 ====
 
-=== Validators run on ingest
+== Validators run on ingest
 
 * *TDF Schema Validation Service*: This service validates a TDO against a TDF schema.
 * *Size Validator*: Validates the size of an attribute's value(s).

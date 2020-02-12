@@ -5,11 +5,11 @@
 :summary: How attribute overrides add attributes to metacards during ingest.
 :order: 04
 
-=== {title}
+= Attributes Added by Attribute Overrides (Ingest)
 
-<<_overriding_attributes,Attribute Overriding>> is the act of replacing existing attribute values with a new value.
+xref:managing:datamanagement/overriding-attributes.adoc[Attribute Overriding] is the act of replacing existing attribute values with a new value.
 
-Attribute overrides can be configured for the <<_content_directory_monitor,Content Directory Monitor>>.
+Attribute overrides can be configured for the xref:managing:configuring/content-directory-monitor.adoc[Content Directory Monitor].
 
-Note that the attribute must be part of the metacard's <<{integrating-prefix}metacard_type,Metacard Type>> before it can be overridden. +
-See <<{managing-prefix}attributes_added_by_attribute_injection,Attributes Added By Attribute Injection>> for more information about injecting attributes into the metacard type.
+Note that the attribute must be part of the metacard's xref:developing:devcomponents/metacard-type.adoc[Metacard Type] before it can be overridden. +
+See xref:managing:datamanagement/attributes-added-by-attribute-injection.adoc[Attributes Added By Attribute Injection] for more information about injecting attributes into the metacard type.

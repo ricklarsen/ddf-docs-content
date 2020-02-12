@@ -161,7 +161,6 @@
 * Data Management
 ** xref:datamanagement/ingesting.adoc[Ingesting Data]
 *** xref:datamanagement/ingest-command.adoc[Ingest Command]
-*** xref:datamanagement/ui-ingest.adoc[User Interface Ingest]
 *** xref:datamanagement/directory-monitor-ingest.adoc[Content Directory Monitor Ingest]
 *** xref:datamanagement/external-ingest.adoc[External Methods of Ingest]
 *** xref:datamanagement/forms-commands.adoc[Creating And Managing System Search Forms Through Karaf]

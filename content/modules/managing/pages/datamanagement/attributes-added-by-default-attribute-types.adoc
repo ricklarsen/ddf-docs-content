@@ -5,9 +5,9 @@
 :summary: How default attribute types add attributes to metacards.
 :order: 03
 
-=== {title}
+= Attributes Added by Default Attribute Types
 
-<<{developing-prefix}metacard_groomer,Developing Default Attribute Types>> is a configurable way to assign default values to a metacard's attributes.
+xref:architectures:/metacard-groomer.adoc[Developing Default Attribute Types] is a configurable way to assign default values to a metacard's attributes.
 
-Note that the attribute must be part of the metacard's <<{integrating-prefix}metacard_type,Metacard Type>> before it can be assigned a default value. +
-See <<{managing-prefix}attributes_added_by_attribute_injection,Attributes Added By Attribute Injection>> for more information about injecting attributes into the metacard type.
+Note that the attribute must be part of the metacard's xref:developing:devcomponents/metacard-type.adoc[Metacard Type] before it can be assigned a default value. +
+See xref:managing:datamanagement/attributes-added-by-attribute-injection.adoc[Attributes Added By Attribute Injection] for more information about injecting attributes into the metacard type.

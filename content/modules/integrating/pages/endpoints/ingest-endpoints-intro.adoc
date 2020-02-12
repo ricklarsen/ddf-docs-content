@@ -4,9 +4,9 @@
 :operations: ingest
 :order: 01
 
-== {title}
+= Ingest Endpoints
 
-*Ingest* is the process of getting data and/or metadata into the ${branding} catalog framework.
+*Ingest* is the process of getting data and/or metadata into the {branding} catalog framework.
 
-These endpoints are provided by ${branding} to be used by integrators to ingest content or metadata.
+These endpoints are provided by {branding} to be used by integrators to ingest content or metadata.
 

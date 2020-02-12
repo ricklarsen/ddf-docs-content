@@ -5,14 +5,14 @@
 :summary: How attributes are automatically added to metacards during ingest.
 :order: 0
 
-== {title}
+= Attributes Added on Ingest
 
-A metacard is first created and populated by parsing the ingested resource with an <<_attributes_added_by_input_transformers,Input Transformer>>. +
-Then <<{managing-prefix}attributes_added_by_attribute_injection,Attributes Are Injected>>, <<{developing-prefix}metacard_groomer,Default Attribute Types>> are applied, and <<_attributes_added_by_attribute_overrides_ingest,Attribute are Overridden>>. +
-Finally the metacard is passed through a series of <<{architecture-prefix}attributes_added_by_pre_authorization_plugins,Pre-Authorization Plugins>> and <<{architecture-prefix}attributes_added_by_pre_ingest_plugins,Pre-Ingest Plugins>>.
+A metacard is first created and populated by parsing the ingested resource with an xref:managing:datamanagement/attributes-added-by-input-transformers.adoc[Input Transformer]. +
+Then xref:managing:datamanagement/attributes-added-by-attribute-injection.adoc[Attributes Are Injected], xref:architectures:metacard-groomer.adoc[Default Attribute Types] are applied, and xref:managing:datamanagement/attributes-added-by-attribute-overrides-ingest.adoc[Attribute are Overridden]. +
+Finally the metacard is passed through a series of xref:managing:datamanagement/attributes-added-by-pre-authorization-plugins.adoc[Pre-Authorization Plugins] and xref:managing:datamanagement/attributes-added-by-pre-ingest-plugins.adoc[Pre-Ingest Plugins].
 
 .Ingest Attribute Flow
-[ditaa,ingest-attribute-flow]
+[ditaa,ingest-attribute-flow,png]
 ....
 +----------------------------------------------+
 | /----------------\  |                    cCCC|

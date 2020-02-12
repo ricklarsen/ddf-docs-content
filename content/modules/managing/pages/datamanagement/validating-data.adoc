@@ -4,7 +4,7 @@
 :summary: Methods of correcting data validation errors.
 :order: 01
 
-== {title}
+= Validating Data
 
 Configure {branding} to perform validation on ingested documents to verify the integrity of the metadata brought into the catalog.
 

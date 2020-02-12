@@ -4,7 +4,7 @@
 :summary: Moving data/metadata to another catalog provider.
 :order: 03
 
-== {title}
+= Migrating Data
 
 Data migration is the process of moving metacards from one catalog provider to another.
 It is also the process of translating metadata from one format to another. 

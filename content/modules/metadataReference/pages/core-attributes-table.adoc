@@ -126,8 +126,8 @@ a|The creation date of the resource http://dublincore.org/documents/dcmi-terms/#
 |
 
 
-|[[modified
-a|Themodified]] modification date of the resource http://dublincore.org/documents/dcmi-terms/#terms-modified[Dublin Core terms-modified] {external-link}.
+|[[modified]]modified
+a|The modification date of the resource http://dublincore.org/documents/dcmi-terms/#terms-modified[Dublin Core terms-modified] {external-link}.
 |Date
 |
 |

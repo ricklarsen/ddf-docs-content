@@ -4,6 +4,6 @@
 :summary: How attributes are automatically added to metacards.
 :order: 05
 
-== {title}
+= Automatically Added Metacard Attributes
 
 This section describes how attributes are automatically added to metacards.

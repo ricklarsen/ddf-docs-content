@@ -5,7 +5,7 @@
 :parent: Data Migration
 :order: 01
 
-== {title}
+= Ingesting Exported Metadata
 
 . Configure a different catalog provider.
 . From the command line of {branding} console, use the *ingest* command to import exported metacards from serialized data files into catalog provider.

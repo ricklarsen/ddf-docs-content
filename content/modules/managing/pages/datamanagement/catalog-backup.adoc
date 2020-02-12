@@ -4,9 +4,9 @@
 :summary: Make a backup of the Catalog.
 :order: 01
 
-== {title}
+= Backing Up the Catalog
 
 To backup local catalog records, a Catalog Backup Plugin is available.
 It is not installed by default for performance reasons.
 
-See <<{developing-prefix}catalog_backup_plugin,Catalog Backup Plugin>> for installation and configuration instructions).
+See xref:architectures:catalog-backup-plugin.adoc[Catalog Backup Plugin] for installation and configuration instructions).

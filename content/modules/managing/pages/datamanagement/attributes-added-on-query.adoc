@@ -5,6 +5,6 @@
 :summary: How attributes are automatically added to metacards during a query.
 :order: 07
 
-== {title}
+= Attributes Added on Query
 
-Metacards resulting from a query will undergo <<{managing-prefix}attributes_added_by_attribute_injection,Attribute Injection>>, then have their <<{managing-prefix}attributes_added_by_attribute_overrides_query,Attributes Overridden>>.
+Metacards resulting from a query will undergo xref:managing:datamanagement/attributes-added-by-attribute-injection.adoc[Attribute Injection], then have their xref:managing:datamanagement/attributes-added-by-attribute-overrides-query.adoc[Attributes Overridden].

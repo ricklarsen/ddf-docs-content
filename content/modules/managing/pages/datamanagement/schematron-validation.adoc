@@ -5,7 +5,7 @@
 :order: 01
 :summary: Adding Schematron Validation Services.
 
-== {title}
+= Configuring Schematron Services
 
 {branding} uses https://github.com/schematron[Schematron Validation] {external-link} to validate metadata ingested into the catalog.
 

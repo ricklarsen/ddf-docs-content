@@ -4,6 +4,6 @@
 :operations: query
 :order: 03
 
-== {title}
+= Query Endpoints
 
-Query data or metadata stored within an instance of ${branding} using one of these endpoints.
+Query data or metadata stored within an instance of {branding} using one of these endpoints.

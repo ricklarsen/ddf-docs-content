@@ -5,7 +5,7 @@
 :parent: Removing expired records from the Catalog
 :order: 00
 
-== {title}
+= Manual Removal of Expired Records
 
 To manually remove expired records from the Catalog, execute in the {command-console}:
 
