@@ -5,10 +5,12 @@
 :plugintypes: preingest
 :summary: Populates the `Location.COUNTRY_CODE` attribute if the Metacard has an associated location.
 
+= GeoCoder Plugin
+
 The GeoCoder Plugin is a pre-ingest plugin that is responsible for populating the Metacard's `Location.COUNTRY_CODE` attribute if the Metacard has an associated location.
 If there is a valid country code for the Metacard, it will be in ISO 3166-1 alpha-3 format.
 If the metacard's country code is already populated, the plugin will *not* override it.
-The GeoCoder relies on either the WebService or <<{reference-prefix}offline_gazetteer_service,Offline Gazetteer>> to retrieve country code information.
+The GeoCoder relies on either the WebService or xref:reference:appReferences/mg-spatial.adoc#offline_gazetteer_service[Offline Gazetteer] to retrieve country code information.
 
 [WARNING]
 ====
@@ -17,17 +19,17 @@ For a polygon or polygons, this plugin takes the center point of the bounding bo
 
 == Installing the GeoCoder Plugin
 
-The GeoCoder Plugin is installed by default with the ${ddf-spatial} application, when the WebService or Offline Gazetteer is started.
+The GeoCoder Plugin is installed by default with the {ddf-spatial} application, when the WebService or Offline Gazetteer is started.
 
 == Configuring the GeoCoder Plugin
 
 To configure the GeoCoder Plugin:
 
-. Navigate to the *${admin-console}*.
-. Select *${ddf-spatial}* application.
+. Navigate to the *{admin-console}*.
+. Select *{ddf-spatial}* application.
 . Select *Configuration* tab.
 . Select *GeoCoder Plugin*.
 
 These are the available configurations:
 
-See <<{reference-prefix}org.codice.ddf.spatial.geocoding.plugin.GeoCoderPlugin,GeoCoder Plugin configurations>> for all possible configurations.
+See xref:reference:tables/GeoCoderPlugin.adoc[GeoCoder Plugin configurations] for all possible configurations.

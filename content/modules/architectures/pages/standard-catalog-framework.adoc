@@ -5,10 +5,12 @@
 :link: _standard_catalog_framework
 :order: 00
 
-The Standard Catalog Framework provides the reference implementation of a Catalog Framework that implements all requirements of the {ddf-catalog} API. 
-`CatalogFrameworkImpl` is the implementation of the ${branding} Standard Catalog Framework.
+= Standard Catalog Framework
 
-The Standard Catalog Framework is the core class of ${branding}.
+The Standard Catalog Framework provides the reference implementation of a Catalog Framework that implements all requirements of the {ddf-catalog} API. 
+`CatalogFrameworkImpl` is the implementation of the {branding} Standard Catalog Framework.
+
+The Standard Catalog Framework is the core class of {branding}.
 It provides the methods for create, update, delete, and resource retrieval (CRUD) operations on the `Sources`.
 By contrast, the Fanout Catalog Framework only allows for query and resource retrieval operations, no catalog modifications, and all queries are enterprise-wide.
 

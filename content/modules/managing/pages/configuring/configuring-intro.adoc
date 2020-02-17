@@ -24,7 +24,7 @@ Finally, configurations are stored in xref:managing:configuring/configuration-fi
 While many configurations can be set or changed in any order, for ease of use of this documentation, similar subjects have been grouped together sequentially.
 
 See xref:managing:installing/managing-certificates.adoc[Keystores and certificates] to set up the certificates needed for messaging integrity and authentication.
-Set up xref:managing:configuring/configuring-user-access.adoc[Users] with security attributes, then configure xref:managing:configuring/configuring-data-management.adoc[data] attribute handling, and finally, define the xref:managing:configuring/configuring-security-policies,Security Policies>> that map between users and data and make decisions about access.
+Set up xref:managing:configuring/configuring-user-access.adoc[Users] with security attributes, then configure xref:managing:configuring/configuring-data-management.adoc[data] attribute handling, and finally, define the xref:managing:configuring/configuring-security-policies[Security Policies] that map between users and data and make decisions about access.
 
 Connecting {branding} to other data sources, including other instances of {branding} is covered in the xref:managing:configuring/configuring-federation.adoc[Configuring Federation] section.
 

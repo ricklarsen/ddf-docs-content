@@ -5,11 +5,13 @@
 :plugintypes: preingest, postingest, prequery, postquery, prefederatedquery, postfederatedquery, preresource, postresource, precreatestorage, preupdatestorage, postcreatestorage, postupdatestorage
 :summary: Logs operations to the security log.
 
+= Security Logging Plugin
+
 The Security Logging Plugin logs operations to the security log.
 
 ==  Installing Security Logging Plugin
 
-The Security Logging Plugin is installed by default in a standard installation in the ${ddf-security} application.
+The Security Logging Plugin is installed by default in a standard installation in the {ddf-security} application.
 
 ==  Enhancing the Security Log
 

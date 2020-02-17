@@ -5,12 +5,14 @@
 :plugintypes: preauthorization
 :summary: Injects request-specific network information into a request.
 
+= Client Info Plugin
+
 The client info plugin injects request-specific network information into request properties, such as Remote IP Address, Remote Host Name, Servlet Scheme, and Servlet Context.
 
 == Related Components to the Client Info Plugin
 
 * Client info filter
-* <<{architecture-prefix}metacard_ingest_network_plugin,Metacard Ingest Network Plugin>>
+* xref:architectures:metacardingest-network.adoc[Metacard Ingest Network Plugin]
 
 == Installing the Client Info Plugin
 

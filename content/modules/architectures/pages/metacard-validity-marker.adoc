@@ -5,6 +5,8 @@
 :plugintypes: preingest
 :summary: Modifies metacards when created or ingested according to metacard validator services.
 
+= Metacard Validity Marker
+
 The Metacard Validity Marker Pre-Ingest plugin modifies the metacards contained in create and update requests.
 
 The plugin runs each metacard in the `CreateRequest` and `UpdateRequest` against each registered `MetacardValidator` service.
@@ -18,7 +20,7 @@ verify either that the ingested data is valid or that the <<_metacard_validity_f
 
 == Related Components to the Metacard Validity Marker
 
-* <<_metacard_validity_filter_plugin,Metacard Validity Filter Plugin>>.
+* xref:reference:tables/MetacardValidityFilterPlugin.adoc[Metacard Validity Filter Plugin].
 
 == Installing Metacard Validity Marker
 
@@ -26,7 +28,7 @@ This plugin is installed by default with a standard installation in the {ddf-cat
 
 == Configuring Metacard Validity Marker
 
-See <<{reference-prefix}ddf.catalog.metacard.validation.MetacardValidityMarkerPlugin,Metacard Validity Marker Plugin configurations>> for all possible configurations.
+See xref:reference:tables/MetacardValidityMarkerPlugin.adoc[Metacard Validity Marker Plugin configurations] for all possible configurations.
 
 == Using Metacard Validity Marker
 

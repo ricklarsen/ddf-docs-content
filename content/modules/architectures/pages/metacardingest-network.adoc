@@ -5,13 +5,15 @@
 :plugintypes: preauthorization
 :summary: Adds attributes for network info from ingest request.
 
+= Metacard Ingest Network Plugin
+
 The Metacard Ingest Network Plugin allows the conditional insertion of new attributes on metacards during ingest based on network information from the ingest request; including IP address and hostname.
 
 For the extent of this section, a 'rule' will refer to a configured, single instance of this plugin.
 
 == Related Components to the Metacard Ingest Network Plugin
 
-* <<_client_info_plugin,Client Info Plugin>>
+* xref:architectures:client-info-plugin.adoc[Client Info Plugin]
 
 == Installing the Metacard Ingest Network Plugin
 
@@ -21,12 +23,12 @@ The Metacard Ingest Network Plugin is installed by default during a standard ins
 
 To configure the Metacard Ingest Network Plugin:
 
-* Navigate to the *${admin-console}*.
+* Navigate to the *{admin-console}*.
 * Select the {ddf-catalog} application.
 * Select the *Configuration* tab.
 * Select the label _Metacard Ingest Network Plugin_ to setup a network rule.
 
-See <<{reference-prefix}org.codice.ddf.catalog.plugin.metacard.MetacardIngestNetworkPlugin,Metacard Ingest Network Plugin configurations>> for all possible configurations.
+See xref:reference:tables/MetacardIngestNetworkPlugin.adoc[Metacard Ingest Network Plugin configurations] for all possible configurations.
 
 Multiple instances of the plugin can be configured by clicking on its configuration title within the configuration tab of the {ddf-catalog} app.
 Each instance represents a conditional statement, or a 'rule', that gets evaluated for each ingest request.

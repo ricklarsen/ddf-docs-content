@@ -1,14 +1,17 @@
 :title: Viewing Metrics
+:title: Viewing Metrics
 :type: subArchitecture
 :status: published
 :parent: Metrics Reporting Application
 :order: 01
-:summary: Viewing Metrics in the ${admin-console}.
+:summary: Viewing Metrics in the {admin-console}.
+
+:title: Viewing Metrics
 
 The Metrics Viewer has reports in various formats.
 
-. Navigate to the *${admin-console}*.
-. Select the *${ddf-platform}* application.
+. Navigate to the *{admin-console}*.
+. Select the *{ddf-platform}* application.
 . Select the *Metrics* tab.
 
 Reports are organized by timeframe and output format.

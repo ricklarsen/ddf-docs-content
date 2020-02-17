@@ -5,13 +5,15 @@
 :plugintypes: postingest
 :summary: Stores backed-up metacards.
 
+= Metacard Backup File Storage Provider
+
 The Metacard Backup File Storage Provider is a storage provider that will store backed-up metacards in a specified file system location.
 
 == Installing the Metacard Backup File Storage Provider
 
 To install the Metacard Backup File Storage Provider
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *System* tab.
 . Select the *Features* tab.
 . Install the `catalog-metacard-backup-filestorage` feature.
@@ -20,9 +22,9 @@ To install the Metacard Backup File Storage Provider
 
 To configure the Metacard Backup File Storage Provider
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select {ddf-catalog} application.
 . Select *Configuration* tab.
 . Select *Metacard Backup File Storage Provider*.
 
-See <<{reference-prefix}Metacard_File_Storage_Route,Metacard Backup File Storage Provider configurations>> for all possible configurations.
+See xref:reference:tables/Metacard_File_Storage_Route.adoc[Metacard Backup File Storage Provider configurations] for all possible configurations.

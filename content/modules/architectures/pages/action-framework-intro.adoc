@@ -5,6 +5,8 @@
 :order: 05
 :summary: Introduction to the Action Framework.
 
+= Action Framework
+
 The Action Framework was designed as a way to limit dependencies between applications (apps) in a system.
 For instance, a feature in an app, such as an Atom feed generator, might want to include an external link as part of its feed's entries.
 That feature does not have to be coupled to a REST endpoint to work, nor does it have to depend on a specific implementation to get a link.

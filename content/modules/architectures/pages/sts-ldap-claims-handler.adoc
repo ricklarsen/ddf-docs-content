@@ -5,9 +5,9 @@
 :parent: Security Token Service
 :order: 04
 
-== {title}
+= Security LDAP Claims Handler
 
-The ${ddf-security} LDAP Claims Handler bundle adds functionality that allows retrieval of claims from an LDAP server.
+The {ddf-security} LDAP Claims Handler bundle adds functionality that allows retrieval of claims from an LDAP server.
 
 [NOTE]
 ====
@@ -15,18 +15,18 @@ All claims handlers are queried for user attributes regardless of realm.
 This means that two different users with the same username in different LDAP servers will end up with both of their claims in each of their individual assertions.
 ====
 
-=== Installing Security LDAP Claims Handler
+== Installing Security LDAP Claims Handler
 
 This bundle is not installed by default and can be added by installing the
 `security-claims-ldap`
  feature.
 
-=== Configuring the Security LDAP Claims Handler
+== Configuring the Security LDAP Claims Handler
 
-Configure the Security LDAP Claims Handler from the ${admin-console}:
+Configure the Security LDAP Claims Handler from the {admin-console}:
 
-. Navigate to the ${admin-console}.
-. Select *${ddf-security} Application*
+. Navigate to the {admin-console}.
+. Select *{ddf-security} Application*
 . Select *Configuration* tab.
 . Select *Security LDAP and Roles Claims Handler*.
 
@@ -39,7 +39,7 @@ Configure the Security LDAP Claims Handler from the ${admin-console}:
 |Additional Information
 
 |LDAP URL
-|`ldaps://${org.codice.ddf.system.hostname}:1636`
+|`ldaps://{org.codice.ddf.system.hostname}:1636`
 |
 
 |StartTLS

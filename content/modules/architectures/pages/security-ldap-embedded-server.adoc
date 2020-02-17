@@ -5,29 +5,29 @@
 :order: 00
 :summary: Embedded LDAP server.
 
-== {title}
+= Embedded LDAP Server
 
-${branding} includes an embedded LDAP server (OpenDJ) for testing and demonstration purposes.
+{branding} includes an embedded LDAP server (OpenDJ) for testing and demonstration purposes.
 
 [WARNING]
 ====
 The embedded LDAP server is intended for testing purposes only and is not recommended for production use.
 ====
 
-=== Installing the Embedded LDAP Server
+== Installing the Embedded LDAP Server
 
 The embedded LDAP server is not installed by default with a standard installation.
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *System* tab.
 . Select the *Features* tab.
 . Install the `opendj-embedded` feature.
 
-=== Configuring the Embedded LDAP
+== Configuring the Embedded LDAP
 
-Configure the Embedded LDAP from the ${admin-console}:
+Configure the Embedded LDAP from the {admin-console}:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *OpenDj Embedded* application.
 . Select the *Configuration* tab.
 
@@ -49,13 +49,13 @@ Configure the Embedded LDAP from the ${admin-console}:
 This file will be loaded into the LDAP and overwrite any existing entries.
 This option should be used when updating the default groups/users with a new LDIF file for testing.
 The LDIF file being loaded may contain any LDAP entries (schemas, users, groups, etc.).
-If the location is left blank, the default base LDIF file will be used that comes with ${branding}.
+If the location is left blank, the default base LDIF file will be used that comes with {branding}.
 
 |===
 
-=== Connecting to Standalone LDAP Servers
+== Connecting to Standalone LDAP Servers
 
-${branding} instances can connect to external LDAP servers by installing and configuring the `security-jaas-ldap` and `security-claims-ldap` features detailed here.
+{branding} instances can connect to external LDAP servers by installing and configuring the `security-jaas-ldap` and `security-claims-ldap` features detailed here.
 
 In order to connect to more than one LDAP server, configure these features for each LDAP server.
 
@@ -226,26 +226,26 @@ The default schemas loaded into the LDAP instance are the same defaults that com
 
 |===
 
-=== Starting and Stopping the Embedded LDAP
+== Starting and Stopping the Embedded LDAP
 
 The embedded LDAP application installs a feature with the name `ldap-embedded`.
 Installing and uninstalling this feature will start and stop the embedded LDAP server.
 This will also install a fresh instance of the server each time.
 If changes need to persist, stop then start the `embedded-ldap-opendj` bundle (rather than installing/uninstalling the feature).
 
-All settings, configurations, and changes made to the embedded LDAP instances are persisted across ${branding} restarts.
-If ${branding} is stopped while the LDAP feature is installed and started, it will automatically restart with the saved settings on the next ${branding} start.
+All settings, configurations, and changes made to the embedded LDAP instances are persisted across {branding} restarts.
+If {branding} is stopped while the LDAP feature is installed and started, it will automatically restart with the saved settings on the next {branding} start.
 
-=== Limitations of the Embedded LDAP
+== Limitations of the Embedded LDAP
 
 Current limitations for the embedded LDAP instances include:
 
-* Inability to store the LDAP files/storage outside of the ${branding} installation directory. This results in any LDAP data (i.e., LDAP user information) being lost when the `ldap-embedded` feature is uninstalled.
-* Cannot be run standalone from ${branding}. In order to run `embedded-ldap`, the ${branding} must be started.
+* Inability to store the LDAP files/storage outside of the {branding} installation directory. This results in any LDAP data (i.e., LDAP user information) being lost when the `ldap-embedded` feature is uninstalled.
+* Cannot be run standalone from {branding}. In order to run `embedded-ldap`, the {branding} must be started.
 
-=== External Links for the Embedded LDAP
+== External Links for the Embedded LDAP
 
-Location to the default base LDIF file in the ${branding} https://github.com/codice/opendj-osgi/blob/master/embedded/opendj-embedded-server/src/main/resources/default-users.ldif[source code] {external-link}.
+Location to the default base LDIF file in the {branding} https://github.com/codice/opendj-osgi/blob/master/embedded/opendj-embedded-server/src/main/resources/default-users.ldif[source code] {external-link}.
 
 https://backstage.forgerock.com/docs/opendj/2.6[OpenDJ documentation] {external-link}
 

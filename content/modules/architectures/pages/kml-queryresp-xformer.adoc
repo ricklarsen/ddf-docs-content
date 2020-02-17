@@ -5,13 +5,15 @@
 :link: _kml_query_response_transformer
 :summary: Translates a query response into a KML-formatted document.
 
+= KML Query Response Transformer
+
 The KML Query Response Transformer translates a query response into a KML-formatted document.
 The KML will contain an HTML description for each metacard that will display in the pop-up bubble in Google Earth.
 The HTML contains links to the full metadata view as well as the resource.
 
 == Installing the KML Query Response Transformer
 
-The `spatial-kml-transformer` feature is installed by default in the ${ddf-spatial} Application.
+The `spatial-kml-transformer` feature is installed by default in the {ddf-spatial} Application.
 
 == Configuring the KML Query Response Transformer
 
@@ -23,7 +25,7 @@ Using the OpenSearch Endpoint, for example, query with the format option set to 
 
 .KML Query Response Transformer URL
 ----
-${public_url}/services/catalog/query?q=schematypesearch&format=kml
+{public_url}/services/catalog/query?q=schematypesearch&format=kml
 ----
 
 .KML Query Response Transformer Example Output
@@ -99,13 +101,13 @@ width: 100% }
   &lt;/head&gt;
   &lt;body&gt;
         &lt;div class="thumbnailDiv"&gt;&lt;a
-href="${public_url}/services/catalog/sources/${branding-lowercase}.distribution/0103c77e66d9428d8f
+href="{public_url}/services/catalog/sources/{branding-lowercase}.distribution/0103c77e66d9428d8f
 48fab939da528e?transform=resource"&gt;&lt;img alt="Thumnail"
 src="data:image/jpeg;charset=utf-8;base64, CA=="&gt;&lt;/a&gt;&lt;/div&gt;
     &lt;table&gt;
       &lt;tr&gt;
         &lt;td class="label"&gt;Source:&lt;/td&gt;
-        &lt;td&gt;${ddf-branding-lowercase}.distribution&lt;/td&gt;
+        &lt;td&gt;{ddf-branding-lowercase}.distribution&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
         &lt;td class="label"&gt;Created:&lt;/td&gt;
@@ -119,10 +121,10 @@ src="data:image/jpeg;charset=utf-8;base64, CA=="&gt;&lt;/a&gt;&lt;/div&gt;
     &lt;table class="linkTable"&gt;
       &lt;tr&gt;
         &lt;td&gt;&lt;a
-href="${public_url}/services/catalog/sources/${branding-lowercase}.distribution/0103c77e66d9428d8f
+href="{public_url}/services/catalog/sources/{branding-lowercase}.distribution/0103c77e66d9428d8f
 48fab939da528e?transform=html"&gt;View Details...&lt;/a&gt;&lt;/td&gt;
         &lt;td&gt;&lt;a
-href="${public_url}/services/catalog/sources/${branding-lowercase}.distribution/0103c77e66d9428d8f
+href="{public_url}/services/catalog/sources/{branding-lowercase}.distribution/0103c77e66d9428d8f
 48fab939da528e?transform=resource"&gt;Download...&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
     &lt;/table&gt;

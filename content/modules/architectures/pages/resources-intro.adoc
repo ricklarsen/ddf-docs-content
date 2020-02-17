@@ -5,8 +5,9 @@
 :order: 02
 :summary: Resources.
 
+= Resources
 .Resources Architecture
-[ditaa, catalog_architecture_resources, png, ${image-width}]
+[ditaa, catalog_architecture_resources, png, {image-width}]
 ....
 +------------------------------------------------------------+
 |                /-------------------\                       |
@@ -31,14 +32,14 @@
 +------------------------------------------------------------+
 ....
 
-Resources are the data that is represented by the cataloged metadata in ${branding}.
+Resources are the data that is represented by the cataloged metadata in {branding}.
 
 Metacards are used to describe those resources through metadata. 
 This metadata includes the time the resource was created, the location where the resource was created, etc. 
-A ${branding} `Metacard` contains the `getResourceUri` method, which is used to locate and retrieve its corresponding resource.
+A {branding} `Metacard` contains the `getResourceUri` method, which is used to locate and retrieve its corresponding resource.
 
 .Content Data Component Architecture
-[ditaa, content_data_components, png,${image.width}]
+[ditaa, content_data_components, png,{image.width}]
 ....
 +------------------------------------------------------------------------------+
 |                 /-=-----------------\                                        |

@@ -5,6 +5,8 @@
 :plugintypes: postingest
 :summary: Stores backed-up metacards in a specified S3 bucket and key.
 
+= Metacard Backup S3 Storage Provider
+
 The Metacard Backup S3 Storage Provider is a storage provider that will store backed up metacards in the specified S3 bucket and key.
 
 == Installing the Metacard S3 File Storage Provider
@@ -19,9 +21,9 @@ To install the Metacard Backup File Storage Provider
 
 To configure the Metacard Backup S3 Storage Provider:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select {ddf-catalog} application.
 . Select *Configuration* tab.
 . Select *Metacard Backup S3 Storage Provider*.
 
-See <<{reference-prefix}Metacard_S3_Storage_Route,Metacard Backup S3 Storage Provider configurations>> for all possible configurations.
+See xref:reference:tables/Metacard_S3_Storage_Route.adoc[Metacard Backup S3 Storage Provider configurations] for all possible configurations.

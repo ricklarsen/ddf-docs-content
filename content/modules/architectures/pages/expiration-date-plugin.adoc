@@ -5,6 +5,8 @@
 :plugintypes: preingest
 :summary: Adds or updates expiration dates for the resource.
 
+= Expiration Date Pre-Ingest Plugin
+
 The Expiration Date plugin adds or updates expiration dates which can be used later for archiving old data.
 
 == Installing the Expiration Date Pre-Ingest Plugin
@@ -12,7 +14,7 @@ The Expiration Date plugin adds or updates expiration dates which can be used la
 The Expiration Date Pre-Ingest Plugin is not installed by default with a standard installation.
 To install:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *{ddf-catalog}* application.
 . Select the *Configuration* tab.
 . Select the *Expiration Data Pre-Ingest Plugin*.
@@ -21,9 +23,9 @@ To install:
 
 To configure the Expiration Date Pre-Ingest Plugin:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *{ddf-catalog}* application.
 . Select the *Configuration* tab.
 . Select the *Expiration Date Pre-Ingest Plugin*.
 
-See <<{reference-prefix}org.codice.ddf.catalog.plugin.expiration.ExpirationDatePlugin,Expiration Date Plugin configurations>> for all possible configurations.
+See xref:reference:tables/ExpirationDatePlugin.adoc[Expiration Date Plugin configurations] for all possible configurations.

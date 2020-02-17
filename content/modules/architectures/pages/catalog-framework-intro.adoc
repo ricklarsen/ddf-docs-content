@@ -4,8 +4,10 @@
 :summary: Introduction to Catalog Framework
 :order: 01
 
+= Catalog Framework Intro
+
 .Catalog Framework Architecture
-[ditaa, catalog_architecture_framework, png, ${image-width}]
+[ditaa, catalog_architecture_framework, png, {image-width}]
 ....
 +------------------------------------------------------------+
 |                /-------------------\                       |
@@ -31,8 +33,8 @@
 ....
 
 The `CatalogFramework` is the routing mechanism between catalog components that provides integration points for the Catalog Plugins.
-An <<{integrating-prefix}endpoints, endpoint>> invokes the active Catalog Framework, which calls any configured <<{architecture-prefix}pre_query_plugins, Pre-query>> or <<{architecture-prefix}pre_ingest_plugins, Pre-ingest plug-ins>>.
-The selected <<{managing-prefix}federation_strategy, federation strategy>> calls the active <<{managing-prefix}catalog_providers, Catalog Provider>> and any connected or federated sources.
+An xref:integrating:endpoints/endpoint-intro.adoc[endpoint] invokes the active Catalog Framework, which calls any configured xref:architectures:pre-query-intro.adoc[Pre-query] or xref:architectures:pre-ingest-intro.adoc[Pre-ingest plug-ins].
+The selected xref:managing:configuring/sources/federation-strategy.adoc[federation strategy] calls the active xref:managing:configuring/sources/catalog-provider-intro.adoc[Catalog Provider] and any connected or federated sources.
 Then, any Post-query or Post-ingest plug-ins are invoked.
 Finally, the appropriate response is returned to the calling endpoint.
 
@@ -40,18 +42,18 @@ The Catalog Framework wires all Catalog components together.
 
 It is responsible for routing Catalog requests and responses to the appropriate target. 
 
-<<{integrating-prefix}endpoints,Endpoints>> send Catalog requests to the Catalog Framework.
-The Catalog Framework then invokes <<{architecture-prefix}catalog_plugins,Catalog Plugins>>, <<{architecture-prefix}transformers,Transformers>>, and <<{architecture-prefix}resources,Resource Components>> as needed before sending requests to the intended destination, such as one or more <<{managing-prefix}connecting_to_sources,Sources>>. 
+xref:integrating:endpoints/endpoint-intro.adoc[Endpoints] send Catalog requests to the Catalog Framework.
+The Catalog Framework then invokes xref:architectures:plugins-intro.adoc[Catalog Plugins], xref:architectures:transformers-intro.adoc[Transformers], and xref:architectures:resources-intro[Resource Components] as needed before sending requests to the intended destination, such as one or more xref:managing:configuring/connecting-to-sources.adoc[Sources]. 
 
 The Catalog Framework decouples clients from service implementations and provides integration points for Catalog Plugins and convenience methods for Endpoint developers.
 
 == Catalog API Design
 
 The Catalog is composed of several components and an API that connects them together.
-The Catalog API is central to ${branding}'s architectural qualities of extensibility and flexibility. 
+The Catalog API is central to {branding}'s architectural qualities of extensibility and flexibility. 
 The Catalog API consists of Java interfaces that define Catalog functionality and specify interactions between components. 
 These interfaces provide the ability for components to interact without a dependency on a particular underlying implementation, thus allowing the possibility of alternate implementations that can maintain interoperability and share developed components.
-As such, new capabilities can be developed independently, in a modular fashion, using the Catalog API interfaces and reused by other ${branding} installations.
+As such, new capabilities can be developed independently, in a modular fashion, using the Catalog API interfaces and reused by other {branding} installations.
 
 === Ensuring Compatibility
 
@@ -108,7 +110,7 @@ Similarly, for deletion of catalog entries, the delete requests call the `delete
 ==== Error Handling
 
 Any ingest attempts that fail inside the Catalog Framework (whether the failure comes from the Catalog Framework itself, pre-ingest plugin failures, or issues with the Catalog Provider) will be logged to a separate log file for ease of error handling.
-The file is located at `${home_directory}/data/log/ingest_error.log` and will log the Metacards that fail, their ID and Title name, and the stack trace associated with their failure.
+The file is located at `{home_directory}/data/log/ingest_error.log` and will log the Metacards that fail, their ID and Title name, and the stack trace associated with their failure.
 By default, successful ingest attempts are not logged.
 However, that functionality can be achieved by setting the log level of the `ingestLogger` to DEBUG (note that enabling DEBUG can cause a non-trivial performance hit).
 
@@ -166,7 +168,7 @@ It is possible to have only remote Sources configured and no local `CatalogProvi
 ==== Product Caching
 
 The Catalog Framework optionally provides caching of products, so future requests to retrieve the same product will be serviced much quicker.
-If caching is enabled, each time a retrieve product request is received, the Catalog Framework will look in its cache (default location `${home_directory}/data/product-cache`) to see if the product has been cached locally.
+If caching is enabled, each time a retrieve product request is received, the Catalog Framework will look in its cache (default location `{home_directory}/data/product-cache`) to see if the product has been cached locally.
 If it has, the product is retrieved from the local site and returned to the client, providing a much quicker turnaround because remote product retrieval and network traffic was avoided.
 If the requested product is not in the cache, the product is retrieved from the Source (local or remote) and cached locally while returning the product to the client.
 The caching to a local file of the product and the streaming of the product to the client are done simultaneously so that the client does not have to wait for the caching to complete before receiving the product.

@@ -4,30 +4,31 @@
 :summary: Introduction to Catalog API.
 :order: 02
 
-==== Catalog API
+
+= Catalog API
 
 The Catalog API is an OSGi bundle (`catalog-core-api`) that contains the Java interfaces for the Catalog components and implementation classes for the Catalog Framework, Operations, and Data components.
 
-===== Catalog API Search Interfaces
+== Catalog API Search Interfaces
 
 The Catalog API includes two different search interfaces.
 
-${ddf-ui} Application Search Interface:: The ${branding} Search UI application provides a graphic interface to return results and locate them on an interactive globe or map.
+{ddf-ui} Application Search Interface:: The {branding} Search UI application provides a graphic interface to return results and locate them on an interactive globe or map.
 
-SSH Search Interface:: Additionally, it is possible to use a client script to remotely access ${branding} via SSH and send console commands to search and ingest data.
+SSH Search Interface:: Additionally, it is possible to use a client script to remotely access {branding} via SSH and send console commands to search and ingest data.
 
-===== Catalog Search Result Objects
+== Catalog Search Result Objects
 
 Data is returned from searches as Catalog Search `Result` objects.
 This is a subtype of Catalog `Entry` that also contains additional data based on what type of sort policy was applied to the search.
 Because it is a subtype of Catalog `Entry`, a Catalog Search `Result` has all Catalog ``Entry``’s fields such as metadata, effective time, and modified time.
-It also contains some of the following fields, depending on type of search, that are populated by ${branding} when the search occurs:
+It also contains some of the following fields, depending on type of search, that are populated by {branding} when the search occurs:
 
 Distance:: Populated when a point-radius spatial search occurs. Numerical value that indicates the result’s distance from the center point of the search.
 Units:: Populated when a point-radius spatial search occurs. Indicates the units (kilometer, mile, etc.) for the distance field.
 Relevance:: Populated when a contextual search occurs. Numerical value that indicates how relevant the text in the result is to the text originally searched for.
 
-===== Search Programmatic Flow
+== Search Programmatic Flow
 
 Searching the catalog involves three basic steps:
 
@@ -41,11 +42,11 @@ Words such as “baghdad”, “BAGHDAD”,  and “baghDad” will not be retur
 . Issue a search.
 . Examine the results.
 
-===== Sort Policies
+== Sort Policies
 
 Searches can also be sorted according to various built-in policies.
 A sort policy is applied to the search criteria after its creation but before the search is issued.
-The policy specifies to the ${branding} the order the Catalog search results should be in when they are returned to the requesting client.
+The policy specifies to the {branding} the order the Catalog search results should be in when they are returned to the requesting client.
 Only one sort policy may be defined per search.
 
 There are three policies available.
@@ -79,9 +80,9 @@ There are three policies available.
 If no sort policy is defined for a particular search, the temporal policy will automatically be applied.
 
 
-===== Product Retrieval
+== Product Retrieval
 
-The ${branding} is used to catalog resources.
+The {branding} is used to catalog resources.
 A Resource is a URI-addressable entity that is represented by a Metacard.
 Resources may exist either locally or on a remote data store.
 
@@ -96,8 +97,8 @@ Resources may exist either locally or on a remote data store.
 .Product Retrieval Services
 
 * SOAP Web services
-* ${branding} JSON
-* ${branding} REST
+* {branding} JSON
+* {branding} REST
 
 The Query Service Endpoint, the Catalog Framework, and the `CatalogProvider` are key
 components for processing a retrieve resource request.
@@ -109,7 +110,7 @@ It is possible to retrieve resources from specific remote Sources by specifying 
 
 .Product Caching
 Product Caching is enabled by default.
-Existing ${branding} clients are able to leverage product caching due to the product cache being implemented in the ${branding}.
+Existing {branding} clients are able to leverage product caching due to the product cache being implemented in the {branding}.
 
 .Product Retrieval Request
 [ditaa,product_retrieval_request,png]
@@ -148,9 +149,9 @@ Existing ${branding} clients are able to leverage product caching due to the pro
   |                                                                                                                                                             |
 ....
 
-===== Notifications and Activities
+== Notifications and Activities
 
-${branding} can send/receive notifications of "Activities" occurring in the system.
+{branding} can send/receive notifications of "Activities" occurring in the system.
 
 Currently, the notifications provide information about resource retrieval only.
 

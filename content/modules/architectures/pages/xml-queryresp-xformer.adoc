@@ -5,6 +5,8 @@
 :link: _xml_query_response_transformer
 :summary: Translates a query response into an XML-formatted document.
 
+= XML Query Response Transformer
+
 The XML Query Response Transformer is responsible for translating a query response into an XML-formatted document.
 The metacard element generated is an extension of `gml:AbstractFeatureCollectionType`, which makes the output of this transformer http://www.opengeospatial.org/projects/groups/gmldwg[GML 3.1.1] compatible.
 
@@ -17,7 +19,7 @@ To uninstall, uninstall the `catalog-transformer-xml` feature.
 
 To configure the XML Query Response Transformer:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *{ddf-catalog}* application.
 . Select the *Configuration* tab.
 . Select the XML Query Response Transformer.
@@ -32,7 +34,7 @@ Using the OpenSearch Endpoint, for example, query with the format option set to 
 .XML Query Response Transformer Query Example
 [source,http]
 ----
-${public_url}/services/catalog/query?q=input?format=xml
+{public_url}/services/catalog/query?q=input?format=xml
 ----
 
 .XML Query Response Transformer Example Output

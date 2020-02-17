@@ -6,6 +6,8 @@
 :order: 00
 :summary: Metrics Collection.
 
+= Metrics Collection Application
+
 The Metrics Collection Application is responsible for collecting both Catalog and Source metrics.
 
 Use Metrics Collection to collect historical metrics data, such as catalog query metrics, message latency, or individual sources' metrics type of data.
@@ -19,4 +21,4 @@ The catalog-level metrics are packaged as the `catalog-core-metricsplugin` fea
 == Configuring Metrics Collection
 
 No configuration is made for the Metrics Collection application.
-All metrics collected are either pre-configured in ${branding} or dynamically created as sources are created or deleted.
+All metrics collected are either pre-configured in {branding} or dynamically created as sources are created or deleted.

@@ -5,35 +5,37 @@
 :order: 07
 :summary: Introduction to the Migration API.
 
+= Migration API
+
 [NOTE]
 ====
 This code is experimental. While the interfaces and classes provided are functional and tested, they may change or be removed in a future version of the library.
 ====
 
-${branding} currently has an experimental API for making bundles migratable. Interfaces and classes in `platform/migration/platform-migratable-api` are
+{branding} currently has an experimental API for making bundles migratable. Interfaces and classes in `platform/migration/platform-migratable-api` are
 used by the system to identify bundles that provide implementations for export and import operations.
 
-The migration API provides a mechanism for bundles to handle exporting data required to clone or backup/restore a ${branding} system. The migration process is meant to
+The migration API provides a mechanism for bundles to handle exporting data required to clone or backup/restore a {branding} system. The migration process is meant to
 be flexible, so an implementation of `org.codice.ddf.migration.Migratable` can handle exporting data for a single bundle or groups of bundles such as applications.
-For example, the `org.codice.ddf.platform.migratable.impl.PlatformMigratable` handles exporting core system files for the ${ddf-platform} application. Each migratable
+For example, the `org.codice.ddf.platform.migratable.impl.PlatformMigratable` handles exporting core system files for the {ddf-platform} application. Each migratable
 must provide a unique identifier via its `getId()` method used by the migration API to uniquely identify the migratable between exports and imports. +
-${branding} defines migratables of its own to export/import all configurations stored in `org.osgi.service.cm.ConfigurationAdmin`.
+{branding} defines migratables of its own to export/import all configurations stored in `org.osgi.service.cm.ConfigurationAdmin`.
 
 These do not need to be handled by implementations of `org.codice.ddf.migration.Migratable`.
 
-An export and an import operation can be performed through the ${command-console}.
+An export and an import operation can be performed through the {command-console}.
 
 When an export operation is processed, the migration API will do a look-up for all registered OSGi services
 that are implementing `Migratable` and call their `doExport()` method. As part of the exported data, information about the migratable as required by the `org.codice.ddf.platform.services.common.Describable`
 interface will be included. In particular the version string returned will help the migration API identify the version of the exported data from the corresponding migratable and must
 be provided as a non-blank string.
 
-When an import operation is processed when the current ${branding} version matches the exported @{branding} version, the migration API will do another look-up for all registered OSGi services that are
+When an import operation is processed when the current {branding} version matches the exported @{branding} version, the migration API will do another look-up for all registered OSGi services that are
 implementing `Migratable` and call their `doImport()` or `doIncompatibleImport()` methods based on whether the recorded version string at export time is equal to the version string currently provided
 by the migratable or not. The `doMissingImport()` method will be called instead of one of the other two methods when the migration API detects that the corresponding migratable data is missing from the
 exported data. Any migratables that are tagged using the `OptionalMigratable` tag interface will automatically be skipped unless otherwise specified when the import phase is initiated.
 
-When an import operation is processed when the current ${branding} version does not the exported @{branding} version, the migration API will do a look-up for all registered OSGi services that are
+When an import operation is processed when the current {branding} version does not the exported @{branding} version, the migration API will do a look-up for all registered OSGi services that are
 implementing `Migratable` and call their `doVersionUpgradeImport()` method.
 
 The services that implement the migratable interface will be called one at a time based on their service ranking order, and do not need to be thread safe.
@@ -86,7 +88,7 @@ The `doExport()` method is called by the migration API along with a context for 
 The `doImport()` method is called by the migration API along with a context for the current import operation when
 the version of exported data matches the current version reported by the migratable. This method can be used to restore previously exported data. +
 The `doIncompatibleImport()` method is called to restore incompatible data which might require transformation. It is provided a context for the current import operation and the previously exported version. It can then proceed with restoring incompatible data which might require transformation. +
-The `doVersionUpgradeImport()` method is called to restore data from a different ${branding} version which might require transformation. It is provided a context for the current import operation and the previously exported version. +
+The `doVersionUpgradeImport()` method is called to restore data from a different {branding} version which might require transformation. It is provided a context for the current import operation and the previously exported version. +
 Finally, the `doMissingImport()` method will be called along with the context for the current import operation when data had not been exported for the corresponding migratable.
 This will be the case when a migratable is later introduced in the software distribution.
 

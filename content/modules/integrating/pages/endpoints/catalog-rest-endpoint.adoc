@@ -13,11 +13,11 @@ Bulk operations are not supported: for all RESTful CRUD commands, only one metac
 
 The Catalog REST Endpoint can be used for one or more of these operations on an instance of {branding}:
 
-* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_create_operation_examples,Ingest metacards or resources into the {branding} catalog.>>
-* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_read_operation_examples,Retrieve metacards or resources from the catalog.>>
-* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_update_operation_examples,Update metacards or resources in the catalog.>>
-* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_delete_operation_examples,Delete resources and metadata from the catalog.>>
-* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_sources_operation_examples,Get information about configured sources.>>
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_create_operation_examples[Ingest metacards or resources into the {branding} catalog.]
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_read_operation_examples[Retrieve metacards or resources from the catalog.]
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_update_operation_examples[Update metacards or resources in the catalog.]
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_delete_operation_examples[Delete resources and metadata from the catalog.]
+* xref:integrating:endpoints/catalog-rest-endpoint.adoc#catalog_rest_sources_operation_examples[Get information about configured sources.]
 
 This example metacard can be used to test the integration with {branding}.
 

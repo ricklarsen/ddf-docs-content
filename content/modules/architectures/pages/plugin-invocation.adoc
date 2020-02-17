@@ -4,7 +4,8 @@
 :plugintypes: general
 :order: 9999
 
-Plugins are called in a specific order during different operations. <<{developing-prefix}developing_catalog_plugins,Custom Plugins>> can be added to the chain for special use cases.
+= Plugin Invocation
+Plugins are called in a specific order during different operations. xref:developing:devcomponents/custom-plugins.adoc[Custom Plugins] can be added to the chain for special use cases.
 
 .Query Request Plugin Call Order
 [ditaa,query_plugin_order,png]

@@ -24,7 +24,7 @@ No pre/post plugins are executed and no message validation is performed if the `
 |Provides a basic description of the Catalog implementation.
 
 |catalog:dump
-|Exports metacards from the local Catalog. Does not remove them. See xref:#date_filtering_options,date filtering options>> below.
+|Exports metacards from the local Catalog. Does not remove them. See xref:#date_filtering_options[date filtering options].
 
 |catalog:envlist
 |[IMPORTANT]

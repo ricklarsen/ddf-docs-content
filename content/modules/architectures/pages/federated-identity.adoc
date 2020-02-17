@@ -5,14 +5,13 @@
 :order: 10
 :summary: How a user's identity is shared with federated Sources during queries
 
-== {title}
+= Federated Identity
 
-Each instance of {branding} may be configured with its own security policy that determines the
-resources a user may access and the actions they may perform. To decide whether a given request is
-permitted, {branding} references any attributes stored internally in the requestor's
-<<_subject,Subject>>. Based on these
-attributes and the configured policy, {branding} makes an authorization decision. See
-<<_security_pdp, Security PDP>> for more information.
+Each instance of {branding} may be configured with its own security policy that determines the resources a user may access and the actions they may perform.
+To decide whether a given request is permitted, {branding} references any attributes stored internally in the requestor's
+xref:architectures:subject.adoc[Subject].
+Based on these attributes and the configured policy, {branding} makes an authorization decision.
+See xref:security-pdp-intro[Security PDP] for more information.
 
 This authorization process works when the requestor authenticates directly with {branding} as they
 are guaranteed to have a Subject. However, when federating, {branding} proxies requests to federated
@@ -34,7 +33,7 @@ in the SOAP security header.
 The figure below shows a federated query between two instances of {branding} that support
 federated identity.
 
-[ditaa, federated_identity, png, ${image-width}]
+[ditaa, federated_identity, png, {image-width}]
 ....
                   /---------------------------\           /--------------------------\
                   | cDEF       DDF            |           |     Federated Source     |
@@ -63,7 +62,7 @@ to each federated Source with the assertion attached.
 . A federated Source receives this request and extracts the SAML assertion. The federated Source
 then validates the authenticity of the SAML Assertion. If the assertion is valid, the federated
 Source generates a Subject from the assertion to represent the user who initiated the request.
-. The federated Source <<_filtering,filters>> all results that the user is not authorized to view
+. The federated Source xref:architectures:security-filtering.adoc[filters] all results that the user is not authorized to view
 and returns the rest to {branding}.
 . {branding} takes the results from all Sources, filters those that the user is not authorized to
 view and returns the remaining results to the user.

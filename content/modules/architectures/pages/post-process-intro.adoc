@@ -6,6 +6,8 @@
 :plugintypes: postprocess
 :order: 06
 
+= Post-Process Plugins
+
 [NOTE]
 ====
 This code is experimental. While this interface is functional and tested, it may change or be removed in a future version of the library.

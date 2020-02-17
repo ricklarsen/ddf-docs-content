@@ -6,7 +6,7 @@
 :order: 07
 :summary: Intro to security filtering.
 
-== {title}
+= Filtering
 
 Metacard filtering is performed by the <<{developing-prefix}filter_plugin,Filter Plugin>> after a query has been performed, but before the results are returned to the requestor.
 
@@ -62,5 +62,5 @@ These permission objects will be implied against the permission object generated
 In this particular case, the metacard might be allowed if the policy is configured appropriately because all of the permissions line up correctly.
 
 To enable filtering on a new type of record, implement a PolicyPlugin that is able to read the string metadata contained within the metacard record.
-Note that, in ${branding}, there is no default plugin that parses a metacard.
+Note that, in {branding}, there is no default plugin that parses a metacard.
 A plugin must be created to create a policy for the metacard.

@@ -5,11 +5,13 @@
 :plugintypes: policy
 :summary: Determines whether to filter metacards with validation errors or warnings.
 
+= Metacard Validity Filter Plugin
+
 The Metacard Validity Filter Plugin determines whether metacards with validation errors or warnings are filtered from query results.
 
 == Related Components to the Metacard Validity Filter Plugin
 
-* <<_metacard_validity_marker,Metacard Validity Marker>>.
+* xref:reference:tables/MetacardValidityFilterPlugin.adoc[Metacard Validity Marker].
 
 == Installing the Metacard Validity Filter Plugin
 

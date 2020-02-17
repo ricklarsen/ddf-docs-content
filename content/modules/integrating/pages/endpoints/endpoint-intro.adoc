@@ -6,7 +6,7 @@
 
 = Endpoints
 
-Federation with {branding} is primarily accomplished through xref:integrating:endpoints/endpoint-intro.adoc,Endpoints>> accessible through http(s) requests and responses.
+Federation with {branding} is primarily accomplished through xref:integrating:endpoints/endpoint-intro.adoc[Endpoints] accessible through http(s) requests and responses.
 
 [NOTE]
 ====

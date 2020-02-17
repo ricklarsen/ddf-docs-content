@@ -5,8 +5,9 @@
 :link: _geojson_input_transformer
 :summary: Translates GeoJSON into a Catalog metacard.
 
-The GeoJSON input transformer is responsible for translating GeoJSON into a Catalog metacard.
+= GeoJSON Input Transformer
 
+The GeoJSON input transformer is responsible for translating GeoJSON into a Catalog metacard.
 
 .{title} Usage
 [cols="1,2m" options="header"]
@@ -33,7 +34,7 @@ Once the REST Endpoint receives the GeoJSON Metacard, it is converted to a Catal
 
 .Example HTTP POST of a Local `metacard.json` File Using the Curl Command
 ----
-curl -X POST -i -H "Content-Type: application/json" -d "${at-symbol}metacard.json" ${secure_url}/services/catalog
+curl -X POST -i -H "Content-Type: application/json" -d "{at-symbol}metacard.json" {secure_url}/services/catalog
 ----
 
 == Conversion to a Metacard
@@ -94,7 +95,7 @@ Currently, only *Required Attributes* are recognized in the properties.
 
 === Metacard Extensibility
 
-GeoJSON supports custom, extensible properties on the incoming GeoJSON using ${branding}'s extensible metacard support.
+GeoJSON supports custom, extensible properties on the incoming GeoJSON using {branding}'s extensible metacard support.
 To have those customized attributes understood by the system, a corresponding `MetacardType` must be registered with the `MetacardTypeRegistry`.
 That `MetacardType` must be specified by name in the metacard-type property of the incoming GeoJSON.
 If a `MetacardType` is specified on the GeoJSON input, the customized properties can be processed, cataloged, and indexed.

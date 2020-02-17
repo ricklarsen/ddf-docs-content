@@ -23,22 +23,22 @@ For example, type `catalog`, then press *TAB*.
 |Namespace
 |Description
 
-|xref:managing:running/catalog-commands.adoc/#catalog_command_descriptions, catalog>>
+|xref:managing:running/catalog-commands.adoc#catalog_command_descriptions[catalog]
 |The Catalog Shell Commands are meant to be used with any `CatalogProvider` implementations. They provide general useful queries and functions against the Catalog API that can be used for debugging, printing, or scripting.
 
-|xref:managing:running/migrate-commands.adoc/#migrate_command_descriptions, migrate>>
+|xref:managing:running/migrate-commands.adoc#migrate_command_descriptions[migrate]
 |The Migrate Shell Commands provide functions to perform data migrations.
 
-|xref:managing:running/platform-commands.adoc/#platform_command_descriptions, platform>>
+|xref:managing:running/platform-commands.adoc#platform_command_descriptions[platform]
 |The {branding} Platform Shell Commands provide generic platform management functions
 
-|xref:managing:running/store-commands.adoc/#store_command_descriptions, store>>
+|xref:managing:running/store-commands.adoc#store_command_descriptions[store]
 |The Persistence Shell Commands are meant to be used with any `PersistentStore` implementations. They provide the ability to query and delete entries from the persistence store.
 
-|xref:managing:running/subscription-commands.adoc/#subscription_command_descriptions, subscription>>
+|xref:managing:running/subscription-commands.adoc#subscription_command_descriptions[subscription]
 |The {branding} PubSub shell commands provide functions to list the registered subscriptions in {branding} and to delete subscriptions.
 
-|xref:managing:running/solr-commands.adoc/#solr_command_descriptions, solr>>
+|xref:managing:running/solr-commands.adoc#solr_command_descriptions[solr]
 |The Solr commands are used for the Solr `CatalogProvider` implementation. They provide commands specific to that provider.
 
 

@@ -5,7 +5,7 @@
 :order: 00
 :summary: STS Claims Handlers.
 
-== {title}
+= Claims Handlers
 
 Claims handlers are classes that convert the incoming user credentials into a set of attribute claims that will be populated in the user Subject object.
 An example in action would be the LDAPClaimsHandler that takes in the user's credentials and retrieves the user's attributes from a backend LDAP server.

@@ -11,7 +11,7 @@ The Migration Export/Import capability allows administrators to export the curre
 
 [IMPORTANT]
 ====
-There are some key limitations when following this process to reuse configurations for a different versions of {branding}. See xref:managing:configuring/reusing-configurations.adoc#reusing_configurations_across_different versions[Reusing Configurations Across Different Versions>>.
+There are some key limitations when following this process to reuse configurations for a different versions of {branding}. See xref:managing:configuring/reusing-configurations.adoc#reusing_configurations_across_different versions[Reusing Configurations Across Different Versions].
 ====
 
 To export the current configuration settings:

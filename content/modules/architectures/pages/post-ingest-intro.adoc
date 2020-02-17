@@ -6,6 +6,8 @@
 :plugintypes: postingest
 :order: 05
 
+= Post-Ingest Plugins
+
 .Query Plugin Flow
 [ditaa,query-plugin-flow,png]
 ....

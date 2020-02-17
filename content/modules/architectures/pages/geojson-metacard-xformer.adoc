@@ -5,6 +5,8 @@
 :link: _geojson_metacard_transformer
 :summary: Translates a metacard into GeoJSON.
 
+= GeoJSON Metacard Transformer
+
 GeoJSON Metacard Transformer translates a metacard into GeoJSON.
 
 == Installing the GeoJSON Metacard Transformer
@@ -13,7 +15,7 @@ The GeoJSON Metacard Transformer is not installed by default with a standard ins
 
 To install:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *System* tab.
 . Select the *Features* tab.
 . Install the `catalog-transformer-json` feature.
@@ -29,7 +31,7 @@ It can also be used within the REST Endpoint by providing the transform option a
 
 .Example REST GET Method with the GeoJSON Metacard Transformer
 ----
-${secure_url}/services/catalog/0123456789abcdef0123456789abcdef?transform=geojson
+{secure_url}/services/catalog/0123456789abcdef0123456789abcdef?transform=geojson
 ----
 
 .Example REST GET Output from the GeoJSON Metacard Transformer

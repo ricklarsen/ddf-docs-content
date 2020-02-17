@@ -6,6 +6,8 @@
 :order: 00
 :summary: Action Providers.
 
+= Action Providers
+
 .[[_included_action_providers]]Included Action Providers
 Download Resource ActionProvider:: Downloads a resource to the local product cache.
 IdP Logout Action Provider:: Identity Provider Logout.

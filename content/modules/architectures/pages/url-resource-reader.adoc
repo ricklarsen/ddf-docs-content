@@ -5,7 +5,9 @@
 :order: 00
 :summary: URL Resource Reader.
 
-The `URLResourceReader` is an implementation of `ResourceReader` which is included in the ${branding} Catalog. 
+= URL Resource Reader
+
+The `URLResourceReader` is an implementation of `ResourceReader` which is included in the {branding} Catalog. 
 It obtains a resource given an http, https, or file-based URL. 
 The `URLResourceReader` will connect to the provided Resource URL and read the resource's bytes into an `InputStream`.  
 
@@ -22,7 +24,7 @@ The `URLResourceReader` is installed by default with a standard installation in
 
 == Configuring Permissions for the URL Resource Reader
 
-Configuring the URL Resource Reader to retrieve files requires adding Security Manager read permission entries for the directory containing the resources. To add the correct permission entries, edit the file ${home_directory}/security/configurations.policy. In the URL Resource Reader section of the file, add two new permission for each top-level directory that the Resource Reader needs to access. The Resource Reader needs one permission to read the directory and another to read its contents.
+Configuring the URL Resource Reader to retrieve files requires adding Security Manager read permission entries for the directory containing the resources. To add the correct permission entries, edit the file {home_directory}/security/configurations.policy. In the URL Resource Reader section of the file, add two new permission for each top-level directory that the Resource Reader needs to access. The Resource Reader needs one permission to read the directory and another to read its contents.
 
 .Adding New Permissions
 [WARNING]
@@ -36,13 +38,13 @@ permission java.io.FilePermission "<DIRECTORY_PATH>", "read";
 permission java.io.FilePermission "<OTHER_DIRECTORY_PATH>", "read";
 }
 
-Trailing slashes after <DIRECTORY_PATH> have no effect on the permissions granted. For example, adding a permission for "${/}test${/}path" and "${/}test${/}path${/}" are equivalent. The recursive forms "${/}test${/}path${/}-", and "${/}test${/}path${/}${/}-" are also equivalent.
+Trailing slashes after <DIRECTORY_PATH> have no effect on the permissions granted. For example, adding a permission for "{/}test{/}path" and "{/}test{/}path{/}" are equivalent. The recursive forms "{/}test{/}path{/}-", and "{/}test{/}path{/}{/}-" are also equivalent.
 
 == Configuring the URL Resource Reader
 
-Configure the URL Resource Reader from the ${admin-console}.
+Configure the URL Resource Reader from the {admin-console}.
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select the *{ddf-catalog}* application.
 . Select the *Configuration* tab.
 . Select the *URL Resource Reader*.
@@ -59,7 +61,7 @@ For example, requesting a resource with the following URL will make the Catalog
 .Example
 [source,http]
 ----
-file:///home/users/${ddf-branding}_user/data/example.txt
+file:///home/users/{ddf-branding}_user/data/example.txt
 ----
 
 If a resource was requested with the URL `udp://123.45.67.89:80/SampleResourceStream`, the `URLResourceReader` would _not_ be invoked.
@@ -71,5 +73,5 @@ If a resource was requested with the URL `udp://123.45.67.89:80/SampleResourceS
 
 [NOTE]
 ====
-If a file-based URL is passed to the `URLResourceReader`, that file path needs to be accessible by the ${branding} instance.
+If a file-based URL is passed to the `URLResourceReader`, that file path needs to be accessible by the {branding} instance.
 ====

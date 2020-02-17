@@ -5,6 +5,8 @@
 :plugintypes: access
 :summary: Prevents non-owner users from changing workspace permissions.
 
+= Workspace Access Plugin
+
 The Workspace Access Plugin prevents non-owner users from changing workspace permissions.
 
 == Related Components to The Workspace Access Plugin

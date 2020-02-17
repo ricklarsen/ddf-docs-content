@@ -5,13 +5,15 @@
 :plugintypes: access
 :summary: Performs filtering on query responses as they pass through the framework.
 
+= Filter Plugin
+
 The Filter Plugin performs filtering on query responses as they pass through the framework.
 
 Each metacard result can contain security attributes that are pulled from the metadata record after being processed by a `PolicyPlugin` that populates this attribute.
 The security attribute is a Map containing a set of keys that map to lists of values.
 The metacard is then processed by a filter plugin that creates a `KeyValueCollectionPermission` from the metacard's security attribute.
 This permission is then checked against the user subject to determine if the subject has the correct claims to view that metacard.
-The decision to filter the metacard eventually relies on the installed <<_security_pdp,Policy Decision Point>> (PDP).
+The decision to filter the metacard eventually relies on the installed xref:architectures:security-pdp-intro.adoc[Policy Decision Point (PDP)].
 The PDP that is being used returns a decision, and the metacard will either be filtered or allowed to pass through.
 
 How a metacard gets filtered is left up to any number of FilterStrategy implementations that might be installed.

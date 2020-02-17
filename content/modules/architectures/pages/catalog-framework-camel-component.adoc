@@ -5,6 +5,8 @@
 :link: _catalog_framework_camel_component
 :order: 01
 
+= Catalog Framework Camel Component
+
 The Catalog Framework Camel Component supports creating, updating, and deleting metacards using the Catalog Framework from a Camel route.
 
 .URI Format

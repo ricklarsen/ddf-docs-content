@@ -5,6 +5,8 @@
 :plugintypes: postingest
 :summary: Enables backup of the catalog and its metacards.
 
+= Catalog Backup Plugin
+
 The Catalog Backup Plugin is used to enable data backup of the catalog and the metacards it contains.
 
 .Catalog Backup Plugin Considerations
@@ -21,12 +23,12 @@ The Catalog Backup Plugin is installed by default with a standard installation i
 
 To configure the Catalog Backup Plugin:
 
-. Navigate to the *${admin-console}*.
+. Navigate to the *{admin-console}*.
 . Select *{ddf-catalog}* application.
 . Select *Configuration* tab.
 . Select *Backup Post-Ingest Plugin*.
 
-See <<{reference-prefix}ddf.catalog.backup.CatalogBackupPlugin,Catalog Backup Plugin configurations>> for all possible configurations.
+See xref:reference:tables/CatalogBackupPlugin.adoc[Catalog Backup Plugin configurations] for all possible configurations.
 
 == Usage Limitations of the Catalog Backup Plugin
 

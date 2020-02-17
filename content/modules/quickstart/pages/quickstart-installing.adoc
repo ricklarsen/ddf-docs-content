@@ -19,7 +19,7 @@ For security reasons, {branding} cannot be started from a user's home directory.
 == Quick Install Prerequisites
 .Hardware Requirements (Quick Install)
 * At least 4096MB of memory for {branding}.
-** This amount can be increased to support memory-intensive applications. See xref:managing:installing:file-system-access.adoc#jvm_memory_configuration, Memory Considerations>>.
+** This amount can be increased to support memory-intensive applications. See xref:managing:installing/file-system-access.adoc#jvm_memory_configuration[Memory Considerations].
 
 .Java Requirements (Quick Install)
 

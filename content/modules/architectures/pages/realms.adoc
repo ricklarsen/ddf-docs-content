@@ -5,12 +5,12 @@
 :order: 01
 :summary: Shiro realms.
 
-== {title}
+= Realms
 
-${branding} uses https://shiro.org[Apache Shiro] {external-link} for the concept of https://shiro.apache.org/realm.html[Realms] {external-link} for Authentication and Authorization.
+{branding} uses https://shiro.org[Apache Shiro] {external-link} for the concept of https://shiro.apache.org/realm.html[Realms] {external-link} for Authentication and Authorization.
 Realms are components that access security data such as such as users or permissions.
 
-=== Authenticating Realms
+== Authenticating Realms
 
 `org.apache.shiro.realm.AuthenticatingRealm`
 
@@ -18,7 +18,7 @@ Authenticating Realms are used to authenticate an incoming Authentication Token 
 This Authentication Info is used by the Shiro framework to put together a resulting Subject.
 A Subject represents the application user and contains all available security-relevant information about that user.
 
-.Implementations of Authenticating Realms in ${branding}:
+.Implementations of Authenticating Realms in {branding}:
 [cols="1m,2" options="header"]
 |===
 
@@ -35,7 +35,7 @@ A Subject represents the application user and contains all available security-re
 |This realm delegates authentication to the Secure Token Service (STS). It creates a `RequestSecurityToken` message from the incoming Authentication Token and converts a successful STS response into Authentication Info.
 |===
 
-=== Authorizing Realms
+== Authorizing Realms
 
 `org.apache.shiro.realm.AuthorizingRealm`
 
@@ -43,7 +43,7 @@ Authorizing Realms are used to perform authorization on the current Subject.
 These are used when performing both service authorization and filtering.
 They are passed in the `AuthorizationInfo` of the Subject along with the permissions of the object wanting to be accessed. The response from these realms is a true (if the Subject has permission to access) or false (if the Subject does not).
 
-.Other implementations of the Security API within ${branding}
+.Other implementations of the Security API within {branding}
 [cols="1m,2" options="header"]
 |===
 
@@ -104,5 +104,5 @@ This approach is often easier to configure for those that are not familiar with 
 ====
 An update was made to the IdpHandler to pass SAML assertions through the Authorization HTTP header.
 Cookies _are_ still accepted and processed to maintain legacy federation compatibility, but assertions are sent in the header on outbound requests.
-While a machine's identity will still federate between versions, a user's identity will ONLY be federated when a ${branding} version 2.7.x server communicates with a ${branding} version 2.8.x+ server, or between two servers whose versions are 2.8.x or higher.
+While a machine's identity will still federate between versions, a user's identity will ONLY be federated when a {branding} version 2.7.x server communicates with a {branding} version 2.8.x+ server, or between two servers whose versions are 2.8.x or higher.
 ====

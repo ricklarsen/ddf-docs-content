@@ -6,8 +6,10 @@
 :plugintypes: preingest
 :order: 04
 
+= Pre-Ingest Plugins
+
 .Ingest Plugin Flow
-[ditaa,ingest-plugin-flow,png, ${image-width}]
+[ditaa,ingest-plugin-flow,png, {image-width}]
 ....
 /------\
 |Client|

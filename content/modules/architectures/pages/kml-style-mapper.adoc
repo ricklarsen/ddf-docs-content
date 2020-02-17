@@ -5,6 +5,8 @@
 :link: _kml_style_mapper
 :summary: Maps a KML Style URL to a metacard based on that metacard's attributes.
 
+= KML Style Mapper
+
 The KML Style Mapper provides the ability for the `KMLTransformer` to map a KML Style URL to a metacard based on that metacard's attributes.
 For example, if a user wanted all JPEGs to be blue, the KML Style Mapper provides the ability to do so.
 This would also allow an administrator to configure metacards from each source to be different colors.
@@ -17,14 +19,14 @@ When a style mapping is configured, the resulting transformed KML contain a `<st
 
 == Installing the KML Style Mapper
 
-The KML Style Mapper is installed by default with a standard installation in the <<{reference-prefix}spatial_application_reference,${ddf-spatial} Application>> in the `spatial-kml-transformer` feature.
+The KML Style Mapper is installed by default with a standard installation in the xref:reference:appReferences/mg-spatial.adoc[{ddf-spatial} Application] in the `spatial-kml-transformer` feature.
 
 == Configuring the KML Style Mapper
 
 The properties below describe how to configure a style mapping.
 The configuration name is `Spatial KML Style Map Entry`.
 
-See <<{reference-prefix}org.codice.ddf.spatial.kml.style,KML Style Mapper configurations>> for all possible configurations.
+See xref:reference:tables/spatial.kml.style.adoc[KML Style Mapper configurations] for all possible configurations.
 
 .KML Style Mapper Example Values
 [source,xml,linenums]
@@ -55,12 +57,12 @@ width: 100% }
   &lt;/head&gt;
   &lt;body&gt;
         &lt;div class="thumbnailDiv"&gt;&lt;a
-href="${public_url}/services/catalog/sources/${ddf-branding-lowercase}.distribution/0103c77e66d9428d8f48fab939da528e?transform=resource"&gt;&lt;img alt="Thumnail"
+href="{public_url}/services/catalog/sources/{ddf-branding-lowercase}.distribution/0103c77e66d9428d8f48fab939da528e?transform=resource"&gt;&lt;img alt="Thumnail"
 src="data:image/jpeg;charset=utf-8;base64, CA=="&gt;&lt;/a&gt;&lt;/div&gt;
     &lt;table&gt;
       &lt;tr&gt;
         &lt;td class="label"&gt;Source:&lt;/td&gt;
-        &lt;td&gt;${ddf-branding-lowercase}.distribution&lt;/td&gt;
+        &lt;td&gt;{ddf-branding-lowercase}.distribution&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
         &lt;td class="label"&gt;Created:&lt;/td&gt;
@@ -74,8 +76,8 @@ src="data:image/jpeg;charset=utf-8;base64, CA=="&gt;&lt;/a&gt;&lt;/div&gt;
     &lt;table class="linkTable"&gt;
       &lt;tr&gt;
         &lt;td&gt;&lt;a
-href="${public_url}/services/catalog/sources/${ddf-branding-lowercase}.distribution/0103c77e66d9428d8f48fab939da528e?transform=html"&gt;View Details...&lt;/a&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;a href="${public_url}/services/catalog/sources/${ddf-branding-lowercase}.distribution/0103c77e66d9428d8f48fab939da528e?transform=resource"&gt;Download...&lt;/a&gt;&lt;/td&gt;
+href="{public_url}/services/catalog/sources/{ddf-branding-lowercase}.distribution/0103c77e66d9428d8f48fab939da528e?transform=html"&gt;View Details...&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;a href="{public_url}/services/catalog/sources/{ddf-branding-lowercase}.distribution/0103c77e66d9428d8f48fab939da528e?transform=resource"&gt;Download...&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
     &lt;/table&gt;
   &lt;/body&gt;

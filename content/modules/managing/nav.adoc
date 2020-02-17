@@ -117,7 +117,6 @@
 **** xref:configuring/configuring-ftp-endpoint.adoc[Configuring FTP Endpoint]
 **** xref:configuring/configuring-kml-endpoint.adoc[Configuring KML Endpoint]
 **** xref:configuring/configuring-opensearch-endpoint.adoc[Configuring OpenSearch Endpoint]
-**** xref:configuring/configuring-wps-endpoint.adoc[Configuring WPS Endpoint]
 **** xref:configuring/compression-services.adoc[Configuring Compression Services]
 
 ** xref:configuring/environment-hardening.adoc[Environment Hardening]

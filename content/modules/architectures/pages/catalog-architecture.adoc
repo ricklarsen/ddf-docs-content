@@ -4,6 +4,8 @@
 :summary: Introduction to Catalog Architecture.
 :order: 00
 
+= Catalog Architecture
+
 .Catalog Architecture
 [ditaa,catalog_architecture, png]
 ....
@@ -36,7 +38,7 @@
                           |
                           v                         Legend
                   +---------------+                /---------------------\
-                  |{s}            |                |cDEF ${ddf-branding} Component   |
+                  |{s}            |                |cDEF {ddf-branding} Component   |
                   |  Data Store   |                \---------------------/
                   |               |                /---------------------\
                   +------------=--+                | External Component  |

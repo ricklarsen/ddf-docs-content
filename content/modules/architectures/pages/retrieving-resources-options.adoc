@@ -5,6 +5,8 @@
 :order: 01
 :summary: Retrieving Resource Options.
 
+= Retrieving Resource Options
+
 Options can be specified on a retrieve resource request made through any of the supporting endpoint. 
 To specify an option for a retrieve resource request, the endpoint needs to first instantiate a `ResourceRequestByProductUri` or a `ResourceRequestById`. 
 Both of these `ResourceRequest` implementations allow a `Map` of properties to be specified. 

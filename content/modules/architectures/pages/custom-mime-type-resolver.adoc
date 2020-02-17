@@ -2,7 +2,9 @@
 :type: mimeTypeResolver
 :status: published
 :link: _custom_mime_type_resolver
-:summary: The Custom Mime Type Resolver is a `MimeTypeResolver` that defines the custom mime types that ${branding} will support.
+:summary: The Custom Mime Type Resolver is a `MimeTypeResolver` that defines the custom mime types that {branding} will support.
+
+= Custom Mime Type Resolver
 
 These are mime types not supported by the default `TikaMimeTypeResolver`.
 
@@ -35,10 +37,10 @@ Additional Custom Mime Type Resolvers can be added for other custom mime types.
 
 === Configuring the Custom Mime Type Resolver
 
-The configurable properties for the Custom Mime Type Resolver are accessed from the *MIME Custom Types* configuration in the ${admin-console}.
+The configurable properties for the Custom Mime Type Resolver are accessed from the *MIME Custom Types* configuration in the {admin-console}.
 
-* Navigate to the ${admin-console}.
-* Select the *${ddf-platform}* application.
+* Navigate to the {admin-console}.
+* Select the *{ddf-platform}* application.
 * Select *Configuration*.
 * Select *MIME Custom Types*.
 
@@ -46,6 +48,6 @@ The configurable properties for the Custom Mime Type Resolver are accessed from 
 
 * `Ddf_Custom_Mime_Type_Resolver`
 
-See <<{reference-prefix}DDF_Custom_Mime_Type_Resolver,Custom Mime Type Resolver configurations>> for all possible configurations.
+See xref:reference:tables/DDF_Custom_Mime_Type_Resolver.adoc[Custom Mime Type Resolver configurations] for all possible configurations.
 
 '''

@@ -4,8 +4,10 @@
 :summary: Introduction to data and metadata sections.
 :order: 00
 
+= Data
+
 .Catalog Architecture Diagram: Data
-[ditaa, catalog_architecture_data, png, ${image-width}]
+[ditaa, catalog_architecture_data, png, {image-width}]
 ....
 +------------------------------------------------------------+
 |                /-------------------\                       |
@@ -57,7 +59,7 @@ The name of the default `MetacardType` can be retrieved from `ddf.catalog.data
 The default metacard type has the following required attributes.
 Though the following attributes are required on all metacard types, setting their values is optional except for ID.
 
-<<{metadata-prefix}core_attributes,Core Attributes>>
+xref:metadatareference:core-attributes-table.adoc[Core Attributes]
 
 [NOTE]
 ====
@@ -68,7 +70,7 @@ formats and for improved federation. This neutral profile facilitates improved s
 
 [WARNING]
 ====
-Every <<{introduction-prefix}introduction_to_federation_and_sources,Source>> should at the very least return an ID attribute according to Catalog API.
+Every xref:introduction:coreconcepts/federation-intro.adoc[Source] should at the very least return an ID attribute according to Catalog API.
 Other fields may or may not be applicable, but a unique ID must be returned by a source.
 ====
 
@@ -80,7 +82,7 @@ Required attributes must be the base of all extensible metacard types. 
 
 [WARNING]
 ====
-Not all <<{managing-prefix}catalog_providers,Catalog Providers>> support extensible metacards.
+Not all xref:managing:configuring/catalog-provider.adoc[Catalog Providers] support extensible metacards.
 Nevertheless, each Catalog Provider should at least have support for the default `MetacardType`; i.e., it should be able to store and query on the attributes and attribute formats specified by the default metacard type.
 Catalog providers are neither expected nor required to store attributes that are not in a given metacard's type.
 
@@ -106,15 +108,15 @@ The `MetacardTypeRegistry` is experimental. 
 While this component has been tested and is functional, it may change as more information is gathered about what is needed and as it is used in more scenarios.
 ====
 
-The `MetacardTypeRegistry` allows ${branding} components, primarily catalog providers and sources, to make available the `MetacardTypes` that they support. 
-It maintains a list of all supported `MetacardTypes` in the `CatalogFramework`, so that other components such as <<{integrating-prefix}endpoints,Endpoints>>, <<{architecture-prefix}types_of_plugins,Plugins>>, and <<{architecture-prefix}transformers,Transformers>> can make use of those `MetacardTypes`. 
+The `MetacardTypeRegistry` allows {branding} components, primarily catalog providers and sources, to make available the `MetacardTypes` that they support. 
+It maintains a list of all supported `MetacardTypes` in the `CatalogFramework`, so that other components such as xref:integrating:endpoints/endpoint-intro.adoc[Endpoints], xref:architectures:plugins-intro.adoc[Plugins], and xref:architectures:transformers-intro.adoc[Transformers] can make use of those `MetacardTypes`. 
 The `MetacardType` is essential for a component in the `CatalogFramework` to understand how it should interpret a metacard by knowing what attributes are available in that metacard. 
 
 For example, an endpoint receiving incoming metadata can perform a lookup in the `MetacardTypeRegistry` to find a corresponding `MetacardType`. 
 The discovered `MetacardType` will then be used to help the endpoint populate a metacard based on the specified attributes in the `MetacardType`. 
 By doing this, all the incoming metadata elements can then be available for processing, cataloging, and searching by the rest of the `CatalogFramework`.
 
-`MetacardTypes` should be registered with the `MetacardTypeRegistry`.  The `MetacardTypeRegistry` makes those `MetacardTypes` available to other ${branding} `CatalogFramework` components. 
+`MetacardTypes` should be registered with the `MetacardTypeRegistry`.  The `MetacardTypeRegistry` makes those `MetacardTypes` available to other {branding} `CatalogFramework` components. 
 Other components that need to know how to interpret metadata or metacards should look up the appropriate `MetacardType` from the registry. 
 By having these `MetacardTypes` available to the `CatalogFramework`, these components can be aware of the custom attributes. 
 
@@ -136,7 +138,7 @@ The reference to this service can then be used to register new `MetacardTypes` o
 
 Typically, new `MetacardTypes` will be registered by `CatalogProviders` or sources indicating they know how to persist, index, and query attributes from that type. 
 Typically, Endpoints or `InputTransformers` will use the lookup functionality to access a `MetacardType` based on a parameter in the incoming metadata. 
-Once the appropriate `MetacardType` is discovered and obtained from the registry, the component will know how to translate incoming raw metadata into a ${branding} Metacard.
+Once the appropriate `MetacardType` is discovered and obtained from the registry, the component will know how to translate incoming raw metadata into a {branding} Metacard.
 
 === Attributes
 

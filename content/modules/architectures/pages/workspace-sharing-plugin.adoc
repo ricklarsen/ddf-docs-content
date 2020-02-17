@@ -5,6 +5,8 @@
 :plugintypes: policy
 :summary: Collects attributes for a workspace to identify the appropriate policy to allow sharing.
 
+= Workspace Sharing Policy Plugin
+
 The Workspace Sharing Policy Plugin collects attributes for a workspace to identify the appropriate policy to apply to allow sharing.
 
 == Related Components to The Workspace Sharing Policy Plugin
