@@ -2,7 +2,7 @@
 :id: ddf.security.pdp.realm.AuthzRealm
 :status: published
 :type: table
-:application: ${ddf-security}
+:application: {ddf-security}
 :summary: AuthZ Security configurations.
 
 .[[_ddf.security.pdp.realm.AuthzRealm]]Security AuthZ Realm

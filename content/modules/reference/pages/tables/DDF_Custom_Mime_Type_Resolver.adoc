@@ -2,7 +2,7 @@
 :id: DDF_Custom_Mime_Type_Resolver
 :type: table
 :status: published
-:application: ${ddf-platform}
+:application: {ddf-platform}
 :summary: DDF Custom Mime Types.
 
 .[[_DDF_Custom_Mime_Type_Resolver]]MIME Custom Types

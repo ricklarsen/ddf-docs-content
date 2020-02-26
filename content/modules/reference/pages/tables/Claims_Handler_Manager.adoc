@@ -2,7 +2,7 @@
 :id: Claims_Handler_Manager
 :type: table
 :status: published
-:application: ${ddf-security}
+:application: {ddf-security}
 :summary: STS Ldap and Roles Claims Handler Configuration.
 
 .[[_Claims_Handler_Manager]]Security STS LDAP and Roles Claims Handler
@@ -19,7 +19,7 @@
 |url
 |String
 |true
-|`ldaps://${org.codice.ddf.system.hostname}:1636`
+|`ldaps://{org.codice.ddf.system.hostname}:1636`
 |LDAP or LDAPS server and port
 
 |StartTLS

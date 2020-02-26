@@ -1,6 +1,6 @@
 .Reference
 * Application References
-** xref:appReferences/mg-admin.adoc[${ddf-admin} Application Reference]
+** xref:appReferences/mg-admin.adoc[{ddf-admin} Application Reference]
 *** xref:tables/AdminConfigPolicy.adoc[Admin Configuration Policy]
 *** xref:tables/admin.ui.configuration.adoc[Admin UI]
 
@@ -36,9 +36,9 @@
 *** xref:tables/org.codice.ddf.transformer.preview.adoc[Catalog Preview]
 *** xref:tables/sourcePoller.adoc[Status Source Poller Runner]
 
-** xref:appReferences/mg-geowebcache.adoc[${ddf-geowebcache} Application Reference]
+** xref:appReferences/mg-geowebcache.adoc[{ddf-geowebcache} Application Reference]
 
-** xref:appReferences/mg-platform.adoc[${ddf-platform} Application Reference]
+** xref:appReferences/mg-platform.adoc[{ddf-platform} Application Reference]
 *** xref:tables/DDF_Custom_Mime_Type_Resolver.adoc[MIME Custom Types]
 *** xref:tables/LoggingService.adoc[Logging Service]
 *** xref:tables/landingpage.properties.adoc[Landing Page]
@@ -51,10 +51,10 @@
 *** xref:tables/SmtpClientImpl.adoc[Email Service]
 
 
-** xref:appReferences/mg-resource-mgmt.adoc[${ddf-resource-management} Application Reference]
+** xref:appReferences/mg-resource-mgmt.adoc[{ddf-resource-management} Application Reference]
 *** xref:tables/resourcemanagement.usage.adoc[Data Usage]
 
-** xref:appReferences/mg-security.adoc[${ddf-security} Application Reference]
+** xref:appReferences/mg-security.adoc[{ddf-security} Application Reference]
 *** xref:tables/idpHandler.adoc[SAML Handler]
 *** xref:tables/validator.pki.adoc[Security STS PKI Token Validator]
 *** xref:tables/Claims_Handler_Manager.adoc[Security STS LDAP and Roles Claims Handler]
@@ -72,10 +72,10 @@
 *** xref:tables/sts.client.configuration.adoc[Security STS Client]
 *** xref:tables/sts.guestclaims.adoc[Guest Claims Configuration]
 
-** xref:appReferences/mg-solr.adoc[${ddf-solr} Application Reference]
+** xref:appReferences/mg-solr.adoc[{ddf-solr} Application Reference]
 *** xref:tables/SolrCatalogProvider.adoc[Solr Catalog Provider]
 
-** xref:appReferences/mg-spatial.adoc[${ddf-spatial} Application Reference]
+** xref:appReferences/mg-spatial.adoc[{ddf-spatial} Application Reference]
 *** xref:tables/Csw_Connected_Source.adoc[CSW Connected Source]
 *** xref:tables/Csw_Federated_Source.adoc[CSW Specification Profile Federated Source]
 *** xref:tables/Csw_Xactional_Fed_Source.adoc[CSW Transactional Profile Federated Source]
@@ -91,31 +91,22 @@
 *** xref:tables/Wfs_v2_0_0_Federated_Source.adoc[WFS 2.0.0 Federated Source]
 *** xref:tables/spatial.kml.style.adoc[Spatial KML Style Map Entry]
 
-** xref:appReferences/mg-ui.adoc[${ddf-ui} Application Reference]
+** xref:appReferences/mg-ui.adoc[{ddf-ui} Application Reference]
 *** xref:tables/EmailNotifier.adoc[Email Notifier]
 *** xref:tables/FacetWhitelist.adoc[Facet Attribute Whitelist]
 *** xref:tables/RedirectServlet.adoc[Search UI Redirect]
-*** xref:tables/WorkspaceQueryService.adoc[Catalog UI Search Workspace Query Monitor]
-*** xref:tables/TransformerDescriptors.adoc[Catalog UI Search Transformer Blacklists]
-*** xref:tables/WorkspaceServiceImpl.adoc[Catalog UI Search Workspace Service]
-*** xref:tables/catalog.ui.adoc[Catalog UI Search]
-*** xref:tables/catalog.ui.attribute.aliases.adoc[Catalog UI Search Attribute Aliases]
-*** xref:tables/catalog.ui.attribute.descriptions.adoc[Catalog UI Search Attribute Descriptions]
-*** xref:tables/catalog.ui.attribute.hidden.adoc[Catalog UI Search Hidden Attributes]
-*** xref:tables/catalog.ui.theme.adoc[Catalog UI Search Theme]
-*** xref:tables/catalog.ui.whitelist.adoc[Catalog UI Search Metacard Type Whitelist]
 *** xref:tables/ui.security.adoc[Catalog UI Search Workspace Security]
 
 * xref:whitelists/whitelist-intro.adoc[Application Whitelists]
 ** xref:whitelists/removed-whitelist.adoc[Packages Removed From Whitelist]
 ** xref:whitelists/catalog-whitelist.adoc[{ddf-catalog} Whitelist]
-** xref:whitelists/platform-whitelist.adoc[${ddf-platform} Whitelist]
-** xref:whitelists/security-whitelist.adoc[${ddf-security} Whitelist]
-** xref:whitelists/solr-whitelist.adoc[${ddf-solr} Whitelist]
-** xref:whitelists/spatial-whitelist.adoc[${ddf-spatial} Whitelist]
-** xref:whitelists/ui-whitelist.adoc[${ddf-ui} Whitelist]
+** xref:whitelists/platform-whitelist.adoc[{ddf-platform} Whitelist]
+** xref:whitelists/security-whitelist.adoc[{ddf-security} Whitelist]
+** xref:whitelists/solr-whitelist.adoc[{ddf-solr} Whitelist]
+** xref:whitelists/spatial-whitelist.adoc[{ddf-spatial} Whitelist]
+** xref:whitelists/ui-whitelist.adoc[{ddf-ui} Whitelist]
 
-* xref:dependencyList/dependency-list-intro.adoc[${branding} Dependency List]
+* xref:dependencyList/dependency-list-intro.adoc[{branding} Dependency List]
 ** xref:dependencyList/ddf-dependency-list.adoc[Java Dependency List]
 ** xref:dependencyList/js-dependency-list.adoc[JavaScript Dependency List]
 

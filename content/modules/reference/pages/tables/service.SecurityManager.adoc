@@ -2,7 +2,7 @@
 :id: ddf.security.service.SecurityManager
 :status: published
 :type: table
-:application: ${ddf-security}
+:application: {ddf-security}
 :summary: SAML NameID Policy.
 
 .[[_ddf.security.service.SecurityManager]]SAML NameID Policy

@@ -1,4 +1,4 @@
-:title: ${branding} Dependency List
+:title: {branding} Dependency List
 :type: referenceIntro
 :status: published
 :order: 02
@@ -7,4 +7,4 @@
 [{reference}]
 == {title}
 
-This list of ${branding} dependencies is automatically generated:
+This list of {branding} dependencies is automatically generated:

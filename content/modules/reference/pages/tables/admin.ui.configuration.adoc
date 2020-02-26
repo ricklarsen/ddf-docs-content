@@ -2,7 +2,7 @@
 :id: org.codice.admin.ui.configuration
 :type: table
 :status: published
-:application: ${ddf-admin}
+:application: {ddf-admin}
 :summary: Admin UI configurations.
 
 .[[_org.codice.admin.ui.configuration]]Admin UI

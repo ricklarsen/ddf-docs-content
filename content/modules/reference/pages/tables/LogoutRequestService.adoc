@@ -2,7 +2,7 @@
 :id: org.codice.ddf.security.idp.client.LogoutRequestService
 :type: table
 :status: published
-:application: ${ddf-security}
+:application: {ddf-security}
 :summary: Logout Page configurations.
 
 .[[_org.codice.ddf.security.idp.client.LogoutRequestService]]Logout Page

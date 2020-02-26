@@ -2,7 +2,7 @@
 :id: Gmd_Csw_Federated_Source
 :status: published
 :type: table
-:application: ${ddf-spatial}
+:application: {ddf-spatial}
 :summary: CSW Federated Source using the Geographic MetaData (GMD) format (ISO 19115:2003).
 
 .[[_Gmd_Csw_Federated_Source]]GMD CSW ISO Federated Source

@@ -2,7 +2,7 @@
 :id: org.codice.ddf.spatial.geocoding.plugin.GeoCoderPlugin
 :type: table
 :status: published
-:application: ${ddf-spatial}
+:application: {ddf-spatial}
 :summary: GeoCoder Plugin.
 
 .[[_org.codice.ddf.spatial.geocoding.plugin.GeoCoderPlugin]]GeoCoder Plugin

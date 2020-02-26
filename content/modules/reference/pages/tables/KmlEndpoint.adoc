@@ -2,7 +2,7 @@
 :id: org.codice.ddf.spatial.kml.endpoint.KmlEndpoint
 :type: table
 :status: published
-:application: ${ddf-spatial}
+:application: {ddf-spatial}
 :summary: Spatial KML Endpoint.
 
 .[[_org.codice.ddf.spatial.kml.endpoint.KmlEndpoint]]Spatial KML Endpoint

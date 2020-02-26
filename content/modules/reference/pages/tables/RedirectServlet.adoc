@@ -2,7 +2,7 @@
 :id: org.codice.ddf.ui.searchui.filter.RedirectServlet
 :type: table
 :status: published
-:application: ${ddf-ui}
+:application: {ddf-ui}
 :summary: Search UI redirect.
 
 .[[_org.codice.ddf.ui.searchui.filter.RedirectServlet]]Search UI Redirect
@@ -20,7 +20,7 @@
 |defaultUri
 |String
 |Specifies the redirect URI to use when accessing the /search URI.
-|`${org.codice.ddf.external.context}/search/catalog/`
+|`{org.codice.ddf.external.context}/search/catalog/`
 |true
 
 |===

@@ -2,7 +2,7 @@
 :id: Csw_Transactional_Federated_Source
 :status: published
 :type: table
-:application: ${ddf-spatial}
+:application: {ddf-spatial}
 :summary: CSW Federated Source that supports transactions (create, update, delete).
 
 .[[_Csw_Transactional_Federated_Source]]CSW Transactional Profile Federated Source
@@ -27,14 +27,14 @@
 |cswUrl
 |String
 |URL to the endpoint implementing the Catalogue Service for Web (CSW) spec
-|${variable-name}org.codice.ddf.system.protocol}${variable-name}org.codice.ddf.system.hostname}:${variable-name}org.codice.ddf.system.port}${variable-name}org.codice.ddf.system.rootContext}/csw
+|{variable-name}org.codice.ddf.system.protocol}{variable-name}org.codice.ddf.system.hostname}:{variable-name}org.codice.ddf.system.port}{variable-name}org.codice.ddf.system.rootContext}/csw
 |true
 
 |Event Service Address
 |eventServiceAddress
 |String
 |Event Service endpoint.
-|${variable-name}org.codice.ddf.system.protocol}${variable-name}org.codice.ddf.system.hostname}:${variable-name}org.codice.ddf.system.port}${variable-name}org.codice.ddf.system.rootContext}/csw/subscription
+|{variable-name}org.codice.ddf.system.protocol}{variable-name}org.codice.ddf.system.hostname}:{variable-name}org.codice.ddf.system.port}{variable-name}org.codice.ddf.system.rootContext}/csw/subscription
 |false
 
 |Register for Events

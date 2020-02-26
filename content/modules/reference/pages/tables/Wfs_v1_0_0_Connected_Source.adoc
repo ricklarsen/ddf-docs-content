@@ -2,7 +2,7 @@
 :id: Wfs_v1_0_0_Connected_Source
 :type: table
 :status: published
-:application: ${ddf-spatial}
+:application: {ddf-spatial}
 :summary: WFS 1.0.0 Connected Source.
 
 .[[_Wfs_v1_0_0_Connected_Source]]WFS v1.0.0 Connected Source

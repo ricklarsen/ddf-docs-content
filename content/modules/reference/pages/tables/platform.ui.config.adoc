@@ -2,7 +2,7 @@
 :id: ddf.platform.ui.config
 :type: table
 :status: published
-:application: ${ddf-platform}
+:application: {ddf-platform}
 :summary: Platform UI configurations.
 
 .[[_ddf.platform.ui.config]]Platform UI Configuration

@@ -2,7 +2,7 @@
 :id: org.codice.ddf.admin.config.policy.AdminConfigPolicy
 :type: table
 :status: published
-:application: ${ddf-admin}
+:application: {ddf-admin}
 :summary: Admin Configuration Policy configurations.
 
 .[[_org.codice.ddf.admin.config.policy.AdminConfigPolicy]]Admin Configuration Policy

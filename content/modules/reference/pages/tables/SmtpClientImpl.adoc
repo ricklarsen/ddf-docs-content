@@ -2,7 +2,7 @@
 :id: org.codice.ddf.platform.email.impl.SmtpClientImpl
 :type: table
 :status: published
-:application: ${ddf-platform}
+:application: {ddf-platform}
 :summary: Email Service configurations.
 
 .[[_org.codice.ddf.platform.email.impl.SmtpClientImpl]]Email Service

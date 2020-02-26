@@ -2,7 +2,7 @@
 :id: org.codice.ddf.spatial.kml.style
 :type: table
 :status: published
-:application: ${ddf-spatial}
+:application: {ddf-spatial}
 :summary: Spatial KML Style Map Entry.
 
 .[[_org.codice.ddf.spatial.kml.style]]Spatial KML Style Map Entry

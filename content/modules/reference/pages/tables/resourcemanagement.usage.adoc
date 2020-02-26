@@ -2,7 +2,7 @@
 :id: org.codice.ddf.resourcemanagement.usage
 :type: table
 :status: published
-:application: ${ddf-resource-management}
+:application: {ddf-resource-management}
 :summary: Data Usage configurations.
 
 .[[_org.codice.ddf.resourcemanagement.usage]]Data Usage

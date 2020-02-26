@@ -2,7 +2,7 @@
 :id: Wfs_v2_0_0_Federated_Source
 :type: table
 :status: published
-:application: ${ddf-spatial}
+:application: {ddf-spatial}
 :summary: WFS 2.0.0 Federated Source.
 
 .[[_Wfs_v2_0_0_Federated_Source]]WFS 2.0.0 Federated Source

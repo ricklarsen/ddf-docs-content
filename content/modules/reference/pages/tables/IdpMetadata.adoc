@@ -2,7 +2,7 @@
 :id: org.codice.ddf.security.idp.client.IdpMetadata
 :type: table
 :status: published
-:application: ${ddf-security}
+:application: {ddf-security}
 :summary: IdP Client configurations.
 
 .[[_org.codice.ddf.security.idp.client.IdpMetadata]]IdP Client
@@ -19,7 +19,7 @@
 |metadata
 |String
 |Refer to metadata by HTTPS URL (https://), file URL (file:), or an XML block(<md:EntityDescriptor>...</md:EntityDescriptor>).
-|https://${org.codice.ddf.system.hostname}:${org.codice.ddf.system.httpsPort}/services/idp/login/metadata
+|https://{org.codice.ddf.system.hostname}:{org.codice.ddf.system.httpsPort}/services/idp/login/metadata
 
 |Perform User-Agent Check
 |userAgentCheck

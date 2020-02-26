@@ -2,7 +2,7 @@
 :id: ddf.platform.scheduler.Command
 :type: table
 :status: published
-:application: ${ddf-platform}
+:application: {ddf-platform}
 :summary: Platform Command Scheduler.
 
 .[[_ddf.platform.scheduler.Command]]Platform Command Scheduler

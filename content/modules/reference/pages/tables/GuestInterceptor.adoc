@@ -2,7 +2,7 @@
 :id: org.codice.ddf.security.interceptor.GuestInterceptor
 :status: published
 :type: table
-:application: ${ddf-security}
+:application: {ddf-security}
 :summary: Security SOAP Guest Interceptor.
 
 .[[_org.codice.ddf.security.interceptor.GuestInterceptor]]Security SOAP Guest Interceptor

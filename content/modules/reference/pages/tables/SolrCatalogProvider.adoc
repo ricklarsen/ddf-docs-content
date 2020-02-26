@@ -2,7 +2,7 @@
 :id: ddf.catalog.solr.provider.SolrCatalogProvider
 :type: table
 :status: published
-:application: ${ddf-solr}
+:application: {ddf-solr}
 :summary: Solr Catalog Provider.
 
 .[[_ddf.catalog.solr.provider.SolrCatalogProvider]]Solr Catalog Provider

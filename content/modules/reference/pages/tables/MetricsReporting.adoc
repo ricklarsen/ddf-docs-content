@@ -2,7 +2,7 @@
 :id: MetricsReporting
 :type: table
 :status: published
-:application: ${ddf-platform}
+:application: {ddf-platform}
 :summary: Metrics Reporting.
 
 .[[_MetricsReporting]]Metrics Reporting

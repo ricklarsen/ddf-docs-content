@@ -2,7 +2,7 @@
 :id: org.codice.ddf.spatial.ogc.wfs.catalog.mapper.MetacardMapper
 :status: published
 :type: table
-:application: ${ddf-spatial}
+:application: {ddf-spatial}
 :summary: Metacard to WFS Feature Map.
 
 .[[_org.codice.ddf.spatial.ogc.wfs.catalog.mapper.MetacardMapper]]Metacard to WFS Feature Map

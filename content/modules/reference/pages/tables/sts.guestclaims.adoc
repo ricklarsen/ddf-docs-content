@@ -2,7 +2,7 @@
 :id: ddf.security.guest.realm
 :status: published
 :type: table
-:application: ${ddf-security}
+:application: {ddf-security}
 :summary: Guest Claims configurations.
 
 .[[_ddf.security.guest.realm]]Guest Claims Configuration

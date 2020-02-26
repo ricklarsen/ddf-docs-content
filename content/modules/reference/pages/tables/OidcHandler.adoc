@@ -2,7 +2,7 @@
 :id: org.codice.ddf.security.handler.oidc.OidcHandler
 :type: table
 :status: published
-:application: ${ddf-security}
+:application: {ddf-security}
 :summary: OIDC Handler configurations.
 
 .[[_org.codice.ddf.security.handler.oidc.OidcHandler]]OIDC Handler

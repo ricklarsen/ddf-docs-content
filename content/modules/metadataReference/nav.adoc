@@ -15,5 +15,3 @@
 ** xref:security-attributes-table.adoc[Security Attributes]
 ** xref:topic-attributes-table.adoc[Topic Attributes]
 ** xref:validation-attributes-table.adoc[Validation Attributes]
-
-]

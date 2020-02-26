@@ -1,7 +1,9 @@
-:title: Integrating Intro
+:title: Integrating happy happy
 :type: integratingIntro
 :status: published
 :summary: Introduction to Integrating sections.
+
+= Integrating with {branding}
 
 {branding} is structured to enable flexible integration with external clients and into larger component systems.
 

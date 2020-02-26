@@ -10,6 +10,6 @@ nav:
 #- modules/using/nav.adoc
 - modules/integrating/nav.adoc
 - modules/architectures/nav.adoc
-#- modules/developing/nav.adoc
-#- modules/reference/nav.adoc
-#- modules/metadataReference/nav.adoc
+- modules/developing/nav.adoc
+- modules/reference/nav.adoc
+- modules/metadatareference/nav.adoc

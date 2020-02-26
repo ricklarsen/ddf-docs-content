@@ -1,11 +1,11 @@
 :title: JavaScript Dependency List
 :type: reference
 :status: published
-:parent: ${branding} Dependency List
+:parent: {branding} Dependency List
 :order: 01
-:summary: ${branding} ${project.version} Javascript Dependency List.
+:summary: {branding} {project.version} Javascript Dependency List.
 
-== {summary}
+== {branding} {project.version} Javascript Dependency List.
 * amdefine: 1.0.1
 * are-we-there-yet: 1.1.5
 * asn1: 0.2.4

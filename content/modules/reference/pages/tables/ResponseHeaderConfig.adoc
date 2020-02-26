@@ -2,7 +2,7 @@
 :id: org.codice.ddf.security.response.filter.ResponseHeaderConfig
 :type: table
 :status: published
-:application: ${ddf-platform}
+:application: {ddf-platform}
 :summary: HTTP Response Security response configurations.
 
 .[[_org.codice.ddf.security.response.filter.ResponseHeaderConfig]]HTTP Response Security

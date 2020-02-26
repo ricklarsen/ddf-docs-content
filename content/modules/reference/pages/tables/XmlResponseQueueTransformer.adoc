@@ -16,7 +16,7 @@
 |Default Value
 |Required
 
-|Parallel Marhsalling Threshold
+|Parallel Marshalling Threshold
 |threshold
 |Integer
 |Response size threshold above which marshalling is run in parallel

@@ -2,7 +2,7 @@
 :id: org.codice.ddf.catalog.ui.transformer.TransformerDescriptors
 :type: table
 :status: published
-:application: ${ddf-ui}
+:application: {ddf-ui}
 :summary: Catalog UI Search Transformer Blacklists.
 
 .[[_org.codice.ddf.catalog.ui.transformer.TransformerDescriptors]]Catalog UI Search Transformer Blacklists

@@ -2,7 +2,7 @@
 :id: org.codice.ddf.catalog.plugin.facetattributeaccess.facetwhitelist
 :type: table
 :status: published
-:application: ${ddf-ui}
+:application: {ddf-ui}
 :summary: Facet Attribute Whitelist
 
 .[[_org.codice.ddf.catalog.plugin.facetattributeaccess.facetwhitelist]]Facet Attribute Whitelist

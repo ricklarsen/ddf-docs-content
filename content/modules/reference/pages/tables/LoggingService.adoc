@@ -2,7 +2,7 @@
 :id: org.codice.ddf.platform.logging.LoggingService
 :type: table
 :status: published
-:application: ${ddf-platform}
+:application: {ddf-platform}
 :summary: Logging Service configurations.
 
 .[[_org.codice.ddf.platform.logging.LoggingService]]Logging Service
