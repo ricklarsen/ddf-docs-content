@@ -5,6 +5,8 @@
 :order: 31
 :summary: Using WFS Services
 
+= WFS Services
+
 The Web Feature Service (WFS) is an http://www.opengeospatial.org/[Open Geospatial Consortium (OGC)] Specification.
 {branding} supports the ability to integrate WFS 1.0, 1.1, and 2.0 Web Services.
 

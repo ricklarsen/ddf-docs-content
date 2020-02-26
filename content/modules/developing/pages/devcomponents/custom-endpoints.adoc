@@ -6,8 +6,10 @@
 :implements: https://www.w3.org/2001/sw/wiki/REST[REST specification] {external-link}.
 :order: 06
 
+= Developing Endpoints
+
 Custom endpoints can be created, if necessary.
-See <<{integrating-prefix}endpoint_details,Endpoints>> for descriptions of provided endpoints.
+See xref:integrating:endpoints/endpoint-intro.adoc[Endpoints] for descriptions of provided endpoints.
 
 Complete the following procedure to create an endpoint. 
 
@@ -15,14 +17,13 @@ Complete the following procedure to create an endpoint. 
 
 . Add the endpoint's business logic, invoking `CatalogFramework` calls as needed.  
 
-. Import the ${branding} packages to the bundle's manifest for run-time (in addition to any other required packages): +
+. Import the {branding} packages to the bundle's manifest for run-time (in addition to any other required packages): +
 `Import-Package: ddf.catalog, ddf.catalog.*`
 
-. Retrieve an instance of `CatalogFramework` from the OSGi registry. (Refer to <<{developing-prefix}osgi_basics,OSGi Basics - Service Registry>> for examples.)
+. Retrieve an instance of `CatalogFramework` from the OSGi registry. (Refer to xref:developing:devguidelines/osgi-basics[OSGi Basics - Service Registry] for examples.)
 
-. Deploy the packaged service to ${branding}.
-(Refer to <<{developing-prefix}osgi_basics,OSGi Basics - Bundles>>.)
-
+. Deploy the packaged service to {branding}.
+(Refer to xref:developing:devguidelines/osgi-basics.adoc[OSGi Basics - Bundles].)
 [NOTE]
 ====
 It is recommended to use the maven bundle plugin to create the Endpoint bundle's manifest as opposed to directly editing the manifest file.
@@ -31,7 +32,7 @@ It is recommended to use the maven bundle plugin to create the Endpoint bundle's
 [TIP]
 ====
 *No implementation of an interface is required* +
-Unlike other ${branding} components that require you to implement a standard interface, no implementation of an interface is required in order to create an endpoint.
+Unlike other {branding} components that require you to implement a standard interface, no implementation of an interface is required in order to create an endpoint.
 ====
 
 .Common Endpoint Business Logic

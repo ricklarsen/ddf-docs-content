@@ -4,17 +4,18 @@
 :summary: Introduction to JSON definition files.
 :order: 32
 
-${branding} supports adding new attribute types, metacard types, validators, and more using json-formatted definition files.
+= JSON Definition Files
+{branding} supports adding new attribute types, metacard types, validators, and more using json-formatted definition files.
 
 The following may be defined in a JSON definition file:
 
-- <<{developing-prefix}attribute_type_definition_file,Attribute Types>>
-- <<{developing-prefix}metacard_type_definition_file,Metacard Types>>
-- <<{developing-prefix}global_attribute_validators_file,Global Attribute Validators>>
-- <<{developing-prefix}default_attribute_values,Default Attribute Values>>
-- <<{developing-prefix}attribute_injection_definition,Attribute Injections>>
+- xref:developing:devcomponents/attribute-type.adoc[Attribute Types]
+- xref:developing:devcomponents/metacard-type.adoc[Metacard Types]
+- xref:developing:devcomponents/global-attribute-validators.adoc[Global Attribute Validators]
+- xref:developing:devcomponents/default-attribute-values.adoc[Default Attribute Values]
+- xref:developing:devcomponents/attribute-injection.adoc[Attribute Injections]
 
-==== Definition File Format
+== Definition File Format
 
 A definition file follows the JSON format as specified in http://www.ecma-international.org/publications/standards/Ecma-404.htm[ECMA-404] {external-link}.
 All definition files must be valid JSON in order to be parsed.
@@ -22,7 +23,7 @@ All definition files must be valid JSON in order to be parsed.
 A single definition file may define as many of the types as needed.
 This means that types can be defined across multiple files for grouping or clarity.
 
-==== Deploying Definition Files
+== Deploying Definition Files
 
 The file must have a `.json` extension in order to be picked up by the deployer.
 Once the definition file is ready to be deployed, put the definition file `<filename>.json` into the `etc/definitions` folder.

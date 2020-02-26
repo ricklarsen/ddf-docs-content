@@ -5,6 +5,8 @@
 :order: 17
 :summary: Creating a custom Filter.
 
+= Developing Filters
+
 The common way to create a `Filter` is to use the GeoTools `FilterFactoryImpl` object, which provides Java implementations for the various types of filters in the Filter Specification.
 Examples are the easiest way to understand how to properly create a `Filter` and a `Query`. 
 
@@ -16,7 +18,7 @@ Refer to the http://docs.geotools.org/latest/javadocs/[GeoTools javadoc] for mor
 [WARNING]
 ====
 Implementing the Filter interface directly is only for extremely advanced use cases and is highly discouraged.
-Instead, use of the ${branding}-specific `FilterBuilder` API is recommended.
+Instead, use of the {branding}-specific `FilterBuilder` API is recommended.
 ====
 
 Developers create a `Filter` object in order to filter or constrain the amount of records returned from a `Source`.
@@ -34,7 +36,7 @@ The OGC Filter Specification has several types of filters that can be combined i
 ==== Units of Measure
 
 According to the http://www.opengeospatial.org/standards/filter[OGC Filter Specifications: 09-026r1] {external-link} and http://www.opengeospatial.org/standards/filter[OGC Filter Specifications: 04-095] {external-link}, units of measure can be expressed as a URI.
-To fulfill that requirement, ${branding} utilizes the GeoTools class `org.geotools.styling.UomOgcMapping` for spatial filters requiring a standard for units of measure for scalar distances.
+To fulfill that requirement, {branding} utilizes the GeoTools class `org.geotools.styling.UomOgcMapping` for spatial filters requiring a standard for units of measure for scalar distances.
 Essentially, the `UomOgcMapping` maps the http://www.opengeospatial.org/standards/symbol[OGC Symbology Encoding] {external-link} standard URIs to Java Units.
 This class provides three options for units of measure: 
 
@@ -42,7 +44,7 @@ This class provides three options for units of measure: 
 * METRE
 * PIXEL
 
-${branding} only supports FOOT and METRE since they are the most applicable to scalar distances.
+{branding} only supports FOOT and METRE since they are the most applicable to scalar distances.
 
 ==== Filter Examples
 
@@ -63,7 +65,7 @@ and the escapeChar itself
 String searchPhrase = "mission" ;
 org.opengis.filter.Filter propertyIsLikeFilter =
     filterFactory.like(filterFactory.property(Metacard.ANY_TEXT), searchPhrase, wildcardChar, singleChar, escapeChar, isCaseSensitive);
-${ddf-branding}.catalog.operation.QueryImpl query = new QueryImpl( propertyIsLikeFilter );
+{ddf-branding}.catalog.operation.QueryImpl query = new QueryImpl( propertyIsLikeFilter );
 ----
 
 The example below illustrates creating an absolute temporal query, meaning the query is searching for Metacards whose modified timestamp occurred during a specific time range.
@@ -83,7 +85,7 @@ String property = Metacard.MODIFIED ; // modified date of a metacard
 
 org.opengis.filter.Filter filter = filterFactory.during( filterFactory.property(property), filterFactory.literal(period)  );
 
-${ddf-branding}.catalog.operation.QueryImpl query = new QueryImpl(filter) ;
+{ddf-branding}.catalog.operation.QueryImpl query = new QueryImpl(filter) ;
 ----
 
 ===== Contextual Searches
@@ -127,12 +129,12 @@ wildcardChar, singleChar, escapeChar, isCaseSensitive),
 wildcardChar, singleChar, escapeChar, isCaseSensitive)
     );
 
-${ddf-branding}.catalog.operation.QueryImpl query = new QueryImpl( filter );
+{ddf-branding}.catalog.operation.QueryImpl query = new QueryImpl( filter );
 ----
 
 ====== Tree View of Creating Filters 
 
-Filters used in ${branding} can always be represented in a tree diagram.
+Filters used in {branding} can always be represented in a tree diagram.
 
 .Filter Example Tree Diagram
 [ditaa,filter-example-tree, png,600]
@@ -176,7 +178,7 @@ Using the Logical Operators and `PropertyIsLike` filters, a developer can crea
 
 ===== Fuzzy Operations
 
-${branding} only supports one custom function.
+{branding} only supports one custom function.
 The Filter specification does not include a fuzzy operator, so a Filter function was created to represent a fuzzy operation.
 The function and class is called `FuzzyFunction`, which is used by clients to notify the Sources to perform a fuzzy search.
 The syntax expected by providers is similar to the Fuzzy Function.
@@ -191,7 +193,7 @@ String escapeChar = "\\" ; // used to escape the meaning of the wildCard, single
 boolean isCaseSensitive = false ;
 
 Filter fuzzyFilter = filterFactory.like(
-     new ${ddf-branding}.catalog.impl.filter.FuzzyFunction(
+     new {ddf-branding}.catalog.impl.filter.FuzzyFunction(
           Arrays.asList((Expression) (filterFactory.property(Metacard.ANY_TEXT))),
           filterFactory.literal("")),
      searchPhrase,

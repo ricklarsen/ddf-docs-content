@@ -5,11 +5,13 @@
 :summary: Creating a custom metacard transformer.
 :order: 08
 
+= Developing Metacard Transformers
+
 In general, a `MetacardTransformer` is used to transform a `Metacard` into some desired format useful to the end user or as input to another process.
 Programmatically, a `MetacardTransformer` transforms a `Metacard` into a `BinaryContent` instance, which translates the `Metacard` into the desired final format.
 Metacard transformers can be used through the Catalog Framework `transform` convenience method or requested from the OSGi Service Registry by endpoints or other bundles.
 
-==== Creating a New Metacard Transformer
+== Creating a New Metacard Transformer
 
 Existing metacard transformers are written as Java classes, and these steps walk through the steps to create a custom metacard transformer.
 
@@ -18,9 +20,9 @@ Existing metacard transformers are written as Java classes, and these steps walk
 . Implement the `transform` method. +
 `public BinaryContent transform(Metacard metacard, Map<String, Serializable> arguments) throws CatalogTransformerException` +
 .. `transform` must return a `Metacard` or throw an exception. It cannot return null.
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog,ddf.catalog.transform`
-. Create an OSGi descriptor file to communicate with the OSGi Service registry (described in the <<{developing-prefix}osgi_basics,OSGi Basics>> section). Export the service to the OSGi registry and declare service properties.
+. Create an OSGi descriptor file to communicate with the OSGi Service registry (described in the xref:developing:devguidelines/osgi-basics.adoc[OSGi Basics] section). Export the service to the OSGi registry and declare service properties.
 +
 .Metacard Transformer Blueprint Descriptor Example
 [source,xml,linenums]

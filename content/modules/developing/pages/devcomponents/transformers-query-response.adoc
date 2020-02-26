@@ -5,6 +5,8 @@
 :summary: Creating a custom query response transformer.
 :order: 09
 
+= Developing Query Response Transformers
+
 A `QueryResponseTransformer` is used to transform a List of Results from a `SourceResponse`.
 Query Response Transformers can be used through the Catalog transform convenience method or requested from the OSGi Service Registry by endpoints or other bundles.
 
@@ -14,7 +16,7 @@ Query Response Transformers can be used through the Catalog transform convenienc
 `public BinaryContent transform(SourceResponse upstreamResponse, Map<String, Serializable> arguments) throws CatalogTransformerException`
 . Import the DDF interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog, ddf.catalog.transform`
-. Create an OSGi descriptor file to communicate with the OSGi Service Registry (described in <<{developing-prefix}osgi_basics,OSGi Basics>>). Export the service to the OSGi registry and declare service properties.
+. Create an OSGi descriptor file to communicate with the OSGi Service Registry (described in xref:developing:devguidelines/osgi-basics,adoc[OSGi Basics]). Export the service to the OSGi registry and declare service properties.
 +
 . Deploy OSGi Bundle to OSGi runtime.
 +

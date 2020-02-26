@@ -5,6 +5,8 @@
 :summary: Creating a custom token validator.
 :order: 12
 
+= Developing Token Validators
+
 Token validators are used by the Security Token Service (STS) to validate incoming token requests.
 The `TokenValidator` CXF interface must be implemented by all custom token validators.
 The `canHandleToken` and `validateToken` methods must be overridden.

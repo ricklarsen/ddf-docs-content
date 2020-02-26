@@ -5,11 +5,13 @@
 :summary: Creating a custom source.
 :order: 10
 
-Sources are components that enable ${branding} to talk to back-end services.
-They let ${branding} perform query and ingest operations on catalog stores and query operations on federated sources.
+= Developing Sources
+
+Sources are components that enable {branding} to talk to back-end services.
+They let {branding} perform query and ingest operations on catalog stores and query operations on federated sources.
 
 .Source Architecture
-[ditaa, sources_architecture, png, ${image-width}]
+[ditaa, sources_architecture, png, {image-width}]
 ....
 +----------------------------------------------------------------------------------------------+
 |                /-------------------\            /-----------------------------\    +-=------+|
@@ -41,7 +43,7 @@ They let ${branding} perform query and ingest operations on catalog stores and q
 +----------------------------------------------------------------------------------------------+
 ....
 
-==== Implement a Source Interface
+== Implement a Source Interface
 
 There are three types of sources that can be created to perform query operations.
 All of these sources must also be able to return their availability and the list of content types currently stored in their back-end data stores.
@@ -50,17 +52,17 @@ Catalog Provider:: `ddf.catalog.source.CatalogProvider` _is used to communicate 
 Federated Source:: `ddf.catalog.source.FederatedSource` _is used to communicate with remote systems and only allows query operations._
 Connected Source:: `ddf.catalog.source.ConnectedSource` _is similar to a Federated Source with the following exceptions:_
 * _Queried on all local queries_
-* ``SiteName`` _is hidden (masked with the ${branding} sourceId) in query results_
-* ``SiteService`` _does not show this Source's information separate from ${branding}'s._
+* ``SiteName`` _is hidden (masked with the {branding} sourceId) in query results_
+* ``SiteService`` _does not show this Source's information separate from {branding}'s._
 Catalog Store:: `catalog.store.interface` _is used to store data._
 
 The procedure for implementing any of the source types follows a similar format:
 
 . Create a new class that implements the specified Source interface, the `ConfiguredService` and the required methods.
-. Create an OSGi descriptor file to communicate with the OSGi registry. (Refer to <<_osgi_basics,OSGi Services>>.)
-.. Import ${branding} packages.
+. Create an OSGi descriptor file to communicate with the OSGi registry. (Refer to xref:developing:devguidelines/osgi-basics.adoc[OSGi Services].)
+.. Import {branding} packages.
 .. Register source class as service to the OSGi registry.
-. Deploy to ${branding}.
+. Deploy to {branding}.
 
 [IMPORTANT]
 ====
@@ -72,7 +74,7 @@ The `factory-pid` property of the metatype must contain one of the following in 
 Remote sources currently extend the `ResourceReader` interface. However, a `RemoteSource` is not treated as a `ResourceReader`. The `getSupportedSchemes()` method should never be called on a `RemoteSource`, thus the suggested implementation for a `RemoteSource` is to return an empty set. The `retrieveResource( …​ )` and `getOptions( …​ )` methods will be called and MUST be properly implemented by a `RemoteSource`.
 ====
 
-===== Developing Catalog Providers
+=== Developing Catalog Providers
 
 Create a custom implementation of a catalog provider.
 
@@ -83,7 +85,7 @@ Create a custom implementation of a catalog provider.
 `public UpdateResponset update(UpdateRequest updateRequest) throws IngestException;`
 `public DeleteResponse delete(DeleteRequest deleteRequest) throws IngestException;`
 
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog, ddf.catalog.source`
 . Export the service to the OSGi registry.
 
@@ -93,14 +95,14 @@ Create a custom implementation of a catalog provider.
 <service ref="TestCatalogProvider" interface="ddf.catalog.source.CatalogProvider" />
 ----
 
-See the <<{managing-prefix}connecting_to_sources,existing Catalog Provider list>> for examples of Catalog Providers included in ${branding}.
+See the xref:managing:configuring/connecting-to-sources.adoc[existing Catalog Provider list] for examples of Catalog Providers included in {branding}.
 
-===== Developing Federated Sources
+=== Developing Federated Sources
 
 . Create a Java class that implements `FederatedSource` and `ConfiguredService`. +
 `public class TestFederatedSource implements ddf.catalog.source.FederatedSource, ddf.catalog.service.ConfiguredService`
 . Implement the required methods of the `ddf.catalog.source.FederatedSource` and `ddf.catalog.service.ConfiguredService` interfaces.
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog, ddf.catalog.source`
 . Export the service to the OSGi registry.
 
@@ -110,14 +112,14 @@ See the <<{managing-prefix}connecting_to_sources,existing Catalog Provider list>
 <service ref="TestFederatedSource" interface="ddf.catalog.source.FederatedSource" />
 ----
 
-===== Developing Connected Sources
+=== Developing Connected Sources
 
 Create a custom implementation of a connected source.
 
 . Create a Java class that implements `ConnectedSource` and `ConfiguredService`. +
 `public class TestConnectedSource implements ddf.catalog.source.ConnectedSource, ddf.catalog.service.ConfiguredService`
 . Implement the required methods of the `ddf.catalog.source.ConnectedSource` and `ddf.catalog.service.ConfiguredService` interfaces.
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog, ddf.catalog.source`
 . Export the service to the OSGi registry.
 
@@ -134,11 +136,11 @@ There may be intermittent failures with the creation of Providers and federated 
 To avoid this issue, create any JAXB within the methods requiring it.
 ====
 
-===== Exception Handling
+=== Exception Handling
 
 In general, sources should only send information back related to the call, not implementation details.
 
-====== Exception Examples
+==== Exception Examples
 
 Follow these guidelines for effective exception handling:
 
@@ -146,6 +148,6 @@ Follow these guidelines for effective exception handling:
 * If the caller issues a malformed search request, return an error describing the right form, or specifically what was not recognized in the request. Do not return the exception and stack trace where the parsing broke.
 * If the caller leaves something out, do not return the null pointer exception with a stack trace, rather return a generic exception with the message "xyz was missing."
 
-====== External Resources for Developing Sources
+==== External Resources for Developing Sources
 
 * http://today.java.net/pub/a/today/2003/12/04/exceptions.html[Three Rules for Effective Exception Handling] {external-link}.

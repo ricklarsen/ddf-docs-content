@@ -5,14 +5,16 @@
 :order: 16
 :summary: Creating a custom Resource Writer.
 
+= Developing Resource Writers
+
 A `ResourceWriter` is an object used to store or delete a `Resource`. 
 `ResourceWriter` objects should be registered within the OSGi Service Registry, so clients can retrieve an instance when they need to store a `Resource`. 
 
-==== Create a New `ResourceWriter`
+== Create a New `ResourceWriter`
 
 Complete the following procedure to create a `ResourceWriter`.
 
-. Create a Java class that implements the `${ddf-branding}.catalog.resource.ResourceWriter` interface.
+. Create a Java class that implements the `{ddf-branding}.catalog.resource.ResourceWriter` interface.
 
 .ResourceWriter Implementation Skeleton
 [source,java,linenums]
@@ -20,10 +22,10 @@ Complete the following procedure to create a `ResourceWriter`.
 import java.io.IOException;
 import java.net.URI;
 import java.util.Map;
-import ${ddf-branding}.catalog.resource.Resource;
-import ${ddf-branding}.catalog.resource.ResourceNotFoundException;
-import ${ddf-branding}.catalog.resource.ResourceNotSupportedException;
-import ${ddf-branding}.catalog.resource.ResourceWriter;
+import {ddf-branding}.catalog.resource.Resource;
+import {ddf-branding}.catalog.resource.ResourceNotFoundException;
+import {ddf-branding}.catalog.resource.ResourceNotSupportedException;
+import {ddf-branding}.catalog.resource.ResourceWriter;
 
 public class SampleResourceWriter implements ResourceWriter {
 
@@ -52,11 +54,11 @@ public class SampleResourceWriter implements ResourceWriter {
 [source,xml,linenums]
 ----
 ...
-<service ref="ResourceWriterReference" interface="${ddf-branding}.catalog.resource.ResourceWriter" />
+<service ref="ResourceWriterReference" interface="{ddf-branding}.catalog.resource.ResourceWriter" />
 ...
 ----
 
-. Deploy the OSGi bundled packaged service to the ${branding} run-time (Refer to the <<{developing-prefix}osgi_basics,OSGi Basics>> - Bundles section.)
+. Deploy the OSGi bundled packaged service to the {branding} run-time (Refer to the xref:developing:devguidelines/osgi-basics.adoc[OSGi Basics] - Bundles section.)
 
 [TIP]
 ====

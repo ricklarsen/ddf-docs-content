@@ -5,12 +5,14 @@
 :order: 22
 :summary: Assuring Authenticity of Bundles and Applications.
 
-${branding} Artifacts in the JAR file format (such as bundles or KAR files) can be signed and verified using the tools included as part of the Java Runtime Environment.
+= Assuring Authenticity of Bundles and Applications
 
-==== Prerequisites
+{branding} Artifacts in the JAR file format (such as bundles or KAR files) can be signed and verified using the tools included as part of the Java Runtime Environment.
+
+== Prerequisites
 
 To work with Java signatures, a keystore/truststore is required.
-For testing or trial purposes ${branding} can sign and validate using a self-signed certificate, generated with the keytool utility.
+For testing or trial purposes {branding} can sign and validate using a self-signed certificate, generated with the keytool utility.
 In an actuall installation, a certificate issued from a trusted Certificate Authority will be used.
 
 Additional documentation on keytool can be found at http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html[Keytool home] {external-link}.
@@ -38,7 +40,7 @@ Enter key password for <selfsigned>
 Re-enter new password:
 ----
 
-==== Signing a JAR/KAR
+== Signing a JAR/KAR
 
 Once a keystore is available, the JAR can be signed using the `jarsigner`
  tool.
@@ -51,7 +53,7 @@ Additional documentation on jarsigner can be found at http://docs.oracle.com/jav
 ~ $ jarsigner -keystore keystore.jks -keypass shield -storepass password  catalog-app-2.5.1.kar selfsigned
 ----
 
-===== Verifying a JAR/KAR
+=== Verifying a JAR/KAR
 The jarsigner utility is also used to verify a signature in a JAR-formatted file.
 
 .Using jarsigner to verify a file
@@ -63,7 +65,7 @@ The jarsigner utility is also used to verify a signature in a JAR-formatted file
 
 [... section abbreviated for space]
 
-smk     6768 Wed Sep 17 17:13:58 MST 2014 repository/${ddf-branding-lowercase}/catalog/security/catalog-security-logging/2.5.1/catalog-security-logging-2.5.1.jar
+smk     6768 Wed Sep 17 17:13:58 MST 2014 repository/{ddf-branding-lowercase}/catalog/security/catalog-security-logging/2.5.1/catalog-security-logging-2.5.1.jar
   s = signature was verified
   m = entry is listed in manifest
   k = at least one certificate was found in keystore

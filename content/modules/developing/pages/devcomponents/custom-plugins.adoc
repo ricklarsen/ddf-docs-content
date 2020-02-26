@@ -5,6 +5,8 @@
 :summary: Creating a custom catalog plugin.
 :order: 11
 
+= Developing Catalog Plugins
+
 Plugins extend the functionality of the Catalog Framework by performing actions at specified times during a transaction. 
 Plugin interfaces are located in the Catalog Core API.
 By implementing a plugin interface, actions can be performed at the desired time. 
@@ -19,77 +21,77 @@ The following types of plugins can be created:
 |Plugin Interface
 |Invocation Order
 
-|<<{architecture-prefix}pre_authorization_plugins,Pre-Authorization>>
+|xref:architectures:pre-authorization-intro.adoc[Pre-Authorization]
 |ddf.catalog.plugin.PreAuthorizationPlugin
 |Before any security rules are applied.
 
-|<<{architecture-prefix}policy_plugins,Policy>>
+|xref:architectures:policy-intro.adoc[Policy]
 |ddf.catalog.plugin.PolicyPlugin
 |After pre-authorization plugins, but before other catalog plugins to establish the policy for requests/responses.
 
-|<<{architecture-prefix}access_plugins,Access>>
+|xref:architectures:access-intro.adoc[Access]
 |ddf.catalog.plugin.AccessPlugin
 |Directly after any policy plugins
 
-|<<{architecture-prefix}pre_ingest_plugins,Pre-Ingest>>
+|xref:architectures:pre-ingest-intro.adoc[Pre-Ingest]
 |ddf.catalog.plugin.PreIngestPlugin
 |Before the Create/Update/Delete method is sent to the Catalog Provider.
 
-|<<{architecture-prefix}post_ingest_plugins,Post-Ingest>>
+|xref:architectures:post-ingest-intro.adoc[Post-Ingest]
 |ddf.catalog.plugin.PostIngestPlugin
 |After the Create/Update/Delete method is sent to the Catalog Provider.
 
-|<<{architecture-prefix}pre_query_plugins,Pre-Query>>
+|xref:architectures:pre-query-intro.adoc[Pre-Query]
 |ddf.catalog.plugin.PreQueryPlugin
 |Prior to the Query/Read method being sent to the Source.
 
-|<<{architecture-prefix}post_query_plugins,Post-Query>>
+|xref:architectures:post-query-intro.adoc[Post-Query]
 |ddf.catalog.plugin.PostQueryPlugin
 |After results have been retrieved from the query but before they are posted to the Endpoint.
 
-|<<{architecture-prefix}pre_federated_query_plugins,Pre-Federated-Query>>
+|xref:architectures:pre-federated-query-intro.adoc[Pre-Federated-Query]
 |ddf.catalog.plugin.PreFederatedQueryPlugin
 |Before a federated query is executed.
 
-|<<{architecture-prefix}post_federated_query_plugins,Post-Federated-Query>>
+|xref:architectures:post-federated-query-intro.adoc[Post-Federated-Query]
 |ddf.catalog.plugin.PostFederatedQueryPlugin
 |After a federated query has been executed.
 
-|<<{architecture-prefix}pre_resource_plugins,Pre-Resource>>
+|xref:architectures:pre-resource-intro.adoc[Pre-Resource]
 |ddf.catalog.plugin.PreResourcePlugin
 |Prior to a Resource being retrieved.
 
-|<<{architecture-prefix}post_resource_plugins,Post-Resource>>
+|xref:architectures:post-resource-intro.adoc[Post-Resource]
 |ddf.catalog.plugin.PostResourcePlugin
 |After a Resource is retrieved, but before it is sent to the Endpoint.
 
-|<<{architecture-prefix}pre_create_storage_plugins,Pre-Create Storage>>
+|xref:architectures:pre-create-storage-intro.adoc[Pre-Create Storage]
 |ddf.catalog.content.plugin.PreCreateStoragePlugin
-|<<{reference-prefix}packages_removed_from_whitelist,Experimental >>Before an item is created in the content repository.
+|xref:reference:packages-removed-from-whitelist,Experimental ]Before an item is created in the content repository.
 
-|<<{architecture-prefix}post_create_storage_plugins,Post-Create Storage>>
+|xref:architectures:postcreatestorage-intro.adoc[Post-Create Storage]
 |ddf.catalog.content.plugin.PostCreateStoragePlugin
-|<<{reference-prefix}packages_removed_from_whitelist,Experimental >>After an item is created in the content repository.
+|xref:reference:packages-removed-from-whitelist,Experimental ]After an item is created in the content repository.
 
-|<<{architecture-prefix}pre_update_storage_plugins,Pre-Update Storage>>
+|xref:architectures:pre-update-storage-intro.adoc[Pre-Update Storage]
 |ddf.catalog.content.plugin.PreUpdateStoragePlugin
-|<<{reference-prefix}packages_removed_from_whitelist,Experimental >>Before an item is updated in the content repository.
+|xref:reference:packages-removed-from-whitelist,Experimental ]Before an item is updated in the content repository.
 
-|<<{architecture-prefix}post_update_storage_plugins,Post-Update Storage>>
+|xref:architectures:post-update-storage-intro.adoc[Post-Update Storage]
 |ddf.catalog.content.plugin.PostUpdateStoragePlugin
-|<<{reference-prefix}packages_removed_from_whitelist,Experimental >>After an item is updated in the content repository.
+|xref:reference:whitelists/removed-whitelist.adoc[Experimental]After an item is updated in the content repository.
 
-|<<{architecture-prefix}pre_subscription_plugins,Pre-Subscription>>
+|xref:architectures:pre-subscription-intro.adoc[Pre-Subscription]
 |ddf.catalog.plugin.PreSubscriptionPlugin
 |Prior to a Subscription being created or updated.
 
-|<<{architecture-prefix}pre_delivery_plugins,Pre-Delivery>>
+|xref:architectures:pre-delivery-intro.adoc[Pre-Delivery]
 |ddf.catalog.plugin.PreDeliveryPlugin
 |Prior to the delivery of a Metacard when an event is posted.
 
 |===
 
-==== Implementing Catalog Plugins
+== Implementing Catalog Plugins
 
 The procedure for implementing any of the plugins follows a similar format:
 
@@ -101,7 +103,7 @@ The procedure for implementing any of the plugins follows a similar format:
 
 .. Register the plugin class as a service to OSGi registry.
 
-. Deploy to ${branding}.
+. Deploy to {branding}.
 
 .Plugin Performance Concerns
 [NOTE]
@@ -112,16 +114,16 @@ It is usually preferable to take no action on non-local requests.
 
 [TIP]
 ====
-Refer to the Javadoc for more information on all Requests and Responses in the `${ddf-branding-lowercase}.catalog.operation` and `${ddf-branding-lowercase}.catalog.event` packages.
+Refer to the Javadoc for more information on all Requests and Responses in the `{ddf-branding-lowercase}.catalog.operation` and `{ddf-branding-lowercase}.catalog.event` packages.
 ====
 
-===== Catalog Plugin Failure Behavior
+=== Catalog Plugin Failure Behavior
 
 In the event that this Catalog Plugin cannot operate but does not wish to fail the transaction, a `PluginExecutionException` should be thrown.
 If processing is to be explicitly stopped, a `StopProcessingException` should be thrown.
 For any other exceptions, the Catalog should "fail fast" and cancel the Operation.
 
-===== Implementing Pre-Ingest Plugins
+=== Implementing Pre-Ingest Plugins
 
 Develop a custom Pre-Ingest Plugin.
 
@@ -133,14 +135,14 @@ Develop a custom Pre-Ingest Plugin.
  * `public UpdateRequest process(UpdateRequest input) throws PluginExecutionException, StopProcessingException;`
  * `public DeleteRequest process(DeleteRequest input) throws PluginExecutionException, StopProcessingException;`
 +
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog,ddf.catalog.plugin`
 +
 . Export the service to the OSGi registry. +
 *Blueprint descriptor example*
 `<service ref="SamplePreIngestPlugin" interface="ddf.catalog.plugin.PreIngestPlugin" />`
 
-===== Implementing Post-Ingest Plugins
+=== Implementing Post-Ingest Plugins
 
 Develop a custom Post-Ingest Plugin.
 
@@ -152,14 +154,14 @@ Develop a custom Post-Ingest Plugin.
  * `public UpdateResponse process(UpdateResponse input) *throws* PluginExecutionException;`
  * `public DeleteResponse process(DeleteResponse input) *throws* PluginExecutionException;`
 
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog,ddf.catalog.plugin`
 
 . Export the service to the OSGi registry. +
 *Blueprint descriptor example*
 `<service ref="SamplePostIngestPlugin" interface="ddf.catalog.plugin.PostIngestPlugin" />`
 
-===== Implementing Pre-Query Plugins
+=== Implementing Pre-Query Plugins
 
 Develop a custom Pre-Query Plugin
 
@@ -168,13 +170,13 @@ Develop a custom Pre-Query Plugin
 
 . Implement the required method. +
 `public QueryRequest process(QueryRequest input) *throws* PluginExecutionException, StopProcessingException;`
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog,ddf.catalog.plugin`
 
 . Export the service to the OSGi registry. +
 `<service ref="SamplePreQueryPlugin" interface="ddf.catalog.plugin.PreQueryPlugin" />`
 
-===== Implementing Post-Query Plugins
+=== Implementing Post-Query Plugins
 
 Develop a custom Post-Query Plugin
 
@@ -184,13 +186,13 @@ Develop a custom Post-Query Plugin
 . Implement the required method. +
 `public QueryResponse process(QueryResponse input) *throws* PluginExecutionException, StopProcessingException;`
 
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog,ddf.catalog.plugin`
 
 . Export the service to the OSGi registry. +
 `<service ref="SamplePostQueryPlugin" interface="ddf.catalog.plugin.PostQueryPlugin" />`
 
-===== Implementing Pre-Delivery Plugins
+=== Implementing Pre-Delivery Plugins
 
 Develop a custom Pre-Delivery Plugin.
 
@@ -204,14 +206,14 @@ StopProcessingException;`
  * `public Update processUpdateHit(Update update) *throws* PluginExecutionException, StopProcessingException;`
  * `public Metacard processCreate(Metacard metacard) *throws* PluginExecutionException, StopProcessingException;`
 
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog,ddf.catalog.plugin,ddf.catalog.operation,ddf.catalog.event`
 
 . Export the service to the OSGi registry. +
 *Blueprint descriptor example* +
 `<service ref="SamplePreDeliveryPlugin" interface="ddf.catalog.plugin.PreDeliveryPlugin" />`
 
-===== Implementing Pre-Subscription Plugins
+=== Implementing Pre-Subscription Plugins
 
 Develop a custom Pre-Subscription Plugin.
 
@@ -221,7 +223,7 @@ Develop a custom Pre-Subscription Plugin.
 . Implement the required method.
  * `public Subscription process(Subscription input) *throws* PluginExecutionException, StopProcessingException;`
 
-===== Implementing Pre-Resource Plugins
+=== Implementing Pre-Resource Plugins
 
 Develop a custom Pre-Resource Plugin.
 
@@ -231,7 +233,7 @@ Develop a custom Pre-Resource Plugin.
 . Implement the required method. +
  * `public ResourceRequest process(ResourceRequest input) *throws* PluginExecutionException, StopProcessingException;`
 
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog,ddf.catalog.plugin,ddf.catalog.operation`
 
 . Export the service to the OSGi registry.
@@ -241,7 +243,7 @@ Develop a custom Pre-Resource Plugin.
 <service ref="SamplePreResourcePlugin" interface="ddf.catalog.plugin.PreResourcePlugin" />
 ----
 
-===== Implementing Post-Resource Plugins
+=== Implementing Post-Resource Plugins
 
 Develop a custom Post-Resource Plugin.
 
@@ -251,7 +253,7 @@ Develop a custom Post-Resource Plugin.
 . Implement the required method. +
  * `public ResourceResponse process(ResourceResponse input) *throws* PluginExecutionException, StopProcessingException;`
 
-. Import the ${branding} interface packages to the bundle manifest (in addition to any other required packages). +
+. Import the {branding} interface packages to the bundle manifest (in addition to any other required packages). +
 `Import-Package: ddf.catalog,ddf.catalog.plugin,ddf.catalog.operation`
 
 . Export the service to the OSGi registry.
@@ -262,7 +264,7 @@ Develop a custom Post-Resource Plugin.
 <]]" inter"[[SamplePostResourcePlugin" interface="ddf.catalog.plugin.PostResourcePlugin" />
 ----
 
-===== Implementing Policy Plugins
+=== Implementing Policy Plugins
 
 Develop a custom Policy Plugin.
 
@@ -283,7 +285,7 @@ Develop a custom Policy Plugin.
 *Blueprint descriptor example* +
 `<]]" inter"[[SamplePolicyPlugin" interface="ddf.catalog.plugin.PolicyPlugin" />`
 
-===== Implementing Access Plugins
+=== Implementing Access Plugins
 
 Develop a custom Access Plugin.
 

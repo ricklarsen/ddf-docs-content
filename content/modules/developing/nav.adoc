@@ -1,5 +1,5 @@
 .Developing
-* xref:highly-available-link.adoc[Highly Available Cluster Notice]
+* xref:devguidelines/highly-available-link.adoc[Highly Available Cluster Notice]
 * xref:devcomponents/custom-applications.adoc[Developing Applications]
 * xref:devcomponents/custom-catalog-frameworks.adoc[Developing Complementary Catalog Frameworks]
 * xref:devcomponents/metacard-type.adoc[Developing Metacard Types]
@@ -26,7 +26,6 @@
 * xref:devcomponents/custom-xacml-policies.adoc[Developing XACML Policies]
 * xref:devcomponents/assuring-bundles-and-apps.adoc[Assuring Authenticity of Bundles and Applications]
 * xref:devcomponents/json-definition-files.adoc[JSON Definition Files]
-* xref:configuring/sources/wfs-sources-services.adoc[WFS Services]
 
 * xref:devguidelines/contributing-intro.adoc[Contributing]
 ** xref:devguidelines/high-availability-guidance.adoc[High Availability Guidance]

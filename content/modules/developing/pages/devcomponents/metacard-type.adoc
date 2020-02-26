@@ -5,9 +5,11 @@
 :summary: Creating a custom Metacard Type.
 :order: 01
 
+= Developing Metacard Types
+
 Create custome Metacard types with Metacard Type definition files.
 
-==== Metacard Type Definition File
+== Metacard Type Definition File
 
 To define Metacard Types, the definition file must have a `metacardTypes` key in the root object.
 
@@ -66,7 +68,7 @@ The value of the `attributes` key is a map where each key is the name of an attr
 
 [NOTE]
 ====
-The ${ddf-branding} basic metacard attribute types are added to custom metacard types by default. If any attribute types are required by a metacard type, just include them in the `attributes` map and set `required` to `true`, as shown in the above example with `point-of-contact`.
+The {ddf-branding} basic metacard attribute types are added to custom metacard types by default. If any attribute types are required by a metacard type, just include them in the `attributes` map and set `required` to `true`, as shown in the above example with `point-of-contact`.
 ====
 
 .Multiple Metacard Types in a Single File

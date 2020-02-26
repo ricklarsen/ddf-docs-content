@@ -1,37 +1,37 @@
 :title: OSGi Basics
 :type: developmentGuideline
 :status: published
-:summary: Using OSGi within ${branding}.
+:summary: Using OSGi within {branding}.
 :order: 01
 
-${branding} runs on top of an OSGi framework, a Java virtual machine (JVM), several choices of operating systems, and the physical hardware infrastructure.
-The items within the dotted line represent the standard ${branding} components.
+{branding} runs on top of an OSGi framework, a Java virtual machine (JVM), several choices of operating systems, and the physical hardware infrastructure.
+The items within the dotted line represent the standard {branding} components.
 
-${branding} is a customized and branded distribution of http://karaf.apache.org/[Apache Karaf] {external-link}.
-${branding} could also be considered to be a more lightweight OSGi distribution, as compared to Apache ServiceMix, FUSE ESB, or Talend ESB, all of which are also built upon Apache Karaf.
-Similar to its peers, ${branding} incorporates (https://tools.codice.org/#DDFArchitecture-AdditionalUpstreamDependencies[additional upstream dependencies] {external-link}).
+{branding} is a customized and branded distribution of http://karaf.apache.org/[Apache Karaf] {external-link}.
+{branding} could also be considered to be a more lightweight OSGi distribution, as compared to Apache ServiceMix, FUSE ESB, or Talend ESB, all of which are also built upon Apache Karaf.
+Similar to its peers, {branding} incorporates (https://tools.codice.org/#DDFArchitecture-AdditionalUpstreamDependencies[additional upstream dependencies] {external-link}).
 
-The ${branding} framework hosts ${branding} applications, which are extensible by adding components via OSGi.
-The best example of this is the ${branding} Catalog (API), which offers extensibility via several types of Catalog Components.
-The ${branding} Catalog API serves as the foundation for several applications and resides in the applications tier.
+The {branding} framework hosts {branding} applications, which are extensible by adding components via OSGi.
+The best example of this is the {branding} Catalog (API), which offers extensibility via several types of Catalog Components.
+The {branding} Catalog API serves as the foundation for several applications and resides in the applications tier.
 
-The Catalog Components consist of <<{integrating-prefix}endpoints,Endpoints>>, <<{architecture-prefix}types_of_plugins,Plugins>>, <<{developing-prefix}catalog_framework_reference,Catalog Frameworks>>, <<{introduction-prefix}introduction_to_federation_and_sources,Sources>>, and <<{managing-prefix}catalog_providers,Catalog Providers>>.
-Customized components can be added to ${branding}.
+The Catalog Components consist of xref:integrating:endpoints/endpoint-intro.adoc[Endpoints], xref:architectures:plugins-intro.adoc[Plugins], xref:developing:devcomponents/custom-catalog-frameworks.adoc[Catalog Frameworks], xref:introduction:coreconcepts/federation-intro.adoc[Sources], and xref:managing:configuring/sources/catalog-provider-intro.adoc[Catalog Providers].
+Customized components can be added to {branding}.
 
 Capability:: A general term used to refer to an ability of the system.
 Component:: Represents a portion of an Application that can be extended.
 Bundle:: Java Archives (JARs) with special OSGi manifest entries.
 Feature:: One or more bundles that form an installable unit; defined by Apache Karaf but portable to other OSGi containers.
-Application:: A JSON file defining a collection of bundles with configurations to be displayed in the ${admin-console}.
+Application:: A JSON file defining a collection of bundles with configurations to be displayed in the {admin-console}.
 
 ==== Packaging Capabilities as Bundles
 
-Services and code are physically deployed to ${branding} using bundles.
-The bundles within ${branding} are created using the maven bundle plug-in.
+Services and code are physically deployed to {branding} using bundles.
+The bundles within {branding} are created using the maven bundle plug-in.
 Bundles are Java JAR files that have additional metadata in the `MANIFEST.MF` that is relevant to an OSGi container.
 
 The best resource for learning about the structure and headers in the manifest definition is in section 3.6 of the https://osgi.org/download/r5/osgi.core-5.0.0.pdf[OSGi Core Specification] {external-link}.
-The bundles within ${branding} are created using the http://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html[maven bundle plug-in] {external-link}, which uses the http://bnd.bndtools.org/[BND tool] {external-link}.
+The bundles within {branding} are created using the http://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html[maven bundle plug-in] {external-link}, which uses the http://bnd.bndtools.org/[BND tool] {external-link}.
 
 .Alternative Bundle Creation Methods
 [TIP]
@@ -73,12 +73,12 @@ Below is a code snippet from a Maven `pom.xml` for creating an OSGi Bundle using
     <artifactId>maven-bundle-plugin</artifactId>
     <configuration>
       <instructions>
-        <Bundle-Name>${variable-prefix}project.name}</Bundle-Name>
+        <Bundle-Name>{variable-prefix}project.name}</Bundle-Name>
         <Export-Package />
-        <Bundle-SymbolicName>${variable-prefix}project.groupId}.${variable-prefix}project.artifactId}</Bundle-SymbolicName>
+        <Bundle-SymbolicName>{variable-prefix}project.groupId}.{variable-prefix}project.artifactId}</Bundle-SymbolicName>
         <Import-Package>
-          ${ddf-branding-lowercase}.catalog,
-          ${ddf-branding-lowercase}.catalog.*
+          {ddf-branding-lowercase}.catalog,
+          {ddf-branding-lowercase}.catalog.*
         </Import-Package>
       </instructions>
     </configuration>
@@ -106,7 +106,7 @@ A bundle is typically installed in one of two ways:
 . Installed as a feature
 . Hot deployed in the `/deploy` directory
 
-The fastest way to deploy a created bundle during development is to copy it to the `/deploy` directory of a running ${branding}.
+The fastest way to deploy a created bundle during development is to copy it to the `/deploy` directory of a running {branding}.
 This directory checks for new bundles and deploys them immediately.
 According to Karaf documentation, "Karaf supports hot deployment of OSGi bundles by monitoring JAR files inside the `[home]/deploy` directory.
 Each time a JAR is copied in this folder, it will be installed inside the runtime.
@@ -126,8 +126,8 @@ The example below shows how to verify if a Client is deployed and running.
 
 .Verifying with grep
 ----
-${ddf-branding-lowercase}${at-symbol}local>list | grep -i example
-[ 162] [Active    ] [       ] [  ] [ 80] ${ddf-branding} :: Registry :: example Client (2.0.0)
+{ddf-branding-lowercase}{at-symbol}local>list | grep -i example
+[ 162] [Active    ] [       ] [  ] [ 80] {ddf-branding} :: Registry :: example Client (2.0.0)
 ----
 
 The state is `Active`, indicating that the bundle is ready for program execution.

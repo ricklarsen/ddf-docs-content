@@ -5,6 +5,8 @@
 :summary: Creating a custom Claims Handler.
 :order: 13
 
+= Developing STS Claims Handlers
+
 Develop a custom claims handler to retrieve attributes from an external attribute store.
 
 A claim is an additional piece of data about a subject that can be included in a token along with basic token data.
@@ -67,7 +69,7 @@ public interface ClaimsHandler {
 ----
 . Deploy the bundle.
 
-If the new claims handler is hitting an external service that is secured with SSL/TLS, a developer may need to add the root CA of the external site to the ${branding} trustStore and add a valid certificate into the ${branding} keyStore. For more information on certificates, refer to <<{managing-prefix}managing_keystores_and_certificates,Configuring a Java Keystore for Secure Communications>>.
+If the new claims handler is hitting an external service that is secured with SSL/TLS, a developer may need to add the root CA of the external site to the {branding} trustStore and add a valid certificate into the {branding} keyStore. For more information on certificates, refer to xref:managing:installing/managing-certificates.adoc[Configuring a Java Keystore for Secure Communications].
 
 [NOTE]
 ====
@@ -304,22 +306,22 @@ This XML file is found inside of the STS bundle and is named `ws-trust-1.4-servi
     </wsp:Policy>
     <wsdl:service name="SecurityTokenService">
         <wsdl:port name="STS_Port" binding="tns:STS_Binding">
-            <soap:address location="${public_url}/services/SecurityTokenService"/>
+            <soap:address location="{public_url}/services/SecurityTokenService"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
 ----
 
-==== Example Requests and Responses for SAML Assertions
+== Example Requests and Responses for SAML Assertions
 
 A client performs a RequestSecurityToken operation against the STS to receive a SAML assertion.
-The ${branding} STS offers several different ways to request a SAML assertion.
+The {branding} STS offers several different ways to request a SAML assertion.
 For help in understanding the various request and response formats, samples have been provided.
 The samples are divided out into different request token types.
 
-==== BinarySecurityToken (CAS) SAML Security Token Samples
+== BinarySecurityToken (CAS) SAML Security Token Samples
 
-Most endpoints in ${branding} require the X.509 PublicKey SAML assertion.
+Most endpoints in {branding} require the X.509 PublicKey SAML assertion.
 
 .BinarySecurityToken (CAS) SAML Security Token Sample Request
 [source,xml,linenums]
@@ -531,13 +533,13 @@ L6tQ</ds:X509Certificate>
 ----
 
 
-To obtain a SAML assertion to use in secure communication to ${branding}, a RequestSecurityToken (RST) request has to be made to the STS.
+To obtain a SAML assertion to use in secure communication to {branding}, a RequestSecurityToken (RST) request has to be made to the STS.
 
 A Bearer SAML assertion is automatically trusted by the endpoint.
 The client doesn't have to prove it can own that SAML assertion.
 It is the simplest way to request a SAML assertion, but many endpoints won't accept a KeyType of Bearer.
 
-==== UsernameToken Bearer SAML Security Token Sample
+== UsernameToken Bearer SAML Security Token Sample
 
 * WS-Addressing header with Action, To, and Message ID
 * Valid, non-expired timestamp
@@ -726,17 +728,17 @@ HM0dPfiQLQ99ElWkv/0=</ds:X509Certificate>
 ----
 
 
-In order to obtain a SAML assertion to use in secure communication to ${branding}, a `RequestSecurityToken` (RST) request has to be made to the STS.
+In order to obtain a SAML assertion to use in secure communication to {branding}, a `RequestSecurityToken` (RST) request has to be made to the STS.
 
 An endpoint's policy will specify the type of security token needed.
-Most of the endpoints that have been used with ${branding} require a SAML v2.0 assertion with a required KeyType of http://docs.oasis-open.org/ws-sx/ws-trust/200512/PublicKey.
-This means that the SAML assertion provided by the client to a ${branding} endpoint must contain a SubjectConfirmation block with a type of "holder-of-key" containing the client's public key.
+Most of the endpoints that have been used with {branding} require a SAML v2.0 assertion with a required KeyType of http://docs.oasis-open.org/ws-sx/ws-trust/200512/PublicKey.
+This means that the SAML assertion provided by the client to a {branding} endpoint must contain a SubjectConfirmation block with a type of "holder-of-key" containing the client's public key.
 This is used to prove that the client can possess the SAML assertion returned by the STS.
 
-==== X.509 PublicKey SAML Security Token Sample
+== X.509 PublicKey SAML Security Token Sample
 
 .X.509 PublicKey SAML Security Token Request
-The STS that comes with ${branding} requires the following to be in the RequestSecurityToken request in order to issue a valid SAML assertion.
+The STS that comes with {branding} requires the following to be in the RequestSecurityToken request in order to issue a valid SAML assertion.
 See the request block below for an example of how these components should be populated.
 
 * WS-Addressing header containing Action, To, and MessageID blocks
