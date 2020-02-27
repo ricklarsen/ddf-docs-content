@@ -5,19 +5,19 @@
 :summary: Support for a variety of file types and data types.
 :order: 00
 
-== {title}
+= Common Metadata Attributes
 
-${branding} supports a wide variety of file types and data types for ingest.
-The ${branding}'s internal Input Transformers extract the necessary data into a <<{metadata-prefix}catalog_taxonomy_definitions,generalized format>>.
-${branding} supports ingest of many datatypes and commonly used file formats, such as Microsoft office products: Word documents, Excel spreadsheets, and PowerPoint presentations as well as .pdf files, GeoJson and others. See <<{metadata-prefix}all_file_formats_supported,complete list>>.
-Many of these file types support additional <<_file_format_specific_attributes,file format-specific attributes>> from which additional metadata can be extracted.
+{branding} supports a wide variety of file types and data types for ingest.
+The {branding}'s internal Input Transformers extract the necessary data into a xref:metadatareference:catalog-taxonomy-intro.adoc[generalized format].
+{branding} supports ingest of many datatypes and commonly used file formats, such as Microsoft office products: Word documents, Excel spreadsheets, and PowerPoint presentations as well as .pdf files, GeoJson and others. See xref:metadatareference:complete-list-file-types.adoc[complete list].
+Many of these file types support additional xref:metadatareference:format-specific-attributes.adoc[file format-specific attributes] from which additional metadata can be extracted.
 
 [NOTE]
 ====
 These attributes will be available in all the specified file formats; however, values will only be present if present in the original document/resource.
 ====
 
-These attributes are supported by any file type ingested into ${branding}:
+These attributes are supported by any file type ingested into {branding}:
 
 .Common Attributes in All Supported File Types
 * metadata
@@ -28,7 +28,7 @@ These attributes are supported by any file type ingested into ${branding}:
 * effective (date)
 * created (date)
 
-These 'media' file types have support for additional attributes to be available when ingested into ${branding}:
+These 'media' file types have support for additional attributes to be available when ingested into {branding}:
 
 .File Types Supporting Additional Attributes
 * Video Types

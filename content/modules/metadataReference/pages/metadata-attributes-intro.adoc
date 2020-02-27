@@ -5,9 +5,9 @@
 :order: 01
 :summary: Introduction to metadata attributes.
 
-== {title}
+= Metadata Reference
 
-${branding} extracts basic metadata from the resources ingested.
+{branding} extracts basic metadata from the resources ingested.
 Many file types contain additional <<_file_format_specific_attributes,file format-specific metadata attributes>>.
 A neutral <<{metadata-prefix}catalog_taxonomy_definitions,Catalog Taxonomy>> enables transformation of metadata to other formats.
 See also a <<{metadata-prefix}all_file_formats_supported,list of all formats supported>> for ingest.

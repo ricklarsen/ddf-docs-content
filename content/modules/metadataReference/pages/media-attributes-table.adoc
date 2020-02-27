@@ -5,7 +5,7 @@
 :status: published
 :summary: Attributes in this group reflect metadata about media in general.
 
-== {title}
+= Media Attributes
 
 .Media: Attributes in this group reflect metadata about media in general. *Injected by default.*
 [cols="1,2,1,1,1" options="header"]

@@ -5,7 +5,7 @@
 :status: published
 :summary: Attributes in this group reflect temporal aspects about the resource.  
 
-== {title}
+= DateTime Attributes
 
 .DateTime: Attributes in this group reflect temporal aspects about the resource. *Injected by default.*
 [cols="5" options="header"]
@@ -30,7 +30,7 @@
  
 |[[_datetime.name]]datetime.name
 |A descriptive name for the corresponding temporal
-attributes. See <<{metadata-prefix}datetime.start,datetime.start>> and <<{metadata-prefix}datetime.end,datetime.end>>.
+attributes. See xref:metadatareference:datetime-attributes-table.adoc#datetime.start[datetime.start] and xref:metadatareference:datetime-attributes-table.adoc#datetime.end[datetime.end].
 |List of Strings
 |< 1024 characters per entry
 | 

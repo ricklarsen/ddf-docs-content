@@ -9,10 +9,10 @@
 The tables in this section have 3 defined columns.
 If adding or removing items, be sure to add or subtract empty cells at the end of the table to avoid losing data in the rendered version.
 ////
-== {title}
+= All File Formats Supported
 
 .Supported File Types
-Using the various input transformers, ${branding} supports ingest of the following MIME types.
+Using the various input transformers, {branding} supports ingest of the following MIME types.
 While ingest is possible for these files, metadata will be limited unless otherwise noted.
 
 .Application File Types

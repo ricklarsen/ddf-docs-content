@@ -5,7 +5,7 @@
 :order: 01
 :summary: File format-specific attribute mappings by data/file format.
 
-== {title}
+= File Format-specific Attributes
 
-Many file formats support additional metadata attributes that ${branding} is able to extract and make discoverable.
+Many file formats support additional metadata attributes that {branding} is able to extract and make discoverable.
 

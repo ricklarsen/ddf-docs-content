@@ -1,5 +1,5 @@
 .xref:metadata-attributes-intro.adoc[Metadata Reference]
-* xref:supported-file-formats.adoc[Common Metadata Attributes]
+* xref:common-metadata-attributes.adoc[Common Metadata Attributes]
 * xref:format-specific-attributes.adoc[File Format-specific Attributes]
 ** xref:mp4-attributes.adoc[Mp4 Additional Attribute]
 ** xref:complete-list-file-types.adoc[All File Formats Supported]
