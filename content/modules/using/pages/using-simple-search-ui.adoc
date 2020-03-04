@@ -5,17 +5,17 @@
 :summary: Using the Simple Search user interface.
 :order: 99
 
-== {title}
+= Using the Simple Search
 
 The ${branding} Simple Search UI application provides a low-bandwidth option for searching records in the local Catalog (provider) and federated sources.
 Results are returned in HTML format.
 
-=== Search
+== Search
 
 The *Input* form allows the user to specify keyword, geospatial, temporal, and type query parameters.
 It also allows the user to select the sources to search and the number of results to return.
 
-==== Search Criteria
+=== Search Criteria
 
 Enter one or more of the available search criteria to execute a query:
 
@@ -26,16 +26,16 @@ Type Search:: Select from *any*, or a specific type. Selecting *Any* results in 
 Sources:: Select from *none*, *all sources*, or *specific sources*. Selelcting *None* results in querying only the local provider, Selecting *All Sources* results in an enterprise search where all federations are queried, and selecting *Specific Sources* allows the user to select which sources are queried.
 Results per Page:: Select the number of results to be returned by a single query.
 
-==== Results
+=== Results
 
 The table of results shows the details of the results found, as well as a link to download the resource if applicable.
 
-===== Results  Summary
+==== Results  Summary
 
 Total Results:: Total Number of Results available for this query. If there are more results than the number displayed per page then a page navigation links will appear to the right.
 Pages:: Provides page navigation, which generate queries for requesting additional pages of results.
 
-===== Results Table
+==== Results Table
 
 The Results table provides a preview of and links to the results.
 The table consists of these columns:
@@ -47,7 +47,7 @@ Time:: Shows the Received (Created) and Effective times of the metacard, if avai
 Thumbnail:: Shows the thumbnail of the metacard, if available.
 Download:: A download link to retrieve the resource associated with the metacard, when applicable, if available.
 
-==== Result View
+=== Result View
 
 This view shows more detailed look at a result.
 

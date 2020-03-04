@@ -1,7 +1,7 @@
 :type: plugin
 :status: published
 :title: Metacard Ingest Network Plugin
-:link: {architecture-prefix}metacard_ingest_network_plugin
+:link: _metacard_ingest_network_plugin
 :plugintypes: preauthorization
 :summary: Adds attributes for network info from ingest request.
 

@@ -12,7 +12,7 @@ The PPTX Input Transformer ingests PPTX documents into the {branding} Content Re
 
 The PPTX Input Transformer will take precedence over the Tika Input Transformer for PPTX documents.
 
-.{title} Usage
+.{PPTX Input Transformer} Usage
 [cols="1,2m" options="header"]
 |===
 |Schema

@@ -1,7 +1,7 @@
 :type: plugin
 :status: published
 :title: Expiration Date Pre-Ingest Plugin
-:link: {architecture-prefix}expiration_date_pre_ingest_plugin
+:link: _expiration_date_pre_ingest_plugin
 :plugintypes: preingest
 :summary: Adds or updates expiration dates for the resource.
 

@@ -6,8 +6,7 @@
 :order: 01
 :summary: {ddf-catalog} whitelist.
 
-== {title}
-
+= {ddf-catalog} Whitelist
 The following classes have been exported by the {ddf-catalog} application and are approved for use by third parties:
 
 In package `ddf.catalog`

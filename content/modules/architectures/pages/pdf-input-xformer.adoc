@@ -9,7 +9,7 @@
 
 The PDF Input Transformer is responsible for translating a PDF document into a Catalog Metacard.
 
-.{title} Usage
+.{PDF Input Transformer} Usage
 [cols="1,2m" options="header"]
 |===
 |Schema
@@ -18,7 +18,6 @@ The PDF Input Transformer is responsible for translating a PDF document into a C
 |N/A
 |application/pdf
 |===
-
 
 == Installing the PDF Input Transformer
 

@@ -12,7 +12,6 @@
 *** xref:tables/ContentDirectoryMonitor.adoc[Content Directory Monitor]
 *** xref:tables/ContentFileSystemStorageProvider.adoc[Content File System Storage Provider]
 *** xref:tables/ExpirationDatePlugin.adoc[Expiration Date Pre-Ingest Plugin]
-*** xref:tables/FtpServerStarter.adoc[FTP Endpoint]
 *** xref:tables/Historian.adoc[Historian]
 *** xref:tables/MetacardAttributePlugin.adoc[Metacard Attribute Security Policy Plugin]
 
@@ -104,7 +103,6 @@
 ** xref:whitelists/security-whitelist.adoc[{ddf-security} Whitelist]
 ** xref:whitelists/solr-whitelist.adoc[{ddf-solr} Whitelist]
 ** xref:whitelists/spatial-whitelist.adoc[{ddf-spatial} Whitelist]
-** xref:whitelists/ui-whitelist.adoc[{ddf-ui} Whitelist]
 
 * xref:dependencyList/dependency-list-intro.adoc[{branding} Dependency List]
 ** xref:dependencyList/ddf-dependency-list.adoc[Java Dependency List]

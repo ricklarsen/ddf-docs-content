@@ -1,7 +1,7 @@
 :type: plugin
 :status: published
 :title: GeoCoder Plugin
-:link: {architecture-prefix}geocoder_plugin
+:link: _geocoder_plugin
 :plugintypes: preingest
 :summary: Populates the `Location.COUNTRY_CODE` attribute if the Metacard has an associated location.
 

@@ -1,7 +1,7 @@
 :title: Encrypting Passwords
 :type: configuration
 :status: published
-:link: {managing-prefix}encrypting_passwords
+:link: _encrypting_passwords
 :parent: Miscellaneous Configurations
 :summary: Encrypts plain text.
 :order: 03

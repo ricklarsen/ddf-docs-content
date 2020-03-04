@@ -5,7 +5,6 @@
 ** xref:endpoints/ingest-endpoints-intro.adoc[Ingest Endpoints]
 *** xref:endpoints/catalog-rest-endpoint.adoc[Catalog REST Endpoint]
 *** xref:endpoints/csw-endpoint.adoc[CSW Endpoint]
-*** xref:endpoints/ftp-endpoint.adoc[FTP Endpoint]
 
 ** xref:endpoints/crud-endpoints-intro.adoc[CRUD Endpoints]
 *** xref:endpoints/catalog-rest-endpoint.adoc[Catalog REST Endpoint]

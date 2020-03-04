@@ -4,6 +4,6 @@
 :order: 00
 :summary: Introduction to application whitelists.
 
-== {title}
+= Application Whitelists
 
 Within each ${branding} application, certain packages are exported for use by third parties.

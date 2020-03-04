@@ -36,7 +36,7 @@
 
 |[[_metacard-tags]]metacard-tags
 |Collections of data that go together, used for filtering.
-query results. NOTE: these are system tags. For descriptive tags, <<{metadata-prefix}topic_attributes,Topic Attributes>>.
+query results. NOTE: these are system tags. For descriptive tags, xref:metadatareference:core-attributes-table.adoc#topic_attributes[Topic Attributes].
 |List of Strings
 |< 1024 characters per entry
 |

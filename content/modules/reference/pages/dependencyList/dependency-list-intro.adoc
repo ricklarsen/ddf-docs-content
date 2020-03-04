@@ -5,6 +5,6 @@
 :summary: Introduction to dependency list reference.
 
 [{reference}]
-== {title}
+= {branding} Dependency List
 
 This list of {branding} dependencies is automatically generated:

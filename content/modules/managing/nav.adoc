@@ -114,7 +114,6 @@
 *** xref:configuring/configuring-endpoints.adoc[Configuring Endpoints]
 **** xref:configuring/configuring-csw-endpoint.adoc[Configuring CSW Endpoint]
 **** xref:configuring/configuring-catalog-rest-endpoint.adoc[Configuring Catalog REST Endpoint]
-**** xref:configuring/configuring-ftp-endpoint.adoc[Configuring FTP Endpoint]
 **** xref:configuring/configuring-kml-endpoint.adoc[Configuring KML Endpoint]
 **** xref:configuring/configuring-opensearch-endpoint.adoc[Configuring OpenSearch Endpoint]
 **** xref:configuring/compression-services.adoc[Configuring Compression Services]

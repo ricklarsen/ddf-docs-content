@@ -35,11 +35,6 @@ Standards marked *Experimental* are functional and have been tested, but are sub
 |xref:managing:configuring/sources/opensearch-source.adoc[OpenSearch Source]
 |Supported
 
-|https://tools.ietf.org/html/rfc959[File Transfer Protocol (FTP)] {external-link}
-|xref:integrating:endpoints/ftp-endpoint.adoc[FTP Endpoint]
-|
-|Supported
-
 |Atlassian Confluence®
 |
 |xref:managing:configuring/sources/confluence-federated-source.adoc[Atlassian Confluence® Federated Source]

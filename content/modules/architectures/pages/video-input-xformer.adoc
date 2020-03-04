@@ -11,7 +11,7 @@ The video input transformer Creates Catalog metacards from certain video file ty
 Currently, it is handles MPEG-2 transport streams as well as MPEG-4, AVI, MOV, and WMV videos.
 This input transformer uses https://tika.apache.org[Apache Tika] to extract basic metadata from the video files and applies more sophisticated methods to extract more meaningful metadata from these types of video.
 
-.{title} Usage
+.{Video Input Transformer} Usage
 [cols="1,2" options="header"]
 |===
 |Schema

@@ -5,7 +5,7 @@
 :order: 06
 :summary: ${ddf-spatial} whitelist.
 
-== {title}
+= ${ddf-spatial} Whitelist
 
 The following classes have been exported by the ${ddf-spatial} application and are approved for use by third parties:
 

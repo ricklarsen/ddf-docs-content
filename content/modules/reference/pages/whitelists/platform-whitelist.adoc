@@ -5,7 +5,7 @@
 :order: 02
 :summary: ${ddf-platform} whitelist.
 
-== {title}
+= ${ddf-platform} Whitelist
 
 The following classes have been exported by the ${ddf-platform} application and are approved for use by third parties:
 
