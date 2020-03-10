@@ -35,8 +35,6 @@
 *** xref:tables/org.codice.ddf.transformer.preview.adoc[Catalog Preview]
 *** xref:tables/sourcePoller.adoc[Status Source Poller Runner]
 
-** xref:appReferences/mg-geowebcache.adoc[{ddf-geowebcache} Application Reference]
-
 ** xref:appReferences/mg-platform.adoc[{ddf-platform} Application Reference]
 *** xref:tables/DDF_Custom_Mime_Type_Resolver.adoc[MIME Custom Types]
 *** xref:tables/LoggingService.adoc[Logging Service]
@@ -48,10 +46,6 @@
 *** xref:tables/MetricsReporting.adoc[Metrics Reporting]
 *** xref:tables/ResponseHeaderConfig.adoc[HTTP Response Security]
 *** xref:tables/SmtpClientImpl.adoc[Email Service]
-
-
-** xref:appReferences/mg-resource-mgmt.adoc[{ddf-resource-management} Application Reference]
-*** xref:tables/resourcemanagement.usage.adoc[Data Usage]
 
 ** xref:appReferences/mg-security.adoc[{ddf-security} Application Reference]
 *** xref:tables/idpHandler.adoc[SAML Handler]

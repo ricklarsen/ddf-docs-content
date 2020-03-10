@@ -25,48 +25,8 @@ asynchronous processing starts and ends, those changes will be overwritten by th
 ====
 
 .Processing Framework Architecture
-[ditaa,processing_framework_architecture,png]
-....
-+----------------------------------------------------------------------------------------+
-|                      |                                                                 |
-|(Create/Update/Delete)|     /---------------------------------------------------------\ |
-|         Request      |     |                                                         | |
-|                      v     v                                                         | |
-|            +--------------------------+                                              | |
-|            |cDEF CatalogFramework     |                                              | |
-|            +--------------------------+                                              | |
-|                            |                                                         | |
-|     (Create/Update/Delete) |                                                         | |
-|           Response         |                                                         | |
-|                            v                                                         | |
-|            +--------------------------+ ProcessRequest{ProcessItem}                  | |
-|            |cDEF PostIngestPlugin     |---------------\                              | |
-|            +--------------------------+               |                              | |
-|                                                       v                              | |
-|                                        +---------------------------+                 | |
-|                                        |    ProcessingFramework    |                 | |
-|                                        |              |     c369   |                 | |
-|                                        |              v            |                 | |
-|   cCCC                                 |     +-------------------+ |                 | |
-|                                        |     |PostProcessPlugin 1| |                 | |
-|                                        |     +-------------------+ |                 | |
-|                                        |              |            |                 | |
-|                          ProcessRequest|{ProcessItem} v            |                 | |
-|                                        |     +-------------------+ |                 | |
-|                                        |     |PostProcessPlugin 2| |                 | |
-|                                        |     +-------------------+ |                 | |
-|                                        |              |            |                 | |
-|                          ProcessRequest|{ProcessItem} v            |                 | |
-|                                        |     +-------------------+ |                 | |
-|                                        |     |PostProcessPlugin N| |                 | |
-|                                        |     +-------------------+ |                 | |
-|                                        |              |            |                 | |
-|                                        |              v            |                 | |
-|                                        +---------------------------+                 | |
-|                                                       | (Create/Update/Delete)Request| |
-|                                                       \------------------------------/ |
-+----------------------------------------------------------------------------------------+
-....
+image::processing_framework_architecture.png[Processing Framework Architecture]]
+
 
 .The Asynchronous Processing Framework API Interfaces
 . `org.codice.ddf.catalog.async.processingframework.api.internal.ProcessingFramework`
@@ -80,56 +40,7 @@ asynchronous processing starts and ends, those changes will be overwritten by th
 . `org.codice.ddf.catalog.async.data.api.internal.ProcessResourceItem`
 
 .Processing Framework Interface Diagram
-[ditaa,processing_framework_interface_diagram,png]
-....
-+-----------------------------------------------------------------------------------------------+
-|         +------------------------------------------------------------+                        |
-|         |c369               <PostProcessPlugin>                      |                        |
-|         +------------------------------------------------------------+                        |
-|         |ProcessRequest{ProcessCreateItem} process(ProcessCreateItem)|                        |
-|         |ProcessRequest{ProcessUpdateItem} process(ProcessUpdateItem)|                        |
-|         |ProcessRequest{ProcessDeleteItem} process(ProcessDeleteItem)|                        |
-|         +------------------------------------------------------------+                        |
-|                                                                                               |
-|                               +-------------------------------------------------+             |
-|                               |c369 <ProcessRequest{T extends ProcessItem}>     |             |
-|                               +-------------------------------------------------+             |
-|                               |List{T} getProcessItems()                        |             |
-|                               |                                                 |             |
-|                               |                                                 |             |
-|                               +-------------------------------------------------+             |
-|                                                                                               |
-|                               +-------------------------------------------------+             |
-|    cCCC                       |c369             <ProcessItem>                   |             |
-|                               +-------------------------------------------------+             |
-|                               |Metacard getMetacard()                           |             |
-|                               |                                                 |             |
-|                               |                                                 |             |
-|                               +-------------------------------------------------+             |
-|                                                         ^                                     |
-|                                                         |                                     |
-|                                 +-----------------------+---------------------+               |
-|                                 |                                             |               |
-|             +---------------------------------------+                         |               |
-|             |c369    <ProcessResourceItem>          |                         |               |
-|             +---------------------------------------+                         |               |
-|             |ProcessResource getProcessResource()   |                         |               |
-|             |Boolean isMetacardModified()           |                         |               |
-|             |                                       |                         |               |
-|             +---------------------------------------+                         |               |
-|                                 ^                                             |               |
-|                                 |                                             |               |
-|               +-----------------+-------------+                               |               |
-|               |                               |                               |               |
-|+-----------------------------+ +-----------------------------+ +-----------------------------+|
-||c369 <ProcessCreateItem>     | |c369 <ProcessUpdateItem>     | |c369 <ProcessDeleteItem>     ||
-|+-----------------------------+ +-----------------------------+ +-----------------------------+|
-||                             | |Metacard getOldMetacard()    | |                             ||
-||                             | |                             | |                             ||
-||                             | |                             | |                             ||
-|+-----------------------------+ +-----------------------------+ +-----------------------------+|
-+-----------------------------------------------------------------------------------------------+
-....
+image::processing_framework_interface_diagram.png[Processing Framework Interface]
 
 .ProcessingFramework
 The `ProcessingFramework` is responsible for processing incoming ``ProcessRequest``s that contain a `ProcessItem`. A `ProcessingFramework` should never block. It receives

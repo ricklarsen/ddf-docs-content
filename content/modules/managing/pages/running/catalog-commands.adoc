@@ -104,49 +104,50 @@ offset            = 'Z' | (('+' | '-') HH [':' mm [':' ss [('.' | ',') SSS]]]
 ----
 
 .catalog:dump Examples
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>// Given we've ingested a few metacards
-{branding-lowercase}{at-symbol}local>catalog:latest
+{branding-lowercase}@local>// Given we've ingested a few metacards
+{branding-lowercase}@local>catalog:latest
 #       ID                                Modified Date              Title
 1       a6e9ae09c792438e92a3c9d7452a449f  {timestamp}
 2       b4aced45103a400da42f3b319e58c3ed  {timestamp}
 3       a63ab22361e14cee9970f5284e8eb4e0  {timestamp} myTitle
 
-{branding-lowercase}{at-symbol}local>// Filter out older files
-{branding-lowercase}{at-symbol}local>catalog:dump --created-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Filter out older files
+{branding-lowercase}@local>catalog:dump --created-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  1 file(s) dumped in 0.015 seconds
 
-{branding-lowercase}{at-symbol}local>// Filter out new file
-{branding-lowercase}{at-symbol}local>catalog:dump --created-before {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Filter out new file
+{branding-lowercase}@local>catalog:dump --created-before {timestamp} /home/user/{branding-lowercase}-catalog-dump
  2 file(s) dumped in 0.023 seconds
 
-{branding-lowercase}{at-symbol}local>// Choose middle file
-{branding-lowercase}{at-symbol}local>catalog:dump --created-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Choose middle file
+{branding-lowercase}@local>catalog:dump --created-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  1 file(s) dumped in 0.020 seconds
 
-{branding-lowercase}{at-symbol}local>// Modified dates work the same way
-{branding-lowercase}{at-symbol}local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Modified dates work the same way
+{branding-lowercase}@local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  1 file(s) dumped in 0.015 seconds
 
-{branding-lowercase}{at-symbol}local>// Can mix and match, most restrictive limits apply
-{branding-lowercase}{at-symbol}local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Can mix and match, most restrictive limits apply
+{branding-lowercase}@local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  1 file(s) dumped in 0.024 seconds
 
-{branding-lowercase}{at-symbol}local>// Can use UTC instead of (or in combination with) explicit time zone offset
-{branding-lowercase}{at-symbol}local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Can use UTC instead of (or in combination with) explicit time zone offset
+{branding-lowercase}@local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  2 file(s) dumped in 0.020 seconds
-{branding-lowercase}{at-symbol}local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  1 file(s) dumped in 0.015 seconds
 
-{branding-lowercase}{at-symbol}local>// Can leave off time zone, but default (local time on server) may not match what you expect!
-{branding-lowercase}{at-symbol}local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Can leave off time zone, but default (local time on server) may not match what you expect!
+{branding-lowercase}@local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  1 file(s) dumped in 0.018 seconds
 
-{branding-lowercase}{at-symbol}local>// Can leave off trailing minutes / seconds
-{branding-lowercase}{at-symbol}local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Can leave off trailing minutes / seconds
+{branding-lowercase}@local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  2 file(s) dumped in 0.024 seconds
 
-{branding-lowercase}{at-symbol}local>// Can use year and day number
-{branding-lowercase}{at-symbol}local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
+{branding-lowercase}@local>// Can use year and day number
+{branding-lowercase}@local>catalog:dump --modified-after {timestamp} /home/user/{branding-lowercase}-catalog-dump
  2 file(s) dumped in 0.027 seconds
 ----

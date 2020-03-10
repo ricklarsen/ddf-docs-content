@@ -11,19 +11,19 @@ Third-party tools, such as https://curl.haxx.se/[cURL.exe] {external-link} and t
 
 .Windows Example
 ----
-curl -H "Content-type: application/json;id=geojson" -i -X POST -d {at-symbol}"C:\path\to\geojson_valid.json" {secure_url}/services/catalog
+curl -H "Content-type: application/json;id=geojson" -i -X POST -d @"C:\path\to\geojson_valid.json" {secure_url}/services/catalog
 ----
 
 .*NIX Example
 ----
-curl -H "Content-type: application/json;id=geojson" -i -X POST -d {at-symbol}geojson_valid.json {secure_url}/services/catalog
+curl -H "Content-type: application/json;id=geojson" -i -X POST -d @geojson_valid.json {secure_url}/services/catalog
 ----
 
 Where: +
 *-H* adds an HTTP header. In this case, Content-type header `application/json;id=geojson` is added to match the data being sent in the request. +
 *-i* requests that HTTP headers are displayed in the response. +
 *-X* specifies the type of HTTP operation. For this example, it is necessary to POST (ingest) data to the server. +
-*-d* specifies the data sent in the POST request. The `{at-symbol}` character is necessary to specify that the data is a file. +
+*-d* specifies the data sent in the POST request. The `@` character is necessary to specify that the data is a file. +
 
 The last parameter is the URL of the server that will receive the data.
 

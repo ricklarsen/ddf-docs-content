@@ -32,9 +32,9 @@ If no argument is provided, all subscriptions will be listed.
 A count of the subscriptions found matching the list command's search phrase (or LDAP filter) is displayed first followed by each subscription's ID.
 
 .List All Subscriptions
-[source]
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:list
+{branding-lowercase}@local>subscriptions:list
 
 Total subscriptions found: 3
 
@@ -45,9 +45,9 @@ my.contextual.id.json|http://172.18.14.169:8088/services/json/local/event/notifi
 ----
 
 .List a Specific Subscription by ID
-[source]
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:list "my.contextual.id.v20|http://172.18.14.169:8088/mockCatalogEventConsumerBinding?WSDL"
+{branding-lowercase}@local>subscriptions:list "my.contextual.id.v20|http://172.18.14.169:8088/mockCatalogEventConsumerBinding?WSDL"
 
 Total subscriptions found: 1
 
@@ -61,9 +61,9 @@ It is recommended to always quote the search phrase (or LDAP filter) argument to
 ====
 
 .List Subscriptions Using Wildcards
-[source]
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:list "my*"
+{branding-lowercase}@local>subscriptions:list "my*"
 
 Total subscriptions found: 3
 
@@ -73,7 +73,7 @@ my.contextual.id.v30|http://172.18.14.169:8088/mockEventConsumerBinding?WSDL
 my.contextual.id.json|http://172.18.14.169:8088/services/json/local/event/notification
 
 
-{branding-lowercase}{at-symbol}local>subscriptions:list "*json*"
+{branding-lowercase}@local>subscriptions:list "*json*"
 
 Total subscriptions found: 1
 
@@ -81,7 +81,7 @@ Subscription ID
 my.contextual.id.json|http://172.18.14.169:8088/services/json/local/event/notification
 
 
-{branding-lowercase}{at-symbol}local>subscriptions:list "*WSDL"
+{branding-lowercase}@local>subscriptions:list "*WSDL"
 
 Total subscriptions found: 2
 
@@ -94,9 +94,9 @@ my.contextual.id.v30|http://172.18.14.169:8088/mockEventConsumerBinding?WSDL
 The example below illustrates searching for any subscription that has "json" or "v20" anywhere in its subscription ID.
 
 .List Subscriptions Using an LDAP Filter
-[source]
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:list -f "(|(subscription-id=*json*) (subscription-id=*v20*))"
+{branding-lowercase}@local>subscriptions:list -f "(|(subscription-id=*json*) (subscription-id=*v20*))"
 
 Total subscriptions found: 2
 
@@ -107,8 +107,9 @@ my.contextual.id.json|http://172.18.14.169:8088/services/json/local/event/notifi
 
 The example below illustrates searching for any subscription that has `json` and `172.18.14.169` in its subscription ID. This could be a handy way of finding all subscriptions for a specific site.
 
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:list -f "(&(subscription-id=*json*) (subscription-id=*172.18.14.169*))"
+{branding-lowercase}@local>subscriptions:list -f "(&(subscription-id=*json*) (subscription-id=*172.18.14.169*))"
 
 Total subscriptions found: 1
 
@@ -124,9 +125,9 @@ If a subscription matches the search phrase but cannot be deleted, a message in 
 After all matching subscriptions are processed, a summary line is displayed indicating how many subscriptions were deleted out of how many matching subscriptions were found.
 
 .Delete a Specific Subscription Using Its Exact ID
-[source]
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:delete "my.contextual.id.json|http://172.18.14.169:8088/services/json/local/event/notification"
+{branding-lowercase}@local>subscriptions:delete "my.contextual.id.json|http://172.18.14.169:8088/services/json/local/event/notification"
 
 Deleted subscription for ID = my.contextual.id.json|http://172.18.14.169:8088/services/json/local/event/notification
 
@@ -134,16 +135,16 @@ Deleted 1 subscriptions out of 1 subscriptions found.
 ----
 
 .Delete Subscriptions Using Wildcards
-[source]
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:delete "my*"
+{branding-lowercase}@local>subscriptions:delete "my*"
 
 Deleted subscription for ID = my.contextual.id.v20|http://172.18.14.169:8088/mockCatalogEventConsumerBinding?WSDL
 Deleted subscription for ID = my.contextual.id.v30|http://172.18.14.169:8088/mockEventConsumerBinding?WSDL
 
 Deleted 2 subscriptions out of 2 subscriptions found.
 
-{branding-lowercase}{at-symbol}local>subscriptions:delete "*json*"
+{branding-lowercase}@local>subscriptions:delete "*json*"
 
 Deleted subscription for ID = my.contextual.id.json|http://172.18.14.169:8088/services/json/local/event/notification
 
@@ -151,9 +152,9 @@ Deleted 1 subscriptions out of 1 subscriptions found.
 ----
 
 .Delete All Subscriptions
-[source]
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:delete *
+{branding-lowercase}@local>subscriptions:delete *
 
 Deleted subscription for ID = my.contextual.id.v30|http://172.18.14.169:8088/mockEventConsumerBinding?WSDL
 Deleted subscription for ID = my.contextual.id.v20|http://172.18.14.169:8088/mockCatalogEventConsumerBinding?WSDL
@@ -163,9 +164,9 @@ Deleted 3 subscriptions out of 3 subscriptions found.
 ----
 
 .Delete Subscriptions Using an LDAP Filter
-[source]
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>subscriptions:delete -f "(&(subscription-id=*WSDL) (subscription-id=*172.18.14.169*))"
+{branding-lowercase}@local>subscriptions:delete -f "(&(subscription-id=*WSDL) (subscription-id=*172.18.14.169*))"
 
 Deleted subscription for ID = my.contextual.id.v20|http://172.18.14.169:8088/mockCatalogEventConsumerBinding?WSDL
 Deleted subscription for ID = my.contextual.id.v30|http://172.18.14.169:8088/mockEventConsumerBinding?WSDL

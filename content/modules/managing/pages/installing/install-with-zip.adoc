@@ -16,7 +16,7 @@ Prior to installing {branding}, ensure the system time is accurate to prevent fe
 To install the {branding} distribution zip, perform the following:
 
 . Download the {branding} {download-url}[zip file] {external-link}.
-. After the <<{managing-prefix}installation_prerequisites,prerequisites>> have been met, change the current directory to the desired install directory, creating a new directory if desired.
+. After the xref:managing:installing/install-prereqs.adoc[prerequisites] have been met, change the current directory to the desired install directory, creating a new directory if desired.
 This will be referred to as `{home_directory}`.
 +
 .Windows Pathname Warning
@@ -27,6 +27,7 @@ For example, do not install in the default `Program Files` directory.
 ====
 +
 .Example: Create a Directory (Windows and *NIX)
+[source,subs=attributes]
 ----
 mkdir new_installation
 ----
@@ -39,52 +40,60 @@ This {branding}_USER can now be used for the remaining installation instructions
 .. Create a new group or use an existing group (e.g., {branding}_GROUP) (Windows users skip this step)
 +
 .Example: Add New Group on *NIX
+[source,subs=attributes]
 ----
 groupadd {branding}_GROUP
 ----
 +
 .Example: Switch User on *NIX
+[source,subs=attributes]
 ----
 chown {branding}_USER:{branding}_GROUP new_installation
 
 su - {branding}_USER
 ----
 +
-. Change the current directory to the location of the zip file ({branding-lowercase}-{project.version}.zip).
+. Change the current directory to the location of the zip file ({branding-lowercase}-{version}.zip).
 +
 .*NIX (Example assumes {branding} has been downloaded to a CD/DVD)
+[source,subs=attributes]
 ----
 cd /home/user/cdrom
 ----
 +
 .Windows (Example assumes {branding} has been downloaded to the D drive)
+[source,subs=attributes]
 ----
 cd D:\
 ----
-. Copy {branding-lowercase}-{project.version}.zip to {home_directory}.
+. Copy {branding-lowercase}-{version}.zip to {home_directory}.
 +
 .*NIX
+[source,subs=attributes]
 ----
-cp {branding-lowercase}-{project.version}.zip {home_directory}
+cp {branding-lowercase}-{version}.zip {home_directory}
 ----
 +
 .Windows
+[source,subs=attributes]
 ----
-copy {branding-lowercase}-{project.version}.zip {home_directory}
+copy {branding-lowercase}-{version}.zip {home_directory}
 ----
 +
 . Change the current directory to the desired install location.
 +
 .*NIX or Windows
+[source,subs=attributes]
 ----
 cd {home_directory}
 ----
 +
-. The {branding} zip is now located within the `{home_directory}`. Unzip {branding-lowercase}-{project.version}.zip.
+. The {branding} zip is now located within the `{home_directory}`. Unzip {branding-lowercase}-{version}.zip.
 +
 .*NIX
+[source,subs=attributes]
 ----
-unzip {branding-lowercase}-{project.version}.zip
+unzip {branding-lowercase}-{version}.zip
 ----
 +
 .Windows Zip Utility Warning
@@ -95,8 +104,9 @@ This is a consequence of its inability to process long file paths.
 Instead, use the java jar command line utility to unzip the distribution (see example below) or use a third party utility such as 7-Zip.
 
 .Use Java to Unzip in Windows(Replace `<PATH_TO_JAVA>` with correct path `and <JAVA_VERSION>` with current version.)
+[source,subs=attributes]
 ----
-"<PATH_TO_JAVA>\jdk<JAVA_VERSION>\bin\jar.exe" xf {branding-lowercase}-{project.version}.zip
+"<PATH_TO_JAVA>\jdk<JAVA_VERSION>\bin\jar.exe" xf {branding-lowercase}-{version}.zip
 ----
 
 The unzipping process may take time to complete.

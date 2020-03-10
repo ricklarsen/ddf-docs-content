@@ -47,7 +47,7 @@ The following exception is thrown:
 a|Restart {branding}.
 
 . Shut down {branding}: +
-`{branding-lowercase}{at-symbol}local>shutdown`
+`{branding-lowercase}@local>shutdown`
 . Start up {branding}:
 `./{branding-lowercase}`
 

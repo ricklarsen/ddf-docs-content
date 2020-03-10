@@ -1,4 +1,5 @@
-﻿:title: Associations Attributes
+﻿
+:title: Associations Attributes
 :type: subMetadataReference
 :order: 01
 :parent: Catalog Taxonomy Definitions

@@ -1,4 +1,5 @@
-﻿:title: Topic Attributes
+﻿
+:title: Topic Attributes
 :type: subMetadataReference
 :order: 09
 :parent: Catalog Taxonomy Definitions

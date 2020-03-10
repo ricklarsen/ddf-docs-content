@@ -31,4 +31,4 @@ To configure the Video Thumbnail Plugin:
 . Select the *Configuration* tab.
 . Select the *Video Thumbnail Plugin*.
 
-See <<{reference-prefix}org.codice.ddf.catalog.content.plugin.video.VideoThumbnailPlugin,Video Thumbnail Plugin configurations>> for all possible configurations.
+See xref:reference:tables/VideoThumbnailPlugin.adoc[Video Thumbnail Plugin configurations] for all possible configurations.

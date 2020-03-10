@@ -9,7 +9,7 @@
 
 The GeoJSON input transformer is responsible for translating GeoJSON into a Catalog metacard.
 
-.{title} Usage
+.GeoJSON Input Transformer Usage
 [cols="1,2m" options="header"]
 |===
 |Schema
@@ -34,7 +34,7 @@ Once the REST Endpoint receives the GeoJSON Metacard, it is converted to a Catal
 
 .Example HTTP POST of a Local `metacard.json` File Using the Curl Command
 ----
-curl -X POST -i -H "Content-Type: application/json" -d "{at-symbol}metacard.json" {secure_url}/services/catalog
+curl -X POST -i -H "Content-Type: application/json" -d "@metacard.json" {secure_url}/services/catalog
 ----
 
 == Conversion to a Metacard

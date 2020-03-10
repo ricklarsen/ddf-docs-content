@@ -38,7 +38,7 @@ The schema of the record needs to conform to a schema of the information model t
 Send a `POST` request to the CSW endpoint URL.
 
 .CSW Endpoint Ingest URL
-[source,http]
+[source,http,subs=attributes+]
 ----
 https://<FQDN>:<PORT>/services/csw
 ----
@@ -46,7 +46,7 @@ https://<FQDN>:<PORT>/services/csw
 Include the metadata to ingest within a `csw:Insert` block in the body of the request.
 
 .Sample XML Transaction `Insert` Request
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:Transaction
@@ -80,7 +80,7 @@ Include the metadata to ingest within a `csw:Insert` block in the body of the re
 To specify the document type being ingested and select the appropriate input transformer,
 use the `typeName` attribute in the `csw:Insert` element
 
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <csw:Insert typeName="xml">
 ----
@@ -88,13 +88,13 @@ use the `typeName` attribute in the `csw:Insert` element
 To receive a copy of the metacard in the response, specify `verboseResponse="true"` in the `csw:Transaction`.
 The `InsertResult` element of the response will hold the metacard information added to the catalog.
 
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <csw:Transaction service="CSW" version="2.0.2" verboseResponse="true" [...]
 ----
 
 .Sample XML Transformer Insert
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <csw:Transaction service="CSW" version="2.0.2" verboseResponse="true" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2">
   <csw:Insert typeName="xml">
@@ -113,7 +113,7 @@ The `InsertResult` element of the response will hold the metacard information ad
 A successful ingest will return a status of `200 OK` and `csw:TransactionResponse`.
 
 .Sample XML Transaction `Insert` Response
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:TransactionResponse xmlns:ogc="http://www.opengis.net/ogc"
@@ -166,7 +166,7 @@ A successful ingest will return a status of `200 OK` and `csw:TransactionRespons
 To query through the CSW Enpoint, send a `POST` request to the CSW endpoint.
 
 .CSW Endpoint Query URL
-[source,http]
+[source,http,subs=attributes+]
 ----
 https://<FQDN>:<PORT>/services/csw
 ----
@@ -178,7 +178,7 @@ Specify the output schema.
 (To get a list of supported schemas, send a xref:integrating:endpoints/csw-endpoint.adoc#csw_endpoint_get_capabilities_examples[Get Capabilities] request to the CSW endpoint.)
 
 .GetRecords Syntax
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <GetRecords xmlns="http://www.opengis.net/cat/csw/2.0.2"
         xmlns:ogc="http://www.opengis.net/ogc"
@@ -202,7 +202,7 @@ Optionally, set the `ElementSetName` to determine how much detail to return.
 
 Within the `Constraint` element, define the query as an OSG or CQL filter.
 
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <Query typeNames="Record">
     <ElementSetName>summary</ElementSetName>
@@ -217,7 +217,7 @@ Within the `Constraint` element, define the query as an OSG or CQL filter.
 </Query>
 ----
 
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <Query typeNames="Record">
     <ElementSetName>summary</ElementSetName>
@@ -230,7 +230,7 @@ Within the `Constraint` element, define the query as an OSG or CQL filter.
 ----
 
 .`GetRecords` XML Request Example
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" ?>
 <GetRecords xmlns="http://www.opengis.net/cat/csw/2.0.2"
@@ -260,7 +260,7 @@ Within the `Constraint` element, define the query as an OSG or CQL filter.
 
 
 .`GetRecords` Sample Response (`application/xml`)
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version='1.0' encoding='UTF-8'?>
 <csw:GetRecordsResponse xmlns:dct="http://purl.org/dc/terms/"
@@ -304,7 +304,7 @@ The `DistributedSearch` element must be specific with a `hopCount` greater than 
 ====
 
 .Querying a Specific Source Sample Request
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" ?>
 <csw:GetRecords resultType="results"
@@ -340,7 +340,7 @@ The `DistributedSearch` element must be specific with a `hopCount` greater than 
 To receive a response to a `GetRecords` query that conforms to the GMD specification, set the Namespace(xmlns),`outputschema`, and `typeName` elements for GML schema.
 
 .GML Output Schema Sample Request
-[source,xml,linenums,subs="verbatim,quotes"]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" ?>
 <GetRecords xmlns="http://www.opengis.net/cat/csw/2.0.2"
@@ -383,7 +383,7 @@ as there isn't a way to specify the UTM `srsName` in CQL.
 ====
 
 .UTM Northern Hemisphere Zone 36 Sample Request
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <GetRecords xmlns="http://www.opengis.net/cat/csw/2.0.2"
         xmlns:ogc="http://www.opengis.net/ogc"
@@ -418,7 +418,7 @@ as there isn't a way to specify the UTM `srsName` in CQL.
 To locate a record by Metacard ID, send a `POST` request with a `GetRecordById` element specifying the ID.
 
 .`GetRecordById` Request Example
-[source,xml,linenums,subs="verbatim,quotes"]
+[source,xml,linenums,subs=attributes+]
 ----
 <GetRecordById xmlns="http://www.opengis.net/cat/csw/2.0.2"
   xmlns:ogc="http://www.opengis.net/ogc"
@@ -785,7 +785,7 @@ The CSW Endpoint can edit the metadata attributes of a metacard.
 Send a `POST` request to the CSW Endpoint URL:
 
 .CSW Endpoint Update URL
-[source,https]
+[source,https,subs=attributes+]
 ----
 https://<FDQN>:<PORT>/services/csw
 ----
@@ -793,7 +793,7 @@ https://<FDQN>:<PORT>/services/csw
 Replace the `<METACARD-ID>` value with the metacard id being updated, and edit any properties within the `csw:Record`.
 
 .CSW Update Record Example
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:Transaction
@@ -824,7 +824,7 @@ Replace the `<METACARD-ID>` value with the metacard id being updated, and edit a
 ----
 
 .CSW Update Record Sample Response
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:TransactionResponse xmlns:ows="http://www.opengis.net/ows"
@@ -853,7 +853,7 @@ Use the `Name` element to specify the name of the record property to be updated 
 the `Value` element to the value to update in the record.
 The values in the `Update` will completely replace those that are already in the record.
 
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <csw:RecordProperty>
     <csw:Name>title</csw:Name>
@@ -864,7 +864,7 @@ The values in the `Update` will completely replace those that are already in the
 .Removing Attributes
 To remove a non-required attribute, send the `csw:Name` without a `csw:Value`.
 
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <csw:RecordProperty>
     <csw:Name>title</csw:Name>
@@ -915,7 +915,7 @@ Required attributes are set to a default value if no `Value` element is provided
 Use a `csw:Constraint` to specify the metacard ID.
 The constraint can be an OGC Filter or a CQL query.
 
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <csw:Constraint version="2.0.0">
     <ogc:Filter>
@@ -927,7 +927,7 @@ The constraint can be an OGC Filter or a CQL query.
 </csw:Constraint>
 ----
 
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <csw:Constraint version="2.0.0">
     <ogc:CqlText>
@@ -942,7 +942,7 @@ These filters can search on any arbitrary query criteria, but take care to only 
 ====
 
 .Sample XML Transaction `Update` Request with OGC filter constraint
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:Transaction
@@ -968,7 +968,7 @@ These filters can search on any arbitrary query criteria, but take care to only 
 ----
 
 .Sample XML Transaction `Update` Request with CQL filter constraint
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:Transaction
@@ -993,7 +993,7 @@ These filters can search on any arbitrary query criteria, but take care to only 
 ----
 
 .Sample XML Transaction Update Response
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:TransactionResponse xmlns:ogc="http://www.opengis.net/ogc"
@@ -1050,14 +1050,14 @@ A Subscription listens for events from federated sources if the `DistributedSear
 Send a `POST` request to the CSW endpoint.
 
 .CSW Add Subscription Sample URL
-[source,https]
+[source,https,subs=attributes+]
 ----
 https://<FQDN>:<PORT>/services/csw/subscription
 ----
 
 
 .Subscription `GetRecords` XML Request
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" ?>
 <GetRecords xmlns="http://www.opengis.net/cat/csw/2.0.2"
@@ -1090,13 +1090,13 @@ https://<FQDN>:<PORT>/services/csw/subscription
 To update an existing subscription, send a `PUT` request with the `requestid` URN appended to the url.
 
 CSW Endpoint Subscription Update URL
-[source,https]
+[source,https,subs=attributes+]
 ----
 {secure_url}/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea-6115021dd62f
 ----
 
 .Subscription `GetRecords` XML Response
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" ?>
 <Acknowledgement timeStamp="{timestamp}T18:49:45" xmlns="http://www.opengis.net/cat/csw/2.0.2"
@@ -1133,7 +1133,7 @@ xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 ../../../csw/2.0.2/CSW-
 
 
 .Subscription `GetRecords` Event Sample Response
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <csw:GetRecordsResponse version="2.0.2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ows="http://www.opengis.net/ows" xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <csw:SearchStatus timestamp="2014-02-19T15:33:44.602-05:00"/>
@@ -1156,12 +1156,13 @@ xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 ../../../csw/2.0.2/CSW-
 To retrieve an active subscription, send a `GET` request with the `requestid` URN appended to the url.
 
 .Retrieve.
+[source,subs=attributes+]
 ----
 https://<FQDN>:<PORT>/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea-6115021dd62f
 ----
 
 .Subscription `HTTP GET` Sample Response
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" ?>
 <Acknowledgement timeStamp="{timestamp}T18:49:45" xmlns="http://www.opengis.net/cat/csw/2.0.2"
@@ -1200,6 +1201,7 @@ https://<FQDN>:<PORT>/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea
 To delete a subscription, send a `DELETE` request with the `requestid` URN appended to the url.
 
 .Delete Subscription Sample URL
+[source,subs=attributes+]
 ----
 https://<FQDN>:<PORT>/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea-6115021dd62f
 ----
@@ -1208,7 +1210,7 @@ https://<FQDN>:<PORT>/services/csw/subscription/urn:uuid:4d5a5249-be03-4fe8-afea
 
 To delete metacards via the CSW Endpoint, send a `POST` request with a `csw:Delete` to the CSW Endpoint URL.
 
-[source,http]
+[source,http,subs=attributes+]
 ----
 https://<FQDN>:<PORT>/services/csw
 ----
@@ -1217,7 +1219,7 @@ Define the records to delete with the `csw:Constraint` field.
 The constraint can be either an OGC or CQL filter.
 
 .Sample XML Transaction `Delete` Request with OGC filter constraint
-[source,xml,linenums,subs="verbatim,quotes"]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:Transaction service="CSW" version="2.0.2"
@@ -1238,7 +1240,7 @@ The constraint can be either an OGC or CQL filter.
 ----
 
 .Sample XML Transaction `Delete` Request with CQL filter constraint
-[source,xml,linenums,subs="verbatim,quotes"]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:Transaction service="CSW" version="2.0.2"
@@ -1256,7 +1258,7 @@ The constraint can be either an OGC or CQL filter.
 ----
 
 .Sample XML Transaction Delete Response
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:TransactionResponse xmlns:ows="http://www.opengis.net/ows"
@@ -1303,7 +1305,7 @@ The response to either request will always be a `csw:Capabilities` XML document.
 This XML document is defined by the http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd[CSW-Discovery XML Schema] {external-link}.
 
 .CSW Endpoint `GetCapabilities` URL for GET request
-[source,https]
+[source,https,subs=attributes+]
 ----
 https://<FQDN>:<PORT>/services/csw?service=CSW&version=2.0.2&request=GetCapabilities
 ----
@@ -1311,7 +1313,7 @@ https://<FQDN>:<PORT>/services/csw?service=CSW&version=2.0.2&request=GetCapabili
 Alternatively, send a `POST` request to the root CSW endpoint URL.
 
 .CSW Endpoint `GetCapabilities` URL for GET request
-[source,https]
+[source,https,subs=attributes+]
 ----
 $https://<FQDN>:<PORT>/services/csw
 ----
@@ -1319,7 +1321,7 @@ $https://<FQDN>:<PORT>/services/csw
 Include an XML message body with a `GetCapabilities` element.
 
 .`GetCapabilities` Sample Request
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" ?>
 <csw:GetCapabilities
@@ -1330,7 +1332,7 @@ Include an XML message body with a `GetCapabilities` element.
 ----
 
 .`GetCapabilities` Sample Response (`application/xml`)
-[source,xml]
+[source,xml,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <csw:Capabilities xmlns:ows="http://www.opengis.net/ows" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:ns6="http://www.w3.org/2001/SMIL20/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ns9="http://www.w3.org/2001/SMIL20/Language" xmlns:ns10="http://www.w3.org/2001/XMLSchema-instance" version="2.0.2" ns10:schemaLocation="http://www.opengis.net/csw /ogc/csw/2.0.2/CSW-publication.xsd">
@@ -1537,6 +1539,3 @@ Include an XML message body with a `GetCapabilities` element.
     </ogc:Filter_Capabilities>
 </csw:Capabilities>
 ----
-
-
-

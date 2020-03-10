@@ -24,7 +24,7 @@ The KML Metacard Transformer has no configurable properties.
 Using the REST Endpoint for example, request a metacard with the transform option set to the KML shortname.
 
 .KML Metacard Transformer Example Output
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <kml xmlns:ns2="http://www.google.com/kml/ext/2.2" xmlns="http://www.opengis.net/kml/2.2" xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns:ns3="http://www.w3.org/2005/Atom">

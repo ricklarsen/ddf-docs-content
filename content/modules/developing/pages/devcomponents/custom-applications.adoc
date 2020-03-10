@@ -10,7 +10,7 @@ The applications are defined in the {etc/application-definitions} directory.
 Any json file added to the {etc/application-definitions} with name, description and bundleLocations keys will be displayed in the {admin-console}.
 The application will only display if one of the bundles listed in the bundleLocations key is running or there is at least 1 plugin associated with that application running.
 
-A KAR file is a Karaf-specific archive format (*K*araf *AR*chive).
+A KAR file is a Karaf-specific archive format (**K**araf **AR**chive).
 It is a jar file that contains a feature descriptor file and one or more OSGi bundle jar files.
 The feature descriptor file identifies a set of bundles that need to be installed, and any dependencies on other features that may need to be installed.
 
@@ -42,7 +42,7 @@ For each feature in this file, it resolves the bundles defined in the feature.
 All bundles are then packaged into the KAR archive.
 
 .`create-kar` Goal Example
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <plugin>
 <groupId>org.apache.karaf.tooling</groupId>
@@ -65,16 +65,16 @@ All bundles are then packaged into the KAR archive.
 	            same feature twice.
 	            Refer to Karaf forum posting at http://karaf.922171.n3.nabble.com/Duplicate-feature-repository-entry-using-archive-kar-to-build-deployable-applications-td3650850.html
 	            -->
-	            <resourcesDir>{variable-prefix}project.build.directory}/doesNotExist</resourcesDir>
+	            <resourcesDir>${project.build.directory}/doesNotExist</resourcesDir>
 
 	            <!--
-	            Location of the features.xml file. If it references properties that need to be filtered, e.g., {variable-prefix}project.version}, it will need to be
+	            Location of the features.xml file. If it references properties that need to be filtered, e.g., {version}, it will need to be
 	            filtered by the maven-resources-plugin.
 	            -->
-	            <featuresFile>{variable-prefix}basedir}/target/classes/features.xml</featuresFile>
+	            <featuresFile>${project.basedir}/target/classes/features.xml</featuresFile>
 
-	            <!-- Name of the kar file (.kar extension added by default). If not specified, defaults to {variable-prefix}project.build.finalName} -->
-	            <finalName>{ddf-branding-lowercase}-ifis-{variable-prefix}project.version}</finalName>
+	            <!-- Name of the kar file (.kar extension added by default). If not specified, defaults to ${project.build.finalName} -->
+	            <finalName>{ddf-branding-lowercase}-ifis-{version}</finalName>
 	        </configuration>
 	    </execution>
     </executions>
@@ -122,7 +122,7 @@ This example demonstrates a plugin that allows the {branding} to use the Admin U
 
 . Create an application plugin to advertise your configuration by extending `AbstractApplicationPlugin`.
 +
-[source,java,linenums]
+[source,java,linenums,subs=attributes+]
 ----
 import org.codice.{ddf-branding-lowercase}.admin.application.plugin.AbstractApplicationPlugin;
 
@@ -145,7 +145,7 @@ public class SourcesPlugin extends AbstractApplicationPlugin {
 . Register the application with Blueprint through a `blueprint.xml` file.
 +
 .`blueprint.xml`
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

@@ -6,32 +6,6 @@
 
 = Catalog Plugins Intro
 
-.Catalog Architecture: Catalog Plugins
-[ditaa, catalog_architecture_plugins, png,{image-width}]
-....
-+------------------------------------------------------------+
-|                /-------------------\                       |
-|                |cDEFEndpoints      |                       |
-|                +------------+------+                       |
-|                |cDEF        |cDEF  |                       |
-|                | Operations | Data |                       |
-|/---------------+------------+------+------------+---------\|
-||cDEF           |cDEF               |cDEF        |cDEF     ||
-||  Transformers |                   | Federation | Sources ||
-|+---------------+ Catalog Framework +------------+---------+|
-||c369           |                   |cDEF   Eventing       ||
-||   Catalog     |                   +------------+---------+|
-||   Plugins     |                   |cDEF   Resources      ||
-|\---------------+-------------------+----------------------/|
-|                |cDEF               |                       |
-|                | Catalog Provider  |                       |
-|                +-------------------+                       |
-|                |cDEF               |                       |
-|                | Storage Provider  |                       |
-|                \-------------------/                       |
-+------------------------------------------------------------+
-....
-
 Plugins are additional tools to use to add additional business logic at certain points, depending on the type of plugin.
 
 The Catalog Framework calls Catalog Plugins to process requests and responses as they enter and leave the Framework. 

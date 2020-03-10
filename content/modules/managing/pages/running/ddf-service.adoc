@@ -28,24 +28,27 @@ See xref:managing:installing/java-reqs.adoc[Java Requirements].
 an operating system service. This is an optional feature that is not installed by default.
 To install the service wrapper feature, go the {branding} console and enter the command:
 +
-`{branding-lowercase}{at-symbol}local> feature:install -r wrapper`
+`{branding-lowercase}@local> feature:install -r wrapper`
 
 . Generate the script, configuration, and executable files:
 +
 .*NIX
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local> wrapper:install -i setenv-wrapper.conf -n {branding-lowercase} -d {branding-lowercase} -D "{branding} Service"
+{branding-lowercase}@local> wrapper:install -i setenv-wrapper.conf -n {branding-lowercase} -d {branding-lowercase} -D "{branding} Service"
 ----
 +
 .Windows
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local> wrapper:install -i setenv-windows-wrapper.conf -n {branding-lowercase} -d {branding-lowercase} -D "{branding} Service"
+{branding-lowercase}@local> wrapper:install -i setenv-windows-wrapper.conf -n {branding-lowercase} -d {branding-lowercase} -D "{branding} Service"
 ----
 . (Windows users skip this step) (All *NIX) If {branding} was installed to run as a non-root
 user (as-recommended,) edit `{home_directory}/bin/{branding-lowercase}-service` and change
 the property `#RUN_AS_USER=` to:
 +
 .{home_directory}/bin/{branding-lowercase}-service
+[source,subs=attributes]
 ----
 RUN_AS_USER=<{branding-lowercase}-user>
 ----
@@ -54,6 +57,7 @@ where <{branding-lowercase}-user> is the intended username:
 Add `LimitNOFILE` to the [Service] section.
 +
 .{home_directory}/bin/{branding-lowercase}.service
+[source,subs=attributes]
 ----
 LimitNOFILE=6815744
 ----
@@ -63,22 +67,24 @@ LimitNOFILE=6815744
 
 Install the service and start it when the system boots, use `systemctl` From an OS console, execute:
 +
-`root{at-symbol}localhost# systemctl enable {home_directory}/bin/{branding-lowercase}.service`
+`root@localhost# systemctl enable {home_directory}/bin/{branding-lowercase}.service`
 
 . (Windows users skip this step) (*NIX _without_ `systemd`) Install the wrapper startup/shutdown scripts.
 +
 If the system does not use `systemd`, use the `init.d` system to install and configure the service.
 Execute these commands as root or superuser:
 +
+[source,subs=attributes]
 ----
-root{at-symbol}localhost# ln -s {home_directory}/bin/{branding-lowercase}-service /etc/init.d/
-root{at-symbol}localhost# chkconfig {branding-lowercase}-service --add
-root{at-symbol}localhost# chkconfig {branding-lowercase}-service on
+root@localhost# ln -s {home_directory}/bin/{branding-lowercase}-service /etc/init.d/
+root@localhost# chkconfig {branding-lowercase}-service --add
+root@localhost# chkconfig {branding-lowercase}-service on
 ----
 . (Windows only, if the system's `JAVA_HOME` variable has spaces in it) Edit `{home_directory}/etc/{branding-lowercase}-wrapper.conf`.
 Put quotes around `wrapper.java.additional.n` system properties for n from 1 to 13 like so:
 +
 .{home_directory}/etc/{branding-lowercase}-wrapper.conf
+[source,subs=attributes]
 ----
 wrapper.java.additional.1=-Djava.endorsed.dirs="%JAVA_HOME%/jre/lib/endorsed;%JAVA_HOME%/lib/endorsed;%KARAF_HOME%/lib/endorsed"
 wrapper.java.additional.2=-Djava.ext.dirs="%JAVA_HOME%/jre/lib/ext;%JAVA_HOME%/lib/ext;%KARAF_HOME%/lib/ext"
@@ -100,8 +106,9 @@ wrapper.java.additional.14=-Dkaraf.startRemoteShell=true
 +
 Run the following command in a console window. The command must be run with elevated permissions.
 +
+[source,subs=attributes]
 ----
-{home_directory}\bin\{branding-lowercase}-service.bat install
+{home_directory}/bin/{branding-lowercase}-service.bat install
 ----
 Startup and shutdown settings can then be managed through *Services -> MMC Start -> Control Panel -> Administrative Tools -> Services*.
 

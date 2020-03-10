@@ -16,7 +16,7 @@ This is useful when displaying password fields in a GUI.
 Below is an example of the security:encrypt command used to encrypt the plain text "myPasswordToEncrypt".
 The output, `bR9mJpDVo8bTRwqGwIFxHJ5yFJzatKwjXjIo/8USWm8=`, is the encrypted value.
 
-[source%nowrap.java]
+[source%nowrap.java,subs=attributes]
 ----
 {ddf-branding-lowercase}@local>security:encrypt myPasswordToEncrypt
 

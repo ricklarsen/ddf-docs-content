@@ -4,39 +4,13 @@
 
 = Transformers Intro
 
-.Transformers
-[ditaa, catalog_architecture_transformers, png, {image-width}]
-....
-+------------------------------------------------------------+
-|                /-------------------\                       |
-|                |cDEFEndpoints      |                       |
-|                +------------+------+                       |
-|                |cDEF        |cDEF  |                       |
-|                | Operations | Data |                       |
-|/---------------+------------+------+------------+---------\|
-||c369           |cDEF               |cDEF        |cDEF     ||
-||  Transformers |                   | Federation | Sources ||
-|+---------------+ Catalog Framework +------------+---------+|
-||cDEF           |                   |cDEF   Eventing       ||
-||   Catalog     |                   +------------+---------+|
-||   Plugins     |                   |cDEF   Resources      ||
-|\---------------+-------------------+----------------------/|
-|                |cDEF               |                       |
-|                | Catalog Provider  |                       |
-|                +-------------------+                       |
-|                |cDEF               |                       |
-|                | Storage Provider  |                       |
-|                \-------------------/                       |
-+------------------------------------------------------------+
-....
-
 Transformers transform data to and from various formats.
 Transformers are categorized by when they are invoked and used.
 The existing types are Input transformers, Metacard transformers, and Query Response transformers.
 Additionally, XSLT transformers are provided to aid in developing custom, lightweight Metacard and Query Response transformers.
 
 Transformers are utility objects used to transform a set of standard {branding} components into a desired format, such as into PDF, GeoJSON, XML, or any other format.
-For instance, a transformer can be used to convert a set of query results into an easy-to-read GeoJSON format (<<{architecture-prefix}geojson_input_transformer,GeoJSON Transformer>>) or convert a set of results into a RSS feed that can be easily published to a URL for RSS feed subscription.
+For instance, a transformer can be used to convert a set of query results into an easy-to-read GeoJSON format (xref:architectures:geojson-input-xformer.adoc[GeoJSON Transformer]) or convert a set of results into a RSS feed that can be easily published to a URL for RSS feed subscription.
 Transformers can be registered in the OSGi Service Registry so that any other developer can access them based on their standard interface and self-assigned identifier, referred to as its "shortname."
 Transformers are often used by endpoints for data conversion in a system standard way.
 Multiple endpoints can use the same transformer, a different transformer, or their own published transformer.
@@ -48,30 +22,7 @@ It is recommend not to use international character sets, as they may not be disp
 ====
 
 .Communication Diagram
-[ditaa, transformer_communication_diagram, png, {image-width}]
-....
-/------\
-|Client|
-|cDEF  |
-\------/
-    ^
-    |
-+-------------------------------------------\
-|DDF|                                  cCCC |
-|   v                                       |
-|/--------\   /-----------------\   /------\|
-||Endpoint|<->|Catalog Framework|<->|Source||
-|| cDEF   |   | cDEF            |   | cDEF ||
-|\--------/   \-----------------/   \------/|
-|                      ^                    |
-|                      |                    |
-|                      v                    |
-|               /-------------\             |
-|               | Transformer |             |
-|               |  cDEF       |             |
-|               \-------------/             |
-\-------------------------------------------/
-....
+image:transformer_communication_diagram.png[Transformer Communication]}]
 
 
 Transformers are used to alter the format of a resource or its metadata to or from the catalog’s metacard format.

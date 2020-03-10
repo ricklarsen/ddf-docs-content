@@ -13,19 +13,4 @@ If using REST services or connecting to REST sources, several configuration opti
 The following diagram shows the configuration options.
 
 .REST Services Configuration Options
-[ditaa, rest_config_options, png, {image-width}]
-....
-+-------------------------------------------------------------------------+
-|    /---------------------------\                                        |
-|    | Configuring REST Services |                                        |
-|    |         for Users         |-------------------\                    |
-|    \---------------------------/                   |                    |
-|                  |                                 |                    |
-|                  v                                 v                    |
-|    /---------------------------\         /-----------------------\      |
-|    | Connecting to an External |         | Configuring without an|      |
-|    |      Identity Provider    |         |   Identity Provider   |      |
-|    \---------------------------/         \-----------------------/      |
-|                                                                         |
-+-------------------------------------------------------------------------+
-....
+image::rest_config_options.png[REST Services Configuration Options ]

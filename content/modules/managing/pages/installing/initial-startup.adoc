@@ -10,11 +10,13 @@
 Run the {branding} using the appropriate script.
 
 .*NIX
+[source,subs=attributes]
 ----
 {home_directory}/bin/{branding-lowercase}
 ----
 
 .Windows
+[source,subs=attributes]
 ----
 {home_directory}/bin/{branding-lowercase}.bat
 ----
@@ -23,7 +25,7 @@ The distribution takes a few moments to load depending on the hardware configura
 
 [TIP]
 ====
-To run {branding} as a service, see <<{managing-prefix}managed_services,Starting as a Service>>.
+To run {branding} as a service, see xref:managing:running/ddf-service.adoc[Starting as a Service].
 ====
 
 == Verifying Startup
@@ -41,8 +43,9 @@ It may take a few moments for all bundles to start so it may be necessary to wai
 Execute the following command to display the status of all the {branding} bundles:
 
 .View Status
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>list | grep -i {branding-lowercase}
+{branding-lowercase}@local>list | grep -i {branding-lowercase}
 ----
 
 [WARNING]
@@ -53,6 +56,7 @@ Bundle fragments remain in the *Resolved* state and can never move to the *Activ
 ====
 
 .Example: Bundle Fragment in the Command Line Console
+[source,subs=attributes]
 ----
 96 | Resolved |  80 | 2.10.0.SNAPSHOT | DDF :: Platform :: PaxWeb :: Jetty Config, Hosts: 90
 ----

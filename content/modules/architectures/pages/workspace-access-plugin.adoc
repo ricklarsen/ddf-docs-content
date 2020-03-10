@@ -11,8 +11,8 @@ The Workspace Access Plugin prevents non-owner users from changing workspace per
 
 == Related Components to The Workspace Access Plugin
 
-* <<_workspace_sharing_policy_plugin,Workspace Sharing Policy Plugin>>.
-* <<_workspace_pre_ingest_plugin,Workspace Pre-Ingest Plugin>>.
+* xref:architectures:workspace-sharing-plugin.adoc[Workspace Sharing Policy Plugin].
+* xref:architectures:workspace-pre-ingest-plugin.adoc[Workspace Pre-Ingest Plugin].
 * Workspace Extension.
 
 == Installing the Workspace Access Plugin

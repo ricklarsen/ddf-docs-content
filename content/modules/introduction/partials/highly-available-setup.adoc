@@ -1,0 +1,16 @@
+.Highly Available Cluster
+[ditaa,highly-available-setup,png]
+....
+                                      {branding}
+                                    /-------------\
+                                    |cDEF         |
+                                /-->+  (active)   +--\
+/---------\     /-------------\ |   |             |  |   +----------+
+|cDEF     |     |cDEF         +-/   \-------------/  \-->+ {s} cDEF |
+| Browser +---->|    Proxy    |                          |SolrCloud |
+|         |     |             |     /-------------\  /-->+          |
+\---------/     \-------------/     |cYEL         |  |   +----------+
+                                    |  (standby)  +--/
+                                    |             |
+                                    \-------------/
+....

@@ -1,4 +1,5 @@
-﻿:title: Security Attributes
+﻿
+:title: Security Attributes
 :type: subMetadataReference
 :order: 08
 :parent: Catalog Taxonomy Definitions

@@ -19,15 +19,15 @@ Below is an example of the `security:encrypt` command used to encrypt the plain 
 . Navigate to the {command-console}.
 +
 .security:encrypt Command Example
-[source%nowrap.java]
+[source%nowrap.java,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>security:encrypt myPasswordToEncrypt
+{branding-lowercase}@local>security:encrypt myPasswordToEncrypt
 ----
 +
 . The output is the encrypted value.
 +
 .security:encrypt Command Output
-[source%nowrap.java]
+[source%nowrap.java,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>bR9mJpDVo8bTRwqGwIFxHJ5yFJzatKwjXjIo/8USWm8=
+{branding-lowercase}@local>bR9mJpDVo8bTRwqGwIFxHJ5yFJzatKwjXjIo/8USWm8=
 ----

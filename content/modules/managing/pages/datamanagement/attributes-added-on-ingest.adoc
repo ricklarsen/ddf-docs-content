@@ -12,42 +12,4 @@ Then xref:managing:datamanagement/attributes-added-by-attribute-injection.adoc[A
 Finally the metacard is passed through a series of xref:managing:datamanagement/attributes-added-by-pre-authorization-plugins.adoc[Pre-Authorization Plugins] and xref:managing:datamanagement/attributes-added-by-pre-ingest-plugins.adoc[Pre-Ingest Plugins].
 
 .Ingest Attribute Flow
-[ditaa,ingest-attribute-flow,png]
-....
-+----------------------------------------------+
-| /----------------\  |                    cCCC|
-| |     Ingest cDEF|  |                        |
-| \----------------/  |                        |
-|                     v                        |
-| /------------------------------------------\ |
-| |c369      Input Transformers              | |
-| \------------------------------------------/ |
-|                     |                        |
-|                     v                        |
-| /------------------------------------------\ |
-| |c369      Attribute Injection             | |
-| \------------------------------------------/ |
-|                     |                        |
-|                     v                        |
-| /------------------------------------------\ |
-| |c369    Default Attribute Types           | |
-| \------------------------------------------/ |
-|                     |                        |
-|                     v                        |
-| /------------------------------------------\ |
-| |c369      Attribute Overrides             | |
-| \------------------------------------------/ |
-|                     |                        |
-|                     v                        |
-| /------------------------------------------\ |
-| |c369    Pre Authorization Plugins         | |
-| \------------------------------------------/ |
-|                     |                        |
-|                     v                        |
-| /------------------------------------------\ |
-| |c369       Pre Ingest Plugins             | |
-| \------------------------------------------/ |
-|                     |                        |
-|                     v                        |
-+----------------------------------------------+
-....
+image::ingest-attribute-flow.png[Ingest Attribute Flow]

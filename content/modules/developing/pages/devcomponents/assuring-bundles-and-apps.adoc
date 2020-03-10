@@ -18,7 +18,7 @@ In an actuall installation, a certificate issued from a trusted Certificate Auth
 Additional documentation on keytool can be found at http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html[Keytool home] {external-link}.
 
 .Using keytool to generate a self-signed certificate keystore
-[source]
+[source,subs=attributes+]
 ----
 ~ $ keytool -genkey -keyalg RSA -alias selfsigned -keystore keystore.jks -storepass password -validity 360 -keysize 2048
 What is your first and last name?
@@ -48,24 +48,24 @@ Once a keystore is available, the JAR can be signed using the `jarsigner`
 Additional documentation on jarsigner can be found at http://docs.oracle.com/javase/6/docs/technotes/tools/windows/jarsigner.html[Jarsigner] {external-link}.
 
 .Using jarsigner to sign a KAR
-[source]
+[source,subs=attributes+]
 ----
-~ $ jarsigner -keystore keystore.jks -keypass shield -storepass password  catalog-app-2.5.1.kar selfsigned
+~ $ jarsigner -keystore keystore.jks -keypass shield -storepass password  catalog-app-{version}.kar selfsigned
 ----
 
 === Verifying a JAR/KAR
 The jarsigner utility is also used to verify a signature in a JAR-formatted file.
 
 .Using jarsigner to verify a file
-[source]
+[source,subs=attributes+]
 ----
-~ $ jarsigner -verify -verbose -keystore keystore.jks catalog-app-2.5.1.kar
+~ $ jarsigner -verify -verbose -keystore keystore.jks catalog-app-{version}.kar
         9447 Mon Oct 06 17:05:46 MST 2014 META-INF/MANIFEST.MF
         9503 Mon Oct 06 17:05:46 MST 2014 META-INF/SELFSIGN.SF
 
 [... section abbreviated for space]
 
-smk     6768 Wed Sep 17 17:13:58 MST 2014 repository/{ddf-branding-lowercase}/catalog/security/catalog-security-logging/2.5.1/catalog-security-logging-2.5.1.jar
+smk     6768 Wed Sep 17 17:13:58 MST 2014 repository/{ddf-branding-lowercase}/catalog/security/catalog-security-logging/{version}/catalog-security-logging-{version}.jar
   s = signature was verified
   m = entry is listed in manifest
   k = at least one certificate was found in keystore

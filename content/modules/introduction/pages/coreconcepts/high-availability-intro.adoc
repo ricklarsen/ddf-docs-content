@@ -26,38 +26,10 @@ If the active node fails for any reason, the standby node will become active and
 See the below diagrams for more detail.
 
 .Highly Available Cluster
-[ditaa,highly-available-setup,png]
-....
-                                      {branding}
-                                    /-------------\
-                                    |cDEF         |
-                                /-->+  (active)   +--\
-/---------\     /-------------\ |   |             |  |   +----------+
-|cDEF     |     |cDEF         +-/   \-------------/  \-->+ {s} cDEF |
-| Browser +---->|    Proxy    |                          |SolrCloud |
-|         |     |             |     /-------------\  /-->+          |
-\---------/     \-------------/     |cYEL         |  |   +----------+
-                                    |  (standby)  +--/
-                                    |             |
-                                    \-------------/
-....
+image::highly-available-setup.png[Highly Available Cluster]
 
 .Highly Available Cluster (after failover)
-[ditaa,highly-available-setup-after-failover,png]
-....
-                                      {branding}
-                                    /-------------\
-                                    |cRED         |
-                                    |   (failed)  |
-/---------\     /-------------\     |             |      +----------+
-|cDEF     |     |cDEF         |     \-------------/      | {s} cDEF |
-| Browser +---->|    Proxy    |                          |SolrCloud |
-|         |     |             +--\  /-------------\  /-->+          |
-\---------/     \-------------/  |  |cDEF         |  |   +----------+
-                                 \->+   (active)  +--/
-                                    |             |
-                                    \-------------/
-....
+image::highly-available-setup-after-failover.png[Highly Available Cluster (after failover)]
 
 There are special procedures for initial setup and configuration of a highly available {branding}.
 See xref:managing:installing/high-availability-initial-setup.adoc[High Availability Initial Setup] and xref:managing:configuring/high-availability-config.adoc[High Availability Configuration] for those procedures.

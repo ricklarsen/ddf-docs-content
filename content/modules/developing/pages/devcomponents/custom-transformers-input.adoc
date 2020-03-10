@@ -79,44 +79,10 @@ Then, the `SaxEventHandlerDelegate` begins parsing the XML input document, handi
 After parsing is finished, each `SaxEventHandler` returns a list of `Attributes` to the `SaxEventHandlerDelegate` and `XmlInputTransformer` which add the attributes to the metacard and then return the fully constructed metacard.
 
 .`XMLInputTransformer` Configuration
-[ditaa, XmlInputTransformer_configuration, png]
-....
-/--------------------------------------------------------\
-| +---------------------------------+                    |
-| |XmlInputTransformer Configuration|        cCCC        |
-| +---------------------------------+                    |
-|    ||                                                  |
-|    ||    +-------------------------------------------+ |
-|    |\--->|String value of SaxEventHandlerFactory1 id | |
-|    |     +-------------------------------------------+ |
-|    |                                                   |
-|    |     +-------------------------------------------+ |
-|    \---->|String value of SaxEventHandlerFactory2 id | |
-|          +-------------------------------------------+ |
-\--------------------------------------------------------/
-....
+image::XmlInputTransformer_configuration.png[XML Input Transformer Configuration]
 
 .`XMLInputTransformer` `SaxEventHandlerDelegate` Configuration
-[ditaa, XmlInputTransformer_saxeventhandlerdelegate, png]
-....
-/--------------------------------------------------------\
-| +---------------------------------+                    |
-| |XmlInputTransformer              |                    |
-| +---------------------------------+        cCCC        |
-|    |||                                                 |
-|    |||   +-----------------------+                     |
-|    ||\-->|SaxEventHandlerDelegate|                     |
-|    ||    +-----------------------+                     |
-|    ||                                                  |
-|    ||    +-----------------------+  +----------------+ |
-|    |\--->|SaxEventHandlerFactory1|->|SaxEventHandler1| |
-|    |     +-----------------------+  +----------------+ |
-|    |                                                   |
-|    |     +-----------------------+  +----------------+ |
-|    \---->|SaxEventHandlerFactory2|->|SaxEventHandler2| |
-|          +-----------------------+  +----------------+ |
-\--------------------------------------------------------/
-....
+image::XmlInputTransformer_saxeventhandlerdelegate.png[XML Input Transformer / Sax Event Handler Delegate]
 
 For more specific details, see the Javadoc for the `org.codice.ddf.transformer.xml.streaming.*` package.
 Additionally, see the source code for the `org.codice.ddf.transformer.xml.streaming.impl.GmlHandler.java`, `org.codice.ddf.transformer.xml.streaming.impl.GmlHandlerFactory`, `org.codice.ddf.transformer.xml.streaming.impl.XmlInputTransformerImpl`, and `org.codice.ddf.transformer.xml.streaming.impl.XmlInputTransformerImplFactory`.

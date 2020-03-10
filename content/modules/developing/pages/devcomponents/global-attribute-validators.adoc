@@ -11,7 +11,7 @@
 
 To define Validators, the definition file must have a `validators` key in the root object.
 
-[source,json]
+[source,json,subs=attributes]
 ----
 {
     "validators": {...}
@@ -20,7 +20,7 @@ To define Validators, the definition file must have a `validators` key in the ro
 
 The value of `validators` is a map of the attribute name to a list of validators for that attribute.
 
-[source,json]
+[source,json,subs=attributes]
 ----
 {
     "validators": {
@@ -31,7 +31,7 @@ The value of `validators` is a map of the attribute name to a list of validators
 
 Each object in the list of validators is the validator name and list of arguments for that validator.
 
-[source,json]
+[source,json,subs=attributes]
 ----
 {
     "validators": {
@@ -77,7 +77,7 @@ The `validator` key must have a value of one of the following:
 ====
 
 .Example Validator Definition
-[source, json]
+[source, json,subs=attributes]
 ----
 {
     "validators": {

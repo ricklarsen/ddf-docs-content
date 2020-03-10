@@ -27,6 +27,7 @@ For example, clients can use the xref:integrating:endpoints/opensearch-endpoint.
 The client can query with the format option set to the shortname, `atom`.
 
 .Sample OpenSearch Query with Atom Specified as Return Format
+[source,subs=attributes]
 ----
 {public_url}/services/catalog/query?q={branding-lowercase}?format=atom
 ----
@@ -34,7 +35,7 @@ The client can query with the format option set to the shortname, `atom`.
 Developers could use this transformer to programmatically transform `QueryResponse` objects on the fly.
 
 .Sample Atom Feed from `QueryResponse` object
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes]
 ----
  <feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
     <title type="text">Query Response</title>

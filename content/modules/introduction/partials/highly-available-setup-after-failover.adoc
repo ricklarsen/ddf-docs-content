@@ -1,0 +1,16 @@
+.Highly Available Cluster (after failover)
+[ditaa,highly-available-setup-after-failover,png]
+....
+                                      {branding}
+                                    /-------------\
+                                    |cRED         |
+                                    |   (failed)  |
+/---------\     /-------------\     |             |      +----------+
+|cDEF     |     |cDEF         |     \-------------/      | {s} cDEF |
+| Browser +---->|    Proxy    |                          |SolrCloud |
+|         |     |             +--\  /-------------\  /-->+          |
+\---------/     \-------------/  |  |cDEF         |  |   +----------+
+                                 \->+   (active)  +--/
+                                    |             |
+                                    \-------------/
+....

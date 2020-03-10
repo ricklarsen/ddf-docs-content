@@ -157,20 +157,20 @@ Title:VP-Engineering:VP-Engineering VP Engineering
 .3+|security:expand
 .3+|Runs the expansion service on the provided data returning the expanded value.
 It takes an attribute and an original value, expands the original value using the current expansion service and ruleset and dumps the results.
-|{branding-lowercase}{at-symbol}local>security:expand Location Goodyear
+|{branding-lowercase}@local>security:expand Location Goodyear
 |[Goodyear, USA, AZ]
 
-|{branding-lowercase}{at-symbol}local>security:expand Title VP-Engineering
+|{branding-lowercase}@local>security:expand Title VP-Engineering
 |`[VP-Engineering, Engineering, VP]`
 
-|{branding-lowercase}{at-symbol}local>expand Title "VP-Engineering Manager"
+|{branding-lowercase}@local>expand Title "VP-Engineering Manager"
 |`[VP-Engineering, Engineering, VP, Manager]`
 
 .2+|security:expansions
 .2+|Displays the ruleset for each active expansion service.
 |Expansion service configured:
 
-{branding-lowercase}{at-symbol}local>security:expansions
+{branding-lowercase}@local>security:expansions
 |[Location : Goodyear : Goodyear AZ +
 Location : AZ : AZ USA +
 Location : CA : CA USA +
@@ -179,6 +179,6 @@ Title : VP-Engineering : VP-Engineering VP Engineering]
 
 |No active expansion service:
 
-{branding-lowercase}{at-symbol}local>security:expansions
+{branding-lowercase}@local>security:expansions
 |`No expansion services currently available.`
 |===

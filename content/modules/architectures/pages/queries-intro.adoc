@@ -7,7 +7,7 @@
 
 = Queries
 
-Clients use `ddf.catalog.operation.Query` objects to describe which metacards are needed from <<{introduction-prefix}introduction_to_federation_and_sources,Sources>>. 
+Clients use `ddf.catalog.operation.Query` objects to describe which metacards are needed from xref:introduction:coreconcepts/federation-intro.adoc[Sources]. 
 
 Query objects have two major components:
 

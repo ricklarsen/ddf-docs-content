@@ -11,8 +11,8 @@ The Workspace Pre-Ingest Plugin verifies that a workspace has an associated emai
 
 == Related Components to The Workspace Pre-Ingest Plugin
 
-* <<_workspace_sharing_policy_plugin,Workspace Sharing Policy Plugin>>.
-* <<_workspace_access_plugin,Workspace Access Plugin>>.
+* xref:architectures:workspace-sharing-plugin.adoc[Workspace Sharing Policy Plugin].
+* xref:architectures:workspace-access-plugin.adoc[Workspace Access Plugin].
 * Workspace Extension.
 
 == Installing the Workspace Pre-Ingest Plugin

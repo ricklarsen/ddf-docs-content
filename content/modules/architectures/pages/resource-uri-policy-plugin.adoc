@@ -22,4 +22,4 @@ To configure the Resource URI Policy Plugin:
 . Select *Configuration* tab.
 . Select *Resource URI Policy Plugin*.
 
-See <<{reference-prefix}org.codice.ddf.catalog.security.ResourceUriPolicy,Resource URI Policy Plugin configurations>> for all possible configurations.
+See xref:reference:tables/security.ResourceUriPolicy.adoc[Resource URI Policy Plugin configurations] for all possible configurations.

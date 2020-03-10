@@ -212,7 +212,7 @@ NOTE: Does not change the port the system runs on.
 |The version of {branding} that is running.
 
 This value should not be changed from the factory default.
-|{project.version}
+|{version}
 |Yes
 
 |Organization

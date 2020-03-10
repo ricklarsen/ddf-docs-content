@@ -7,7 +7,7 @@
 = Installing
 
 Set up a complete, secure instance of {branding}.
-For simplified steps used for a testing, development, or demonstration installation, see the <<{quickstart-prefix}quick_start_tutorial,{branding} Quick Start>>.
+For simplified steps used for a testing, development, or demonstration installation, see the xref:quickstart:quickstart-intro.adoc[{branding} Quick Start].
 
 [IMPORTANT]
 ====

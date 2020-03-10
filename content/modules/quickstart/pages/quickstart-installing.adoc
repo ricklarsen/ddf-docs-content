@@ -56,8 +56,9 @@ Instead, use the java jar command line utility to unzip the distribution (see ex
 Note: If and only if a JDK is installed, the jar command may be used; otherwise, another archiving utility that does not have issue with long paths should be installed
 
 .Use Java to Unzip in Windows(Replace `<PATH_TO_JAVA>` with correct path `and <JAVA_VERSION>` with current version.)
+[source,subs=attributes+]
 ----
-"<PATH_TO_JAVA>\jdk<JAVA_VERSION>\bin\jar.exe" xf {branding-lowercase}-{project.version}.zip
+"<PATH_TO_JAVA>\jdk<JAVA_VERSION>\bin\jar.exe" xf {branding-lowercase}-{version}.zip
 ----
 ====
 +
@@ -71,8 +72,9 @@ This installation directory will be referred to as `{home_directory}`.
 . The {command-console} will display.
 
 .{command-console} Prompt
+[source,subs=attributes+]
 ----
-{branding-lowercase}{at-symbol}local>
+{branding-lowercase}@local>
 
 ----
 

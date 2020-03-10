@@ -13,11 +13,13 @@ Follow the below steps to start and stop {branding}.
 Run one of the start scripts from a command shell to start the distribution and open a local console:
 
 .Start Script: *NIX
+[source,subs=attributes]
 ----
 {home_directory}/bin/{branding-lowercase}
 ----
 
 .Start Script: Windows
+[source,subs=attributes]
 ----
 {home_directory}/bin/{branding-lowercase}.bat
 ----
@@ -27,11 +29,13 @@ Run one of the start scripts from a command shell to start the distribution and 
 Alternatively, to run {branding} as a background process, run the `start` script:
 
 .*NIX
+[source,subs=attributes]
 ----
 {home_directory}/bin/start
 ----
 
 .Windows
+[source,subs=attributes]
 ----
 {home_directory}/bin/start.bat
 ----
@@ -41,11 +45,13 @@ Alternatively, to run {branding} as a background process, run the `start` script
 If console access is needed while running as a service, run the `client` script on the host where the {branding} is running:
 
 .*NIX
+[source,subs=attributes]
 ----
 {home_directory}/bin/client
 ----
 
 .Windows
+[source,subs=attributes]
 ----
 {home_directory}/bin/client.bat -h <FQDN>
 ----
@@ -60,13 +66,15 @@ There are two options to stop a running instance:
 * Call shutdown from the console:
 
 .Shut down with a prompt
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>shutdown
+{branding-lowercase}@local>shutdown
 ----
 
 .Force Shutdown without prompt
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>shutdown -f
+{branding-lowercase}@local>shutdown -f
 ----
 
 * Keyboard shortcut for shutdown
@@ -75,11 +83,13 @@ There are two options to stop a running instance:
 * Or run the stop script:
 
 .*NIX
+[source,subs=attributes]
 ----
 {home_directory}/bin/stop
 ----
 
 .Windows
+[source,subs=attributes]
 ----
 {home_directory}/bin/stop.bat
 ----

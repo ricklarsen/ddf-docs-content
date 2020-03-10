@@ -9,7 +9,7 @@
 
 Restrict access to sensitive files by ensuring that the only users with access privileges are administrators.
 
-Within the `{home_directory}`, a directory is created named {branding-lowercase}-{project.version}.
+Within the `{home_directory}`, a directory is created named {branding-lowercase}-{version}.
 This directory will be referred to in the documentation as `{home_directory}`.
 
 . Do not assume the deployment is from a trusted source; verify its origination.

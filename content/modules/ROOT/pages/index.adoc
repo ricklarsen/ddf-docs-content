@@ -29,5 +29,5 @@ TBD
 .News and Events
 ****
 [#version-history]
-* *2013-01-01* Happy Birthday!
+* *2013-01-01* Initial Release 
 ****

@@ -11,8 +11,8 @@ The Workspace Sharing Policy Plugin collects attributes for a workspace to ident
 
 == Related Components to The Workspace Sharing Policy Plugin
 
-* <<_workspace_access_plugin,Workspace Access Plugin>>.
-* <<_workspace_pre_ingest_plugin,Workspace Pre-Ingest Plugin>>.
+* xref:architectures:workspace-access-plugin.adoc[Workspace Access Plugin].
+* xref:architectures:workspace-pre-ingest-plugin.adoc[Workspace Pre-Ingest Plugin].
 * Workspace Extension.
 
 == Installing the Workspace Sharing Policy Plugin

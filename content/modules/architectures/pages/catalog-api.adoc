@@ -113,41 +113,8 @@ Product Caching is enabled by default.
 Existing {branding} clients are able to leverage product caching due to the product cache being implemented in the {branding}.
 
 .Product Retrieval Request
-[ditaa,product_retrieval_request,png]
-....
-+------+             +---------------------------------------------------------------------------------------------------------------------------------+
-| cDEF |             |/-----------------\/--------------------------\/-----------------\/------------------\/--------------------------\/-------------\|/--------------------\
-|Client|             ||c369<<Endpoint>> ||c369<<CatalogFramework>>  ||c369             ||c369              ||c369<<DownloadManager>>   ||  <<Cache>>  |||c369<<External>>    |
-+------+             || Service Endpoint||Standard Catalog Framework||PreResourcePlugin||PostResourcePlugin||     Download Manager     ||c369Cache    |||    Resource Host   |
-  :                  |\-----------------/\--------------------------/\-----------------/\------------------/\--------------------------/\-------------/|\--------------------/
-  |Service Retrieval |        :                       |                         |               |                     |                        |       |        |
-  | Request          |        |                       :                         :               :                     :                        :       |        :
-  |------------------|------->|                       |                         |               |                     |                        |       |        |
-  |                  |        |query(ResourceRequest) |                         |               |                     |                        |       |        |
-  |                  |        |---------------------->|process(ResourceRequest) |               |                     |                        |       |        |
-  |                  |        |                       |------------------------>|               |                     |                        |       |        |
-  |                  |        |                       |   ResourceRequest       |               |                     |                        |       |        |
-  |                  |        |                       |<------------------------|               |                     |                        |       |        |
-  |                  | cDEF   |                       | getResource             |               |                     |                        |       |        |
-  |                  |        |                       |-------------------------------------------------------------->| download               |       |        |
-  |                  |        |                       |                         :               :                     |------------------------|-------|------->|
-  |                  |        |                       |                         |               |                     |    resource            |       |        |
-  |                  |        |                       |                         |               |                     |<-----------------------|-------|--------|
-  |                  |        |                       |                         |               |                     | resource               |       |        |
-  |                  |        |                       |                         |               |                     |----------------------->|       |        |
-  |                  |        |                       |      resource           |               |                     |                        |       |        |
-  |                  |        |                       |<------------------------|-------------------------------------|                        |       |        |
-  |                  |        |                       |process(ResourceResponse):               :                     |                        |       |        |
-  |                  |        |                       |-------------------------|-------------->|                     |                        |       |        |
-  |                  |        |                       |   ResourceResponse      |               |                     |                        |       |        |
-  |                  |        |                       |<------------------------|---------------|                     |                        |       |        |
-  |Web Service       |        |       ResourceResponse|                         |               |                     |                        |       |        |
-  |     Retrieval Response    |<----------------------|                         :               |                     |                        |       |        |
-  |<-----------------|--------|                       |                         |               |                     |                        |       |        |
-  |                  |        |                       |                         |               |                     |                        |       |        |
-  |                  +---------------------------------------------------------------------------------------------------------------------------------+        |
-  |                                                                                                                                                             |
-....
+image::product_retrieval_request.png[Product Retrieval Request Diagram,image-width]
+
 
 == Notifications and Activities
 

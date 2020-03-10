@@ -7,20 +7,20 @@
 
 .[[_setup_types]]Setup Types
 ****
-$branding} is pre-configured with several installation profiles.
+{branding} is pre-configured with several installation profiles.
 
 * Standard Installation: *Recommended*. Includes these applications by default:
-** xref:reference:appReferences/mg-admin.adoc[$ddf-admin}]
+** xref:reference:appReferences/mg-admin.adoc[{ddf-admin}]
 ** xref:reference:appReferences/mg-catalog.adoc[{ddf-catalog}]
-** xref:reference:appReferences/mg-platform.adoc[$ddf-platform}]
-** xref:reference:appReferences/mg-security.adoc[$ddf-security}]
-** xref:reference:appReferences/mg-solr.adoc[$ddf-solr}]
-** xref:reference:appReferences/mg-spatial.adoc[$ddf-spatial}]
+** xref:reference:appReferences/mg-platform.adoc[{ddf-platform}]
+** xref:reference:appReferences/mg-security.adoc[{ddf-security}]
+** xref:reference:appReferences/mg-solr.adoc[{ddf-solr}]
+** xref:reference:appReferences/mg-spatial.adoc[{ddf-spatial}]
 
 * Minimum Installation: Includes these applications for a minimum install:
-** xref:reference:appReferences/mg-admin.adoc[$ddf-admin}]
-** xref:reference:appReferences/mg-platform.adoc[$ddf-platform}]
-** xref:reference:appReferences/mg-security.adoc[$ddf-security}]
+** xref:reference:appReferences/mg-admin.adoc[{ddf-admin}]
+** xref:reference:appReferences/mg-platform.adoc[{ddf-platform}]
+** xref:reference:appReferences/mg-security.adoc[{ddf-security}]
 
 * Development: Includes all demo.adoc[ beta.adoc[ and experimental applications.
 ****

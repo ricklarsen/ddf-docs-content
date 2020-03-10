@@ -6,7 +6,8 @@
 :summary: Submits catalog Create, Update, or Delete requests to the Processing Framework.
 
 = Processing Post-Ingest Plugin
-The Processing Post Ingest Plugin is responsible for submitting catalog Create, Update, and Delete (CUD) requests to the <<_asynchronous_processing_framework,Processing Framework>>.
+
+The Processing Post Ingest Plugin is responsible for submitting catalog Create, Update, and Delete (CUD) requests to the xref:architectures:processing-framework-intro.adoc[Processing Framework].
 
 == Related Components to Processing Post-Ingest Plugin
 
@@ -19,3 +20,5 @@ The Processing Post-Ingest Plugin is not installed by default with a standard in
 == Configuring the Processing Post-Ingest Plugin
 
 The Processing Post-Ingest Plugin has no configurable properties.
+
+

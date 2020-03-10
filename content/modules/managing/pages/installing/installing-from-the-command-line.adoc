@@ -8,7 +8,7 @@
 = Completing Installation from the {command-console}
 
 In order to install {branding} from the {command-console}, use the command `profile:install <profile-name>`.
-The `<profile-name>` should be the desired <<{managing-prefix}setup_types, Setup Type>> in lowercase letters.
+The `<profile-name>` should be the desired Setup Type in lowercase letters.
 To see the available profiles, use the command `profile:list`.
 
 [NOTE]
@@ -18,10 +18,10 @@ After installing the Setup Type, these other components can be set up as describ
 ====
 
 The Guest Claim Attributes can be configured via the {admin-console} after running the `profile:install` command.
-See <<{managing-prefix}configuring_guest_claim_attributes,Configuring Guest Claim Attributes>>.
+See xref:managing:configuring/configuring-guest-access.adoc#configuring_guest_claim_attributes[Configuring Guest Claim Attributes].
 
-System Settings and Contact Info, as described in <<{managing-prefix}configuring_system_settings, System Configuration Settings>>, can be changed in `{home_directory}/etc/custom.system.properties`.
-The certificates must be set up manually as described in <<{managing-prefix}managing_keystores_and_certificates,Managing Keystores and Certificates>>.
+System Settings and Contact Info, as described in xref:managing:configuring/configuring_system_settings[System Configuration Settings], can be changed in `{home_directory}/etc/custom.system.properties`.
+The certificates must be set up manually as described in xref:managing:/installing/managing-certificates/.adoc[Managing Keystores and Certificates].
 
 [NOTE]
 ====

@@ -25,4 +25,4 @@ Match-One Mapping:: This mapping is used to guarantee that at least one of the 
 . Select *Configuration* tab.
 . Select *Security AuthZ Realm*.
 
-See <<{reference-prefix}ddf.security.pdp.realm.AuthzRealm,Security AuthZ Realm>> for all possible configurations.
+See xref:reference:tables/pdp.realm.AuthzRealm.adoc[Security AuthZ Realm] for all possible configurations.

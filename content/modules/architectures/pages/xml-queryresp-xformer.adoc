@@ -25,7 +25,7 @@ To configure the XML Query Response Transformer:
 . Select the XML Query Response Transformer.
 
 
-See <<{reference-prefix}ddf.catalog.transformer.xml.XmlResponseQueueTransformer,XML Query Response Transformer configurations>> for all possible configurations.
+See xref:reference:tables/XmlResponseQueueTransformer.adoc[XML Query Response Transformer configurations] for all possible configurations.
 
 == Using the XML Query Response Transformer
 

@@ -1,4 +1,4 @@
-:title: Integrating happy happy
+:title: Integrating
 :type: integratingIntro
 :status: published
 :summary: Introduction to Integrating sections.

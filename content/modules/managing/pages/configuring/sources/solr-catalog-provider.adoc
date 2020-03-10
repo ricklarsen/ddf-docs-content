@@ -18,42 +18,7 @@ SolrCloud is a cluster of distributed Solr servers used for high availability an
 Configuration shared between Solr Server instances is managed by Zookeeper.
 
 .SolrCloud Deployment
-[ditaa,solrcloud-diagram,png]
-....
-  Container(JVM)         SolrCloud
- +=-----------------+   +=--------------------+
- |                  |   |                     |
- | /-----------\    |   | +---------+         |
- | |cDEF       |    |   | |Solr     |         |
- | | DDF       |    |   | +---------+         |
- | |           |    |   |                     |
- | |           |  http  |         +---------+ |
- | |           +------->|         |Solr     | |
- | |           |    |   |         +---------+ |
- | |           |    |   |                     |
- | |           |    |   | +---------+         |
- | |           |    |   | |Solr     |         |
- | \---------+-/    |   | +---------+         |
- |           |      |   |                     |
- +---------+-+------+   +---------------------+
-             |tcp
-   Zookeeper V
- +=--------------------+
- |                     |
- | +---------+         |
- | |Zookeeper|         |
- | +---------+         |
- |                     |
- |         +---------+ |
- |         |Zookeeper| |
- |         +---------+ |
- |                     |
- | +---------+         |
- | |Zookeeper|         |
- | +---------+         |
- |                     |
- +---------------------+
-....
+image::solrcloud-diagram.png[SolrCloud Deployment]
 
 .SolrCloud Prerequisites
 

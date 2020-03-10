@@ -37,7 +37,7 @@ The console output should show an entry similar to the following:
 [ 117] [Active     ] [            ] [Started] [   75] {ddf-branding} :: Catalog :: Source :: Dummy (<version>)
 ----
 
-=== Uninstalling Features from the {command-console}
+== Uninstalling Features from the {command-console}
 
 . Check the feature list to verify the feature is installed properly. +
 `{branding-lowercase}@local>feature:list`

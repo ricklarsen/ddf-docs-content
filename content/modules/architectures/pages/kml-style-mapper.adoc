@@ -29,7 +29,7 @@ The configuration name is `Spatial KML Style Map Entry`.
 See xref:reference:tables/spatial.kml.style.adoc[KML Style Mapper configurations] for all possible configurations.
 
 .KML Style Mapper Example Values
-[source,xml,linenums]
+[source,xml,linenums,subs=attributes+]
 ----
 <xmlns="http://www.opengis.net/kml/2.2"
   xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"

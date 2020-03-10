@@ -33,26 +33,7 @@ in the SOAP security header.
 The figure below shows a federated query between two instances of {branding} that support
 federated identity.
 
-[ditaa, federated_identity, png, {image-width}]
-....
-                  /---------------------------\           /--------------------------\
-                  | cDEF       DDF            |           |     Federated Source     |
-/--------\        | +-----------------------+ |           | cDEF                     |
-|  User  +------->| |    Send request to    | |           | +----------------------+ |
-|  cDEF  | Search | |   Catalog Framework   | |  /------->| |   Recreate Subject   | |
-\--------/        | +-----------------------+ |  | Query  | +----------------------+ |
-     ^            |             |             |  |        |             |            |
-     |            |             v             |  |        |             v            |
-     |            | +-----------------------+ |  |        | +----------------------+ |
-     |            | | Create HTTP request & | +--/        | | Run query as Subject | |
-     |            | | attach SAML assertion | |           | +----------------------+ |
-     |            | +-----------------------+ |           |             |            |
-     |            |                           |           |             v            |
-     |            | +-----------------------+ |           | +----------------------+ |
-     \------------+ |     Filter results    | |<----------+ |    Filter results    | |
-                  | +-----------------------+ |  Filtered | +----------------------+ |
-                  \---------------------------/   results \--------------------------/
-....
+image::federated_identity.png[Federated Identity, {image-width}]
 
 . A user submits a search to {branding}.
 . {branding} generates a catalog request, attaches the user's Subject, and sends the request to the

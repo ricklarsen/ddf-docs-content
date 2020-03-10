@@ -109,7 +109,6 @@
 **** xref:configuring/sources/wfs-20-source.adoc[WFS 2.0 Source]
 **** xref:configuring/sources/catalog-provider-intro.adoc[Catalog Provider Intro]
 **** xref:configuring/sources/federation-strategy.adoc[Federation Strategy]
-**** xref:configuring/sources/storage-provider-intro.adoc[Storage Provider]
 
 *** xref:configuring/configuring-endpoints.adoc[Configuring Endpoints]
 **** xref:configuring/configuring-csw-endpoint.adoc[Configuring CSW Endpoint]

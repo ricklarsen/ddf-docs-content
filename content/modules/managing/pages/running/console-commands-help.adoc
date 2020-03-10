@@ -11,8 +11,9 @@ For details on any command, type `help` then the command.
 For example, `help search` (see results of this command in the example below).
 
 .Example Help
+[source,subs=attributes]
 ----
-{branding-lowercase}{at-symbol}local>help search
+{branding-lowercase}@local>help search
 DESCRIPTION
         catalog:search
         Searches records in the catalog provider.

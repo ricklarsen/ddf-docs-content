@@ -17,7 +17,7 @@ The third method invokes `retrieveResource` on a local `ResourceReader`. 
 The parameter for each of these methods in the `CatalogFramework` is a `ResourceRequest`. 
 {branding} includes two implementations of `ResourceRequest`: `ResourceRequestById` and `ResourceRequestByProductUri`. 
 Since these implementations extend `OperationImpl`, they can pass a `Map` of generic properties through the `CatalogFramework` to customize how the resource request is carried out. 
-One example of this is explained in the <<_retrieving_resource_options,Retrieving Resource Options>> section below. 
+One example of this is explained in the xref:architectures:retrieving-resources-options.adoc[Retrieving Resource Options] section below. 
 The following is a basic example of how to create a `ResourceRequest` and invoke the `CatalogFramework` resource retrieval methods to process the request.   
 
 .Retrieve Resource Example

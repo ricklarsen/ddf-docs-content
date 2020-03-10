@@ -49,7 +49,7 @@ Configure the URL Resource Reader from the {admin-console}.
 . Select the *Configuration* tab.
 . Select the *URL Resource Reader*.
 
-See <<{reference-prefix}ddf.catalog.resource.impl.URLResourceReader,URL Resource Reader configurations>> for all possible configurations.
+See xref:reference:tables/URLResourceReader.adoc[URL Resource Reader configurations] for all possible configurations.
 
 == Using the URL Resource Reader
 

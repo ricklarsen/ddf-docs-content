@@ -6,32 +6,6 @@
 
 = Data
 
-.Catalog Architecture Diagram: Data
-[ditaa, catalog_architecture_data, png, {image-width}]
-....
-+------------------------------------------------------------+
-|                /-------------------\                       |
-|                |cDEFEndpoints      |                       |
-|                +------------+------+                       |
-|                |cDEF        |c369  |                       |
-|                | Operations | Data |                       |
-|/---------------+------------+------+------------+---------\|
-||cDEF           |cDEF               |cDEF        |cDEF     ||
-||  Transformers |                   | Federation | Sources ||
-|+---------------+ Catalog Framework +------------+---------+|
-||cDEF           |                   |cDEF   Eventing       ||
-||   Catalog     |                   +------------+---------+|
-||   Plugins     |                   |cDEF   Resources      ||
-|\---------------+-------------------+----------------------/|
-|                |cDEF               |                       |
-|                | Catalog Provider  |                       |
-|                +-------------------+                       |
-|                |cDEF               |                       |
-|                | Storage Provider  |                       |
-|                \-------------------/                       |
-+------------------------------------------------------------+
-....
-
 The Catalog stores and translates Metadata, which can be transformed into many data formats, shared, and queried.
 The primary form of this metadata is the metacard. 
 A `Metacard` is a container for metadata. 

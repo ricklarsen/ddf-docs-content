@@ -8,6 +8,6 @@
 = Metadata Reference
 
 {branding} extracts basic metadata from the resources ingested.
-Many file types contain additional <<_file_format_specific_attributes,file format-specific metadata attributes>>.
-A neutral <<{metadata-prefix}catalog_taxonomy_definitions,Catalog Taxonomy>> enables transformation of metadata to other formats.
-See also a <<{metadata-prefix}all_file_formats_supported,list of all formats supported>> for ingest.
+Many file types contain additional xref:metadatareference:format-specific-attributes.adoc[file format-specific metadata attributes].
+A neutral xref:metadatareference:catalog-taxonomy-intro.adoc[Catalog Taxonomy] enables transformation of metadata to other formats.
+See also a xref:metadatareference:complete-list-file-types.adoc[list of all formats supported] for ingest.

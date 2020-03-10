@@ -63,7 +63,7 @@ By default, the {branding} start scripts include a system property enabling logg
 
 In order to see the messages in the log, one must set the logging level for `org.apache.cxf.services` to `INFO`. By default, the logging level for `org.apache.cxf` is set to `WARN`.
 
-`{branding-lowercase}{at-symbol}local>log:set INFO org.apache.cxf.services`
+`{branding-lowercase}@local>log:set INFO org.apache.cxf.services`
 
 ===== Logging External Resources
 
