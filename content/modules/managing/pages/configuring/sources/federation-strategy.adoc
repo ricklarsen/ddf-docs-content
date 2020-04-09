@@ -22,7 +22,7 @@ The Catalog Federation Strategy configuration can be found in the {admin-console
 . Select *Configuration*
 . Select *Catalog Federation Strategy*.
 
-See xref:reference:tables/CachingFederationStrategy.adoc[Federation Strategy configurations] for all possible configurations.
+include::reference:partial$CachingFederationStrategy.adoc[]
 
 === Catalog Federation Strategy [[_catalogFederationStrategy]]
 

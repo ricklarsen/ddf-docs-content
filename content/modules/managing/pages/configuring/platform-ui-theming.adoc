@@ -28,4 +28,4 @@ The banner has four items to configure:
 . *Text Color*
 . *Background Color*
 
-See the xref:reference:tables/platform.ui.config.adoc[Platform UI] for all possible configurations of the Platform UI Configuration.
+include::reference:partial$platform.ui.config.adoc[]

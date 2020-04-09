@@ -25,7 +25,7 @@ To configure the XML Query Response Transformer:
 . Select the XML Query Response Transformer.
 
 
-See xref:reference:tables/XmlResponseQueueTransformer.adoc[XML Query Response Transformer configurations] for all possible configurations.
+include::reference:partial$XmlResponseQueueTransformer.adoc[]
 
 == Using the XML Query Response Transformer
 

@@ -24,4 +24,4 @@ To configure the Content File System Storage Provider:
 . Select *Configuration*.
 . Select *Content File System Storage Provider*.
 
-See xref:reference:tables/ContentFileSystemStorageProvider.adoc[Content File System Storage Provider configurations] for all possible configurations.
+include::reference:partial$ContentFileSystemStorageProvider.adoc[]

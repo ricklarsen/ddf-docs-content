@@ -1,6 +1,6 @@
 name: docs 
-version: 2.22.0
-title: DDF Documentation 
+version: 2.25.0
+title: DDF 
 start_page: index.adoc
 nav:
 - modules/ROOT/nav.adoc

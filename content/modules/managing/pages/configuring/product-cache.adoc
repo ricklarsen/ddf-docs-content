@@ -7,7 +7,7 @@
 
 = Configuring Product Cache
 
-All caching properties are part of the xref:reference:tables/ReliableResourceDownload.adoc[Resource Download Settings].
+All caching properties are part of the Resource Download Settings.
 
 == Invalidating the Product Cache
 
@@ -22,4 +22,4 @@ Example:
 
 `{home_directory}/data/product-cache/abc123`
 
-See xref:architectures:metacard_ingest_network_plugin[Metacard Ingest Network Plugin].
+See xref:architectures:metacardingest-network.adoc[Metacard Ingest Network Plugin].

@@ -32,7 +32,7 @@ enter these two lines under the title **Metacard Union Attributes**
 |`sourceattribute2=destinationattribute1`
 |===
 
-See xref:reference:tables/MetacardAttributePlugin.adoc[Metacard Attribute Security Policy Plugin configurations] for all possible configurations.
+include::reference:partial$MetacardAttributePlugin.adoc[]
 
 == Configuring the Metacard Validation Marker Plugin
 
@@ -47,7 +47,7 @@ Metacards that are invalid according to an "enforced" validator will not be inge
 .. If desired, enter the ID of any metacard validator to enforce. This will prevent ingest of metacards that fail validation.
 .. If desired, check *Enforce Errors* or *Enforce Warnings*, or both.
 
-See xref:reference:tables/MetacardValidityMarkerPlugin.adoc[Metacard Validity Marker Plugin configurations] for all possible configurations.
+include::reference:partial$MetacardValidityMarkerPlugin.adoc[]
 
 == Configuring the Metacard Validity Filter Plugin
 
@@ -60,7 +60,7 @@ The xref:architectures:metacard-validity-filter.adoc[Metacard Validity Filter Pl
 .. Check *Filter Errors* to hide metacards with errors from users.
 .. Check *Filter Warnings* to hide metacards with warnings from users.
 
-See xref:reference:tables/MetacardValidityFilterPlugin.adoc[Metacard Validity Filter Plugin configurations] for all possible configurations.
+include::reference:partial$MetacardValidityFilterPlugin.adoc[]
 
 == Configuring the XML Attribute Security Policy Plugin
 
@@ -71,6 +71,6 @@ The XML Attribute Security Policy Plugin finds security attributes contained in 
 . Select the *Configuration* tab.
 . Select the *XML Attribute Security Policy Plugin* configuration.
 
-See xref:reference:tables/XmlAttributePlugin.adoc[XML Attribute Security Policy Plugin
+include::reference:partial$XmlAttributePlugin.adoc[XML Attribute Security Policy Plugin
  configurations] for all possible configurations.
 

@@ -20,4 +20,4 @@ time for the user to submit will be rejected.
 
 . *Default value*: 3600000 (milliseconds)
 
-See xref:reference:tables/LogoutRequestService.adoc[Logout Configuration] for detailed information.
+include::reference:partial$LogoutRequestService.adoc[]

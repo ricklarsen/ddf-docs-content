@@ -23,5 +23,5 @@ To configure the Security Audit Plugin:
 
 Add the desired metacard attributes that will be audited when modified.
 
-See xref:reference:tables/SecurityAuditPlugin.adoc[Security Audit Plugin configurations] for all possible configurations.
+include::reference:partial$SecurityAuditPlugin.adoc[]
 

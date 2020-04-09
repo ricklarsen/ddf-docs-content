@@ -33,4 +33,4 @@ To configure the PDF Input Transformer:
 
 These configurations are available for the PDF Input Transformer:
 
-See xref:reference:tables/PdfInputTransformer.adoc[PDF Input Transformer configurations] for all possible configurations.
+include::reference:partial$PdfInputTransformer.adoc[]

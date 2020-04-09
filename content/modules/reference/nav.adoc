@@ -1,95 +1,12 @@
 .Reference
 * Application References
 ** xref:appReferences/mg-admin.adoc[{ddf-admin} Application Reference]
-*** xref:tables/AdminConfigPolicy.adoc[Admin Configuration Policy]
-*** xref:tables/admin.ui.configuration.adoc[Admin UI]
-
 ** xref:appReferences/mg-catalog.adoc[{ddf-catalog} Application Reference]
-*** xref:tables/CachingFederationStrategy.adoc[Catalog Federation Strategy]
-*** xref:tables/CatalogBackupPlugin.adoc[Catalog Backup Plugin]
-*** xref:tables/CatalogFrameworkImpl.adoc[Catalog Standard Framework]
-*** xref:tables/Confluence_Federated_Source.adoc[Confluence Federated Source]
-*** xref:tables/ContentDirectoryMonitor.adoc[Content Directory Monitor]
-*** xref:tables/ContentFileSystemStorageProvider.adoc[Content File System Storage Provider]
-*** xref:tables/ExpirationDatePlugin.adoc[Expiration Date Pre-Ingest Plugin]
-*** xref:tables/Historian.adoc[Historian]
-*** xref:tables/MetacardAttributePlugin.adoc[Metacard Attribute Security Policy Plugin]
-
-*** xref:tables/MetacardIngestNetworkPlugin.adoc[Catalog Metacard Ingest Network Plugin]
-*** xref:tables/MetacardValidityFilterPlugin.adoc[Metacard Validation Filter Plugin]
-*** xref:tables/MetacardValidityMarkerPlugin.adoc[Metacard Validation Marker Plugin]
-*** xref:tables/Metacard_File_Storage_Route.adoc[Metacard Backup File Storage Provider]
-*** xref:tables/Metacard_S3_Storage_Route.adoc[Metacard_S3_Storage_Route]
-*** xref:tables/OpenSearchSource.adoc[Catalog OpenSearch Federated Source]
-*** xref:tables/ReliableResourceDownload.adoc[Resource Download Settings]
-*** xref:tables/SchematronValidationService.adoc[Schematron Validation Services]
-*** xref:tables/SecurityAuditPlugin.adoc[Security Audit Plugin]
-*** xref:tables/VideoThumbnailPlugin.adoc[Video Thumbnail Plugin]
-*** xref:tables/TikaInputTransformer.adoc[Tika Input Transformer]
-*** xref:tables/URLResourceReader.adoc[URL Resource Reader]
-*** xref:tables/XmlResponseQueueTransformer.adoc[Xml Query Transformer]
-*** xref:tables/ddf.catalog.transformer.input.pdf.PdfInputTransformer.adoc[PDF Input Transformer]
-*** xref:tables/XmlAttributePlugin.adoc[XML Attribute Security Policy Plugin]
-*** xref:tables/security.CatalogPolicy.adoc[Catalog Policy Plugin]
-*** xref:tables/security.ResourceUriPolicy.adoc[Resource URI Policy Plugin]
-*** xref:tables/org.codice.ddf.transformer.preview.adoc[Catalog Preview]
-*** xref:tables/sourcePoller.adoc[Status Source Poller Runner]
-
 ** xref:appReferences/mg-platform.adoc[{ddf-platform} Application Reference]
-*** xref:tables/DDF_Custom_Mime_Type_Resolver.adoc[MIME Custom Types]
-*** xref:tables/LoggingService.adoc[Logging Service]
-*** xref:tables/landingpage.properties.adoc[Landing Page]
-*** xref:tables/scheduler.Command.adoc[Platform Command Scheduler]
-*** xref:tables/platform.ui.config.adoc[Platform UI]
-
-
-*** xref:tables/MetricsReporting.adoc[Metrics Reporting]
-*** xref:tables/ResponseHeaderConfig.adoc[HTTP Response Security]
-*** xref:tables/SmtpClientImpl.adoc[Email Service]
-
 ** xref:appReferences/mg-security.adoc[{ddf-security} Application Reference]
-*** xref:tables/idpHandler.adoc[SAML Handler]
-*** xref:tables/validator.pki.adoc[Security STS PKI Token Validator]
-*** xref:tables/Claims_Handler_Manager.adoc[Security STS LDAP and Roles Claims Handler]
-*** xref:tables/GuestInterceptor.adoc[Security SOAP Guest Interceptor]
-*** xref:tables/LogoutRequestService.adoc[Logout Page]
-*** xref:tables/IdpMetadata.adoc[IdP Client]
-*** xref:tables/OidcHandler.adoc[OIDC Handler]
-*** xref:tables/PolicyManager.adoc[Web Context Policy Manager]
-
-*** xref:tables/PropertyFileClaimsHandler.adoc[File Based Claims Handler]
-*** xref:tables/Session.adoc[Session]
-*** xref:tables/pdp.realm.AuthzRealm.adoc[Security AuthZ Realm]
-*** xref:tables/service.SecurityManager.adoc[SAML NameID Policy]
-*** xref:tables/sts.adoc[Security STS Server]
-*** xref:tables/sts.client.configuration.adoc[Security STS Client]
-*** xref:tables/sts.guestclaims.adoc[Guest Claims Configuration]
-
 ** xref:appReferences/mg-solr.adoc[{ddf-solr} Application Reference]
-*** xref:tables/SolrCatalogProvider.adoc[Solr Catalog Provider]
-
 ** xref:appReferences/mg-spatial.adoc[{ddf-spatial} Application Reference]
-*** xref:tables/Csw_Connected_Source.adoc[CSW Connected Source]
-*** xref:tables/Csw_Federated_Source.adoc[CSW Specification Profile Federated Source]
-*** xref:tables/Csw_Xactional_Fed_Source.adoc[CSW Transactional Profile Federated Source]
-*** xref:tables/GeoCoderPlugin.adoc[GeoCoder Plugin]
-*** xref:tables/Gmd_Csw_Federated_Source.adoc[GMD CSW ISO Federated Source]
-*** xref:tables/Csw_Federation_Profile_Source.adoc[CSW Federation Profile Source]
-*** xref:tables/KmlEndpoint.adoc[Spatial KML Endpoint]
-*** xref:tables/MetacardMapper.adoc[Metacard to WFS Feature Map]
-*** xref:tables/Wfs_v1_0_0_Connected_Source.adoc[WFS 1.0.0 Connected Source]
-*** xref:tables/Wfs_v1_0_0_Federated_Source.adoc[WFS v1.0.0 Federated Source]
-*** xref:tables/Wfs_v1_1_0_Federated_Source.adoc[WFS 1.1.0 Federated Source]
-*** xref:tables/Wfs_v2_0_0_Connected_Source.adoc[WFS 2.0.0 Connected Source]
-*** xref:tables/Wfs_v2_0_0_Federated_Source.adoc[WFS 2.0.0 Federated Source]
-*** xref:tables/spatial.kml.style.adoc[Spatial KML Style Map Entry]
-
 ** xref:appReferences/mg-ui.adoc[{ddf-ui} Application Reference]
-*** xref:tables/EmailNotifier.adoc[Email Notifier]
-*** xref:tables/FacetWhitelist.adoc[Facet Attribute Whitelist]
-*** xref:tables/RedirectServlet.adoc[Search UI Redirect]
-*** xref:tables/ui.security.adoc[Catalog UI Search Workspace Security]
-
 * xref:whitelists/whitelist-intro.adoc[Application Whitelists]
 ** xref:whitelists/removed-whitelist.adoc[Packages Removed From Whitelist]
 ** xref:whitelists/catalog-whitelist.adoc[{ddf-catalog} Whitelist]
@@ -97,12 +14,6 @@
 ** xref:whitelists/security-whitelist.adoc[{ddf-security} Whitelist]
 ** xref:whitelists/solr-whitelist.adoc[{ddf-solr} Whitelist]
 ** xref:whitelists/spatial-whitelist.adoc[{ddf-spatial} Whitelist]
-
 * xref:dependencyList/dependency-list-intro.adoc[{branding} Dependency List]
 ** xref:dependencyList/ddf-dependency-list.adoc[Java Dependency List]
 ** xref:dependencyList/js-dependency-list.adoc[JavaScript Dependency List]
-
-
-
-
-

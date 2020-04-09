@@ -15,4 +15,4 @@ To configure product caching:
 . Select *Resource Download Settings*.
 . Select / Deselect *Enable Product Caching*.
 
-See xref:reference:tables/ReliableResourceDownload.adoc[Resource Download Settings configurations] for all possible configurations.
+include::reference:partial$ReliableResourceDownload.adoc[]

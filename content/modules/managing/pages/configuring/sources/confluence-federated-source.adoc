@@ -40,7 +40,7 @@ Configure an Existing Confluence Federated Source through the {admin-console}:
 . Select the *Sources* tab.
 . Select the name of the source to edit.
 
-See xref:reference:/tables/Confluence_Federated_Source.adoc[Confluence Federated Source configurations] for all possible configurations.
+include::reference:partial$Confluence_Federated_Source.adoc[]
 
 [IMPORTANT]
 ====

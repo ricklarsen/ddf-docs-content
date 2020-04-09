@@ -14,7 +14,7 @@ It defines:
 * the type of authentication that a context requires.
 * any user attributes required for authorization.
 
-See xref:reference:tables/PolicyManager.adoc[Web Context Policy Manager Configurations] for detailed descriptions of all fields.
+include::reference:partial$PolicyManager.adoc[]
 
 == Guest Access
 Guest access is a toggleable configuration.

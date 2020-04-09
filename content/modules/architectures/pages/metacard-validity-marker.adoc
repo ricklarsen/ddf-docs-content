@@ -18,17 +18,13 @@ If an ingest did not fail, there are no errors in the ingest log, but the expect
 verify either that the ingested data is valid or that the xref:architectures:/metacard-validity-filter.adoc[Metacard Validity Filter Plugin] is configured to show warnings and/or errors.
 ====
 
-== Related Components to the Metacard Validity Marker
-
-* xref:reference:tables/MetacardValidityFilterPlugin.adoc[Metacard Validity Filter Plugin].
-
 == Installing Metacard Validity Marker
 
 This plugin is installed by default with a standard installation in the {ddf-catalog} application.
 
 == Configuring Metacard Validity Marker
 
-See xref:reference:tables/MetacardValidityMarkerPlugin.adoc[Metacard Validity Marker Plugin configurations] for all possible configurations.
+include::reference:partial$MetacardValidityMarkerPlugin.adoc[]
 
 == Using Metacard Validity Marker
 

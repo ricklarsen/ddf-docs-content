@@ -35,4 +35,4 @@ Configure an existing GMD CSW APISO v2.0.2 Source through the {admin-console}:
 * Select the *Sources* tab.
 * Select the name of the source to edit.
 
-See xref:reference:tables/Gmd_Csw_Federated_Source.adoc[GMD CSW APISO v2.0.2 Source configurations] for all possible configurations.
+include::reference:partial$Gmd_Csw_Federated_Source.adoc[]

@@ -18,4 +18,4 @@ For, example this configuration can provide warnings that system usage is monito
 . Select *Enable System Usage Message*.
 . Enter text in the remaining fields and save.
 
-See the xref:reference:tables/platform.ui.config.adoc[Platform UI] for all possible configurations.
+include::reference:partial$platform.ui.config.adoc[]

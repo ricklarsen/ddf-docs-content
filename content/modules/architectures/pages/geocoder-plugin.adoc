@@ -32,4 +32,4 @@ To configure the GeoCoder Plugin:
 
 These are the available configurations:
 
-See xref:reference:tables/GeoCoderPlugin.adoc[GeoCoder Plugin configurations] for all possible configurations.
+include::reference:partial$GeoCoderPlugin.adoc[]

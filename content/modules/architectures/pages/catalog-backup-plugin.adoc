@@ -28,7 +28,7 @@ To configure the Catalog Backup Plugin:
 . Select *Configuration* tab.
 . Select *Backup Post-Ingest Plugin*.
 
-See xref:reference:tables/CatalogBackupPlugin.adoc[Catalog Backup Plugin configurations] for all possible configurations.
+include::reference:partial$CatalogBackupPlugin.adoc[]
 
 == Usage Limitations of the Catalog Backup Plugin
 

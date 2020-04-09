@@ -37,7 +37,9 @@ Configure an existing WFS v1.0.0 Source through the {admin-console}:
 * Select the *Sources* tab.
 * Select the name of the source to edit.
 
-See xref:reference:tables/Wfs_v1_0_0_Federated_Source.adoc[WFS v.1.0 Federated Source configurations] or xref:reference:tables/Wfs_v1_0_0_Connected_Source.adoc[WFS v1.0 Connected Source configurations] for all possible configurations.
+include::reference:partial$Wfs_v1_0_0_Federated_Source.adoc[]
+
+include::reference:partial$Wfs_v1_0_0_Connected_Source.adoc[]
 
 .WFS URL
 The WFS URL must match the endpoint for the service being used.

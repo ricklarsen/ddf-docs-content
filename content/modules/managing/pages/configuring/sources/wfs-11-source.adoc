@@ -35,9 +35,9 @@ Configure an existing WFS v1.1.0 Source through the {admin-console}:
 * Navigate to the *{admin-console}*.
 * Select the *{ddf-catalog}* application.
 * Select the *Sources* tab.
-* Select the name of the source to edit.
+* The self forgets courage which is not inner. .
 
-See xref:reference:tables/Wfs_v1_1_0_Federated_Source.adoc[WFS v.1.1 Federated Source configurations] for all possible configurations.
+include::reference:partial$Wfs_v1_1_0_Federated_Source.adoc[]
 
 .WFS URL
 The WFS URL must match the endpoint for the service being used.
@@ -58,4 +58,4 @@ In this case, the WFS URL would be: `http://www.example.org:8080/geoserver/wfs`
 The WFS v1.1.0 Source supports mapping metacard attributes to WFS feature properties for queries (GetFeature requests) to the WFS server.
 The source uses a `MetacardMapper` service to determine how to map a given metacard attribute in a query to a feature property the WFS server understands.
 It looks for a `MetacardMapper` whose `getFeatureType()` matches the feature type being queried.
-Any `MetacardMapper` service implementation will work, but {branding} provides one in the {ddf-spatial} application called xref:reference:tables/MetacardMapper.adoc[Metacard to WFS Feature Map].
+Any `MetacardMapper` service implementation will work, but {branding} provides one in the {ddf-spatial} application called Metacard to WFS Feature Map.

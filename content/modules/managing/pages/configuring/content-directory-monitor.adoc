@@ -54,7 +54,7 @@ See xref:managing:configuring/content-directory-monitor.adoc#configuring_permiss
 
 [NOTE]
 ====
-If there's a metacard that points to a resource outside of the CDM, then you must configure the xref:developing:devcomponents/url-resource-reader[URL Resource Reader] to be able to download it.
+If there's a metacard that points to a resource outside of the CDM, then you must configure the xref:architectures:url-resource-reader.adoc[URL Resource Reader] to be able to download it.
 ====
 
 .Monitoring Directories In Place
@@ -71,7 +71,7 @@ Configure the CDM from the {admin-console}:
 . Select the *Configuration* tab.
 . Select *Catalog Content Directory Monitor*.
 
-See xref:reference:tables/ContentDirectoryMonitor.adoc[Content Directory Monitor configurations] for all possible configurations.
+include::reference:partial$ContentDirectoryMonitor.adoc[]
 
 == Using the Content Directory Monitor
 

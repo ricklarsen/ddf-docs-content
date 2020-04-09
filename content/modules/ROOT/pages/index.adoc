@@ -1,5 +1,8 @@
 = DDF: Intelligent Integration
 
+[#project-name]
+{ddf-branding-lowercase}
+
 DDF provides free and open-source data integration.
 
 image:ddf_logo.png[DDF logo]
@@ -29,5 +32,5 @@ TBD
 .News and Events
 ****
 [#version-history]
-* *2013-01-01* Initial Release 
+* *2013-01-01* Initial Release
 ****

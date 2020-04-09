@@ -37,4 +37,4 @@ To configure the KML endpoint:
 . Select *Features*.
 . Select *KML Endpoint*.
 
-See xref:reference:tables/KmlEndpoint.adoc[KML Endpoint configurations] for all possible configurations.
+include::reference:partial$KmlEndpoint.adoc[]
