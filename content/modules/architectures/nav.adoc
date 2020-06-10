@@ -1,4 +1,4 @@
-.Architectures
+.xref:architecture-intro.adoc[Architectures]
 * xref:catalog-api.adoc[Catalog API]
 * xref:data-intro.adoc[Data]
 * xref:operations-intro.adoc[Operations]

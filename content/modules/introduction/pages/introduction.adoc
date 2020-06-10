@@ -16,3 +16,15 @@ Licensed under http://www.gnu.org/licenses/gpl.html[LGPL] {external-link}, {ddf-
 * a flexible and modular integration framework.
 * built to "unzip and run" even when scaled to large enterprise systems.
 * primarily focused on data integration, enabling clients to insert, query, and transform information from disparate data sources via the {ddf-branding} Catalog.
+
+== Release Notes
+
+Updates and changes by version.
+
+=== Current version: {version}
+
+include::partial${version}.adoc[]
+
+=== Archive
+
+xref:2.25.0@introduction.adoc[2.25.0]

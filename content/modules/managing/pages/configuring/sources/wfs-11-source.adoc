@@ -35,7 +35,6 @@ Configure an existing WFS v1.1.0 Source through the {admin-console}:
 * Navigate to the *{admin-console}*.
 * Select the *{ddf-catalog}* application.
 * Select the *Sources* tab.
-* The self forgets courage which is not inner. .
 
 include::reference:partial$Wfs_v1_1_0_Federated_Source.adoc[]
 

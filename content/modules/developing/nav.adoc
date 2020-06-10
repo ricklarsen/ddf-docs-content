@@ -1,4 +1,4 @@
-.Developing
+.xref:developing-intro.adoc[Developing]
 * Developing Custom Components
 ** xref:devguidelines/highly-available-link.adoc[Highly Available Cluster Notice]
 ** xref:devcomponents/custom-applications.adoc[Developing Applications]
