@@ -1,0 +1,9 @@
+= Archive
+
+Release notes for previous releases.
+
+See the xref:release-notes.adoc[{ddf-version}] page for the most recent version.
+
+include::partial$2.25.0.adoc[]
+
+include::partial$2.24.0.adoc[]

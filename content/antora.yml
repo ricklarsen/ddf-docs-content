@@ -4,6 +4,7 @@ title: DDF
 start_page: index.adoc
 nav:
 - modules/ROOT/nav.adoc
+- modules/release-notes/nav.adoc
 - modules/introduction/nav.adoc
 - modules/quickstart/nav.adoc
 - modules/managing/nav.adoc

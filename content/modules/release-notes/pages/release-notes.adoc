@@ -1,0 +1,7 @@
+= {ddf-branding} Release Notes {ddf-version}
+
+New features and resolved issues in this release of {ddf-branding}.
+
+See the xref:archive.adoc[archive] for information on previous versions.
+
+include::partial${ddf-version}.adoc[]
