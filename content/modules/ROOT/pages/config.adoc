@@ -1,4 +1,4 @@
-Version {version}. Copyright (c) Codice Foundation
+Version {ddf-version}. Copyright (c) Codice Foundation
 :imagesdir: ${project.build.directory}/doc-contents/images
 :iconsdir: ${project.build.directory}/doc-contents/images
 :type: config

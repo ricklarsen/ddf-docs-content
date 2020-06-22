@@ -17,7 +17,7 @@ There are some key limitations when following this process to reuse configuratio
 To export the current configuration settings:
 
 . Run the command migration:export from the {command-console}.
-. Files named `{branding-lowercase}-{version}.dar`, `{branding-lowercase}-{version}.dar.key`, and `{branding-lowercase}-{version}.dar.sha256` will be created in the `exported` directory underneath `{home_directory}`.
+. Files named `{branding-lowercase}-<VERSION>.dar`, `{branding-lowercase}-<VERSION>.dar.key`, and `{branding-lowercase}-<VERSION>.dar.sha256` will be created in the `exported` directory underneath `{home_directory}`.
 The `.dar` file contains the encrypted information. The `.key` and `.sha256` files contains the encryption key and a validation checksum. Copy the '.dar' file to a secure location and copy the '.key' and '.sha256' to a different secure location.
 Keeping all 3 files together represents a security risk and should be avoided.
 
@@ -50,7 +50,7 @@ To decrypt the exported file:
 
 . Copy all 3 exported files (i.e. `.dar`, `.key`, and `.sha256`) to the `exported` directory underneath `{home_directory}`.
 . Run the command migration:decrypt from the {command-console}.
-. A file named `{branding-lowercase}-{version}.zip` will be created in the `exported` directory underneath `{home_directory}`.
+. A file named `{branding-lowercase}-<VERSION>.zip` will be created in the `exported` directory underneath `{home_directory}`.
 This file represents the decrypted version of the `.dar` file.
 
 [IMPORTANT]

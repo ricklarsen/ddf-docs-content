@@ -53,7 +53,7 @@ chown {branding}_USER:{branding}_GROUP new_installation
 su - {branding}_USER
 ----
 +
-. Change the current directory to the location of the zip file ({branding-lowercase}-{version}.zip).
+. Change the current directory to the location of the zip file ({branding-lowercase}-{ddf-version}.zip).
 +
 .*NIX (Example assumes {branding} has been downloaded to a CD/DVD)
 [source,subs=attributes]

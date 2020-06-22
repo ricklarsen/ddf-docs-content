@@ -50,7 +50,7 @@ Additional documentation on jarsigner can be found at http://docs.oracle.com/jav
 .Using jarsigner to sign a KAR
 [source,subs=attributes+]
 ----
-~ $ jarsigner -keystore keystore.jks -keypass shield -storepass password  catalog-app-{version}.kar selfsigned
+~ $ jarsigner -keystore keystore.jks -keypass shield -storepass password  catalog-app-{ddf-version}.kar selfsigned
 ----
 
 === Verifying a JAR/KAR
@@ -59,13 +59,13 @@ The jarsigner utility is also used to verify a signature in a JAR-formatted file
 .Using jarsigner to verify a file
 [source,subs=attributes+]
 ----
-~ $ jarsigner -verify -verbose -keystore keystore.jks catalog-app-{version}.kar
+~ $ jarsigner -verify -verbose -keystore keystore.jks catalog-app-{ddf-version}.kar
         9447 Mon Oct 06 17:05:46 MST 2014 META-INF/MANIFEST.MF
         9503 Mon Oct 06 17:05:46 MST 2014 META-INF/SELFSIGN.SF
 
 [... section abbreviated for space]
 
-smk     6768 Wed Sep 17 17:13:58 MST 2014 repository/{ddf-branding-lowercase}/catalog/security/catalog-security-logging/{version}/catalog-security-logging-{version}.jar
+smk     6768 Wed Sep 17 17:13:58 MST 2014 repository/{ddf-branding-lowercase}/catalog/security/catalog-security-logging/{ddf-version}/catalog-security-logging-{version}.jar
   s = signature was verified
   m = entry is listed in manifest
   k = at least one certificate was found in keystore
