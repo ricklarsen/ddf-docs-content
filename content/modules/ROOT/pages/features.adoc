@@ -5,7 +5,6 @@
 image::plus-icon-green.svg[Standardization,40]
 
 * Building on established Free and Open-Source Software (FOSS) and open standards avoids vendor lock-in.
-* changed?
 ****
 
 .Extensibility
