@@ -7,4 +7,15 @@
 
 = Core Concepts
 
-This introduction section is intended to give a high-level overview of the concepts and capabilities of {branding}.
+Learn more about the concepts and capabilities of {branding}with this high-level overview.
+
+* Learn about the xref::coreconcepts/search-intro.adoc[search] capabilities of {branding}.
+* Learn how {branding} uses xref::coreconcepts/metadata-intro.adoc[metadata].
+* Get data into {branding} through xref::coreconcepts/ingest-intro.adoc[ingest].
+* xref::coreconcepts/resources-intro.adoc[resources]
+* Understand the xref::coreconcepts/catalog-framework-intro.adoc[catalog framework]
+* xref::coreconcepts/federation-intro.adoc[federate] data and queries between other data sources, including other instances of {branding}.
+* See how {branding} uses xref::coreconcepts/events-subscriptions-intro.adoc[events and subscriptions].
+* {branding} has xref::coreconcepts/endpoints-intro.adoc[endpoints]
+* See how {branding} can offer xref::coreconcepts/high-availability-intro.adoc[high availability] configuration.
+* {branding} is built on common xref::coreconcepts/standards-intro.adoc[standards].
