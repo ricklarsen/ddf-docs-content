@@ -249,7 +249,7 @@ The `org.codice.ddf.migration.MigrationException` is defined as a base class for
 The `getMessage()` method provides a message for the corresponding exception, warning, or info that will be displayed to the administrator on the console.
 
 === `MigrationException`
-An `org.codice.ddf.migration.MigrationException` should be thrown when an unrecoverable exception occurs that prevents the export or the import operation from continuing. It is also possible to simply record one or many exception(s) with the migration report in order to fail the export or import operation
+An `org.codice.ddf.migration.MigrationException` should be thrown when an unrecoverable exception occurs that prevents the export or the import operation from continuing. It is also possible to simply record one or many exceptions with the migration report in order to fail the export or import operation
 while not aborting it right away. This provides for the ability to record as many errors as possible and report all of them back to the administrator. All migration exception messages are displayed to the administrator.
 
 === `MigrationWarning`
