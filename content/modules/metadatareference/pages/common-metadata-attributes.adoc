@@ -32,18 +32,18 @@ These 'media' file types have support for additional attributes to be available 
 
 .File Types Supporting Additional Attributes
 * Video Types
-** WMV
-** AVI
-** MP4
-** MOV
-** h.264 MPEG2
+** `WMV`
+** `AVI`
+** `MP4`
+** `MOV`
+** `h.264 MPEG2`
 * Image Types
-** JPEG-2000
+** `JPEG-2000`
 * Document Types
-** .DOC, .DOCX, .DOTX, .DOCM
-** .PPT, .PPTX
-** .XLS, .XLSX
-** .PDF
+** `.DOC`, `.DOCX`, `.DOTX`, `.DOCM`
+** `.PPT`, `.PPTX`
+** `.XLS`, `.XLSX`
+** `.PDF`
 
 These are the attributes common to any of the media file types which support additional attributes:
 

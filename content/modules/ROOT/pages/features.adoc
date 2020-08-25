@@ -21,7 +21,7 @@ image::lightning.svg[Extensibility,40]
 image::hourglass.svg[Simplicity of Development,40]
 
 * Build simple Java objects and wire them in via a choice of dependency injection frameworks.
-* Make use of widely-available documentation and components for DDF's underlying technologies.
+* Make use of widely available documentation and components for DDF's underlying technologies.
 * Modular development supports multi-organizational and multi-regional teams.
 ****
 
