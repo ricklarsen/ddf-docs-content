@@ -25,13 +25,13 @@ A Subject represents the application user and contains all available security-re
 |Classname
 |Description
 
-|org.codice.ddf.security.guest.realm.GuestRealm
+|`org.codice.ddf.security.guest.realm.GuestRealm`
 |This realm checks if Guest access is allowed on the incoming Authentication Token, and if so the Guest realm returns the Guest Authentication Info.
 
-|org.codice.ddf.security.oidc.realm.OidcRealm
+|`org.codice.ddf.security.oidc.realm.OidcRealm`
 |This realm takes in any OIDC/OAuth credentials found on the incoming Authentication Token, and if so resolves the ID_Token using those credentials. The ID_Token is then used to put together the resulting Authentication Info.
 
-|ddf.security.realm.sts.StsRealm
+|`ddf.security.realm.sts.StsRealm`
 |This realm delegates authentication to the Secure Token Service (STS). It creates a `RequestSecurityToken` message from the incoming Authentication Token and converts a successful STS response into Authentication Info.
 |===
 
@@ -50,52 +50,52 @@ They are passed in the `AuthorizationInfo` of the Subject along with the permiss
 |Classname
 |Description
 
-|org.codice.ddf.platform.filter.delegate.DelegateServletFilter
+|`org.codice.ddf.platform.filter.delegate.DelegateServletFilter`
 |The `DelegateServletFilter` detects any servlet filters that have been exposed as OSGi services implementing `org.codice.ddf.platform.filter.SecurityFilter` and places them in-order in front of any servlet or web application running on the container.
 
-|org.codice.ddf.security.filter.websso.WebSSOFilter
+|`org.codice.ddf.security.filter.websso.WebSSOFilter`
 |This filter is the main security filter that works with a number of handlers to protect a variety of web contexts, each using different authentication schemes and policies.
 It attaches an Authentication Token to the request by either checking the session or calling the configured Security Handlers.
 
-|org.codice.ddf.security.handler.basic.BasicAuthenticationHandler
+|`org.codice.ddf.security.handler.basic.BasicAuthenticationHandler`
 |Checks for basic authentication credentials in the http request header.
 If no credentials are found, it supports the acquisition of basic credentials on user-agent requests.
 
-|org.codice.ddf.security.handler.pki.PKIHandler
+|`org.codice.ddf.security.handler.pki.PKIHandler`
 |Handler for PKI based authentication.
 X509 chain will be extracted from the HTTP request.
 
-|org.codice.security.idp.client.IdpHandler
+|`org.codice.security.idp.client.IdpHandler`
 |Handler for IdP/SAML based authentication.
 If no credentials are found, it supports the acquisition of credentials through the configured SAML IdP.
 
-|org.codice.ddf.security.handler.oidc.OidcHandler
+|`org.codice.ddf.security.handler.oidc.OidcHandler`
 |Handler for OIDC based authentication.
 If no credentials are found, and is a user-agent request, this handler supports the acquisition of credentials through the configured OIDC IdP.
 
-|org.codice.ddf.security.handler.oauth.OAuthHandler
+|`org.codice.ddf.security.handler.oauth.OAuthHandler`
 |Handler for OAuth based authentication.
 Does not support the acquisition of credentials.
 
-|org.codice.ddf.security.filter.login.LoginFilter
+|`org.codice.ddf.security.filter.login.LoginFilter`
 |This filter runs immediately after the WebSSOFilter and exchanges an Authentication Token found in the request with a Subject via Shiro.
 
-|org.codice.ddf.security.filter.authorization.AuthorizationFilter
+|`org.codice.ddf.security.filter.authorization.AuthorizationFilter`
 |This filter runs immediately after the `LoginFilter` and checks any permissions assigned to the web context against the attributes of the Subject via Shiro.
 
-|org.apache.shiro.realm.AuthenticatingRealm
+|`org.apache.shiro.realm.AuthenticatingRealm`
 |This is an abstract authenticating realm that exchanges an `org.apache.shiro.authc.AuthenticationToken` for a `org.apache.shiro.authc.AuthenticationInfo`, which is used by the Shiro framework to put together a `ddf.security.Subject`.
 
-|ddf.security.service.AbstractAuthorizingRealm
+|`ddf.security.service.AbstractAuthorizingRealm`
 |This is an abstract authorizing realm that takes care of caching and parsing the Subject's `AuthorizingInfo` and should be extended to allow the implementing realm to focus on making the decision.
 
-|ddf.security.pdp.realm.AuthZRealm
+|`ddf.security.pdp.realm.AuthZRealm`
 |This realm performs the authorization decision and may or may not delegate out to the external XACML processing engine. It uses the incoming permissions to create a decision.
-However, it is possible to extend this realm using the ddf.security.policy.extension.PolicyExtension interface.
+However, it is possible to extend this realm using the `ddf.security.policy.extension.PolicyExtension` interface.
 This interface allows an integrator to add additional policy information to the PDP that can't be covered via its generic matching policies.
 This approach is often easier to configure for those that are not familiar with XACML.
 
-|org.codice.ddf.security.validator.*
+|`org.codice.ddf.security.validator.*`
 |A number of validators are provided for X.509 and Username tokens.
 
 |===
