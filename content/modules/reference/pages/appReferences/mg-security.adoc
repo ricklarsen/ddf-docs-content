@@ -31,3 +31,22 @@ Install the {ddf-security} application through the {admin-console}.
 . Select the *System* tab.
 . Select the *Features* tab.
 . Install the `security-app` feature.
+
+== Available configurations
+:table-caption: Configuration
+
+include::reference:partial$Claims_Handler_Manager.adoc[]
+include::reference:partial$GuestInterceptor.adoc[]
+include::reference:partial$IdpMetadata.adoc[]
+include::reference:partial$LogoutRequestService.adoc[]
+include::reference:partial$OidcHandler.adoc[]
+include::reference:partial$PolicyManager.adoc[]
+include::reference:partial$PropertyFileClaimsHandler.adoc[]
+include::reference:partial$Session.adoc[]
+include::reference:partial$idpHandler.adoc[]
+include::reference:partial$pdp.realm.AuthzRealm.adoc[]
+include::reference:partial$service.SecurityManager.adoc[]
+include::reference:partial$sts.adoc[]
+include::reference:partial$sts.client.configuration.adoc[]
+include::reference:partial$sts.guestclaims.adoc[]
+include::reference:partial$validator.pki.adoc[]

@@ -26,3 +26,36 @@ Install the {ddf-catalog} application through the {admin-console}.
 . Select the *System* tab.
 . Select the *Features* tab.
 . Install the `catalog-app` feature.
+
+== Available configurations
+:table-caption: Configuration
+
+include::reference:partial$CachingFederationStrategy.adoc[]
+include::reference:partial$CatalogBackupPlugin.adoc[]
+include::reference:partial$CatalogFrameworkImpl.adoc[]
+include::reference:partial$Confluence_Federated_Source.adoc[]
+include::reference:partial$ContentDirectoryMonitor.adoc[]
+include::reference:partial$ContentFileSystemStorageProvider.adoc[]
+include::reference:partial$Csw_Connected_Source.adoc[]
+include::reference:partial$ExpirationDatePlugin.adoc[]
+include::reference:partial$Historian.adoc[]
+include::reference:partial$MetacardAttributePlugin.adoc[]
+include::reference:partial$MetacardIngestNetworkPlugin.adoc[]
+include::reference:partial$MetacardValidityFilterPlugin.adoc[]
+include::reference:partial$MetacardValidityMarkerPlugin.adoc[]
+include::reference:partial$Metacard_File_Storage_Route.adoc[]
+include::reference:partial$Metacard_S3_Storage_Route.adoc[]
+include::reference:partial$OpenSearchSource.adoc[]
+include::reference:partial$ReliableResourceDownload.adoc[]
+include::reference:partial$SchematronValidationService.adoc[]
+include::reference:partial$SecurityAuditPlugin.adoc[]
+include::reference:partial$TikaInputTransformer.adoc[]
+include::reference:partial$URLResourceReader.adoc[]
+include::reference:partial$VideoThumbnailPlugin.adoc[]
+include::reference:partial$XmlAttributePlugin.adoc[]
+include::reference:partial$XmlResponseQueueTransformer.adoc[]
+include::reference:partial$ddf.catalog.transformer.input.pdf.PdfInputTransformer.adoc[]
+include::reference:partial$org.codice.ddf.transformer.preview.adoc[]
+include::reference:partial$security.CatalogPolicy.adoc[]
+include::reference:partial$security.ResourceUriPolicy.adoc[]
+include::reference:partial$sourcePoller.adoc[]

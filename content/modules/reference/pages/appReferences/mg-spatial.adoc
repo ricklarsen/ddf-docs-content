@@ -62,3 +62,20 @@ Install the {ddf-spatial} application through the {admin-console}.
 . Select the *System* tab.
 . Select the *Features* tab.
 . Install the `spatial-app` feature.
+
+== Available configurations
+:table-caption: Configuration
+
+include::reference:partial$Csw_Federated_Source.adoc[]
+include::reference:partial$Csw_Federation_Profile_Source.adoc[]
+include::reference:partial$Csw_Xactional_Fed_Source.adoc[]
+include::reference:partial$GeoCoderPlugin.adoc[]
+include::reference:partial$Gmd_Csw_Federated_Source.adoc[]
+include::reference:partial$KmlEndpoint.adoc[]
+include::reference:partial$MetacardMapper.adoc[]
+include::reference:partial$Wfs_v1_0_0_Connected_Source.adoc[]
+include::reference:partial$Wfs_v1_0_0_Federated_Source.adoc[]
+include::reference:partial$Wfs_v1_1_0_Federated_Source.adoc[]
+include::reference:partial$Wfs_v2_0_0_Connected_Source.adoc[]
+include::reference:partial$Wfs_v2_0_0_Federated_Source.adoc[]
+include::reference:partial$spatial.kml.style.adoc[]

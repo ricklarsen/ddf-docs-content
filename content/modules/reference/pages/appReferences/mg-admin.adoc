@@ -20,3 +20,9 @@ Install the {ddf-admin} application through the {admin-console}.
 . Select the *System* tab.
 . Select the *Features* tab.
 . Install the `admin-app` feature.
+
+== Available configurations
+:table-caption: Configuration
+
+include::reference:partial$AdminConfigPolicy.adoc[]
+include::reference:partial$admin.ui.configuration.adoc[]
