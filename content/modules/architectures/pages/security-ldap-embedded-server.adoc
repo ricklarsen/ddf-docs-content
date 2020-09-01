@@ -240,7 +240,7 @@ If {branding} is stopped while the LDAP feature is installed and started, it wil
 
 Current limitations for the embedded LDAP instances include:
 
-* Inability to store the LDAP files/storage outside of the {branding} installation directory. This results in any LDAP data (i.e., LDAP user information) being lost when the `ldap-embedded` feature is uninstalled.
+* Inability to store the LDAP files/storage outside of the {branding} installation directory. This results in any LDAP user information being lost when the `ldap-embedded` feature is uninstalled.
 * Cannot be run standalone from {branding}. In order to run `embedded-ldap`, the {branding} must be started.
 
 == External Links for the Embedded LDAP

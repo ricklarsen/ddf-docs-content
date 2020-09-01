@@ -8,7 +8,7 @@
 
 = Media Attributes
 
-.Media: Attributes in this group reflect metadata about media in general. *Injected by default.*
+.Media: attributes in this group reflect metadata about media in general. *Injected by default.*
 [cols="1,2,1,1,1" options="header"]
 |===
 |Term

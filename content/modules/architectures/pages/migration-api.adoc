@@ -224,7 +224,7 @@ The `org.codice.ddf.migration.MigrationReport` interface provides information ab
 - `boolean hasErrors()`
 - `void verifyCompletion()`
 
-The `getOperation()` method provides the type of migration operation (i.e. export or import) currently in progress. +
+The `getOperation()` method provides the type of migration operation (export or import) currently in progress. +
 The `getStartTime()` method provides the time at which the corresponding operation started. +
 The `getEndTime()` method provides the optional time at which the corresponding operation ended. The time is only available if the operation has ended. +
 The `record()` methods enable messages to be recorded with the report. Messages are displayed on the console for the administrator. +

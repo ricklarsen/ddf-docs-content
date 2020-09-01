@@ -46,8 +46,8 @@ Example: `ddf.catalog.CatalogFramework`
 
 === Hyperlinks
 
-Some hyperlinks (e.g., `/admin`) within the documentation assume a locally running installation of {ddf-branding}. 
-Simply change the hostname if accessing a remote host.
+Some hyperlinks (for example, `/admin`) within the documentation assume a locally running installation of {ddf-branding}. 
+Change the hostname if accessing a remote host.
 
 Hyperlinks that take the user away from the {branding} documentation are marked with an `external link` ({external-link}) icon.
 

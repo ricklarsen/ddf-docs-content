@@ -8,7 +8,7 @@
 
 = Validation Attributes
 
-.Validation: Attributes in this group identify validation issues with the metacard and/or resource. *Injected by default.*
+.Validation: attributes in this group identify validation issues with the metacard and/or resource. *Injected by default.*
 [cols="1,2,1,1,1" options="header"]
 |===
 

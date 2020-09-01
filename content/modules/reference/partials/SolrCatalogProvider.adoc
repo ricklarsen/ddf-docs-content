@@ -18,7 +18,10 @@
 |Force Auto Commit
 |forceAutoCommit
 |Boolean
-|WARNING: Performance Impact. Only in special cases should auto-commit be forced. Forcing auto-commit makes the search results visible immediately.
+a|[WARNING]
+====
+Performance Impact. Only in special cases should auto-commit be forced. Forcing auto-commit makes the search results visible immediately.
+====
 |false
 |true
 

@@ -40,7 +40,7 @@
 |[[authentication_methods]]Authentication Types
 |authenticationTypes
 |String
-|List of authentication types required for each context. List of default valid authentication types are: BASIC, PKI, SAML, and OIDC. Example: /context=AUTH1\|AUTH2\|AUTH3
+|List of authentication types required for each context. List of default valid authentication types are BASIC, PKI, SAML, and OIDC. For example, /context=AUTH1\|AUTH2\|AUTH3
 |/=SAML,/admin=SAML\|BASIC
 |true
 
@@ -54,7 +54,7 @@
 |[[whitelisted_contexts]]White Listed Contexts
 |whiteListContexts
 |String
-|List of contexts that will not use security. Note that sub-contexts to ones listed here will also skip security, unless authentication types are provided for it. For example: if /foo is listed here, then /foo/bar will also not require any sort of authentication. However, if /foo is listed and /foo/bar has authentication types provided in the 'Authentication Types' field, then that more specific policy will be used.
+|List of contexts that will not use security. Note that sub-contexts to ones listed here will also skip security, unless authentication types are provided for it. For example, if `/foo` is listed here, then `/foo/bar` will also not require any sort of authentication. However, if `/foo` is listed and `/foo/bar` has authentication types provided in the 'Authentication Types' field, then that more specific policy will be used.
 |{variable-prefix}org.codice.ddf.system.rootContext}/SecurityTokenService,{variable-prefix}org.codice.ddf.system.rootContext}/internal/metrics,/proxy,{variable-prefix}org.codice.ddf.system.rootContext}/saml,{variable-prefix}org.codice.ddf.system.rootContext}/idp,/idp,{variable-prefix}org.codice.ddf.system.rootContext}/platform/config/ui,/logout
 |true
 

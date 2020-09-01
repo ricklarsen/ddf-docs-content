@@ -8,7 +8,7 @@
 
 = Topic Attributes
 
-.Topic: Attributes in this group describe the topic of the resource. *Injected by default.*
+.Topic: attributes in this group describe the topic of the resource. *Injected by default.*
 [cols="1,2,1,1,1" options="header"]
 |===
 

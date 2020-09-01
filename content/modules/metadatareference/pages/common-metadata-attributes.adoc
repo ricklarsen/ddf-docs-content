@@ -9,7 +9,7 @@
 
 {branding} supports a wide variety of file types and data types for ingest.
 The {branding}'s internal Input Transformers extract the necessary data into a xref:metadatareference:catalog-taxonomy-intro.adoc[generalized format].
-{branding} supports ingest of many datatypes and commonly used file formats, such as Microsoft office products: Word documents, Excel spreadsheets, and PowerPoint presentations as well as .pdf files, GeoJson and others. See xref:metadatareference:complete-list-file-types.adoc[complete list].
+{branding} supports ingest of many datatypes and commonly used file formats, such as Microsoft office products including Word documents, Excel spreadsheets, PowerPoint presentations, .pdf files, GeoJson, and others. See xref:metadatareference:complete-list-file-types.adoc[complete list].
 Many of these file types support additional xref:metadatareference:format-specific-attributes.adoc[file format-specific attributes] from which additional metadata can be extracted.
 
 [NOTE]

@@ -8,7 +8,7 @@
 
 = Security Attributes
 
-.Security: Attributes in this group relate to security of the resource and metadata. *Injected by default.*
+.Security: attributes in this group relate to security of the resource and metadata. *Injected by default.*
 [cols="1,2,1,1,1" options="header"]
 |===
 

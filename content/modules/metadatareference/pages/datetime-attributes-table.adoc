@@ -7,7 +7,7 @@
 
 = DateTime Attributes
 
-.DateTime: Attributes in this group reflect temporal aspects about the resource. *Injected by default.*
+.DateTime: attributes in this group reflect temporal aspects about the resource. *Injected by default.*
 [cols="5" options="header"]
 |===
 |Term

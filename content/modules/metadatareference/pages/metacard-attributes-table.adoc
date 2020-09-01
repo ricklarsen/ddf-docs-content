@@ -7,7 +7,7 @@
 
 = Metacard Attributes
 
-.Metacard: Attributes in this group describe the metacard itself. *Injected by default.*
+.Metacard: attributes in this group describe the metacard itself. *Injected by default.*
 [cols="5" options="header"]
 |===
 |Term

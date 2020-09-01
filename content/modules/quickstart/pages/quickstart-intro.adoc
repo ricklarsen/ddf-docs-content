@@ -7,9 +7,9 @@
 :summary: Installation of an example instance.
 :order: 00
 
-= Quick Start Tutorial 
+= Quick Start Tutorial
 
-This quick tutorial will enable install, configuring and using a basic instance of {branding}.
+This quick tutorial will enable install, configuring, and using a basic instance of {branding}.
 
 [NOTE]
 ====
