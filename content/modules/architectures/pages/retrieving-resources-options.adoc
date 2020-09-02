@@ -20,9 +20,9 @@ properties.put("RESOURCE_OPTION", "OptionA");
 ResourceRequestById resourceRequest = new ResourceRequestById("0123456789abcdef0123456789abcdef", properties);
 ----
 
-Depending on the support that the `ResourceReader` or `Source` provides for options, the `properties` `Map` will be checked for the `RESOURCE_OPTION` entry. 
-If that entry is found, the option will be handled. 
-If the `ResourceReader` or `Source` does not support options, that entry will be ignored.
+Depending on the support that the `ResourceReader` or `Source` provides for options, the `properties` `Map` is checked for the `RESOURCE_OPTION` entry. 
+If that entry is found, the option is handled. 
+If the `ResourceReader` or `Source` does not support options, that entry is ignored.
 
 A new `ResourceReader` or `Source` implementation can be created to support options in a way that is most appropriate. 
-Since the option is passed through the catalog framework as a property, the `ResourceReader` or `Source` will have access to that option as long as the endpoint supports options.
+Since the option is passed through the catalog framework as a property, the `ResourceReader` or `Source` has access to that option as long as the endpoint supports options.

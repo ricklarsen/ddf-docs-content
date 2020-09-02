@@ -2,7 +2,7 @@
 :type: mimeTypeResolver
 :status: published
 :link: _custom_mime_type_resolver
-:summary: The Custom Mime Type Resolver is a `MimeTypeResolver` that defines the custom mime types that {branding} will support.
+:summary: The Custom Mime Type Resolver is a `MimeTypeResolver` that defines the custom mime types that {branding} supports.
 
 = Custom Mime Type Resolver
 
@@ -26,7 +26,7 @@ These are mime types not supported by the default `TikaMimeTypeResolver`.
 
 |===
 
-As a `MimeTypeResolver`, the Custom Mime Type Resolver will provide methods to map the file extension to the corresponding mime type, and vice versa.
+As a `MimeTypeResolver`, the Custom Mime Type Resolver provides methods to map the file extension to the corresponding mime type, and vice versa.
 
 == Installing the Custom Mime Type Resolver
 

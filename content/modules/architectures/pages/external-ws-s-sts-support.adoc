@@ -13,6 +13,6 @@ Use these auth types when connecting to a non-{branding} STS or if ignoring real
 
 == Security STS Address Provider
 
-This selects which STS address will be used (for example, in SOAP sources) for clients of this service.
+This selects which STS address are used (for example, in SOAP sources) for clients of this service.
 Default is off (internal).
 

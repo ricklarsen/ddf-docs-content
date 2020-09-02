@@ -9,7 +9,7 @@
 
 = Quick Start Tutorial
 
-This quick tutorial will enable install, configuring, and using a basic instance of {branding}.
+This quick tutorial enables install, configuring, and using a basic instance of {branding}.
 
 [NOTE]
 ====
@@ -17,7 +17,7 @@ This tutorial is intended for setting up a test, demonstration, or trial install
 For complete installation and configuration steps, see xref:managing:installing/installing-intro.adoc[Installing].
 ====
 
-These steps will demonstrate:
+These steps demonstrate:
 
 - [*] xref:quickstart-installing.adoc#quick_install_prerequisites[Prerequisites].
 - [*] xref:quickstart-installing.adoc#quick_install_of_solrcloud[Quick Install of SolrCloud].

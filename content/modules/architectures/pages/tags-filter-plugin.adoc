@@ -8,7 +8,7 @@
 = Tags Filter Plugin
 
 The Tags Filter Plugin updates queries without filters for tags, and adds a default tag of `resource`.
-For backwards compatibility, a filter will also be added to include metacards without any tags attribute.
+For backwards compatibility, a filter is also added to include metacards without any tags attribute.
 
 == Related Components to Tags Filter Plugin
 

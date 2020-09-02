@@ -22,7 +22,7 @@
 a|Attributes that can be faceted against through the catalog framework.
 [CAUTION]
 ====
-Suggestion values are not protected by any security. Only choose attributes whose values will be safe for all users to view.
+Suggestion values are not protected by any security. Only choose attributes whose values are safe for all users to view.
 ====
 |
 |false

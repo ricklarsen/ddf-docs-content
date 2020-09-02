@@ -35,5 +35,5 @@ Output formats:
 
 [NOTE]
 ====
-Based on the browser's configuration, either the `.xls` file will be downloaded or automatically displayed in Excel.
+Based on the browser's configuration, the `.xls` file is either downloaded or automatically displayed in Excel.
 ====

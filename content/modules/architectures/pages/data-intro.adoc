@@ -64,7 +64,7 @@ Consult the documentation of the Catalog Provider in use for more information on
 ====
 
 Often, the `BASIC_METACARD` `MetacardType` does not provide all the functionality or attributes necessary for a specific task.
-For performance or convenience purposes, it may be necessary to create custom attributes even if others will not be aware of those attributes.
+For performance or convenience purposes, it may be necessary to create custom attributes even if others are not aware of those attributes.
 One example could be if a user wanted to optimize a search for a date field that did not fit the definition of `CREATED`, `MODIFIED`, `EXPIRATION`, or `EFFECTIVE`.
 The user could create an additional `java.util.Date` attribute in order to query the attribute separately. 
 
@@ -87,7 +87,7 @@ It maintains a list of all supported `MetacardTypes` in the `CatalogFramework`, 
 The `MetacardType` is essential for a component in the `CatalogFramework` to understand how it should interpret a metacard by knowing what attributes are available in that metacard. 
 
 For example, an endpoint receiving incoming metadata can perform a lookup in the `MetacardTypeRegistry` to find a corresponding `MetacardType`. 
-The discovered `MetacardType` will then be used to help the endpoint populate a metacard based on the specified attributes in the `MetacardType`. 
+The discovered `MetacardType` is then used to help the endpoint populate a metacard based on the specified attributes in the `MetacardType`. 
 By doing this, all the incoming metadata elements can then be available for processing, cataloging, and searching by the rest of the `CatalogFramework`.
 
 `MetacardTypes` should be registered with the `MetacardTypeRegistry`.  The `MetacardTypeRegistry` makes those `MetacardTypes` available to other {branding} `CatalogFramework` components. 
